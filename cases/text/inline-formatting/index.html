@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>inline-formatting</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  #p {
+    margin: 20px;
+    width: 500px;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #f0f0ff;
+  }
+  #p strong { background: #ffe0e0; }
+  #p em { background: #e0ffe0; }
+  #p span.big { font-size: 24px; background: #e0e0ff; }
+  #p span.small { font-size: 10px; background: #fff0e0; }
+</style>
+</head>
+<body>
+  <p id="p">Plain text, then <strong>bold</strong>, then <em>italic</em>, then <span class="big">larger inline</span> and <span class="small">tiny inline</span> sharing a baseline. Trailing plain text after the inline run.</p>
+</body>
+</html>
