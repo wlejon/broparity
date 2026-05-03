@@ -136,4 +136,6 @@ const dump = {
 
 const fs = require("fs");
 fs.writeFileSync(OUT_JSON, JSON.stringify(dump, null, 2));
+// Crop to <html> so we exclude the engine's reserved menu-bar inset (~28px),
+// matching Chromium's screenshot which starts at viewport y=0.
 screenshot(OUT_PNG);
