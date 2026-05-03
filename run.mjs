@@ -7,6 +7,7 @@ import { runBro } from "./drivers/bro.mjs";
 import { runChromium } from "./drivers/chromium.mjs";
 import { diffPixels } from "./diff/pixels.mjs";
 import { diffLayout } from "./diff/layout.mjs";
+import { cropToContent } from "./diff/crop.mjs";
 import { renderReport, renderPerCategoryReports } from "./report/render.mjs";
 import { renderSummary } from "./report/summary.mjs";
 import { aggregate, detectPaintOrderFlag } from "./scoring.mjs";
@@ -73,6 +74,12 @@ async function main() {
     try {
       const broRes = await runBro({ caseDir: c.dir, outDir, width: args.width, height: args.height });
       const chRes = await runChromium({ caseDir: c.dir, outDir, width: args.width, height: args.height });
+      await cropToContent({
+        broLayoutJson: broRes.layoutJson,
+        chromiumLayoutJson: chRes.layoutJson,
+        broPng: broRes.screenshot,
+        chromiumPng: chRes.screenshot
+      });
       const diffPng = resolve(outDir, "diff.png");
       const layoutDiff = resolve(outDir, "layout.diff.json");
       const pixels = await diffPixels({ aPath: broRes.screenshot, bPath: chRes.screenshot, outPath: diffPng });
