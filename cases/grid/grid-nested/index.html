@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>grid-nested</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #outer { display: grid; grid-template-columns: 150px 200px; gap: 8px; width: 358px; height: 200px; margin: 20px; background: #eeeeee; }
+   #a { background: #c0d0e0; }
+   #b { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; background: #f8f8f8; }
+   #b > div { background: #e0c0d0; }
+   #b > div:nth-child(2) { background: #c0e0d0; }
+   #b > div:nth-child(3) { background: #d0c0e0; }
+   #b > div:nth-child(4) { background: #e0d0c0; }
+</style>
+</head>
+<body>
+<div id="outer"><div id="a"></div><div id="b"><div></div><div></div><div></div><div></div></div></div>
+</body>
+</html>

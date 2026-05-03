@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>multiple-stacking-contexts</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #root { position: relative; width: 400px; height: 300px; margin: 20px; background: #eeeeee; }
+   #a, #b { position: absolute; width: 200px; height: 200px; opacity: 0.9; }
+   #a { left: 50px; top: 30px; background: rgba(192,0,0,0.7); z-index: 1; }
+   #b { left: 150px; top: 70px; background: rgba(0,0,192,0.7); z-index: 2; }
+   .child { position: absolute; width: 80px; height: 80px; left: 60px; top: 60px; background: #ffff00; z-index: 999; }
+</style>
+</head>
+<body>
+<div id="root"><div id="a"><div class="child"></div></div><div id="b"><div class="child"></div></div></div>
+</body>
+</html>

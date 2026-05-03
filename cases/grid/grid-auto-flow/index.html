@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>grid-auto-flow</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #g { display: grid; grid-template-columns: 80px 80px 80px; grid-auto-rows: 60px; gap: 4px; width: 252px; margin: 20px; background: #eeeeee; }
+   #g > div { background: #c0d0e0; }
+   #g > div:nth-child(2) { background: #d0e0c0; }
+   #g > div:nth-child(3) { background: #e0c0d0; }
+   #g > div:nth-child(4) { background: #c0e0e0; }
+   #g > div:nth-child(5) { background: #e0e0c0; }
+</style>
+</head>
+<body>
+<div id="g"><div></div><div></div><div></div><div></div><div></div></div>
+</body>
+</html>

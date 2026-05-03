@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>outline-vs-border-spacing</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #root { width: 400px; margin: 20px; background: #eeeeee; padding: 20px; display: flex; gap: 20px; }
+   #a { width: 100px; height: 80px; border: 6px solid #c00000; background: #ffe0e0; }
+   #b { width: 100px; height: 80px; outline: 6px solid #c00000; background: #ffe0e0; }
+</style>
+</head>
+<body>
+<div id="root"><div id="a"></div><div id="b"></div></div>
+</body>
+</html>

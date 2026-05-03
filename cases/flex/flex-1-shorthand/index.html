@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>flex-1-shorthand</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #c { display: flex; width: 600px; height: 100px; margin: 20px; background: #eeeeee; }
+   #c > div { flex: 1; height: 100px; background: #c0d0e0; }
+   #c > div:nth-of-type(2) { background: #d0e0c0; }
+   #c > div:nth-of-type(3) { background: #e0c0d0; }
+</style>
+</head>
+<body>
+<div id="c"><div></div><div></div><div></div></div>
+</body>
+</html>
