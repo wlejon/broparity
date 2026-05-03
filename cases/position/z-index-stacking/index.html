@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>z-index-stacking</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #parent {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    margin: 50px;
+    background: #eeeeee;
+  }
+  .box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+  #red {
+    top: 30px;
+    left: 30px;
+    background: #ff0000;
+    z-index: 1;
+  }
+  #green {
+    top: 80px;
+    left: 80px;
+    background: #00ff00;
+    z-index: 2;
+  }
+  #blue {
+    top: 130px;
+    left: 130px;
+    background: #0000ff;
+    z-index: 3;
+  }
+</style>
+</head>
+<body>
+  <div id="parent">
+    <div id="red" class="box"></div>
+    <div id="green" class="box"></div>
+    <div id="blue" class="box"></div>
+  </div>
+</body>
+</html>

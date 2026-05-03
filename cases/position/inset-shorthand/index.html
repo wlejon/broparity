@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>inset-shorthand</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #parent {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    margin: 50px;
+    background: #eeeeee;
+  }
+  #child {
+    position: absolute;
+    inset: 10px 20px;
+    background: #c0d0e0;
+  }
+</style>
+</head>
+<body>
+  <div id="parent">
+    <div id="child">inset</div>
+  </div>
+</body>
+</html>

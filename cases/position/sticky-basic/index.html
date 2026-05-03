@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sticky-basic</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #scroller {
+    width: 400px;
+    height: 300px;
+    margin: 50px;
+    overflow: auto;
+    background: #eeeeee;
+  }
+  #sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: #c0d0e0;
+  }
+  #spacer {
+    width: 100%;
+    height: 800px;
+    background: #f8f8f8;
+  }
+</style>
+</head>
+<body>
+  <div id="scroller">
+    <div id="sticky">sticky</div>
+    <div id="spacer">spacer</div>
+  </div>
+</body>
+</html>

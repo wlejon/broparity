@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>transform-stacking-context</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #parent {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    margin: 50px;
+    background: #eeeeee;
+  }
+  #ctx {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 250px;
+    height: 250px;
+    background: #ff0000;
+    transform: translate(0, 0);
+  }
+  #trapped {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background: #ffff00;
+    z-index: 9999;
+  }
+  #sibling {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 250px;
+    height: 250px;
+    background: #0000ff;
+    z-index: 5;
+  }
+</style>
+</head>
+<body>
+  <div id="parent">
+    <div id="ctx">
+      <div id="trapped"></div>
+    </div>
+    <div id="sibling"></div>
+  </div>
+</body>
+</html>

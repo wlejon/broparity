@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>absolute-tlbr</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #parent {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    margin: 50px;
+    background: #eeeeee;
+  }
+  #child {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    right: 50px;
+    bottom: 60px;
+    background: #c0d0e0;
+  }
+</style>
+</head>
+<body>
+  <div id="parent">
+    <div id="child">tlbr</div>
+  </div>
+</body>
+</html>
