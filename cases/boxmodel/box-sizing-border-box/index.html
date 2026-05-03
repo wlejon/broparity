@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>box-sizing-border-box</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #content-box {
+    box-sizing: content-box;
+    width: 200px;
+    padding: 20px;
+    border: 6px solid #008060;
+    background: #d0f0e0;
+    margin: 20px;
+  }
+  #border-box {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 20px;
+    border: 6px solid #804000;
+    background: #f0e0d0;
+    margin: 20px;
+  }
+</style>
+</head>
+<body>
+  <div id="content-box">content-box: outer width = 200 + 40 + 12 = 252</div>
+  <div id="border-box">border-box: outer width = 200</div>
+</body>
+</html>
