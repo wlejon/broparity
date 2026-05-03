@@ -79,19 +79,6 @@ numeric values normalize to 3 decimal places.
   font hinting differences don't dominate). Style values are exact-match after
   normalization.
 
-## Categories
-
-| Category | Cases | What it covers |
-|---|---:|---|
-| `boxmodel/` | 3 | basic block, margin collapse, content-box vs border-box |
-| `text/` | 8 | font shorthand, font-size cascade, line-height (px and unitless), inline formatting, whitespace (normal/pre), soft wrap |
-| `flex/` | 12 | row/column, grow/shrink/basis, justify/align (items, self), wrap, gap, nested, min-content shrink |
-| `position/` | 12 | relative offset, absolute (with/without ancestor, percent, tlbr, inset shorthand), fixed, sticky, z-index, stacking contexts (opacity/transform), negative z-index |
-| `tables/` | 9 | basic, colspan, rowspan, border-collapse vs separate, table-layout auto/fixed, caption, thead/tfoot |
-| `display-types/` | 12 | inline-block (basic / baseline / vertical-align-top / vs inline), `<img>` (intrinsic / explicit / css / aspect-ratio), `<button>` / `<input>` defaults, display:none, visibility:hidden |
-
-Total: 56 cases across 6 categories.
-
 ## Scoring
 
 Each case gets two scores in `[0..1]`:
@@ -117,46 +104,14 @@ per-category breakdown, and the curated top-issues list. Per-category
 `out/<run>/<category>/index.html` files give the case-by-case view, and
 `out/<run>/index.html` is the legacy all-cases report.
 
-## Known bro divergences
+## bro divergences
 
 Snapshot of the worst offenders, grouped by category. Updated alongside the
 curated list in `report/summary.mjs`; see `summary.html` for the impact-sorted
 view.
-
-- **tables/** (category layout score ≈ 0.10)
-  - Cell geometry diverges across every case — cell widths, row heights,
-    caption placement, thead/tfoot ordering all drift.
-  - Caption and thead-tfoot cases are the worst (5%+ pixel mismatch).
-- **display-types/** (≈ 0.45)
-  - `<img>` intrinsic / aspect-ratio sizing wrong when only one CSS dimension
-    is set (img-intrinsic-size, img-aspect-ratio, img-explicit-size).
-  - inline-block baseline + vertical-align off by a few px; knocks on to
-    `<button>` / `<input>` default sizing.
-- **text/** (≈ 0.37)
-  - Line-box y and font-size cascade drift in nested contexts
-    (line-height-px, line-height-unitless, font-size-cascade, inline-formatting).
-- **position/** (≈ 0.98)
-  - `negative-zindex`: pure paint-order bug — z-index:-1 child paints above its
-    containing block (4.08% pixel mismatch, layout rects match).
-  - `sticky-basic`: computed style for `position: sticky` differs even when
-    geometry matches.
-- **flex/** (≈ 0.89)
-  - `min-content-shrink`: min-content intrinsic width and negative-free-space
-    distribution disagree with Chromium (only flex case with substantial drift).
-- **boxmodel/** (≈ 0.57)
-  - `box-sizing-border-box`: small consistent rect delta on border-box widths.
-
-## Possible bro engine additions (deferred)
-
-- A native `dumpLayout()` headless global so we don't have to ship a runner script
-  per case. Foundation works fine without it; `_runner.js` runs inside bro-headless
-  and writes via brokit `fs`.
 
 ## Notes / known caveats
 
 - `bro-headless` requires a GPU by default; we use the default (GPU) mode.
 - The bro driver materializes a per-case `_runner.local.js` next to the output so
   the output paths are baked in (bro-headless has no `process.env`).
-- bro screenshots may be rendered at a different size than the requested viewport
-  if the engine reserves space (e.g. menu bar inset). Mismatched sizes are clipped
-  to the common region for pixel diffing and flagged in the report.
