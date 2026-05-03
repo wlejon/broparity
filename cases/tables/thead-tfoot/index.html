@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>thead-tfoot</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  table {
+    margin: 20px;
+    border-collapse: collapse;
+    border: 2px solid #404040;
+    font-size: 16px;
+    color: #202020;
+  }
+  th, td {
+    padding: 8px 12px;
+    border: 1px solid #808080;
+  }
+  thead { background: #d0d8e0; }
+  tbody { background: #ffffff; }
+  tfoot { background: #e8e0d0; font-weight: bold; }
+</style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Qty</th><th>Cost</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>apples</td><td>3</td><td>1.50</td></tr>
+      <tr><td>bread</td><td>1</td><td>2.00</td></tr>
+      <tr><td>milk</td><td>2</td><td>3.00</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>Total</td><td>6</td><td>6.50</td></tr>
+    </tfoot>
+  </table>
+</body>
+</html>

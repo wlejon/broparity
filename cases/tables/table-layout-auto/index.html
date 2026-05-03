@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>table-layout-auto</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  table {
+    margin: 20px;
+    table-layout: auto;
+    border-collapse: collapse;
+    border: 2px solid #404040;
+    font-size: 16px;
+    color: #202020;
+  }
+  td {
+    padding: 8px 12px;
+    border: 1px solid #808080;
+    background: #ffffff;
+  }
+</style>
+</head>
+<body>
+  <table>
+    <tr><td>x</td><td>medium content</td><td>this column has substantially more text than the others</td></tr>
+    <tr><td>longer first cell</td><td>m</td><td>short</td></tr>
+    <tr><td>q</td><td>also some content here</td><td>tiny</td></tr>
+  </table>
+</body>
+</html>
