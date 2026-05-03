@@ -9,7 +9,6 @@ import { diffPixels } from "./diff/pixels.mjs";
 import { diffLayout } from "./diff/layout.mjs";
 import { cropToContent } from "./diff/crop.mjs";
 import { renderReport, renderPerCategoryReports } from "./report/render.mjs";
-import { renderSummary } from "./report/summary.mjs";
 import { aggregate, detectPaintOrderFlag } from "./scoring.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -103,12 +102,10 @@ async function main() {
   }
 
   const reportPath = await renderReport({ runDir, results });
-  const perCategoryReports = await renderPerCategoryReports({ runDir, results });
+  await renderPerCategoryReports({ runDir, results });
   const scoring = aggregate(results);
-  const summaryPath = await renderSummary({ runDir, results, scoring, perCategoryReports });
 
   console.log(`\nreport:  ${reportPath}`);
-  console.log(`summary: ${summaryPath}`);
   console.log(`overall layout: ${scoring.overall.layoutScore.toFixed(3)}  pixel: ${scoring.overall.pixelScore.toFixed(3)}`);
   for (const c of scoring.categories) {
     console.log(`  ${c.name.padEnd(16)} n=${String(c.n).padEnd(3)} L=${c.layoutScore.toFixed(3)}  P=${c.pixelScore.toFixed(3)}`);

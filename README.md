@@ -99,16 +99,8 @@ Per-category aggregate is the arithmetic mean across cases (errored cases
 score 0). Overall is the mean across **categories** (equal weight, so a
 3-case category isn't drowned by a 12-case one). See [`scoring.mjs`](scoring.mjs).
 
-After every full run, `out/<run>/summary.html` shows headline numbers,
-per-category breakdown, and the curated top-issues list. Per-category
-`out/<run>/<category>/index.html` files give the case-by-case view, and
-`out/<run>/index.html` is the legacy all-cases report.
-
-## bro divergences
-
-Snapshot of the worst offenders, grouped by category. Updated alongside the
-curated list in `report/summary.mjs`; see `summary.html` for the impact-sorted
-view.
+Per-category `out/<run>/<category>/index.html` files give the case-by-case
+view, and `out/<run>/index.html` is the all-cases report.
 
 ## Notes / known caveats
 

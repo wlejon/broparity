@@ -55,7 +55,7 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
 a { color: #1f6feb; }
 </style></head><body>
 <h1>${escapeHtml(name)}</h1>
-<div class="sub"><a href="../summary.html">← summary</a> · <a href="../index.html">all cases</a></div>
+<div class="sub"><a href="../index.html">all cases</a></div>
 <table><thead><tr><th>Case</th><th>bro</th><th>Chromium</th><th>Diff</th><th>Pixel mismatch</th><th>Layout Δ</th><th>Score</th></tr></thead>
 <tbody>${rows}</tbody></table>
 </body></html>`;
