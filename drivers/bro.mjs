@@ -2,31 +2,8 @@
 // layout JSON + screenshot.
 import { spawn } from "node:child_process";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { PNG } from "pngjs";
-
-// bro reserves a top inset for the menu bar in screenshots (~28px in
-// Release builds). Chromium screenshots start at viewport y=0 with no menu
-// bar, so without this fix every diff shows a constant ~28px vertical shift
-// inflating the pixel-mismatch ratio. We strip the inset rows and pad the
-// bottom with white so the PNG dims still match Chromium's.
-const MENUBAR_INSET = 28;
-
-function cropMenuBarInset(pngPath) {
-  const src = PNG.sync.read(readFileSync(pngPath));
-  const { width, height } = src;
-  if (height <= MENUBAR_INSET) return;
-  const dst = new PNG({ width, height });
-  const rowBytes = width * 4;
-  src.data.copy(dst.data, 0, MENUBAR_INSET * rowBytes, height * rowBytes);
-  const fillStart = (height - MENUBAR_INSET) * rowBytes;
-  for (let i = fillStart; i < dst.data.length; i += 4) {
-    dst.data[i] = 255; dst.data[i+1] = 255; dst.data[i+2] = 255; dst.data[i+3] = 255;
-  }
-  writeFileSync(pngPath, PNG.sync.write(dst));
-}
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -65,8 +42,6 @@ export async function runBro({ caseDir, outDir, width, height }) {
     const tail = result.stderr.split(/\r?\n/).slice(-20).join("\n");
     throw new Error(`bro-headless exited ${result.code}\n${tail}`);
   }
-
-  cropMenuBarInset(outPng);
 
   return { layoutJson: outJson, screenshot: outPng, stderr: result.stderr };
 }
