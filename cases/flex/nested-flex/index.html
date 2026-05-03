@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>nested-flex</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #outer {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    background: #eeeeee;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 100px;
+    background: #dddddd;
+  }
+  .row > div {
+    width: 100px;
+    height: 100px;
+    background: #c0d0e0;
+  }
+  .row > div:nth-of-type(2) { background: #d0e0c0; }
+  .row > div:nth-of-type(3) { background: #e0c0d0; }
+</style>
+</head>
+<body>
+  <div id="outer">
+    <div class="row">
+      <div>A1</div>
+      <div>A2</div>
+      <div>A3</div>
+    </div>
+    <div class="row">
+      <div>B1</div>
+      <div>B2</div>
+      <div>B3</div>
+    </div>
+    <div class="row">
+      <div>C1</div>
+      <div>C2</div>
+      <div>C3</div>
+    </div>
+  </div>
+</body>
+</html>

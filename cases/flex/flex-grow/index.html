@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>flex-grow</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #container {
+    display: flex;
+    width: 600px;
+    height: 100px;
+    margin: 20px;
+    background: #eeeeee;
+  }
+  #container > div { height: 100px; background: #c0d0e0; }
+  #a { flex-grow: 1; }
+  #b { flex-grow: 2; background: #d0e0c0; }
+  #c { flex-grow: 1; background: #e0c0d0; }
+</style>
+</head>
+<body>
+  <div id="container">
+    <div id="a">A</div>
+    <div id="b">B</div>
+    <div id="c">C</div>
+  </div>
+</body>
+</html>

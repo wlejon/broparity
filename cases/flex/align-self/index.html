@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>align-self</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  #container {
+    display: flex;
+    align-items: flex-start;
+    width: 600px;
+    height: 200px;
+    margin: 20px;
+    background: #eeeeee;
+  }
+  #container > div { width: 100px; height: 60px; background: #c0d0e0; }
+  #a { background: #c0d0e0; }
+  #b { background: #d0e0c0; align-self: center; }
+  #c { background: #e0c0d0; align-self: flex-end; }
+</style>
+</head>
+<body>
+  <div id="container">
+    <div id="a">A</div>
+    <div id="b">B</div>
+    <div id="c">C</div>
+  </div>
+</body>
+</html>
