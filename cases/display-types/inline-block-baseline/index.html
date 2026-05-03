@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>inline-block-baseline</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; line-height: 1.4; }
+  #row { margin: 30px; background: #f8f8f0; padding: 4px; }
+  .ib {
+    display: inline-block;
+    background: #e0f0ff;
+    border: 1px solid #4080c0;
+    padding: 4px 8px;
+    margin-right: 8px;
+  }
+  .tall { height: 80px; width: 60px; }
+  .mid { height: 40px; width: 60px; }
+  .short { height: 20px; width: 60px; }
+</style>
+</head>
+<body>
+  <div id="row">
+    text before
+    <span class="ib tall">tall</span>
+    <span class="ib mid">mid</span>
+    <span class="ib short">short</span>
+    text after
+  </div>
+</body>
+</html>
