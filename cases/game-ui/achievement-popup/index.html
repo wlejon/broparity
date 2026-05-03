@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>achievement-popup</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #14161c; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; background: linear-gradient(180deg, #2c4d6d, #14161c); }
+  .game-blob { position: absolute; border-radius: 50%; opacity: 0.3; }
+  .gb1 { top: 200px; left: 100px; width: 200px; height: 200px; background: radial-gradient(circle, #5b9bff, transparent 70%); }
+  .gb2 { bottom: 100px; right: 80px; width: 240px; height: 240px; background: radial-gradient(circle, #b85bff, transparent 70%); }
+  .toast { position: absolute; top: 50px; left: 50%; transform: translateX(-50%) rotate(-1deg); width: 480px; height: 100px; background: linear-gradient(135deg, #2c303a, #1a1d26); border: 2px solid #ffd84d; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 20px rgba(255,216,77,0.4); padding: 12px; box-sizing: border-box; display: flex; gap: 14px; align-items: center; }
+  .badge { width: 76px; height: 76px; border-radius: 50%; background: linear-gradient(135deg, #ffd84d, #a06020); border: 3px solid #ffd84d; box-shadow: 0 0 16px #ffd84d; flex-shrink: 0; position: relative; }
+  .badge-inner { position: absolute; top: 12px; left: 12px; width: 46px; height: 46px; background: linear-gradient(135deg, #fff8c0, #ffd84d); border-radius: 50%; }
+  .badge-star { position: absolute; top: 26px; left: 26px; width: 18px; height: 18px; background: #802020; transform: rotate(45deg); }
+  .info { flex: 1; display: flex; flex-direction: column; gap: 6px; padding-top: 4px; }
+  .name { width: 80%; height: 16px; background: linear-gradient(90deg, #ffd84d, #ff8b5b); border-radius: 3px; }
+  .desc { width: 100%; height: 10px; background: #555; border-radius: 2px; }
+  .progress { width: 100%; height: 8px; background: #1a1d26; border: 1px solid #444; border-radius: 4px; padding: 1px; box-sizing: border-box; }
+  .progress-fill { width: 100%; height: 100%; background: linear-gradient(90deg, #5bff8b, #5b9bff); border-radius: 2px; }
+  .rewards { display: flex; gap: 4px; margin-top: 2px; }
+  .reward { width: 18px; height: 18px; border-radius: 4px; }
+  .rw-1 { background: linear-gradient(135deg, #ffd84d, #a06020); }
+  .rw-2 { background: linear-gradient(135deg, #5b9bff, #204080); }
+  .rw-3 { background: linear-gradient(135deg, #5bff8b, #208040); }
+  .rw-4 { background: linear-gradient(135deg, #b85bff, #602080); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="game-blob gb1"></div>
+  <div class="game-blob gb2"></div>
+  <div class="toast">
+    <div class="badge">
+      <div class="badge-inner"></div>
+      <div class="badge-star"></div>
+    </div>
+    <div class="info">
+      <div class="name"></div>
+      <div class="desc"></div>
+      <div class="progress"><div class="progress-fill"></div></div>
+      <div class="rewards">
+        <div class="reward rw-1"></div>
+        <div class="reward rw-2"></div>
+        <div class="reward rw-3"></div>
+        <div class="reward rw-4"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

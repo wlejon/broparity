@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>map-overlay-with-pins</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #14161c; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; }
+  .map { position: absolute; inset: 20px; background: linear-gradient(135deg, #2c4d2c, #1f3a1f); border: 3px solid #555; border-radius: 6px; overflow: hidden; }
+  .terrain { position: absolute; border-radius: 50%; opacity: 0.4; }
+  .t1 { top: 50px; left: 80px; width: 200px; height: 140px; background: radial-gradient(circle, #5b9bff, transparent 70%); }
+  .t2 { top: 200px; left: 400px; width: 180px; height: 180px; background: radial-gradient(circle, #ff8b5b, transparent 70%); }
+  .t3 { bottom: 40px; left: 200px; width: 240px; height: 120px; background: radial-gradient(circle, #ffd84d, transparent 70%); }
+  .road { position: absolute; height: 6px; background: rgba(180,160,120,0.6); border-radius: 3px; }
+  .road1 { top: 200px; left: 100px; width: 400px; }
+  .road2 { top: 100px; left: 300px; width: 200px; transform: rotate(60deg); transform-origin: 0 50%; }
+  .pin { position: absolute; width: 16px; height: 16px; border-radius: 50%; border: 2px solid #fff; }
+  .pin.q { background: #ffd84d; box-shadow: 0 0 12px #ffd84d; }
+  .pin.e { background: #ff5b5b; box-shadow: 0 0 12px #ff5b5b; }
+  .pin.s { background: #5b9bff; box-shadow: 0 0 12px #5b9bff; }
+  .pulse { position: absolute; border-radius: 50%; border: 2px solid currentColor; opacity: 0.5; }
+  .pulse.r1 { width: 32px; height: 32px; top: -10px; left: -10px; }
+  .pulse.r2 { width: 56px; height: 56px; top: -22px; left: -22px; opacity: 0.25; }
+  .pin-wrap { position: absolute; }
+  .pin-wrap.p1 { top: 120px; left: 180px; color: #ffd84d; }
+  .pin-wrap.p2 { top: 280px; left: 460px; color: #ff5b5b; }
+  .pin-wrap.p3 { top: 400px; left: 280px; color: #5b9bff; }
+  .pin-wrap.p4 { top: 180px; left: 600px; color: #ffd84d; }
+  .pin-wrap.p5 { top: 460px; left: 600px; color: #ff5b5b; }
+  .player { position: absolute; top: 280px; left: 360px; width: 14px; height: 14px; background: #fff; border: 3px solid #000; border-radius: 50%; box-shadow: 0 0 10px #fff; }
+  .fog { position: absolute; background: rgba(10,12,20,0.7); }
+  .fog.f1 { top: 0; right: 0; width: 200px; height: 200px; }
+  .fog.f2 { bottom: 0; left: 0; width: 150px; height: 100px; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="map">
+    <div class="terrain t1"></div>
+    <div class="terrain t2"></div>
+    <div class="terrain t3"></div>
+    <div class="road road1"></div>
+    <div class="road road2"></div>
+    <div class="pin-wrap p1">
+      <div class="pulse r2"></div><div class="pulse r1"></div><div class="pin q"></div>
+    </div>
+    <div class="pin-wrap p2">
+      <div class="pulse r2"></div><div class="pulse r1"></div><div class="pin e"></div>
+    </div>
+    <div class="pin-wrap p3">
+      <div class="pulse r2"></div><div class="pulse r1"></div><div class="pin s"></div>
+    </div>
+    <div class="pin-wrap p4">
+      <div class="pin q"></div>
+    </div>
+    <div class="pin-wrap p5">
+      <div class="pin e"></div>
+    </div>
+    <div class="player"></div>
+    <div class="fog f1"></div>
+    <div class="fog f2"></div>
+  </div>
+</div>
+</body>
+</html>

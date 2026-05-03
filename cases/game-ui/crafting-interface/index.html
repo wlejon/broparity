@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>crafting-interface</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #14161c; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; }
+  .panel { position: absolute; top: 40px; left: 40px; width: 720px; height: 520px; background: linear-gradient(180deg, #2c303a, #1a1d26); border: 2px solid #555; border-radius: 8px; display: grid; grid-template-columns: 220px 1fr 220px; padding: 16px; box-sizing: border-box; gap: 16px; }
+  .col { background: #14161c; border: 1px solid #444; border-radius: 4px; padding: 12px; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px; }
+  .col-header { width: 100%; height: 24px; background: #555; border-radius: 2px; margin-bottom: 6px; }
+  .ingredient { display: flex; align-items: center; gap: 8px; height: 40px; padding: 4px; background: #1f2330; border: 1px solid #333; border-radius: 4px; box-sizing: border-box; }
+  .ing-icon { width: 30px; height: 30px; border-radius: 4px; }
+  .ing-i1 { background: linear-gradient(135deg, #ff8b5b, #804020); }
+  .ing-i2 { background: linear-gradient(135deg, #5bff8b, #208040); }
+  .ing-i3 { background: linear-gradient(135deg, #5b9bff, #204080); }
+  .ing-i4 { background: linear-gradient(135deg, #b85bff, #602080); }
+  .ing-i5 { background: linear-gradient(135deg, #ffd84d, #a06020); }
+  .ing-name { flex: 1; height: 10px; background: #555; border-radius: 2px; }
+  .ing-count { width: 28px; height: 14px; background: #888; border-radius: 2px; }
+  .middle { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .preview { width: 200px; height: 200px; background: linear-gradient(135deg, #ffd84d, #a06020); border: 3px solid #ffd84d; border-radius: 8px; box-shadow: 0 0 32px rgba(255,216,77,0.6); margin-top: 24px; position: relative; }
+  .preview-shine { position: absolute; top: 20px; left: 20px; width: 60px; height: 60px; background: rgba(255,255,255,0.3); border-radius: 50%; }
+  .craft-btn { width: 200px; height: 50px; background: linear-gradient(180deg, #5bff8b, #208040); border: 2px solid #5bff8b; border-radius: 6px; box-shadow: 0 0 12px rgba(91,255,139,0.4); }
+  .progress { width: 200px; height: 12px; background: #1a1d26; border: 1px solid #555; border-radius: 6px; padding: 1px; box-sizing: border-box; }
+  .progress-fill { width: 70%; height: 100%; background: linear-gradient(90deg, #5b9bff, #b85bff); border-radius: 4px; }
+  .recipe-row { display: flex; align-items: center; gap: 6px; height: 20px; }
+  .r-icon { width: 16px; height: 16px; border-radius: 50%; background: #ffd84d; }
+  .r-bar { flex: 1; height: 8px; background: #555; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="panel">
+    <div class="col">
+      <div class="col-header"></div>
+      <div class="ingredient"><div class="ing-icon ing-i1"></div><div class="ing-name"></div><div class="ing-count"></div></div>
+      <div class="ingredient"><div class="ing-icon ing-i2"></div><div class="ing-name"></div><div class="ing-count"></div></div>
+      <div class="ingredient"><div class="ing-icon ing-i3"></div><div class="ing-name"></div><div class="ing-count"></div></div>
+      <div class="ingredient"><div class="ing-icon ing-i4"></div><div class="ing-name"></div><div class="ing-count"></div></div>
+      <div class="ingredient"><div class="ing-icon ing-i5"></div><div class="ing-name"></div><div class="ing-count"></div></div>
+      <div class="ingredient"><div class="ing-icon ing-i1"></div><div class="ing-name"></div><div class="ing-count"></div></div>
+      <div class="ingredient"><div class="ing-icon ing-i2"></div><div class="ing-name"></div><div class="ing-count"></div></div>
+    </div>
+    <div class="col middle">
+      <div class="preview"><div class="preview-shine"></div></div>
+      <div class="progress"><div class="progress-fill"></div></div>
+      <div class="craft-btn"></div>
+    </div>
+    <div class="col">
+      <div class="col-header"></div>
+      <div class="recipe-row"><div class="r-icon"></div><div class="r-bar"></div></div>
+      <div class="recipe-row"><div class="r-icon" style="background:#5b9bff"></div><div class="r-bar"></div></div>
+      <div class="recipe-row"><div class="r-icon" style="background:#5bff8b"></div><div class="r-bar"></div></div>
+      <div class="recipe-row"><div class="r-icon" style="background:#ff5b5b"></div><div class="r-bar"></div></div>
+      <div class="recipe-row"><div class="r-icon" style="background:#b85bff"></div><div class="r-bar"></div></div>
+      <div class="recipe-row"><div class="r-icon" style="background:#ff8b5b"></div><div class="r-bar"></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

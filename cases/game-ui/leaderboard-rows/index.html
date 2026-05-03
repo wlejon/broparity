@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>leaderboard-rows</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #14161c; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; }
+  .panel { position: absolute; top: 30px; left: 60px; width: 680px; background: #1f2330; border: 2px solid #555; border-radius: 8px; overflow: hidden; }
+  .header { width: 100%; height: 40px; background: linear-gradient(90deg, #ffd84d, #a06020); }
+  .row { display: flex; align-items: center; gap: 12px; padding: 8px 16px; height: 44px; box-sizing: border-box; border-bottom: 1px solid #333; }
+  .row:nth-child(odd) { background: #1a1d26; }
+  .row:nth-child(even) { background: #252836; }
+  .rank { width: 32px; height: 32px; border-radius: 4px; background: #444; }
+  .rank.r1 { background: linear-gradient(135deg, #ffd84d, #a06020); }
+  .rank.r2 { background: linear-gradient(135deg, #cccccc, #666); }
+  .rank.r3 { background: linear-gradient(135deg, #cd7f32, #6b3a18); }
+  .avatar { width: 32px; height: 32px; border-radius: 50%; }
+  .a1 { background: linear-gradient(135deg, #5b9bff, #204080); }
+  .a2 { background: linear-gradient(135deg, #ff5b5b, #802020); }
+  .a3 { background: linear-gradient(135deg, #5bff8b, #208040); }
+  .a4 { background: linear-gradient(135deg, #b85bff, #602080); }
+  .a5 { background: linear-gradient(135deg, #ff8b5b, #804020); }
+  .name { flex: 1; height: 14px; background: #555; border-radius: 2px; }
+  .score { width: 100px; height: 18px; background: #888; border-radius: 2px; }
+  .trend { width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; }
+  .trend.up { border-bottom: 12px solid #5bff8b; }
+  .trend.down { border-top: 12px solid #ff5b5b; }
+  .trend.flat { width: 14px; height: 4px; background: #888; border: 0; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="panel">
+    <div class="header"></div>
+    <div class="row"><div class="rank r1"></div><div class="avatar a1"></div><div class="name"></div><div class="score"></div><div class="trend up"></div></div>
+    <div class="row"><div class="rank r2"></div><div class="avatar a2"></div><div class="name"></div><div class="score"></div><div class="trend up"></div></div>
+    <div class="row"><div class="rank r3"></div><div class="avatar a3"></div><div class="name"></div><div class="score"></div><div class="trend down"></div></div>
+    <div class="row"><div class="rank"></div><div class="avatar a4"></div><div class="name"></div><div class="score"></div><div class="trend flat"></div></div>
+    <div class="row"><div class="rank"></div><div class="avatar a5"></div><div class="name"></div><div class="score"></div><div class="trend up"></div></div>
+    <div class="row"><div class="rank"></div><div class="avatar a1"></div><div class="name"></div><div class="score"></div><div class="trend down"></div></div>
+    <div class="row"><div class="rank"></div><div class="avatar a2"></div><div class="name"></div><div class="score"></div><div class="trend flat"></div></div>
+    <div class="row"><div class="rank"></div><div class="avatar a3"></div><div class="name"></div><div class="score"></div><div class="trend up"></div></div>
+    <div class="row"><div class="rank"></div><div class="avatar a4"></div><div class="name"></div><div class="score"></div><div class="trend down"></div></div>
+    <div class="row"><div class="rank"></div><div class="avatar a5"></div><div class="name"></div><div class="score"></div><div class="trend flat"></div></div>
+  </div>
+</div>
+</body>
+</html>

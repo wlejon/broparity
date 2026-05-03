@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vendor-shop-grid</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #14161c; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; }
+  .panel { position: absolute; top: 30px; left: 30px; right: 30px; bottom: 30px; background: linear-gradient(180deg, #2c303a, #1a1d26); border: 2px solid #555; border-radius: 8px; display: flex; padding: 16px; box-sizing: border-box; gap: 16px; }
+  .sidebar { flex: 0 0 80px; display: flex; flex-direction: column; gap: 8px; }
+  .cat { width: 64px; height: 64px; border-radius: 8px; background: #1f2330; border: 1px solid #444; padding: 12px; box-sizing: border-box; }
+  .cat.active { border-color: #ffd84d; box-shadow: 0 0 8px #ffd84d; }
+  .cat-icon { width: 100%; height: 100%; border-radius: 4px; }
+  .ci-1 { background: linear-gradient(135deg, #ff5b5b, #802020); }
+  .ci-2 { background: linear-gradient(135deg, #5b9bff, #204080); }
+  .ci-3 { background: linear-gradient(135deg, #5bff8b, #208040); }
+  .ci-4 { background: linear-gradient(135deg, #ffd84d, #a06020); }
+  .ci-5 { background: linear-gradient(135deg, #b85bff, #602080); }
+  .ci-6 { background: linear-gradient(135deg, #ff8b5b, #804020); }
+  .main { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 12px; }
+  .card { background: #1f2330; border: 1px solid #444; border-radius: 6px; padding: 8px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; }
+  .card-img { width: 100%; flex: 1; border-radius: 4px; }
+  .img-1 { background: linear-gradient(135deg, #ff5b5b, #802020); box-shadow: 0 0 6px #ff5b5b; }
+  .img-2 { background: linear-gradient(135deg, #5b9bff, #204080); box-shadow: 0 0 6px #5b9bff; }
+  .img-3 { background: linear-gradient(135deg, #5bff8b, #208040); }
+  .img-4 { background: linear-gradient(135deg, #ffd84d, #a06020); box-shadow: 0 0 6px #ffd84d; }
+  .img-5 { background: linear-gradient(135deg, #b85bff, #602080); box-shadow: 0 0 6px #b85bff; }
+  .img-6 { background: linear-gradient(135deg, #ff8b5b, #804020); }
+  .img-7 { background: linear-gradient(135deg, #888, #444); }
+  .img-8 { background: linear-gradient(135deg, #5bcdff, #2070a0); }
+  .price { display: flex; align-items: center; gap: 4px; height: 14px; }
+  .gold { width: 12px; height: 12px; border-radius: 50%; background: #ffd84d; }
+  .price-bar { flex: 1; height: 10px; background: #555; border-radius: 2px; }
+  .buy { width: 100%; height: 22px; background: linear-gradient(180deg, #5bff8b, #208040); border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="panel">
+    <div class="sidebar">
+      <div class="cat active"><div class="cat-icon ci-1"></div></div>
+      <div class="cat"><div class="cat-icon ci-2"></div></div>
+      <div class="cat"><div class="cat-icon ci-3"></div></div>
+      <div class="cat"><div class="cat-icon ci-4"></div></div>
+      <div class="cat"><div class="cat-icon ci-5"></div></div>
+      <div class="cat"><div class="cat-icon ci-6"></div></div>
+    </div>
+    <div class="main">
+      <div class="card"><div class="card-img img-1"></div><div class="price"><div class="gold"></div><div class="price-bar"></div></div><div class="buy"></div></div>
+      <div class="card"><div class="card-img img-2"></div><div class="price"><div class="gold"></div><div class="price-bar"></div></div><div class="buy"></div></div>
+      <div class="card"><div class="card-img img-3"></div><div class="price"><div class="gold"></div><div class="price-bar"></div></div><div class="buy"></div></div>
+      <div class="card"><div class="card-img img-4"></div><div class="price"><div class="gold"></div><div class="price-bar"></div></div><div class="buy"></div></div>
+      <div class="card"><div class="card-img img-5"></div><div class="price"><div class="gold"></div><div class="price-bar"></div></div><div class="buy"></div></div>
+      <div class="card"><div class="card-img img-6"></div><div class="price"><div class="gold"></div><div class="price-bar"></div></div><div class="buy"></div></div>
+      <div class="card"><div class="card-img img-7"></div><div class="price"><div class="gold"></div><div class="price-bar"></div></div><div class="buy"></div></div>
+      <div class="card"><div class="card-img img-8"></div><div class="price"><div class="gold"></div><div class="price-bar"></div></div><div class="buy"></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

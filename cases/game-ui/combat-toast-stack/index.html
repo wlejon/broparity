@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>combat-toast-stack</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #1a2030; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; background: linear-gradient(135deg, #2c4d2c, #1a2030); }
+  .stack { position: absolute; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+  .toast { width: 320px; height: 70px; background: rgba(28,32,46,0.95); border-left: 4px solid #ffd84d; border-radius: 6px; padding: 10px; box-sizing: border-box; display: flex; gap: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+  .toast.kill   { border-left-color: #ff5b5b; }
+  .toast.loot   { border-left-color: #ffd84d; }
+  .toast.level  { border-left-color: #5bff8b; }
+  .toast.buff   { border-left-color: #5b9bff; }
+  .toast.t1 { opacity: 1; }
+  .toast.t2 { opacity: 0.85; transform: scale(0.96); transform-origin: bottom right; }
+  .toast.t3 { opacity: 0.7; transform: scale(0.92); transform-origin: bottom right; }
+  .toast.t4 { opacity: 0.55; transform: scale(0.88); transform-origin: bottom right; }
+  .t-icon { width: 50px; height: 50px; border-radius: 6px; flex-shrink: 0; }
+  .ico-kill  { background: linear-gradient(135deg, #ff5b5b, #802020); }
+  .ico-loot  { background: linear-gradient(135deg, #ffd84d, #a06020); }
+  .ico-level { background: linear-gradient(135deg, #5bff8b, #208040); }
+  .ico-buff  { background: linear-gradient(135deg, #5b9bff, #204080); }
+  .t-info { flex: 1; display: flex; flex-direction: column; gap: 6px; padding-top: 4px; }
+  .t-title { width: 80%; height: 12px; background: #888; border-radius: 2px; }
+  .t-body { width: 100%; height: 8px; background: #555; border-radius: 2px; }
+  .t-body.short { width: 60%; }
+  .t-close { width: 16px; height: 16px; background: #444; border-radius: 50%; align-self: flex-start; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="stack">
+    <div class="toast kill t4">
+      <div class="t-icon ico-kill"></div>
+      <div class="t-info"><div class="t-title"></div><div class="t-body short"></div></div>
+      <div class="t-close"></div>
+    </div>
+    <div class="toast loot t3">
+      <div class="t-icon ico-loot"></div>
+      <div class="t-info"><div class="t-title"></div><div class="t-body"></div></div>
+      <div class="t-close"></div>
+    </div>
+    <div class="toast buff t2">
+      <div class="t-icon ico-buff"></div>
+      <div class="t-info"><div class="t-title"></div><div class="t-body short"></div></div>
+      <div class="t-close"></div>
+    </div>
+    <div class="toast level t1">
+      <div class="t-icon ico-level"></div>
+      <div class="t-info"><div class="t-title"></div><div class="t-body"></div></div>
+      <div class="t-close"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

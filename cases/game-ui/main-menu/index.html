@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>main-menu</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #0a0c14; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; background: radial-gradient(ellipse at center, #2c303a 0%, #0a0c14 70%); }
+  .ambient { position: absolute; border-radius: 50%; opacity: 0.3; }
+  .a1 { top: 100px; left: 100px; width: 200px; height: 200px; background: radial-gradient(circle, #5b9bff, transparent 70%); }
+  .a2 { bottom: 50px; right: 100px; width: 240px; height: 240px; background: radial-gradient(circle, #b85bff, transparent 70%); }
+  .stack { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .logo { width: 320px; height: 90px; background: linear-gradient(180deg, #ffd84d, #a06020); border: 2px solid #ffd84d; border-radius: 8px; box-shadow: 0 0 20px rgba(255,216,77,0.5); margin-bottom: 30px; }
+  .btn { width: 240px; height: 44px; background: linear-gradient(180deg, #3a4050, #1f2330); border: 1px solid #555; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.5); position: relative; overflow: hidden; }
+  .btn-hi { position: absolute; top: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(180deg, rgba(255,255,255,0.1), transparent); }
+  .btn.primary { background: linear-gradient(180deg, #5b9bff, #2050b2); border-color: #5b9bff; box-shadow: 0 0 12px rgba(91,155,255,0.5); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="ambient a1"></div>
+  <div class="ambient a2"></div>
+  <div class="stack">
+    <div class="logo"></div>
+    <div class="btn primary"><div class="btn-hi"></div></div>
+    <div class="btn"><div class="btn-hi"></div></div>
+    <div class="btn"><div class="btn-hi"></div></div>
+    <div class="btn"><div class="btn-hi"></div></div>
+    <div class="btn"><div class="btn-hi"></div></div>
+  </div>
+</div>
+</body>
+</html>

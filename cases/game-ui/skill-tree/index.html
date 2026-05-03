@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>skill-tree</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #14161c; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; }
+  .panel { position: absolute; top: 40px; left: 40px; width: 720px; height: 520px; background: linear-gradient(180deg, #1f2330, #14161c); border: 2px solid #555; border-radius: 8px; }
+  .grid { position: absolute; top: 60px; left: 60px; width: 600px; height: 400px; }
+  .node { position: absolute; width: 60px; height: 60px; border-radius: 50%; background: #2c303a; border: 3px solid #555; }
+  .node.filled { background: linear-gradient(135deg, #ffd84d, #a06020); border-color: #ffd84d; box-shadow: 0 0 12px rgba(255,216,77,0.6); }
+  .node.unlock { background: linear-gradient(135deg, #5b9bff, #2050b2); border-color: #5b9bff; box-shadow: 0 0 12px rgba(91,155,255,0.5); }
+  .node.locked { background: #1a1d26; border-color: #333; }
+  .node-core { position: absolute; top: 12px; left: 12px; width: 30px; height: 30px; border-radius: 50%; }
+  .filled .node-core { background: rgba(255,255,255,0.4); }
+  .unlock .node-core { background: rgba(255,255,255,0.3); }
+  .conn { position: absolute; height: 4px; background: linear-gradient(90deg, #555, #333); border-radius: 2px; transform-origin: 0 50%; }
+  .conn.active { background: linear-gradient(90deg, #ffd84d, #5b9bff); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="panel">
+    <div class="grid">
+      <div class="conn active" style="top: 30px; left: 60px; width: 120px;"></div>
+      <div class="conn active" style="top: 30px; left: 180px; width: 120px;"></div>
+      <div class="conn" style="top: 30px; left: 300px; width: 120px;"></div>
+      <div class="conn" style="top: 30px; left: 420px; width: 120px;"></div>
+
+      <div class="conn active" style="top: 30px; left: 30px; width: 120px; transform: rotate(90deg);"></div>
+      <div class="conn active" style="top: 30px; left: 150px; width: 120px; transform: rotate(90deg);"></div>
+      <div class="conn" style="top: 30px; left: 270px; width: 120px; transform: rotate(90deg);"></div>
+      <div class="conn" style="top: 30px; left: 390px; width: 120px; transform: rotate(90deg);"></div>
+      <div class="conn" style="top: 30px; left: 510px; width: 120px; transform: rotate(90deg);"></div>
+
+      <div class="conn active" style="top: 150px; left: 60px; width: 120px;"></div>
+      <div class="conn" style="top: 150px; left: 180px; width: 120px;"></div>
+      <div class="conn" style="top: 150px; left: 300px; width: 120px;"></div>
+      <div class="conn" style="top: 150px; left: 420px; width: 120px;"></div>
+
+      <div class="conn" style="top: 150px; left: 30px; width: 120px; transform: rotate(90deg);"></div>
+      <div class="conn" style="top: 150px; left: 150px; width: 120px; transform: rotate(90deg);"></div>
+      <div class="conn" style="top: 150px; left: 270px; width: 120px; transform: rotate(90deg);"></div>
+      <div class="conn" style="top: 150px; left: 390px; width: 120px; transform: rotate(90deg);"></div>
+      <div class="conn" style="top: 150px; left: 510px; width: 120px; transform: rotate(90deg);"></div>
+
+      <div class="conn" style="top: 270px; left: 60px; width: 120px;"></div>
+      <div class="conn" style="top: 270px; left: 180px; width: 120px;"></div>
+      <div class="conn" style="top: 270px; left: 300px; width: 120px;"></div>
+      <div class="conn" style="top: 270px; left: 420px; width: 120px;"></div>
+
+      <div class="node filled"  style="top: 0px;   left: 0px;"><div class="node-core"></div></div>
+      <div class="node filled"  style="top: 0px;   left: 120px;"><div class="node-core"></div></div>
+      <div class="node filled"  style="top: 0px;   left: 240px;"><div class="node-core"></div></div>
+      <div class="node unlock"  style="top: 0px;   left: 360px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 0px;   left: 480px;"><div class="node-core"></div></div>
+
+      <div class="node filled"  style="top: 120px; left: 0px;"><div class="node-core"></div></div>
+      <div class="node filled"  style="top: 120px; left: 120px;"><div class="node-core"></div></div>
+      <div class="node unlock"  style="top: 120px; left: 240px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 120px; left: 360px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 120px; left: 480px;"><div class="node-core"></div></div>
+
+      <div class="node filled"  style="top: 240px; left: 0px;"><div class="node-core"></div></div>
+      <div class="node unlock"  style="top: 240px; left: 120px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 240px; left: 240px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 240px; left: 360px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 240px; left: 480px;"><div class="node-core"></div></div>
+
+      <div class="node unlock"  style="top: 340px; left: 0px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 340px; left: 120px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 340px; left: 240px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 340px; left: 360px;"><div class="node-core"></div></div>
+      <div class="node locked"  style="top: 340px; left: 480px;"><div class="node-core"></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>health-bar-stack</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #14161c; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; }
+  .stack { position: absolute; top: 40px; left: 40px; width: 320px; display: flex; flex-direction: column; gap: 14px; }
+  .enemy { background: rgba(0,0,0,0.5); border: 1px solid #444; border-radius: 4px; padding: 8px; }
+  .row1 { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .name { flex: 1; height: 12px; background: #555; border-radius: 2px; }
+  .level { width: 28px; height: 18px; background: #ffd84d; border-radius: 2px; }
+  .hp-bar { width: 100%; height: 10px; background: #2a0a0a; border: 1px solid #500; border-radius: 2px; padding: 0; box-sizing: border-box; }
+  .hp-fill { height: 100%; background: linear-gradient(180deg, #ff5b5b, #a02020); border-radius: 1px; }
+  .row3 { display: flex; gap: 4px; margin-top: 6px; }
+  .status { width: 16px; height: 16px; border-radius: 50%; }
+  .s-poison { background: #5bff8b; }
+  .s-burn { background: #ff8b5b; }
+  .s-stun { background: #ffd84d; }
+  .s-bleed { background: #ff5b5b; }
+  .s-shield { background: #5b9bff; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="stack">
+    <div class="enemy">
+      <div class="row1"><div class="name"></div><div class="level"></div></div>
+      <div class="hp-bar"><div class="hp-fill" style="width:80%"></div></div>
+      <div class="row3"><div class="status s-poison"></div><div class="status s-bleed"></div></div>
+    </div>
+    <div class="enemy">
+      <div class="row1"><div class="name" style="background:#822"></div><div class="level"></div></div>
+      <div class="hp-bar"><div class="hp-fill" style="width:35%"></div></div>
+      <div class="row3"><div class="status s-burn"></div><div class="status s-stun"></div><div class="status s-shield"></div></div>
+    </div>
+    <div class="enemy">
+      <div class="row1"><div class="name"></div><div class="level" style="background:#ff5b5b"></div></div>
+      <div class="hp-bar"><div class="hp-fill" style="width:60%"></div></div>
+      <div class="row3"><div class="status s-poison"></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

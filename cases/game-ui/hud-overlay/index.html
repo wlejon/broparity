@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hud-overlay</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #1a1d26; font-size: 0; }
+  .screen { width: 800px; height: 600px; position: relative; overflow: hidden; background: #2a2d36; }
+  .hud-tl { position: absolute; top: 16px; left: 16px; width: 220px; }
+  .bar { width: 200px; height: 14px; background: #1a1d26; border: 1px solid #555; border-radius: 3px; padding: 1px; margin-bottom: 6px; box-sizing: content-box; }
+  .bar-fill { height: 14px; border-radius: 2px; }
+  .hp .bar-fill { width: 70%; background: linear-gradient(180deg, #ff5b5b, #b22020); }
+  .mp .bar-fill { width: 45%; background: linear-gradient(180deg, #5b9bff, #2050b2); }
+  .xp .bar-fill { width: 30%; background: linear-gradient(180deg, #ffd84d, #b27a20); height: 6px; }
+  .xp { width: 220px; height: 6px; padding: 1px; }
+  .label { width: 60px; height: 10px; background: #444a55; border-radius: 2px; margin-bottom: 4px; }
+  .hud-tr { position: absolute; top: 16px; right: 16px; width: 140px; height: 140px; border: 2px solid #888; border-radius: 8px; background: linear-gradient(135deg, #2c4d2c, #1f3a1f); overflow: hidden; }
+  .minimap-pin { position: absolute; width: 8px; height: 8px; background: #ff5b5b; border-radius: 50%; }
+  .minimap-pin.p1 { top: 30px; left: 40px; }
+  .minimap-pin.p2 { top: 80px; left: 90px; background: #5bff8b; }
+  .minimap-pin.p3 { top: 60px; left: 60px; background: #ffd84d; }
+  .minimap-player { position: absolute; top: 66px; left: 66px; width: 8px; height: 8px; background: #ffffff; border: 2px solid #000; border-radius: 50%; }
+  .hotbar { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; padding: 6px; background: rgba(0,0,0,0.4); border-radius: 6px; border: 1px solid #555; }
+  .slot { width: 48px; height: 48px; background: #222; border: 2px solid #555; border-radius: 4px; position: relative; }
+  .slot.active { border-color: #ffd84d; box-shadow: 0 0 8px #ffd84d; }
+  .slot-icon { position: absolute; top: 8px; left: 8px; width: 32px; height: 32px; border-radius: 4px; }
+  .slot:nth-child(1) .slot-icon { background: linear-gradient(135deg, #ff5b5b, #802020); }
+  .slot:nth-child(2) .slot-icon { background: linear-gradient(135deg, #5b9bff, #204080); }
+  .slot:nth-child(3) .slot-icon { background: linear-gradient(135deg, #5bff8b, #208040); }
+  .slot:nth-child(4) .slot-icon { background: linear-gradient(135deg, #ffd84d, #806020); }
+  .slot:nth-child(5) .slot-icon { background: linear-gradient(135deg, #b85bff, #602080); }
+  .slot:nth-child(6) .slot-icon { background: linear-gradient(135deg, #ff8b5b, #804020); }
+  .slot:nth-child(7) .slot-icon { background: #444; }
+  .slot:nth-child(8) .slot-icon { background: #444; }
+  .cooldown { position: absolute; left: 0; bottom: 0; width: 100%; height: 40%; background: rgba(0,0,0,0.7); border-radius: 0 0 2px 2px; }
+  .stack { position: absolute; right: 2px; bottom: 2px; width: 14px; height: 8px; background: #fff; border-radius: 1px; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="hud-tl">
+    <div class="label"></div>
+    <div class="bar hp"><div class="bar-fill"></div></div>
+    <div class="label" style="width:50px"></div>
+    <div class="bar mp"><div class="bar-fill"></div></div>
+    <div class="bar xp"><div class="bar-fill"></div></div>
+  </div>
+  <div class="hud-tr">
+    <div class="minimap-pin p1"></div>
+    <div class="minimap-pin p2"></div>
+    <div class="minimap-pin p3"></div>
+    <div class="minimap-player"></div>
+  </div>
+  <div class="hotbar">
+    <div class="slot active"><div class="slot-icon"></div><div class="stack"></div></div>
+    <div class="slot"><div class="slot-icon"></div><div class="cooldown"></div></div>
+    <div class="slot"><div class="slot-icon"></div></div>
+    <div class="slot"><div class="slot-icon"></div><div class="stack"></div></div>
+    <div class="slot"><div class="slot-icon"></div></div>
+    <div class="slot"><div class="slot-icon"></div><div class="cooldown" style="height:80%"></div></div>
+    <div class="slot"><div class="slot-icon"></div></div>
+    <div class="slot"><div class="slot-icon"></div></div>
+  </div>
+</div>
+</body>
+</html>
