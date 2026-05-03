@@ -7,7 +7,9 @@ import { runBro } from "./drivers/bro.mjs";
 import { runChromium } from "./drivers/chromium.mjs";
 import { diffPixels } from "./diff/pixels.mjs";
 import { diffLayout } from "./diff/layout.mjs";
-import { renderReport } from "./report/render.mjs";
+import { renderReport, renderPerCategoryReports } from "./report/render.mjs";
+import { renderSummary } from "./report/summary.mjs";
+import { aggregate, detectPaintOrderFlag } from "./scoring.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = __dirname;
@@ -75,6 +77,7 @@ async function main() {
       const layoutDiff = resolve(outDir, "layout.diff.json");
       const pixels = await diffPixels({ aPath: broRes.screenshot, bPath: chRes.screenshot, outPath: diffPng });
       const layout = await diffLayout({ broJson: broRes.layoutJson, chromiumJson: chRes.layoutJson, outPath: layoutDiff });
+      const paintOk = await detectPaintOrderFlag(c.dir);
       results.push({
         category: c.category,
         case: c.case,
@@ -82,7 +85,8 @@ async function main() {
         chromiumPng: chRes.screenshot,
         diffPng,
         pixels,
-        layout
+        layout,
+        paintOk
       });
       console.log(`ok  pixels=${(pixels.mismatchRatio*100).toFixed(2)}%  rectΔ=${layout.rectMismatches}  styleΔ=${layout.styleMismatches}`);
     } catch (e) {
@@ -92,7 +96,16 @@ async function main() {
   }
 
   const reportPath = await renderReport({ runDir, results });
-  console.log(`\nreport: ${reportPath}`);
+  const perCategoryReports = await renderPerCategoryReports({ runDir, results });
+  const scoring = aggregate(results);
+  const summaryPath = await renderSummary({ runDir, results, scoring, perCategoryReports });
+
+  console.log(`\nreport:  ${reportPath}`);
+  console.log(`summary: ${summaryPath}`);
+  console.log(`overall layout: ${scoring.overall.layoutScore.toFixed(3)}  pixel: ${scoring.overall.pixelScore.toFixed(3)}`);
+  for (const c of scoring.categories) {
+    console.log(`  ${c.name.padEnd(16)} n=${String(c.n).padEnd(3)} L=${c.layoutScore.toFixed(3)}  P=${c.pixelScore.toFixed(3)}`);
+  }
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

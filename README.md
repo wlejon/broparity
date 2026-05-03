@@ -81,7 +81,70 @@ numeric values normalize to 3 decimal places.
 
 ## Categories
 
-- `boxmodel/` — basic block, vertical margin collapsing, content-box vs border-box.
+| Category | Cases | What it covers |
+|---|---:|---|
+| `boxmodel/` | 3 | basic block, margin collapse, content-box vs border-box |
+| `text/` | 8 | font shorthand, font-size cascade, line-height (px and unitless), inline formatting, whitespace (normal/pre), soft wrap |
+| `flex/` | 12 | row/column, grow/shrink/basis, justify/align (items, self), wrap, gap, nested, min-content shrink |
+| `position/` | 12 | relative offset, absolute (with/without ancestor, percent, tlbr, inset shorthand), fixed, sticky, z-index, stacking contexts (opacity/transform), negative z-index |
+| `tables/` | 9 | basic, colspan, rowspan, border-collapse vs separate, table-layout auto/fixed, caption, thead/tfoot |
+| `display-types/` | 12 | inline-block (basic / baseline / vertical-align-top / vs inline), `<img>` (intrinsic / explicit / css / aspect-ratio), `<button>` / `<input>` defaults, display:none, visibility:hidden |
+
+Total: 56 cases across 6 categories.
+
+## Scoring
+
+Each case gets two scores in `[0..1]`:
+
+- **Layout-conformance**:
+  `layoutScore = 0.5·rectFrac + 0.4·styleFrac + 0.1·paintOk`
+  where `rectFrac = 1 − rectMismatches / totalElements`,
+  `styleFrac = 1 − styleMismatches / totalElements`, and `paintOk` is 1 unless
+  the case is manually flagged as a paint-order failure (drop a sibling file
+  `paint-order.fail` next to `index.html` to set `paintOk = 0` — there's no
+  automated detector for stacking/compositing yet).
+  Geometry dominates because most app bugs surface as mis-positioned boxes;
+  style equality is a second-order check; paint-order keeps a small but real
+  weight so stacking bugs don't disappear from the score.
+- **Pixel-similarity**: `pixelScore = 1 − mismatchRatio`.
+
+Per-category aggregate is the arithmetic mean across cases (errored cases
+score 0). Overall is the mean across **categories** (equal weight, so a
+3-case category isn't drowned by a 12-case one). See [`scoring.mjs`](scoring.mjs).
+
+After every full run, `out/<run>/summary.html` shows headline numbers,
+per-category breakdown, and the curated top-issues list. Per-category
+`out/<run>/<category>/index.html` files give the case-by-case view, and
+`out/<run>/index.html` is the legacy all-cases report.
+
+## Known bro divergences
+
+Snapshot of the worst offenders, grouped by category. Updated alongside the
+curated list in `report/summary.mjs`; see `summary.html` for the impact-sorted
+view.
+
+- **tables/** (category layout score ≈ 0.10)
+  - Cell geometry diverges across every case — cell widths, row heights,
+    caption placement, thead/tfoot ordering all drift.
+  - Caption and thead-tfoot cases are the worst (5%+ pixel mismatch).
+- **display-types/** (≈ 0.45)
+  - `<img>` intrinsic / aspect-ratio sizing wrong when only one CSS dimension
+    is set (img-intrinsic-size, img-aspect-ratio, img-explicit-size).
+  - inline-block baseline + vertical-align off by a few px; knocks on to
+    `<button>` / `<input>` default sizing.
+- **text/** (≈ 0.37)
+  - Line-box y and font-size cascade drift in nested contexts
+    (line-height-px, line-height-unitless, font-size-cascade, inline-formatting).
+- **position/** (≈ 0.98)
+  - `negative-zindex`: pure paint-order bug — z-index:-1 child paints above its
+    containing block (4.08% pixel mismatch, layout rects match).
+  - `sticky-basic`: computed style for `position: sticky` differs even when
+    geometry matches.
+- **flex/** (≈ 0.89)
+  - `min-content-shrink`: min-content intrinsic width and negative-free-space
+    distribution disagree with Chromium (only flex case with substantial drift).
+- **boxmodel/** (≈ 0.57)
+  - `box-sizing-border-box`: small consistent rect delta on border-box widths.
 
 ## Possible bro engine additions (deferred)
 
