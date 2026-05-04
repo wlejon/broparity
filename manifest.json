@@ -54,6 +54,31 @@
         "w": 800,
         "h": 600
       }
+    },
+    "linux": {
+      "runId": "2026-05-04T09-48-59-201Z",
+      "publishedAt": "2026-05-04T09:53:20.569Z",
+      "system": {
+        "platform": "linux",
+        "platformSlug": "linux",
+        "os": "Debian GNU/Linux 12 (bookworm)",
+        "arch": "x64",
+        "cpu": "AMD Ryzen 9 7950X3D 16-Core Processor",
+        "cpuCount": 32,
+        "gpus": [],
+        "nodeVersion": "v24.8.0",
+        "detectedAt": "2026-05-04T09:50:38.541Z"
+      },
+      "overall": {
+        "layoutScore": 0.9225804214270243,
+        "pixelScore": 0.990687930986742,
+        "caseCount": 168,
+        "categoryCount": 13
+      },
+      "viewport": {
+        "w": 800,
+        "h": 600
+      }
     }
   }
 }

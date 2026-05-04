@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "totalElements": 4,
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 60,
+          "w": 800,
+          "h": 400
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 60,
+          "w": 800,
+          "h": 400
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "parent",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 50,
+          "y": 60,
+          "w": 500,
+          "h": 400
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 50,
+          "y": 60,
+          "w": 500,
+          "h": 400
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "behind",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 80,
+          "y": 90,
+          "w": 200,
+          "h": 200
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 80,
+          "y": 90,
+          "w": 200,
+          "h": 200
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)",
+      "tag": "div",
+      "id": "front",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 110,
+          "y": 60,
+          "w": 250,
+          "h": 150
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 110,
+          "y": 60,
+          "w": 250,
+          "h": 150
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    }
+  ]
+}
