@@ -1,0 +1,82 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>broparity — overflow</title>
+<style>
+body { font-family: -apple-system, sans-serif; margin: 24px; background: #fafafa; color: #202020; }
+h1 { margin: 0 0 4px; }
+.sub { color: #606060; font-size: 13px; margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+th { background: #f4f4f4; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #606060; }
+img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block; }
+.num { font-variant-numeric: tabular-nums; font-size: 13px; }
+.dim { color: #808080; font-size: 11px; }
+.err td { background: #fff0f0; }
+.errcell { color: #c00000; font-family: monospace; font-size: 12px; }
+a { color: #1f6feb; }
+</style></head><body>
+<h1>overflow</h1>
+<div class="sub"><a href="../index.html">all cases</a></div>
+<table><thead><tr><th>Case</th><th>bro</th><th>Chromium</th><th>Diff</th><th>Pixel mismatch</th><th>Layout Δ</th><th>Score</th></tr></thead>
+<tbody><tr id="clip-path-basic">
+      <td><b>clip-path-basic</b></td>
+      <td><img src="clip-path-basic/bro.png" loading="lazy"></td>
+      <td><img src="clip-path-basic/chromium.png" loading="lazy"></td>
+      <td><img src="clip-path-basic/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="overflow-auto-scroll">
+      <td><b>overflow-auto-scroll</b></td>
+      <td><img src="overflow-auto-scroll/bro.png" loading="lazy"></td>
+      <td><img src="overflow-auto-scroll/chromium.png" loading="lazy"></td>
+      <td><img src="overflow-auto-scroll/diff.png" loading="lazy"></td>
+      <td class="num">0.065%<br><span class="dim">160/246400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=0.999</td>
+    </tr>
+<tr id="overflow-hidden">
+      <td><b>overflow-hidden</b></td>
+      <td><img src="overflow-hidden/bro.png" loading="lazy"></td>
+      <td><img src="overflow-hidden/chromium.png" loading="lazy"></td>
+      <td><img src="overflow-hidden/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/126400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="overflow-visible">
+      <td><b>overflow-visible</b></td>
+      <td><img src="overflow-visible/bro.png" loading="lazy"></td>
+      <td><img src="overflow-visible/chromium.png" loading="lazy"></td>
+      <td><img src="overflow-visible/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/126400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="overflow-with-border-radius">
+      <td><b>overflow-with-border-radius</b></td>
+      <td><img src="overflow-with-border-radius/bro.png" loading="lazy"></td>
+      <td><img src="overflow-with-border-radius/chromium.png" loading="lazy"></td>
+      <td><img src="overflow-with-border-radius/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/86400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="overflow-x-y-different">
+      <td><b>overflow-x-y-different</b></td>
+      <td><img src="overflow-x-y-different/bro.png" loading="lazy"></td>
+      <td><img src="overflow-x-y-different/chromium.png" loading="lazy"></td>
+      <td><img src="overflow-x-y-different/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="text-overflow-ellipsis">
+      <td><b>text-overflow-ellipsis</b></td>
+      <td><img src="text-overflow-ellipsis/bro.png" loading="lazy"></td>
+      <td><img src="text-overflow-ellipsis/chromium.png" loading="lazy"></td>
+      <td><img src="text-overflow-ellipsis/diff.png" loading="lazy"></td>
+      <td class="num">0.884%<br><span class="dim">297/33600 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
+      <td class="num">L=1.000<br>P=0.991</td>
+    </tr></tbody></table>
+</body></html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>broparity — Bro vs Chromium rendering parity</title>
+<style>
+:root { color-scheme: light; }
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; background: #fafafa; color: #202020; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 48px 24px; }
+h1 { margin: 0 0 8px; font-size: 32px; }
+.tag { color: #606060; font-size: 14px; margin-bottom: 28px; }
+.intro { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px 22px; margin-bottom: 24px; line-height: 1.55; font-size: 15px; }
+.intro p { margin: 0 0 10px; }
+.intro p:last-child { margin: 0; }
+.intro a { color: #1f6feb; }
+h2 { font-size: 18px; margin: 28px 0 12px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.card { display: block; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 18px; text-decoration: none; color: inherit; transition: border-color 0.1s, transform 0.1s; }
+.card:hover { border-color: #1f6feb; transform: translateY(-1px); }
+.card-head { margin-bottom: 14px; }
+.card-title { font-size: 17px; font-weight: 600; }
+.card-sub { font-size: 12px; color: #707070; margin-top: 2px; }
+.card-metrics { display: flex; gap: 18px; margin-bottom: 14px; }
+.m .v { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.m .l { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #707070; }
+.card-sys { font-size: 12px; color: #505050; line-height: 1.5; margin-bottom: 12px; }
+.card-sys span { color: #909090; display: inline-block; min-width: 36px; }
+.card-foot { font-size: 11px; color: #909090; border-top: 1px solid #f0f0f0; padding-top: 10px; }
+.empty { background: #fff; border: 1px dashed #d0d0d0; border-radius: 8px; padding: 24px; text-align: center; color: #707070; font-size: 14px; }
+footer { margin-top: 40px; color: #909090; font-size: 12px; }
+footer a { color: #707070; }
+</style></head><body>
+<div class="wrap">
+  <h1>broparity</h1>
+  <div class="tag">Side-by-side rendering parity: <b>Bro</b> vs <b>Chromium</b></div>
+  <div class="intro">
+    <p>Bro is a small HTML/CSS/JS app runtime. <a href="https://github.com/wlejon/bro">Bro</a> renders web pages with its own layout and paint engine — not by embedding a browser. <a href="https://github.com/wlejon/broparity">Broparity</a> measures how close that engine is to Chromium on a curated set of test pages.</p>
+    <p>Each test case is a UA-neutral HTML page rendered by both engines. We compare the resulting pixels and a structural layout dump (every element's box and a curated set of computed styles). Numbers below are factual and unweighted: this is what bro currently produces, not a target or a claim.</p>
+    <p>Rendering depends on the host system — fonts, GPU drivers, and OS text shaping all influence the result — so each platform is tracked separately.</p>
+  </div>
+
+  <h2>Reports by platform</h2>
+  <div class="grid">
+      <a class="card" href="windows/index.html">
+        <div class="card-head">
+          <div class="card-title">Windows 11 Pro</div>
+          <div class="card-sub">Windows 11 Pro · NVIDIA GeForce RTX 4090 · AMD Ryzen 9 7950X3D 16-Core Processor</div>
+        </div>
+        <div class="card-metrics">
+          <div class="m"><div class="v">94.7%</div><div class="l">layout</div></div>
+          <div class="m"><div class="v">99.2%</div><div class="l">pixels</div></div>
+          <div class="m"><div class="v">168</div><div class="l">cases</div></div>
+        </div>
+        <div class="card-sys">
+          <div><span>OS</span> Windows 11 Pro</div><div><span>CPU</span> AMD Ryzen 9 7950X3D 16-Core Processor (32 threads)</div><div><span>GPU</span> NVIDIA GeForce RTX 4090, NVIDIA GeForce RTX 4090</div>
+        </div>
+        <div class="card-foot">View report → · published 2026-05-04 · run 2026-05-04T07-18-00-528Z</div>
+      </a></div>
+
+  <footer>
+    Published from broparity at 2026-05-04T07:27:14.185Z.
+    Source: <a href="https://github.com/wlejon/broparity">github.com/wlejon/broparity</a>
+  </footer>
+</div>
+</body></html>
