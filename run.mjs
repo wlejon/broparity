@@ -1,6 +1,6 @@
 // Orchestrator. Discovers cases under cases/<category>/<case>/index.html,
 // runs both drivers, computes diffs, renders an HTML report.
-import { readdir, stat, mkdir } from "node:fs/promises";
+import { readdir, stat, mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { runBro } from "./drivers/bro.mjs";
@@ -10,6 +10,7 @@ import { diffLayout } from "./diff/layout.mjs";
 import { cropToContent } from "./diff/crop.mjs";
 import { renderReport, renderPerCategoryReports } from "./report/render.mjs";
 import { aggregate, detectPaintOrderFlag } from "./scoring.mjs";
+import { collectSystemInfo } from "./system-info.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = __dirname;
@@ -101,9 +102,22 @@ async function main() {
     }
   }
 
-  const reportPath = await renderReport({ runDir, results });
-  await renderPerCategoryReports({ runDir, results });
   const scoring = aggregate(results);
+  const system = collectSystemInfo();
+  const summary = {
+    runId,
+    timestamp: new Date().toISOString(),
+    viewport: { w: args.width, h: args.height },
+    system,
+    overall: scoring.overall,
+    categories: scoring.categories.map(c => ({
+      name: c.name, n: c.n, layoutScore: c.layoutScore, pixelScore: c.pixelScore, errors: c.errors
+    }))
+  };
+  await writeFile(resolve(runDir, "summary.json"), JSON.stringify(summary, null, 2) + "\n", "utf8");
+
+  const reportPath = await renderReport({ runDir, results, summary });
+  await renderPerCategoryReports({ runDir, results });
 
   console.log(`\nreport:  ${reportPath}`);
   console.log(`overall layout: ${scoring.overall.layoutScore.toFixed(3)}  pixel: ${scoring.overall.pixelScore.toFixed(3)}`);
