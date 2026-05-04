@@ -1,0 +1,120 @@
+{
+  "runId": "2026-05-04T07-31-48-610Z",
+  "timestamp": "2026-05-04T07:33:10.409Z",
+  "viewport": {
+    "w": 800,
+    "h": 600
+  },
+  "system": {
+    "platform": "darwin",
+    "platformSlug": "macos",
+    "os": "macOS 15.6",
+    "arch": "arm64",
+    "cpu": "Apple M2 Pro",
+    "cpuCount": 12,
+    "gpus": [
+      "Apple M2 Pro"
+    ],
+    "nodeVersion": "v22.8.0",
+    "detectedAt": "2026-05-04T07:33:10.409Z"
+  },
+  "overall": {
+    "layoutScore": 0.9441791537265776,
+    "pixelScore": 0.9916557608238369,
+    "caseCount": 168,
+    "categoryCount": 13
+  },
+  "categories": [
+    {
+      "name": "backgrounds",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "borders",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 0.9998000000000001,
+      "errors": 0
+    },
+    {
+      "name": "boxmodel",
+      "n": 10,
+      "layoutScore": 0.96,
+      "pixelScore": 0.9980279948950777,
+      "errors": 0
+    },
+    {
+      "name": "display-types",
+      "n": 12,
+      "layoutScore": 0.9430555555555555,
+      "pixelScore": 0.9906019749931234,
+      "errors": 0
+    },
+    {
+      "name": "flex",
+      "n": 18,
+      "layoutScore": 0.9777777777777779,
+      "pixelScore": 0.9980373500522819,
+      "errors": 0
+    },
+    {
+      "name": "game-ui",
+      "n": 15,
+      "layoutScore": 0.8828851559063834,
+      "pixelScore": 0.9890165277777777,
+      "errors": 0
+    },
+    {
+      "name": "grid",
+      "n": 11,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "overflow",
+      "n": 7,
+      "layoutScore": 1,
+      "pixelScore": 0.9989463512677798,
+      "errors": 0
+    },
+    {
+      "name": "position",
+      "n": 18,
+      "layoutScore": 1,
+      "pixelScore": 0.999869662076206,
+      "errors": 0
+    },
+    {
+      "name": "sizing",
+      "n": 10,
+      "layoutScore": 0.9400000000000001,
+      "pixelScore": 0.9995271739130434,
+      "errors": 0
+    },
+    {
+      "name": "tables",
+      "n": 29,
+      "layoutScore": 0.8872771758724575,
+      "pixelScore": 0.9730286792920949,
+      "errors": 0
+    },
+    {
+      "name": "text",
+      "n": 8,
+      "layoutScore": 0.6833333333333332,
+      "pixelScore": 0.9446691764424959,
+      "errors": 0
+    },
+    {
+      "name": "transforms",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    }
+  ]
+}

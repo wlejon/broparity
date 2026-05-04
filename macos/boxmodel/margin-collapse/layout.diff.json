@@ -1,0 +1,100 @@
+{
+  "summary": {
+    "totalElements": 3,
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "w": 800,
+          "h": 168
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "w": 800,
+          "h": 168
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "a",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 40,
+          "y": 40,
+          "w": 304,
+          "h": 64
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 40,
+          "y": 40,
+          "w": 304,
+          "h": 64
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(2)",
+      "tag": "div",
+      "id": "b",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 40,
+          "y": 144,
+          "w": 304,
+          "h": 64
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 40,
+          "y": 144,
+          "w": 304,
+          "h": 64
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    }
+  ]
+}
