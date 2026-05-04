@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>td-padding-percent</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  table {
+    margin: 20px;
+    width: 600px;
+    border: 2px solid #404040;
+    border-collapse: collapse;
+    font-size: 16px;
+    color: #202020;
+  }
+  td {
+    padding: 4% 6%;
+    border: 1px solid #808080;
+    background: #ffffff;
+  }
+  td.a { background: #ffe0e0; }
+  td.b { background: #e0ffe0; }
+  td.c { background: #e0e0ff; }
+</style>
+</head>
+<body>
+  <table>
+    <tr><td class="a">A</td><td class="b">B</td><td class="c">C</td></tr>
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+  </table>
+</body>
+</html>

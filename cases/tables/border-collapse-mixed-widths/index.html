@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>border-collapse-mixed-widths</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  table {
+    margin: 20px;
+    border-collapse: collapse;
+    font-size: 16px;
+    color: #202020;
+  }
+  td {
+    padding: 10px 14px;
+    background: #ffffff;
+  }
+  td.thin { border: 1px solid #808080; }
+  td.med  { border: 4px solid #c04040; }
+  td.thick { border: 8px solid #4040c0; }
+</style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="thin">thin</td>
+      <td class="med">medium</td>
+      <td class="thick">thick</td>
+    </tr>
+    <tr>
+      <td class="thick">thick</td>
+      <td class="thin">thin</td>
+      <td class="med">medium</td>
+    </tr>
+    <tr>
+      <td class="med">medium</td>
+      <td class="thick">thick</td>
+      <td class="thin">thin</td>
+    </tr>
+  </table>
+</body>
+</html>

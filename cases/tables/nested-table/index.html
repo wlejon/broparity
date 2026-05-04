@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>nested-table</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  table {
+    margin: 20px;
+    border: 2px solid #404040;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #202020;
+  }
+  td {
+    padding: 8px 10px;
+    border: 1px solid #808080;
+    background: #ffffff;
+    vertical-align: top;
+  }
+  table.inner {
+    margin: 0;
+    border: 2px solid #c04040;
+    background: #fff0f0;
+  }
+  table.inner td {
+    padding: 4px 6px;
+    border: 1px solid #c08080;
+    background: #ffffff;
+  }
+</style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>outer A</td>
+      <td>
+        <table class="inner">
+          <tr><td>i1</td><td>i2</td></tr>
+          <tr><td>i3</td><td>i4</td></tr>
+        </table>
+      </td>
+      <td>outer B</td>
+    </tr>
+    <tr>
+      <td>r2c1</td>
+      <td>r2c2</td>
+      <td>r2c3</td>
+    </tr>
+  </table>
+</body>
+</html>

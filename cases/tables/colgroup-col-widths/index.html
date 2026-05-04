@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>colgroup-col-widths</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  table {
+    margin: 20px;
+    border: 2px solid #404040;
+    border-collapse: collapse;
+    font-size: 16px;
+    color: #202020;
+  }
+  td {
+    padding: 8px 12px;
+    border: 1px solid #808080;
+    background: #ffffff;
+  }
+  col.a { background: #ffe0e0; width: 80px; }
+  col.b { background: #e0ffe0; width: 200px; }
+  col.c { background: #e0e0ff; width: 320px; }
+</style>
+</head>
+<body>
+  <table>
+    <colgroup>
+      <col class="a">
+      <col class="b">
+      <col class="c">
+    </colgroup>
+    <tr><td>80</td><td>200</td><td>320</td></tr>
+    <tr><td>x</td><td>y</td><td>z</td></tr>
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>wrapping-text-cells</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  table {
+    margin: 20px;
+    width: 500px;
+    border: 2px solid #404040;
+    border-collapse: collapse;
+    font-size: 16px;
+    color: #202020;
+    table-layout: fixed;
+  }
+  td {
+    padding: 8px 10px;
+    border: 1px solid #808080;
+    background: #ffffff;
+    vertical-align: top;
+    word-wrap: break-word;
+  }
+  td.a { width: 120px; background: #ffe8e8; }
+  td.b { width: 180px; background: #e8ffe8; }
+  td.c { width: 200px; background: #e8e8ff; }
+</style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="a">narrow column wraps lots of words here</td>
+      <td class="b">medium column with somewhat longer content that should still wrap nicely</td>
+      <td class="c">wider column with even more content because there is plenty of room here for prose</td>
+    </tr>
+  </table>
+</body>
+</html>
