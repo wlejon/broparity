@@ -7,7 +7,16 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
-const BRO_HEADLESS = resolve("D:/projects/bro/build/Release/bro-headless.exe");
+const BRO_HEADLESS = resolveBroHeadless();
+
+function resolveBroHeadless() {
+  if (process.env.BRO_HEADLESS) return resolve(process.env.BRO_HEADLESS);
+  const isWin = process.platform === "win32";
+  const repo = resolve(ROOT, "..", "bro");
+  return isWin
+    ? resolve(repo, "build/Release/bro-headless.exe")
+    : resolve(repo, "build-release/bro-headless");
+}
 const RUNNER_TEMPLATE = resolve(ROOT, "_runner.js");
 
 export async function runBro({ caseDir, outDir, width, height }) {
