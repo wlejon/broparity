@@ -102,6 +102,41 @@ score 0). Overall is the mean across **categories** (equal weight, so a
 Per-category `out/<run>/<category>/index.html` files give the case-by-case
 view, and `out/<run>/index.html` is the all-cases report.
 
+## Publishing the report
+
+The site is published to GitHub Pages on the `gh-pages` branch and served at
+`https://wlejon.github.io/broparity/`. The bro project's site links here for
+parity status.
+
+```
+node publish.mjs                                # publish most recent out/<run>/, auto-detect platform
+node publish.mjs --platform windows             # force platform slug
+node publish.mjs --platform macos out/<run>/    # publish a specific run as macos
+node publish.mjs --dry-run                      # build the worktree but don't commit/push
+node publish.mjs --no-push                      # commit locally, skip push
+```
+
+Each platform (`windows`, `macos`, `linux`) is tracked separately because
+fonts, GPU drivers, and OS text shaping all influence the rendered output. The
+published site looks like:
+
+```
+/index.html       landing — one card per platform with headline numbers
+/manifest.json    what's published per platform (machine-readable)
+/windows/         full per-platform report (index.html + tables/...)
+/macos/           added when you publish from a Mac
+/linux/           added when you publish from Linux
+```
+
+The landing page is regenerated from `manifest.json` on every publish, so each
+publish only updates one platform's subtree plus the landing summary. The
+`gh-pages` branch is created as an orphan on first publish if it doesn't
+already exist.
+
+Each run writes a `summary.json` next to its `index.html` containing the
+overall scores plus the host system info (OS, CPU, GPU). That file is what the
+publisher reads to populate the landing page.
+
 ## Notes / known caveats
 
 - `bro-headless` requires a GPU by default; we use the default (GPU) mode.

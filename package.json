@@ -5,7 +5,8 @@
   "type": "module",
   "description": "Side-by-side parity comparison: bro vs Chromium",
   "scripts": {
-    "run": "node run.mjs"
+    "run": "node run.mjs",
+    "publish": "node publish.mjs"
   },
   "devDependencies": {
     "playwright": "^1.59.1",
