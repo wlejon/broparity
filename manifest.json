@@ -27,6 +27,33 @@
         "w": 800,
         "h": 600
       }
+    },
+    "macos": {
+      "runId": "2026-05-04T07-31-48-610Z",
+      "publishedAt": "2026-05-04T07:35:07.581Z",
+      "system": {
+        "platform": "darwin",
+        "platformSlug": "macos",
+        "os": "macOS 15.6",
+        "arch": "arm64",
+        "cpu": "Apple M2 Pro",
+        "cpuCount": 12,
+        "gpus": [
+          "Apple M2 Pro"
+        ],
+        "nodeVersion": "v22.8.0",
+        "detectedAt": "2026-05-04T07:33:10.409Z"
+      },
+      "overall": {
+        "layoutScore": 0.9441791537265776,
+        "pixelScore": 0.9916557608238369,
+        "caseCount": 168,
+        "categoryCount": 13
+      },
+      "viewport": {
+        "w": 800,
+        "h": 600
+      }
     }
   }
 }
