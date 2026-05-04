@@ -1,0 +1,109 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>broparity — sizing</title>
+<style>
+body { font-family: -apple-system, sans-serif; margin: 24px; background: #fafafa; color: #202020; }
+h1 { margin: 0 0 4px; }
+.sub { color: #606060; font-size: 13px; margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+th { background: #f4f4f4; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #606060; }
+img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block; }
+.num { font-variant-numeric: tabular-nums; font-size: 13px; }
+.dim { color: #808080; font-size: 11px; }
+.err td { background: #fff0f0; }
+.errcell { color: #c00000; font-family: monospace; font-size: 12px; }
+a { color: #1f6feb; }
+</style></head><body>
+<h1>sizing</h1>
+<div class="sub"><a href="../index.html">all cases</a></div>
+<table><thead><tr><th>Case</th><th>bro</th><th>Chromium</th><th>Diff</th><th>Pixel mismatch</th><th>Layout Δ</th><th>Score</th></tr></thead>
+<tbody><tr id="aspect-ratio">
+      <td><b>aspect-ratio</b></td>
+      <td><img src="aspect-ratio/bro.png" loading="lazy"></td>
+      <td><img src="aspect-ratio/chromium.png" loading="lazy"></td>
+      <td><img src="aspect-ratio/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/153600 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="box-sizing-content-box">
+      <td><b>box-sizing-content-box</b></td>
+      <td><img src="box-sizing-content-box/bro.png" loading="lazy"></td>
+      <td><img src="box-sizing-content-box/chromium.png" loading="lazy"></td>
+      <td><img src="box-sizing-content-box/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/124800 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="height-vh-vw">
+      <td><b>height-vh-vw</b></td>
+      <td><img src="height-vh-vw/bro.png" loading="lazy"></td>
+      <td><img src="height-vh-vw/chromium.png" loading="lazy"></td>
+      <td><img src="height-vh-vw/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/153600 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="min-max-width-clamp">
+      <td><b>min-max-width-clamp</b></td>
+      <td><img src="min-max-width-clamp/bro.png" loading="lazy"></td>
+      <td><img src="min-max-width-clamp/chromium.png" loading="lazy"></td>
+      <td><img src="min-max-width-clamp/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/76800 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 4 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="padding-percent">
+      <td><b>padding-percent</b></td>
+      <td><img src="padding-percent/bro.png" loading="lazy"></td>
+      <td><img src="padding-percent/chromium.png" loading="lazy"></td>
+      <td><img src="padding-percent/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/70400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="width-calc">
+      <td><b>width-calc</b></td>
+      <td><img src="width-calc/bro.png" loading="lazy"></td>
+      <td><img src="width-calc/chromium.png" loading="lazy"></td>
+      <td><img src="width-calc/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/86400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="width-fit-content">
+      <td><b>width-fit-content</b></td>
+      <td><img src="width-fit-content/bro.png" loading="lazy"></td>
+      <td><img src="width-fit-content/chromium.png" loading="lazy"></td>
+      <td><img src="width-fit-content/diff.png" loading="lazy"></td>
+      <td class="num">0.125%<br><span class="dim">46/36800 px</span></td>
+      <td class="num">rect: 0<br>style: 1<br><span class="dim">of 2 elems</span></td>
+      <td class="num">L=0.800<br>P=0.999</td>
+    </tr>
+<tr id="width-max-content">
+      <td><b>width-max-content</b></td>
+      <td><img src="width-max-content/bro.png" loading="lazy"></td>
+      <td><img src="width-max-content/chromium.png" loading="lazy"></td>
+      <td><img src="width-max-content/diff.png" loading="lazy"></td>
+      <td class="num">0.375%<br><span class="dim">138/36800 px</span></td>
+      <td class="num">rect: 0<br>style: 1<br><span class="dim">of 2 elems</span></td>
+      <td class="num">L=0.800<br>P=0.996</td>
+    </tr>
+<tr id="width-min-content">
+      <td><b>width-min-content</b></td>
+      <td><img src="width-min-content/bro.png" loading="lazy"></td>
+      <td><img src="width-min-content/chromium.png" loading="lazy"></td>
+      <td><img src="width-min-content/diff.png" loading="lazy"></td>
+      <td class="num">0.190%<br><span class="dim">70/36800 px</span></td>
+      <td class="num">rect: 0<br>style: 1<br><span class="dim">of 2 elems</span></td>
+      <td class="num">L=0.800<br>P=0.998</td>
+    </tr>
+<tr id="width-percent">
+      <td><b>width-percent</b></td>
+      <td><img src="width-percent/bro.png" loading="lazy"></td>
+      <td><img src="width-percent/chromium.png" loading="lazy"></td>
+      <td><img src="width-percent/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/54400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr></tbody></table>
+</body></html>

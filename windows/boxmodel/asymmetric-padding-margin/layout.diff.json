@@ -1,0 +1,70 @@
+{
+  "summary": {
+    "totalElements": 2,
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 10,
+          "w": 800,
+          "h": 94
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 10,
+          "w": 800,
+          "h": 94
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "b",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 70,
+          "y": 10,
+          "w": 254,
+          "h": 94
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 70,
+          "y": 10,
+          "w": 254,
+          "h": 94
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    }
+  ]
+}

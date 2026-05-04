@@ -1,0 +1,121 @@
+{
+  "runId": "2026-05-04T07-18-00-528Z",
+  "timestamp": "2026-05-04T07:20:26.306Z",
+  "viewport": {
+    "w": 800,
+    "h": 600
+  },
+  "system": {
+    "platform": "win32",
+    "platformSlug": "windows",
+    "os": "Windows 11 Pro",
+    "arch": "x64",
+    "cpu": "AMD Ryzen 9 7950X3D 16-Core Processor",
+    "cpuCount": 32,
+    "gpus": [
+      "NVIDIA GeForce RTX 4090",
+      "NVIDIA GeForce RTX 4090"
+    ],
+    "nodeVersion": "v24.2.0",
+    "detectedAt": "2026-05-04T07:20:26.306Z"
+  },
+  "overall": {
+    "layoutScore": 0.9470637691111927,
+    "pixelScore": 0.9919468406908639,
+    "caseCount": 168,
+    "categoryCount": 13
+  },
+  "categories": [
+    {
+      "name": "backgrounds",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "borders",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 0.9998000000000001,
+      "errors": 0
+    },
+    {
+      "name": "boxmodel",
+      "n": 10,
+      "layoutScore": 0.96,
+      "pixelScore": 0.9981167520704277,
+      "errors": 0
+    },
+    {
+      "name": "display-types",
+      "n": 12,
+      "layoutScore": 0.9680555555555556,
+      "pixelScore": 0.9916352389180566,
+      "errors": 0
+    },
+    {
+      "name": "flex",
+      "n": 18,
+      "layoutScore": 0.9777777777777779,
+      "pixelScore": 0.9973624494026843,
+      "errors": 0
+    },
+    {
+      "name": "game-ui",
+      "n": 15,
+      "layoutScore": 0.8828851559063834,
+      "pixelScore": 0.9889973611111113,
+      "errors": 0
+    },
+    {
+      "name": "grid",
+      "n": 11,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "overflow",
+      "n": 7,
+      "layoutScore": 1,
+      "pixelScore": 0.9986444805194805,
+      "errors": 0
+    },
+    {
+      "name": "position",
+      "n": 18,
+      "layoutScore": 1,
+      "pixelScore": 0.9998430173509192,
+      "errors": 0
+    },
+    {
+      "name": "sizing",
+      "n": 10,
+      "layoutScore": 0.9400000000000001,
+      "pixelScore": 0.9993097826086956,
+      "errors": 0
+    },
+    {
+      "name": "tables",
+      "n": 29,
+      "layoutScore": 0.8872771758724575,
+      "pixelScore": 0.9723901825522661,
+      "errors": 0
+    },
+    {
+      "name": "text",
+      "n": 8,
+      "layoutScore": 0.6958333333333332,
+      "pixelScore": 0.9492096644475906,
+      "errors": 0
+    },
+    {
+      "name": "transforms",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    }
+  ]
+}
