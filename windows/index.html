@@ -29,21 +29,21 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
 </style>
 </head><body>
 <h1>broparity report</h1>
-<div class="sub">Bro vs Chromium parity · Windows 11 Pro · NVIDIA GeForce RTX 4090 · AMD Ryzen 9 7950X3D 16-Core Processor · 2026-05-04T07:20:26.306Z</div>
+<div class="sub">Bro vs Chromium parity · Windows 11 Pro · NVIDIA GeForce RTX 4090 · AMD Ryzen 9 7950X3D 16-Core Processor · 2026-05-12T18:33:37.839Z</div>
 <div class="headline">
   <div class="lede">
-    Bro renders <b>94.7%</b> of measured layout properties identically to Chromium across <b>168</b> test cases on <b>Windows 11 Pro</b>.
-    Pixel output matches on <b>99.2%</b> of pixels.
+    Bro renders <b>94.6%</b> of measured layout properties identically to Chromium across <b>168</b> test cases on <b>Windows 11 Pro</b>.
+    Pixel output matches on <b>99.1%</b> of pixels.
     Scroll for the per-case screenshots and diffs.
   </div>
   <div class="metrics">
     <div class="metric">
-      <div class="v">94.7%</div>
+      <div class="v">94.6%</div>
       <div class="l">Layout conformance</div>
       <div class="h">weighted rect + style + paint match, mean across categories</div>
     </div>
     <div class="metric">
-      <div class="v">99.2%</div>
+      <div class="v">99.1%</div>
       <div class="l">Pixel match</div>
       <div class="h">1 − mean pixel mismatch ratio</div>
     </div>
@@ -143,18 +143,18 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
     <tr>
       <td>tables</td>
       <td class="num">29</td>
-      <td class="num">88.7% <span class="bar"><i style="width:88.7%"></i></span></td>
-      <td class="num">97.2% <span class="bar"><i style="width:97.2%"></i></span></td>
-      <td class="num">14</td>
-      <td class="num">113</td>
+      <td class="num">84.9% <span class="bar"><i style="width:84.9%"></i></span></td>
+      <td class="num">96.5% <span class="bar"><i style="width:96.5%"></i></span></td>
+      <td class="num">35</td>
+      <td class="num">124</td>
     </tr>
     <tr>
       <td>text</td>
       <td class="num">8</td>
-      <td class="num">69.6% <span class="bar"><i style="width:69.6%"></i></span></td>
-      <td class="num">94.9% <span class="bar"><i style="width:94.9%"></i></span></td>
+      <td class="num">72.1% <span class="bar"><i style="width:72.1%"></i></span></td>
+      <td class="num">95.0% <span class="bar"><i style="width:95.0%"></i></span></td>
       <td class="num">6</td>
-      <td class="num">12</td>
+      <td class="num">10</td>
     </tr>
     <tr>
       <td>transforms</td>
@@ -795,7 +795,7 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="game-ui/main-menu/bro.png" loading="lazy"></td>
       <td><img src="game-ui/main-menu/chromium.png" loading="lazy"></td>
       <td><img src="game-ui/main-menu/diff.png" loading="lazy"></td>
-      <td class="num">12.232%<br><span class="dim">58716/480000 px</span></td>
+      <td class="num">12.230%<br><span class="dim">58706/480000 px</span></td>
       <td class="num">rect: 0<br>style: 0<br><span class="dim">of 16 elems</span></td>
     </tr>
 
@@ -1335,7 +1335,7 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="tables/colgroup-col-widths/bro.png" loading="lazy"></td>
       <td><img src="tables/colgroup-col-widths/chromium.png" loading="lazy"></td>
       <td><img src="tables/colgroup-col-widths/diff.png" loading="lazy"></td>
-      <td class="num">3.427%<br><span class="dim">3180/92800 px</span></td>
+      <td class="num">3.426%<br><span class="dim">3179/92800 px</span></td>
       <td class="num">rect: 0<br>style: 0<br><span class="dim">of 19 elems</span></td>
     </tr>
 
@@ -1344,8 +1344,8 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="tables/colspan/bro.png" loading="lazy"></td>
       <td><img src="tables/colspan/chromium.png" loading="lazy"></td>
       <td><img src="tables/colspan/diff.png" loading="lazy"></td>
-      <td class="num">0.307%<br><span class="dim">221/72000 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 10 elems</span></td>
+      <td class="num">2.304%<br><span class="dim">1659/72000 px</span></td>
+      <td class="num">rect: 9<br>style: 6<br><span class="dim">of 10 elems</span></td>
     </tr>
 
     <tr>
@@ -1353,8 +1353,8 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="tables/colspan-rowspan-mixed/bro.png" loading="lazy"></td>
       <td><img src="tables/colspan-rowspan-mixed/chromium.png" loading="lazy"></td>
       <td><img src="tables/colspan-rowspan-mixed/diff.png" loading="lazy"></td>
-      <td class="num">1.419%<br><span class="dim">4267/300800 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 23 elems</span></td>
+      <td class="num">16.125%<br><span class="dim">48504/300800 px</span></td>
+      <td class="num">rect: 9<br>style: 3<br><span class="dim">of 23 elems</span></td>
     </tr>
 
     <tr>
@@ -1362,7 +1362,7 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="tables/empty-cells-show/bro.png" loading="lazy"></td>
       <td><img src="tables/empty-cells-show/chromium.png" loading="lazy"></td>
       <td><img src="tables/empty-cells-show/diff.png" loading="lazy"></td>
-      <td class="num">0.510%<br><span class="dim">1289/252800 px</span></td>
+      <td class="num">0.511%<br><span class="dim">1291/252800 px</span></td>
       <td class="num">rect: 0<br>style: 0<br><span class="dim">of 23 elems</span></td>
     </tr>
 
@@ -1389,8 +1389,8 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="tables/rowspan/bro.png" loading="lazy"></td>
       <td><img src="tables/rowspan/chromium.png" loading="lazy"></td>
       <td><img src="tables/rowspan/diff.png" loading="lazy"></td>
-      <td class="num">0.336%<br><span class="dim">344/102400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 14 elems</span></td>
+      <td class="num">4.730%<br><span class="dim">4844/102400 px</span></td>
+      <td class="num">rect: 3<br>style: 2<br><span class="dim">of 14 elems</span></td>
     </tr>
 
     <tr>
@@ -1533,8 +1533,8 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="text/font-size-cascade/bro.png" loading="lazy"></td>
       <td><img src="text/font-size-cascade/chromium.png" loading="lazy"></td>
       <td><img src="text/font-size-cascade/diff.png" loading="lazy"></td>
-      <td class="num">1.083%<br><span class="dim">953/88000 px</span></td>
-      <td class="num">rect: 0<br>style: 2<br><span class="dim">of 4 elems</span></td>
+      <td class="num">0.608%<br><span class="dim">535/88000 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 4 elems</span></td>
     </tr>
 
     <tr>
@@ -1542,7 +1542,7 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="text/inline-formatting/bro.png" loading="lazy"></td>
       <td><img src="text/inline-formatting/chromium.png" loading="lazy"></td>
       <td><img src="text/inline-formatting/diff.png" loading="lazy"></td>
-      <td class="num">7.811%<br><span class="dim">4249/54400 px</span></td>
+      <td class="num">7.765%<br><span class="dim">4224/54400 px</span></td>
       <td class="num">rect: 6<br>style: 2<br><span class="dim">of 6 elems</span></td>
     </tr>
 

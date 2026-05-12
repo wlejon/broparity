@@ -1,8 +1,8 @@
 {
   "summary": {
     "totalElements": 14,
-    "rectMismatches": 0,
-    "styleMismatches": 0,
+    "rectMismatches": 3,
+    "styleMismatches": 2,
     "geomEpsilon": 1
   },
   "entries": [
@@ -134,15 +134,15 @@
         "dx": 0,
         "dy": 0,
         "dw": 0,
-        "dh": 0
+        "dh": -38
       },
-      "rectMismatch": false,
+      "rectMismatch": true,
       "bro": {
         "rect": {
           "x": 24,
           "y": 24,
           "w": 120.266,
-          "h": 74
+          "h": 36
         }
       },
       "chromium": {
@@ -153,8 +153,13 @@
           "h": 74
         }
       },
-      "styleDeltas": {},
-      "styleMismatch": false
+      "styleDeltas": {
+        "height": [
+          "18px",
+          "56px"
+        ]
+      },
+      "styleMismatch": true
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)",
@@ -251,17 +256,17 @@
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": 0,
+        "dx": -122.26599999999999,
         "dy": 0,
-        "dw": 0,
+        "dw": 63.141000000000005,
         "dh": 0
       },
-      "rectMismatch": false,
+      "rectMismatch": true,
       "bro": {
         "rect": {
-          "x": 146.266,
+          "x": 24,
           "y": 62,
-          "w": 57.125,
+          "w": 120.266,
           "h": 36
         }
       },
@@ -273,23 +278,28 @@
           "h": 36
         }
       },
-      "styleDeltas": {},
-      "styleMismatch": false
+      "styleDeltas": {
+        "width": [
+          "94.266px",
+          "31.125px"
+        ]
+      },
+      "styleMismatch": true
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(2)",
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": 0,
+        "dx": -59.125,
         "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": false,
+      "rectMismatch": true,
       "bro": {
         "rect": {
-          "x": 205.391,
+          "x": 146.266,
           "y": 62,
           "w": 57.125,
           "h": 36
