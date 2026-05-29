@@ -1,6 +1,6 @@
 {
-  "runId": "2026-05-04T07-31-48-610Z",
-  "timestamp": "2026-05-04T07:33:10.409Z",
+  "runId": "2026-05-29T01-34-22-008Z",
+  "timestamp": "2026-05-29T01:36:03.121Z",
   "viewport": {
     "w": 800,
     "h": 600
@@ -16,20 +16,34 @@
       "Apple M2 Pro"
     ],
     "nodeVersion": "v22.8.0",
-    "detectedAt": "2026-05-04T07:33:10.409Z"
+    "detectedAt": "2026-05-29T01:36:03.121Z"
   },
   "overall": {
-    "layoutScore": 0.9441791537265776,
-    "pixelScore": 0.9916557608238369,
-    "caseCount": 168,
-    "categoryCount": 13
+    "layoutScore": 0.8756564330396389,
+    "pixelScore": 0.9756731166606071,
+    "caseCount": 196,
+    "categoryCount": 22
   },
   "categories": [
+    {
+      "name": "auth",
+      "n": 3,
+      "layoutScore": 0.8809048625792811,
+      "pixelScore": 0.9804965277777778,
+      "errors": 0
+    },
     {
       "name": "backgrounds",
       "n": 10,
       "layoutScore": 1,
       "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "blog",
+      "n": 3,
+      "layoutScore": 0.8945650301464255,
+      "pixelScore": 0.9992944444444444,
       "errors": 0
     },
     {
@@ -47,10 +61,24 @@
       "errors": 0
     },
     {
+      "name": "dashboard",
+      "n": 3,
+      "layoutScore": 0.6696560846560846,
+      "pixelScore": 0.9841895833333333,
+      "errors": 0
+    },
+    {
       "name": "display-types",
       "n": 12,
-      "layoutScore": 0.9430555555555555,
+      "layoutScore": 0.9208333333333334,
       "pixelScore": 0.9906019749931234,
+      "errors": 0
+    },
+    {
+      "name": "editorial",
+      "n": 3,
+      "layoutScore": 0.45988906088751297,
+      "pixelScore": 0.8949076388888889,
       "errors": 0
     },
     {
@@ -64,7 +92,7 @@
       "name": "game-ui",
       "n": 15,
       "layoutScore": 0.8828851559063834,
-      "pixelScore": 0.9890165277777777,
+      "pixelScore": 0.9890177777777777,
       "errors": 0
     },
     {
@@ -75,17 +103,45 @@
       "errors": 0
     },
     {
+      "name": "landing",
+      "n": 3,
+      "layoutScore": 0.8111507936507936,
+      "pixelScore": 0.9871631944444443,
+      "errors": 0
+    },
+    {
+      "name": "media",
+      "n": 3,
+      "layoutScore": 0.9235235235235235,
+      "pixelScore": 0.7480020833333333,
+      "errors": 0
+    },
+    {
       "name": "overflow",
       "n": 7,
       "layoutScore": 1,
-      "pixelScore": 0.9989463512677798,
+      "pixelScore": 0.9987556045145329,
       "errors": 0
     },
     {
       "name": "position",
       "n": 18,
       "layoutScore": 1,
-      "pixelScore": 0.999869662076206,
+      "pixelScore": 0.999838324330518,
+      "errors": 0
+    },
+    {
+      "name": "pricing",
+      "n": 3,
+      "layoutScore": 0.944734101579172,
+      "pixelScore": 0.9963090277777779,
+      "errors": 0
+    },
+    {
+      "name": "shop",
+      "n": 3,
+      "layoutScore": 0.8668131868131868,
+      "pixelScore": 0.9992972222222223,
       "errors": 0
     },
     {
@@ -96,10 +152,17 @@
       "errors": 0
     },
     {
+      "name": "svg",
+      "n": 4,
+      "layoutScore": 0.5991019620280358,
+      "pixelScore": 0.991109375,
+      "errors": 0
+    },
+    {
       "name": "tables",
       "n": 29,
-      "layoutScore": 0.8872771758724575,
-      "pixelScore": 0.9730286792920949,
+      "layoutScore": 0.8492733206572078,
+      "pixelScore": 0.9657640923922826,
       "errors": 0
     },
     {
