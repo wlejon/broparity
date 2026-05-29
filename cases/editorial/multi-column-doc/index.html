@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>multi-column-doc</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #fff; }
+  .page { width: 800px; height: 600px; overflow: hidden; padding: 26px 30px; box-sizing: border-box; }
+  .doc { column-count: 3; column-gap: 26px; column-rule: 1px solid #e5e7eb; }
+  .h { column-span: all; height: 22px; background: #111827; border-radius: 4px; margin-bottom: 4px; }
+  .h.sub { width: 40%; height: 12px; background: #6b7280; margin-bottom: 18px; }
+  .p { height: 8px; background: #d1d5db; border-radius: 4px; margin-bottom: 9px; }
+  .p.f { width: 100% } .p.a { width: 92% } .p.b { width: 78% } .p.c { width: 60% }
+  .gap { height: 10px; }
+  .card { break-inside: avoid; -webkit-column-break-inside: avoid; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; margin: 4px 0 12px; }
+  .card .bar { height: 60px; border-radius: 6px; margin-bottom: 10px; background: linear-gradient(135deg, #818cf8, #4f46e5); }
+  .card .cl { height: 8px; background: #c7cdd6; border-radius: 4px; margin-bottom: 8px; }
+  .card .cl.s { width: 55% }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="doc">
+    <div class="h"></div>
+    <div class="h sub"></div>
+    <div class="p f"></div><div class="p a"></div><div class="p f"></div><div class="p b"></div><div class="p c"></div>
+    <div class="gap"></div>
+    <div class="p f"></div><div class="p a"></div><div class="p f"></div>
+    <div class="card"><div class="bar"></div><div class="cl"></div><div class="cl s"></div></div>
+    <div class="p a"></div><div class="p f"></div><div class="p b"></div><div class="p f"></div><div class="p c"></div>
+    <div class="gap"></div>
+    <div class="p f"></div><div class="p a"></div><div class="p f"></div><div class="p b"></div>
+    <div class="card"><div class="bar"></div><div class="cl"></div><div class="cl s"></div></div>
+    <div class="p f"></div><div class="p a"></div><div class="p c"></div><div class="p f"></div><div class="p b"></div><div class="p f"></div><div class="p a"></div><div class="p c"></div>
+  </div>
+</div>
+</body>
+</html>

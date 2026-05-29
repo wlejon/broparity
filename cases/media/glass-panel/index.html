@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>glass-panel</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; }
+  .page { width: 800px; height: 600px; overflow: hidden; position: relative; background: linear-gradient(135deg, #1e3a8a, #312e81); }
+  .blob { position: absolute; border-radius: 50%; filter: blur(8px); }
+  .b1 { top: -40px; left: 80px; width: 280px; height: 280px; background: #ec4899; opacity: 0.8; }
+  .b2 { bottom: -60px; right: 60px; width: 320px; height: 320px; background: #22d3ee; opacity: 0.75; }
+  .b3 { top: 220px; left: 320px; width: 200px; height: 200px; background: #facc15; opacity: 0.7; }
+  .nav { position: absolute; top: 0; left: 0; right: 0; height: 54px; padding: 0 28px; display: flex; align-items: center;
+         background: rgba(255,255,255,0.12); backdrop-filter: blur(12px) saturate(1.4); -webkit-backdrop-filter: blur(12px) saturate(1.4);
+         border-bottom: 1px solid rgba(255,255,255,0.25); }
+  .brand { width: 110px; height: 18px; background: rgba(255,255,255,0.85); border-radius: 5px; }
+  .nav-right { margin-left: auto; display: flex; gap: 14px; align-items: center; }
+  .pill { width: 56px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 6px; }
+  .avatar { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.85); }
+  .card { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 360px; padding: 30px;
+          background: rgba(255,255,255,0.15); backdrop-filter: blur(18px) saturate(1.6); -webkit-backdrop-filter: blur(18px) saturate(1.6);
+          border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+  .c-avatar { width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,0.85); margin: 0 auto 18px; box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
+  .c-title { width: 160px; height: 16px; background: rgba(255,255,255,0.85); border-radius: 6px; margin: 0 auto 10px; }
+  .c-sub { width: 220px; height: 10px; background: rgba(255,255,255,0.5); border-radius: 5px; margin: 0 auto 24px; }
+  .field { height: 42px; border-radius: 10px; background: rgba(255,255,255,0.22); border: 1px solid rgba(255,255,255,0.4); margin-bottom: 14px; }
+  .submit { height: 46px; border-radius: 10px; background: rgba(255,255,255,0.92); margin-top: 6px; box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="nav">
+    <div class="brand"></div>
+    <div class="nav-right"><div class="pill"></div><div class="pill"></div><div class="avatar"></div></div>
+  </div>
+  <div class="card">
+    <div class="c-avatar"></div>
+    <div class="c-title"></div>
+    <div class="c-sub"></div>
+    <div class="field"></div>
+    <div class="field"></div>
+    <div class="submit"></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>image-editor</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #15171c; }
+  .page { width: 800px; height: 600px; overflow: hidden; display: flex; }
+  .rail { width: 56px; background: #1d2026; padding: 14px 0; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .tool { width: 30px; height: 30px; border-radius: 8px; background: #2c3038; }
+  .tool.on { background: #4f46e5; }
+  .stage { flex: 1; padding: 22px; display: flex; align-items: center; justify-content: center; }
+  .canvas { width: 420px; height: 300px; border-radius: 10px; position: relative; overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
+  .photo { position: absolute; inset: 0; background: linear-gradient(120deg, #f6d365, #fda085 45%, #f5576c); filter: contrast(1.3) saturate(1.5) brightness(1.05); }
+  .vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, rgba(0,0,0,0.6) 100%); }
+  .mask-fade { position: absolute; inset: 0; background: #8b5cf6; mix-blend-mode: overlay;
+               -webkit-mask-image: radial-gradient(circle at 30% 30%, #000 0%, transparent 60%);
+               mask-image: radial-gradient(circle at 30% 30%, #000 0%, transparent 60%); }
+  .panel { width: 220px; background: #1d2026; padding: 18px; }
+  .p-title { width: 90px; height: 10px; background: #4b5161; border-radius: 5px; margin-bottom: 18px; }
+  .slider { margin-bottom: 18px; }
+  .s-lbl { width: 60px; height: 7px; background: #3a3f4a; border-radius: 4px; margin-bottom: 8px; }
+  .track { height: 6px; background: #2c3038; border-radius: 3px; position: relative; }
+  .track .fill { position: absolute; left: 0; top: 0; bottom: 0; background: #4f46e5; border-radius: 3px; }
+  .track .knob { position: absolute; top: -5px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+  .strip-title { width: 70px; height: 8px; background: #3a3f4a; border-radius: 4px; margin: 6px 0 12px; }
+  .strip { display: flex; gap: 8px; }
+  .thumb { width: 36px; height: 36px; border-radius: 6px; background: linear-gradient(120deg, #f6d365, #f5576c); }
+  .thumb.sel { outline: 2px solid #4f46e5; outline-offset: 1px; }
+  .t-gray { filter: grayscale(1); }
+  .t-sepia { filter: sepia(1); }
+  .t-hue { filter: hue-rotate(160deg); }
+  .t-invert { filter: invert(1); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="rail">
+    <div class="tool on"></div>
+    <div class="tool"></div>
+    <div class="tool"></div>
+    <div class="tool"></div>
+    <div class="tool"></div>
+  </div>
+  <div class="stage">
+    <div class="canvas">
+      <div class="photo"></div>
+      <div class="mask-fade"></div>
+      <div class="vignette"></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="p-title"></div>
+    <div class="slider"><div class="s-lbl"></div><div class="track"><div class="fill" style="width:65%"></div><div class="knob" style="left:60%"></div></div></div>
+    <div class="slider"><div class="s-lbl"></div><div class="track"><div class="fill" style="width:40%"></div><div class="knob" style="left:35%"></div></div></div>
+    <div class="slider"><div class="s-lbl"></div><div class="track"><div class="fill" style="width:80%"></div><div class="knob" style="left:75%"></div></div></div>
+    <div class="strip-title"></div>
+    <div class="strip">
+      <div class="thumb sel"></div>
+      <div class="thumb t-gray"></div>
+      <div class="thumb t-sepia"></div>
+      <div class="thumb t-hue"></div>
+      <div class="thumb t-invert"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

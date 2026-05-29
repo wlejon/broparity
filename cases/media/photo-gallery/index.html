@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>photo-gallery</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #0f1115; }
+  .page { width: 800px; height: 600px; overflow: hidden; padding: 20px; box-sizing: border-box; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 132px; gap: 14px; }
+  .tile { border-radius: 12px; overflow: hidden; position: relative; }
+  .ph { width: 100%; height: 100%; }
+  .g1 { background: linear-gradient(135deg, #f6d365, #fda085); }
+  .g2 { background: linear-gradient(135deg, #84fab0, #8fd3f4); }
+  .g3 { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+  .g4 { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+  .g5 { background: linear-gradient(135deg, #30cfd0, #330867); }
+  .g6 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+  .f-gray   { filter: grayscale(1); }
+  .f-sepia  { filter: sepia(0.9); }
+  .f-sat    { filter: saturate(2.4); }
+  .f-hue    { filter: hue-rotate(120deg); }
+  .f-contr  { filter: contrast(1.6) brightness(1.1); }
+  .f-blur   { filter: blur(4px); }
+  .f-invert { filter: invert(1); }
+  .duo .overlay { position: absolute; inset: 0; mix-blend-mode: screen; background: linear-gradient(135deg, #1d2b64, #f8cdda); }
+  .duo .ph { filter: grayscale(1) contrast(1.2); }
+  .mult .overlay { position: absolute; inset: 0; mix-blend-mode: multiply; background: #f59e0b; }
+  .obj img { width: 100%; height: 100%; display: block; }
+  .cover img { object-fit: cover; object-position: 70% 30%; }
+  .contain img { object-fit: contain; background: #1b1e26; }
+  .badge { position: absolute; left: 10px; bottom: 10px; width: 44px; height: 16px; background: rgba(0,0,0,0.5); border-radius: 8px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="grid">
+    <div class="tile"><div class="ph g1 f-gray"></div><div class="badge"></div></div>
+    <div class="tile"><div class="ph g2 f-sepia"></div></div>
+    <div class="tile"><div class="ph g3 f-sat"></div></div>
+    <div class="tile"><div class="ph g4 f-hue"></div></div>
+    <div class="tile duo"><div class="ph g5"></div><div class="overlay"></div></div>
+    <div class="tile"><div class="ph g6 f-contr"></div><div class="badge"></div></div>
+    <div class="tile"><div class="ph g1 f-blur"></div></div>
+    <div class="tile mult"><div class="ph g2"></div><div class="overlay"></div></div>
+    <div class="tile"><div class="ph g3 f-invert"></div></div>
+    <div class="tile obj cover"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='100'%3E%3Crect%20width='160'%20height='100'%20fill='%234f46e5'/%3E%3Ccircle%20cx='120'%20cy='30'%20r='26'%20fill='%23f59e0b'/%3E%3Cpath%20d='M0%20100%20L70%2040%20L130%20100%20Z'%20fill='%2310b981'/%3E%3C/svg%3E"></div>
+    <div class="tile obj contain"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='100'%3E%3Crect%20width='160'%20height='100'%20fill='%234f46e5'/%3E%3Ccircle%20cx='120'%20cy='30'%20r='26'%20fill='%23f59e0b'/%3E%3Cpath%20d='M0%20100%20L70%2040%20L130%20100%20Z'%20fill='%2310b981'/%3E%3C/svg%3E"></div>
+    <div class="tile"><div class="ph g5 f-sat"></div></div>
+  </div>
+</div>
+</body>
+</html>

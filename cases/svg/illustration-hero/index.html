@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>illustration-hero</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  svg { display: block; width: 800px; height: 600px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#fde68a"/>
+        <stop offset="0.45" stop-color="#fca5a5"/>
+        <stop offset="1" stop-color="#c084fc"/>
+      </linearGradient>
+      <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stop-color="#fff7d6"/>
+        <stop offset="1" stop-color="#fbbf24"/>
+      </radialGradient>
+      <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d28d9"/><stop offset="1" stop-color="#4c1d95"/></linearGradient>
+      <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#5b21b6"/></linearGradient>
+      <clipPath id="frame"><rect x="0" y="0" width="800" height="600"/></clipPath>
+    </defs>
+    <g clip-path="url(#frame)">
+      <rect x="0" y="0" width="800" height="600" fill="url(#sky)"/>
+      <circle cx="400" cy="250" r="90" fill="url(#sun)"/>
+      <circle cx="400" cy="250" r="120" fill="#fbbf24" opacity="0.15"/>
+      <g opacity="0.85">
+        <ellipse cx="180" cy="160" rx="60" ry="22" fill="#fff" opacity="0.7"/>
+        <ellipse cx="220" cy="150" rx="44" ry="20" fill="#fff" opacity="0.7"/>
+        <ellipse cx="620" cy="120" rx="70" ry="24" fill="#fff" opacity="0.6"/>
+      </g>
+      <path d="M0 430 L140 300 L280 430 Z" fill="url(#m2)"/>
+      <path d="M560 430 L700 290 L860 430 Z" fill="url(#m2)"/>
+      <path d="M180 460 L380 250 L600 460 Z" fill="url(#m1)"/>
+      <polygon points="380,250 360,290 400,290" fill="#ede9fe" opacity="0.9"/>
+      <rect x="0" y="430" width="800" height="170" fill="#3b0764"/>
+      <path d="M0 470 Q200 440 400 470 T800 470 L800 600 L0 600 Z" fill="#2e1065"/>
+      <ellipse cx="400" cy="470" rx="240" ry="20" fill="#1e0a47" opacity="0.6"/>
+    </g>
+  </svg>
+</div>
+</body>
+</html>
