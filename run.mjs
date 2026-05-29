@@ -17,12 +17,14 @@ const ROOT = __dirname;
 const CASES_DIR = resolve(ROOT, "cases");
 
 function parseArgs(argv) {
-  const out = { filter: "", width: 800, height: 600 };
+  const out = { filter: "", width: 800, height: 600, geomEpsilon: 1, styleEpsilon: 0.5 };
   for (let i = 2; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--filter") out.filter = argv[++i];
     else if (a === "--width") out.width = parseInt(argv[++i], 10);
     else if (a === "--height") out.height = parseInt(argv[++i], 10);
+    else if (a === "--geom-epsilon") out.geomEpsilon = parseFloat(argv[++i]);
+    else if (a === "--style-epsilon") out.styleEpsilon = parseFloat(argv[++i]);
   }
   return out;
 }
@@ -83,7 +85,7 @@ async function main() {
       const diffPng = resolve(outDir, "diff.png");
       const layoutDiff = resolve(outDir, "layout.diff.json");
       const pixels = await diffPixels({ aPath: broRes.screenshot, bPath: chRes.screenshot, outPath: diffPng });
-      const layout = await diffLayout({ broJson: broRes.layoutJson, chromiumJson: chRes.layoutJson, outPath: layoutDiff });
+      const layout = await diffLayout({ broJson: broRes.layoutJson, chromiumJson: chRes.layoutJson, outPath: layoutDiff, geomEpsilon: args.geomEpsilon, styleEpsilon: args.styleEpsilon });
       const paintOk = await detectPaintOrderFlag(c.dir);
       results.push({
         category: c.category,

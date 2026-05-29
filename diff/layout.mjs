@@ -1,7 +1,25 @@
 // Structural layout diff: align by `path`, compute rect deltas + style deltas.
 import { readFile, writeFile } from "node:fs/promises";
 
-export async function diffLayout({ broJson, chromiumJson, outPath, geomEpsilon = 1 }) {
+// Two style values are equal if their strings match exactly, OR they're both a
+// single number (with the same optional px/% unit) within `styleEpsilon`. This
+// keeps sub-pixel fractional widths (e.g. "172.667px" vs "172.656px") from
+// flagging as mismatches — those are pixel-identical once rounded, and rect
+// deltas already carry their own ε. Colors, keywords, and multi-token values
+// fall back to exact string compare.
+function styleValuesEqual(a, b, styleEpsilon) {
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  const num = /^(-?\d*\.?\d+)(px|%)?$/;
+  const ma = num.exec(a.trim());
+  const mb = num.exec(b.trim());
+  if (ma && mb && (ma[2] || "") === (mb[2] || "")) {
+    return Math.abs(parseFloat(ma[1]) - parseFloat(mb[1])) <= styleEpsilon;
+  }
+  return false;
+}
+
+export async function diffLayout({ broJson, chromiumJson, outPath, geomEpsilon = 1, styleEpsilon = 0.5 }) {
   const [a, b] = await Promise.all([
     readFile(broJson, "utf8").then(JSON.parse),
     readFile(chromiumJson, "utf8").then(JSON.parse)
@@ -26,7 +44,7 @@ export async function diffLayout({ broJson, chromiumJson, outPath, geomEpsilon =
     const rectOff = Math.max(Math.abs(dx), Math.abs(dy), Math.abs(dw), Math.abs(dh)) > geomEpsilon;
     const styleDeltas = {};
     for (const k of Object.keys(ea.style)) {
-      if (ea.style[k] !== eb.style[k]) {
+      if (!styleValuesEqual(ea.style[k], eb.style[k], styleEpsilon)) {
         styleDeltas[k] = [ea.style[k], eb.style[k]];
       }
     }
@@ -50,7 +68,8 @@ export async function diffLayout({ broJson, chromiumJson, outPath, geomEpsilon =
     totalElements: entries.length,
     rectMismatches: totalRectMismatches,
     styleMismatches: totalStyleMismatches,
-    geomEpsilon
+    geomEpsilon,
+    styleEpsilon
   };
   const out = { summary, entries };
   await writeFile(outPath, JSON.stringify(out, null, 2));
