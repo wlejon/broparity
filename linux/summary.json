@@ -1,6 +1,6 @@
 {
-  "runId": "2026-05-04T09-48-59-201Z",
-  "timestamp": "2026-05-04T09:50:38.541Z",
+  "runId": "2026-05-29T02-31-32-931Z",
+  "timestamp": "2026-05-29T02:33:29.680Z",
   "viewport": {
     "w": 800,
     "h": 600
@@ -14,20 +14,34 @@
     "cpuCount": 32,
     "gpus": [],
     "nodeVersion": "v24.8.0",
-    "detectedAt": "2026-05-04T09:50:38.541Z"
+    "detectedAt": "2026-05-29T02:33:29.680Z"
   },
   "overall": {
-    "layoutScore": 0.9225804214270243,
-    "pixelScore": 0.990687930986742,
-    "caseCount": 168,
-    "categoryCount": 13
+    "layoutScore": 0.860352502370785,
+    "pixelScore": 0.9686656902800445,
+    "caseCount": 196,
+    "categoryCount": 22
   },
   "categories": [
+    {
+      "name": "auth",
+      "n": 3,
+      "layoutScore": 0.8809048625792811,
+      "pixelScore": 0.9804749999999999,
+      "errors": 0
+    },
     {
       "name": "backgrounds",
       "n": 10,
       "layoutScore": 1,
       "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "blog",
+      "n": 3,
+      "layoutScore": 0.8945650301464255,
+      "pixelScore": 0.9992972222222223,
       "errors": 0
     },
     {
@@ -45,10 +59,24 @@
       "errors": 0
     },
     {
+      "name": "dashboard",
+      "n": 3,
+      "layoutScore": 0.6696560846560846,
+      "pixelScore": 0.9841840277777778,
+      "errors": 0
+    },
+    {
       "name": "display-types",
       "n": 12,
       "layoutScore": 0.9180555555555556,
       "pixelScore": 0.9897945902431444,
+      "errors": 0
+    },
+    {
+      "name": "editorial",
+      "n": 3,
+      "layoutScore": 0.45988906088751297,
+      "pixelScore": 0.8952583333333334,
       "errors": 0
     },
     {
@@ -73,6 +101,20 @@
       "errors": 0
     },
     {
+      "name": "landing",
+      "n": 3,
+      "layoutScore": 0.8111507936507936,
+      "pixelScore": 0.9871576388888889,
+      "errors": 0
+    },
+    {
+      "name": "media",
+      "n": 3,
+      "layoutScore": 0.8073944912654589,
+      "pixelScore": 0.6106777777777778,
+      "errors": 0
+    },
+    {
       "name": "overflow",
       "n": 7,
       "layoutScore": 1,
@@ -87,10 +129,31 @@
       "errors": 0
     },
     {
+      "name": "pricing",
+      "n": 3,
+      "layoutScore": 0.944734101579172,
+      "pixelScore": 0.9963041666666667,
+      "errors": 0
+    },
+    {
+      "name": "shop",
+      "n": 3,
+      "layoutScore": 0.8668131868131868,
+      "pixelScore": 0.99925,
+      "errors": 0
+    },
+    {
       "name": "sizing",
       "n": 10,
       "layoutScore": 0.9400000000000001,
       "pixelScore": 0.999288043478261,
+      "errors": 0
+    },
+    {
+      "name": "svg",
+      "n": 4,
+      "layoutScore": 0.5991019620280358,
+      "pixelScore": 0.9790979166666667,
       "errors": 0
     },
     {

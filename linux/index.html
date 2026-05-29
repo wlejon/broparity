@@ -29,28 +29,28 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
 </style>
 </head><body>
 <h1>broparity report</h1>
-<div class="sub">Bro vs Chromium parity · Debian GNU/Linux 12 (bookworm) · AMD Ryzen 9 7950X3D 16-Core Processor · 2026-05-04T09:50:38.541Z</div>
+<div class="sub">Bro vs Chromium parity · Debian GNU/Linux 12 (bookworm) · AMD Ryzen 9 7950X3D 16-Core Processor · 2026-05-29T02:33:29.680Z</div>
 <div class="headline">
   <div class="lede">
-    Bro renders <b>92.3%</b> of measured layout properties identically to Chromium across <b>168</b> test cases on <b>Debian GNU/Linux 12 (bookworm)</b>.
-    Pixel output matches on <b>99.1%</b> of pixels.
+    Bro renders <b>86.0%</b> of measured layout properties identically to Chromium across <b>196</b> test cases on <b>Debian GNU/Linux 12 (bookworm)</b>.
+    Pixel output matches on <b>96.9%</b> of pixels.
     Scroll for the per-case screenshots and diffs.
   </div>
   <div class="metrics">
     <div class="metric">
-      <div class="v">92.3%</div>
+      <div class="v">86.0%</div>
       <div class="l">Layout conformance</div>
       <div class="h">weighted rect + style + paint match, mean across categories</div>
     </div>
     <div class="metric">
-      <div class="v">99.1%</div>
+      <div class="v">96.9%</div>
       <div class="l">Pixel match</div>
       <div class="h">1 − mean pixel mismatch ratio</div>
     </div>
     <div class="metric">
-      <div class="v">168</div>
+      <div class="v">196</div>
       <div class="l">Cases</div>
-      <div class="h">13 categories</div>
+      <div class="h">22 categories</div>
     </div>
   </div>
 </div>
@@ -61,12 +61,28 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
   <table><thead><tr><th>Category</th><th>Cases</th><th>Layout match</th><th>Pixel match</th><th>Rect Δ</th><th>Style Δ</th></tr></thead>
   <tbody>
     <tr>
+      <td>auth</td>
+      <td class="num">3</td>
+      <td class="num">88.1% <span class="bar"><i style="width:88.1%"></i></span></td>
+      <td class="num">98.0% <span class="bar"><i style="width:98.0%"></i></span></td>
+      <td class="num">19</td>
+      <td class="num">8</td>
+    </tr>
+    <tr>
       <td>backgrounds</td>
       <td class="num">10</td>
       <td class="num">100.0% <span class="bar"><i style="width:100.0%"></i></span></td>
       <td class="num">100.0% <span class="bar"><i style="width:100.0%"></i></span></td>
       <td class="num">0</td>
       <td class="num">0</td>
+    </tr>
+    <tr>
+      <td>blog</td>
+      <td class="num">3</td>
+      <td class="num">89.5% <span class="bar"><i style="width:89.5%"></i></span></td>
+      <td class="num">99.9% <span class="bar"><i style="width:99.9%"></i></span></td>
+      <td class="num">6</td>
+      <td class="num">24</td>
     </tr>
     <tr>
       <td>borders</td>
@@ -85,12 +101,28 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td class="num">2</td>
     </tr>
     <tr>
+      <td>dashboard</td>
+      <td class="num">3</td>
+      <td class="num">67.0% <span class="bar"><i style="width:67.0%"></i></span></td>
+      <td class="num">98.4% <span class="bar"><i style="width:98.4%"></i></span></td>
+      <td class="num">90</td>
+      <td class="num">68</td>
+    </tr>
+    <tr>
       <td>display-types</td>
       <td class="num">12</td>
       <td class="num">91.8% <span class="bar"><i style="width:91.8%"></i></span></td>
       <td class="num">99.0% <span class="bar"><i style="width:99.0%"></i></span></td>
       <td class="num">9</td>
       <td class="num">1</td>
+    </tr>
+    <tr>
+      <td>editorial</td>
+      <td class="num">3</td>
+      <td class="num">46.0% <span class="bar"><i style="width:46.0%"></i></span></td>
+      <td class="num">89.5% <span class="bar"><i style="width:89.5%"></i></span></td>
+      <td class="num">173</td>
+      <td class="num">42</td>
     </tr>
     <tr>
       <td>flex</td>
@@ -117,6 +149,22 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td class="num">0</td>
     </tr>
     <tr>
+      <td>landing</td>
+      <td class="num">3</td>
+      <td class="num">81.1% <span class="bar"><i style="width:81.1%"></i></span></td>
+      <td class="num">98.7% <span class="bar"><i style="width:98.7%"></i></span></td>
+      <td class="num">17</td>
+      <td class="num">22</td>
+    </tr>
+    <tr>
+      <td>media</td>
+      <td class="num">3</td>
+      <td class="num">80.7% <span class="bar"><i style="width:80.7%"></i></span></td>
+      <td class="num">61.1% <span class="bar"><i style="width:61.1%"></i></span></td>
+      <td class="num">21</td>
+      <td class="num">13</td>
+    </tr>
+    <tr>
       <td>overflow</td>
       <td class="num">7</td>
       <td class="num">100.0% <span class="bar"><i style="width:100.0%"></i></span></td>
@@ -133,12 +181,36 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td class="num">0</td>
     </tr>
     <tr>
+      <td>pricing</td>
+      <td class="num">3</td>
+      <td class="num">94.5% <span class="bar"><i style="width:94.5%"></i></span></td>
+      <td class="num">99.6% <span class="bar"><i style="width:99.6%"></i></span></td>
+      <td class="num">0</td>
+      <td class="num">21</td>
+    </tr>
+    <tr>
+      <td>shop</td>
+      <td class="num">3</td>
+      <td class="num">86.7% <span class="bar"><i style="width:86.7%"></i></span></td>
+      <td class="num">99.9% <span class="bar"><i style="width:99.9%"></i></span></td>
+      <td class="num">12</td>
+      <td class="num">56</td>
+    </tr>
+    <tr>
       <td>sizing</td>
       <td class="num">10</td>
       <td class="num">94.0% <span class="bar"><i style="width:94.0%"></i></span></td>
       <td class="num">99.9% <span class="bar"><i style="width:99.9%"></i></span></td>
       <td class="num">0</td>
       <td class="num">3</td>
+    </tr>
+    <tr>
+      <td>svg</td>
+      <td class="num">4</td>
+      <td class="num">59.9% <span class="bar"><i style="width:59.9%"></i></span></td>
+      <td class="num">97.9% <span class="bar"><i style="width:97.9%"></i></span></td>
+      <td class="num">145</td>
+      <td class="num">40</td>
     </tr>
     <tr>
       <td>tables</td>
@@ -168,6 +240,33 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
 <table>
 <thead><tr><th>Case</th><th>bro</th><th>Chromium</th><th>Diff</th><th>Pixel mismatch</th><th>Layout Δ</th></tr></thead>
 <tbody>
+
+    <tr>
+      <td><b>auth/login-centered</b></td>
+      <td><img src="auth/login-centered/bro.png" loading="lazy"></td>
+      <td><img src="auth/login-centered/chromium.png" loading="lazy"></td>
+      <td><img src="auth/login-centered/diff.png" loading="lazy"></td>
+      <td class="num">0.004%<br><span class="dim">17/480000 px</span></td>
+      <td class="num">rect: 1<br>style: 2<br><span class="dim">of 25 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>auth/settings-form</b></td>
+      <td><img src="auth/settings-form/bro.png" loading="lazy"></td>
+      <td><img src="auth/settings-form/chromium.png" loading="lazy"></td>
+      <td><img src="auth/settings-form/diff.png" loading="lazy"></td>
+      <td class="num">0.257%<br><span class="dim">1235/480000 px</span></td>
+      <td class="num">rect: 9<br>style: 3<br><span class="dim">of 43 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>auth/signup-split</b></td>
+      <td><img src="auth/signup-split/bro.png" loading="lazy"></td>
+      <td><img src="auth/signup-split/chromium.png" loading="lazy"></td>
+      <td><img src="auth/signup-split/diff.png" loading="lazy"></td>
+      <td class="num">5.597%<br><span class="dim">26864/480000 px</span></td>
+      <td class="num">rect: 9<br>style: 3<br><span class="dim">of 33 elems</span></td>
+    </tr>
 
     <tr>
       <td><b>backgrounds/bg-attachment-local</b></td>
@@ -257,6 +356,33 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="backgrounds/bg-size-cover/diff.png" loading="lazy"></td>
       <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
       <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>blog/article-sidebar</b></td>
+      <td><img src="blog/article-sidebar/bro.png" loading="lazy"></td>
+      <td><img src="blog/article-sidebar/chromium.png" loading="lazy"></td>
+      <td><img src="blog/article-sidebar/diff.png" loading="lazy"></td>
+      <td class="num">0.207%<br><span class="dim">996/480000 px</span></td>
+      <td class="num">rect: 5<br>style: 9<br><span class="dim">of 43 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>blog/article-single</b></td>
+      <td><img src="blog/article-single/bro.png" loading="lazy"></td>
+      <td><img src="blog/article-single/chromium.png" loading="lazy"></td>
+      <td><img src="blog/article-single/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/480000 px</span></td>
+      <td class="num">rect: 1<br>style: 3<br><span class="dim">of 18 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>blog/post-grid</b></td>
+      <td><img src="blog/post-grid/bro.png" loading="lazy"></td>
+      <td><img src="blog/post-grid/chromium.png" loading="lazy"></td>
+      <td><img src="blog/post-grid/diff.png" loading="lazy"></td>
+      <td class="num">0.003%<br><span class="dim">16/480000 px</span></td>
+      <td class="num">rect: 0<br>style: 12<br><span class="dim">of 60 elems</span></td>
     </tr>
 
     <tr>
@@ -440,6 +566,33 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
     </tr>
 
     <tr>
+      <td><b>dashboard/analytics-grid</b></td>
+      <td><img src="dashboard/analytics-grid/bro.png" loading="lazy"></td>
+      <td><img src="dashboard/analytics-grid/chromium.png" loading="lazy"></td>
+      <td><img src="dashboard/analytics-grid/diff.png" loading="lazy"></td>
+      <td class="num">3.863%<br><span class="dim">18542/480000 px</span></td>
+      <td class="num">rect: 12<br>style: 15<br><span class="dim">of 54 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>dashboard/sidebar-stats</b></td>
+      <td><img src="dashboard/sidebar-stats/bro.png" loading="lazy"></td>
+      <td><img src="dashboard/sidebar-stats/chromium.png" loading="lazy"></td>
+      <td><img src="dashboard/sidebar-stats/diff.png" loading="lazy"></td>
+      <td class="num">0.643%<br><span class="dim">3084/480000 px</span></td>
+      <td class="num">rect: 27<br>style: 21<br><span class="dim">of 70 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>dashboard/topnav-table</b></td>
+      <td><img src="dashboard/topnav-table/bro.png" loading="lazy"></td>
+      <td><img src="dashboard/topnav-table/chromium.png" loading="lazy"></td>
+      <td><img src="dashboard/topnav-table/diff.png" loading="lazy"></td>
+      <td class="num">0.239%<br><span class="dim">1149/480000 px</span></td>
+      <td class="num">rect: 51<br>style: 32<br><span class="dim">of 84 elems</span></td>
+    </tr>
+
+    <tr>
       <td><b>display-types/button-default-size</b></td>
       <td><img src="display-types/button-default-size/bro.png" loading="lazy"></td>
       <td><img src="display-types/button-default-size/chromium.png" loading="lazy"></td>
@@ -545,6 +698,33 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="display-types/visibility-hidden-keeps-size/diff.png" loading="lazy"></td>
       <td class="num">0.194%<br><span class="dim">205/105600 px</span></td>
       <td class="num">rect: 0<br>style: 0<br><span class="dim">of 5 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>editorial/magazine-spread</b></td>
+      <td><img src="editorial/magazine-spread/bro.png" loading="lazy"></td>
+      <td><img src="editorial/magazine-spread/chromium.png" loading="lazy"></td>
+      <td><img src="editorial/magazine-spread/diff.png" loading="lazy"></td>
+      <td class="num">5.091%<br><span class="dim">24437/480000 px</span></td>
+      <td class="num">rect: 61<br>style: 1<br><span class="dim">of 68 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>editorial/multi-column-doc</b></td>
+      <td><img src="editorial/multi-column-doc/bro.png" loading="lazy"></td>
+      <td><img src="editorial/multi-column-doc/chromium.png" loading="lazy"></td>
+      <td><img src="editorial/multi-column-doc/diff.png" loading="lazy"></td>
+      <td class="num">16.482%<br><span class="dim">79114/480000 px</span></td>
+      <td class="num">rect: 27<br>style: 36<br><span class="dim">of 40 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>editorial/newspaper-front</b></td>
+      <td><img src="editorial/newspaper-front/bro.png" loading="lazy"></td>
+      <td><img src="editorial/newspaper-front/chromium.png" loading="lazy"></td>
+      <td><img src="editorial/newspaper-front/diff.png" loading="lazy"></td>
+      <td class="num">9.849%<br><span class="dim">47277/480000 px</span></td>
+      <td class="num">rect: 85<br>style: 5<br><span class="dim">of 95 elems</span></td>
     </tr>
 
     <tr>
@@ -944,6 +1124,60 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
     </tr>
 
     <tr>
+      <td><b>landing/feature-sections</b></td>
+      <td><img src="landing/feature-sections/bro.png" loading="lazy"></td>
+      <td><img src="landing/feature-sections/chromium.png" loading="lazy"></td>
+      <td><img src="landing/feature-sections/diff.png" loading="lazy"></td>
+      <td class="num">0.207%<br><span class="dim">996/480000 px</span></td>
+      <td class="num">rect: 4<br>style: 13<br><span class="dim">of 35 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>landing/hero-centered</b></td>
+      <td><img src="landing/hero-centered/bro.png" loading="lazy"></td>
+      <td><img src="landing/hero-centered/chromium.png" loading="lazy"></td>
+      <td><img src="landing/hero-centered/diff.png" loading="lazy"></td>
+      <td class="num">3.416%<br><span class="dim">16396/480000 px</span></td>
+      <td class="num">rect: 8<br>style: 8<br><span class="dim">of 30 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>landing/hero-split</b></td>
+      <td><img src="landing/hero-split/bro.png" loading="lazy"></td>
+      <td><img src="landing/hero-split/chromium.png" loading="lazy"></td>
+      <td><img src="landing/hero-split/diff.png" loading="lazy"></td>
+      <td class="num">0.229%<br><span class="dim">1101/480000 px</span></td>
+      <td class="num">rect: 5<br>style: 1<br><span class="dim">of 24 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>media/glass-panel</b></td>
+      <td><img src="media/glass-panel/bro.png" loading="lazy"></td>
+      <td><img src="media/glass-panel/chromium.png" loading="lazy"></td>
+      <td><img src="media/glass-panel/diff.png" loading="lazy"></td>
+      <td class="num">41.198%<br><span class="dim">197750/480000 px</span></td>
+      <td class="num">rect: 6<br>style: 1<br><span class="dim">of 18 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>media/image-editor</b></td>
+      <td><img src="media/image-editor/bro.png" loading="lazy"></td>
+      <td><img src="media/image-editor/chromium.png" loading="lazy"></td>
+      <td><img src="media/image-editor/diff.png" loading="lazy"></td>
+      <td class="num">25.101%<br><span class="dim">120484/480000 px</span></td>
+      <td class="num">rect: 3<br>style: 0<br><span class="dim">of 37 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>media/photo-gallery</b></td>
+      <td><img src="media/photo-gallery/bro.png" loading="lazy"></td>
+      <td><img src="media/photo-gallery/chromium.png" loading="lazy"></td>
+      <td><img src="media/photo-gallery/diff.png" loading="lazy"></td>
+      <td class="num">50.498%<br><span class="dim">242390/480000 px</span></td>
+      <td class="num">rect: 12<br>style: 12<br><span class="dim">of 31 elems</span></td>
+    </tr>
+
+    <tr>
       <td><b>overflow/clip-path-basic</b></td>
       <td><img src="overflow/clip-path-basic/bro.png" loading="lazy"></td>
       <td><img src="overflow/clip-path-basic/chromium.png" loading="lazy"></td>
@@ -1169,6 +1403,60 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
     </tr>
 
     <tr>
+      <td><b>pricing/comparison-table</b></td>
+      <td><img src="pricing/comparison-table/bro.png" loading="lazy"></td>
+      <td><img src="pricing/comparison-table/chromium.png" loading="lazy"></td>
+      <td><img src="pricing/comparison-table/diff.png" loading="lazy"></td>
+      <td class="num">0.925%<br><span class="dim">4440/480000 px</span></td>
+      <td class="num">rect: 0<br>style: 8<br><span class="dim">of 71 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>pricing/single-cta</b></td>
+      <td><img src="pricing/single-cta/bro.png" loading="lazy"></td>
+      <td><img src="pricing/single-cta/chromium.png" loading="lazy"></td>
+      <td><img src="pricing/single-cta/diff.png" loading="lazy"></td>
+      <td class="num">0.184%<br><span class="dim">882/480000 px</span></td>
+      <td class="num">rect: 0<br>style: 3<br><span class="dim">of 25 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>pricing/three-tier</b></td>
+      <td><img src="pricing/three-tier/bro.png" loading="lazy"></td>
+      <td><img src="pricing/three-tier/chromium.png" loading="lazy"></td>
+      <td><img src="pricing/three-tier/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/480000 px</span></td>
+      <td class="num">rect: 0<br>style: 10<br><span class="dim">of 55 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>shop/checkout</b></td>
+      <td><img src="shop/checkout/bro.png" loading="lazy"></td>
+      <td><img src="shop/checkout/chromium.png" loading="lazy"></td>
+      <td><img src="shop/checkout/diff.png" loading="lazy"></td>
+      <td class="num">0.001%<br><span class="dim">3/480000 px</span></td>
+      <td class="num">rect: 0<br>style: 4<br><span class="dim">of 52 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>shop/product-detail</b></td>
+      <td><img src="shop/product-detail/bro.png" loading="lazy"></td>
+      <td><img src="shop/product-detail/chromium.png" loading="lazy"></td>
+      <td><img src="shop/product-detail/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/480000 px</span></td>
+      <td class="num">rect: 0<br>style: 4<br><span class="dim">of 35 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>shop/product-grid</b></td>
+      <td><img src="shop/product-grid/bro.png" loading="lazy"></td>
+      <td><img src="shop/product-grid/chromium.png" loading="lazy"></td>
+      <td><img src="shop/product-grid/diff.png" loading="lazy"></td>
+      <td class="num">0.224%<br><span class="dim">1077/480000 px</span></td>
+      <td class="num">rect: 12<br>style: 48<br><span class="dim">of 78 elems</span></td>
+    </tr>
+
+    <tr>
       <td><b>sizing/aspect-ratio</b></td>
       <td><img src="sizing/aspect-ratio/bro.png" loading="lazy"></td>
       <td><img src="sizing/aspect-ratio/chromium.png" loading="lazy"></td>
@@ -1256,6 +1544,42 @@ img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block;
       <td><img src="sizing/width-percent/diff.png" loading="lazy"></td>
       <td class="num">0.000%<br><span class="dim">0/54400 px</span></td>
       <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>svg/chart-dashboard</b></td>
+      <td><img src="svg/chart-dashboard/bro.png" loading="lazy"></td>
+      <td><img src="svg/chart-dashboard/chromium.png" loading="lazy"></td>
+      <td><img src="svg/chart-dashboard/diff.png" loading="lazy"></td>
+      <td class="num">4.918%<br><span class="dim">23607/480000 px</span></td>
+      <td class="num">rect: 35<br>style: 9<br><span class="dim">of 46 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>svg/icon-grid</b></td>
+      <td><img src="svg/icon-grid/bro.png" loading="lazy"></td>
+      <td><img src="svg/icon-grid/chromium.png" loading="lazy"></td>
+      <td><img src="svg/icon-grid/diff.png" loading="lazy"></td>
+      <td class="num">0.710%<br><span class="dim">3407/480000 px</span></td>
+      <td class="num">rect: 46<br>style: 20<br><span class="dim">of 87 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>svg/illustration-hero</b></td>
+      <td><img src="svg/illustration-hero/bro.png" loading="lazy"></td>
+      <td><img src="svg/illustration-hero/chromium.png" loading="lazy"></td>
+      <td><img src="svg/illustration-hero/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/480000 px</span></td>
+      <td class="num">rect: 15<br>style: 3<br><span class="dim">of 34 elems</span></td>
+    </tr>
+
+    <tr>
+      <td><b>svg/logo-wall</b></td>
+      <td><img src="svg/logo-wall/bro.png" loading="lazy"></td>
+      <td><img src="svg/logo-wall/chromium.png" loading="lazy"></td>
+      <td><img src="svg/logo-wall/diff.png" loading="lazy"></td>
+      <td class="num">2.733%<br><span class="dim">13118/480000 px</span></td>
+      <td class="num">rect: 49<br>style: 8<br><span class="dim">of 52 elems</span></td>
     </tr>
 
     <tr>

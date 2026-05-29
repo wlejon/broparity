@@ -1,0 +1,1638 @@
+{
+  "summary": {
+    "totalElements": 52,
+    "rectMismatches": 49,
+    "styleMismatches": 8,
+    "geomEpsilon": 1
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 800,
+          "h": 600
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 800,
+          "h": 600
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 800,
+          "h": 600
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 800,
+          "h": 600
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 260,
+          "y": 159,
+          "w": 280,
+          "h": 12
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 260,
+          "y": 159,
+          "w": 280,
+          "h": 12
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 140,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 201,
+          "w": 800,
+          "h": 240
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 70,
+          "y": 201,
+          "w": 660,
+          "h": 240
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "800px",
+          "660px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 201,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 70,
+          "y": 201,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>svg:nth-of-type(1)",
+      "tag": "svg",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 231,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 100,
+          "y": 231,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>svg:nth-of-type(1)>defs:nth-of-type(1)",
+      "tag": "defs",
+      "id": "",
+      "rectDelta": {
+        "dx": 30,
+        "dy": 231,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>svg:nth-of-type(1)>defs:nth-of-type(1)>lineargradient:nth-of-type(1)",
+      "tag": "lineargradient",
+      "id": "l1",
+      "rectDelta": {
+        "dx": 30,
+        "dy": 231,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>svg:nth-of-type(1)>defs:nth-of-type(1)>lineargradient:nth-of-type(1)>stop:nth-of-type(1)",
+      "tag": "stop",
+      "id": "",
+      "rectDelta": {
+        "dx": 30,
+        "dy": 231,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>svg:nth-of-type(1)>defs:nth-of-type(1)>lineargradient:nth-of-type(1)>stop:nth-of-type(2)",
+      "tag": "stop",
+      "id": "",
+      "rectDelta": {
+        "dx": 30,
+        "dy": 231,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>svg:nth-of-type(1)>circle:nth-of-type(1)",
+      "tag": "circle",
+      "id": "",
+      "rectDelta": {
+        "dx": -79,
+        "dy": -9,
+        "dw": -32,
+        "dh": -32
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 109,
+          "y": 240,
+          "w": 32,
+          "h": 32
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>svg:nth-of-type(1)>rect:nth-of-type(1)",
+      "tag": "rect",
+      "id": "",
+      "rectDelta": {
+        "dx": -114,
+        "dy": -16,
+        "dw": -38,
+        "dh": -18
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 144,
+          "y": 247,
+          "w": 38,
+          "h": 18
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "auto",
+          "38px"
+        ],
+        "height": [
+          "auto",
+          "18px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 170,
+          "y": 201,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 240,
+          "y": 201,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>svg:nth-of-type(1)",
+      "tag": "svg",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 231,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 270,
+          "y": 231,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>svg:nth-of-type(1)>polygon:nth-of-type(1)",
+      "tag": "polygon",
+      "id": "",
+      "rectDelta": {
+        "dx": -74,
+        "dy": -8,
+        "dw": -32,
+        "dh": -34
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 274,
+          "y": 239,
+          "w": 32,
+          "h": 34
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>svg:nth-of-type(1)>polygon:nth-of-type(2)",
+      "tag": "polygon",
+      "id": "",
+      "rectDelta": {
+        "dx": -82,
+        "dy": -20,
+        "dw": -16,
+        "dh": -22
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 282,
+          "y": 251,
+          "w": 16,
+          "h": 22
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>svg:nth-of-type(1)>rect:nth-of-type(1)",
+      "tag": "rect",
+      "id": "",
+      "rectDelta": {
+        "dx": -116,
+        "dy": -20,
+        "dw": -36,
+        "dh": -10
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 316,
+          "y": 251,
+          "w": 36,
+          "h": 10
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "auto",
+          "36px"
+        ],
+        "height": [
+          "auto",
+          "10px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 340,
+          "y": 201,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 410,
+          "y": 201,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>svg:nth-of-type(1)",
+      "tag": "svg",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 231,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 440,
+          "y": 231,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>svg:nth-of-type(1)>defs:nth-of-type(1)",
+      "tag": "defs",
+      "id": "",
+      "rectDelta": {
+        "dx": 370,
+        "dy": 231,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>svg:nth-of-type(1)>defs:nth-of-type(1)>radialgradient:nth-of-type(1)",
+      "tag": "radialgradient",
+      "id": "r1",
+      "rectDelta": {
+        "dx": 370,
+        "dy": 231,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>svg:nth-of-type(1)>defs:nth-of-type(1)>radialgradient:nth-of-type(1)>stop:nth-of-type(1)",
+      "tag": "stop",
+      "id": "",
+      "rectDelta": {
+        "dx": 370,
+        "dy": 231,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>svg:nth-of-type(1)>defs:nth-of-type(1)>radialgradient:nth-of-type(1)>stop:nth-of-type(2)",
+      "tag": "stop",
+      "id": "",
+      "rectDelta": {
+        "dx": 370,
+        "dy": 231,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>svg:nth-of-type(1)>rect:nth-of-type(1)",
+      "tag": "rect",
+      "id": "",
+      "rectDelta": {
+        "dx": -75.209,
+        "dy": -7.209000000000003,
+        "dw": -35.582,
+        "dh": -35.582
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 445.209,
+          "y": 238.209,
+          "w": 35.582,
+          "h": 35.582
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "auto",
+          "30px"
+        ],
+        "height": [
+          "auto",
+          "30px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>svg:nth-of-type(1)>circle:nth-of-type(1)",
+      "tag": "circle",
+      "id": "",
+      "rectDelta": {
+        "dx": -118,
+        "dy": -11,
+        "dw": -28,
+        "dh": -28
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 488,
+          "y": 242,
+          "w": 28,
+          "h": 28
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(4)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 510,
+          "y": 201,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 580,
+          "y": 201,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(4)>svg:nth-of-type(1)",
+      "tag": "svg",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 540,
+          "y": 231,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 610,
+          "y": 231,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(4)>svg:nth-of-type(1)>path:nth-of-type(1)",
+      "tag": "path",
+      "id": "",
+      "rectDelta": {
+        "dx": -80,
+        "dy": -24,
+        "dw": -40,
+        "dh": -32
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 540,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 620,
+          "y": 255,
+          "w": 40,
+          "h": 32
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(4)>svg:nth-of-type(1)>circle:nth-of-type(1)",
+      "tag": "circle",
+      "id": "",
+      "rectDelta": {
+        "dx": -129,
+        "dy": -11,
+        "dw": -18,
+        "dh": -18
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 540,
+          "y": 231,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 669,
+          "y": 242,
+          "w": 18,
+          "h": 18
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(5)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 331,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 70,
+          "y": 331,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(5)>svg:nth-of-type(1)",
+      "tag": "svg",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 361,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 100,
+          "y": 361,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(5)>svg:nth-of-type(1)>g:nth-of-type(1)",
+      "tag": "g",
+      "id": "",
+      "rectDelta": {
+        "dx": -78.029,
+        "dy": -8.028999999999996,
+        "dw": -33.941,
+        "dh": -33.941
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 108.029,
+          "y": 369.029,
+          "w": 33.941,
+          "h": 33.941
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(5)>svg:nth-of-type(1)>g:nth-of-type(1)>rect:nth-of-type(1)",
+      "tag": "rect",
+      "id": "",
+      "rectDelta": {
+        "dx": -83,
+        "dy": -13,
+        "dw": -24,
+        "dh": -24
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 113,
+          "y": 374,
+          "w": 24,
+          "h": 24
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "auto",
+          "24px"
+        ],
+        "height": [
+          "auto",
+          "24px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(5)>svg:nth-of-type(1)>g:nth-of-type(1)>rect:nth-of-type(2)",
+      "tag": "rect",
+      "id": "",
+      "rectDelta": {
+        "dx": -78.029,
+        "dy": -8.028999999999996,
+        "dw": -33.941,
+        "dh": -33.941
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 108.029,
+          "y": 369.029,
+          "w": 33.941,
+          "h": 33.941
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "auto",
+          "24px"
+        ],
+        "height": [
+          "auto",
+          "24px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(5)>svg:nth-of-type(1)>rect:nth-of-type(1)",
+      "tag": "rect",
+      "id": "",
+      "rectDelta": {
+        "dx": -116,
+        "dy": -18,
+        "dw": -36,
+        "dh": -14
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 30,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 146,
+          "y": 379,
+          "w": 36,
+          "h": 14
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "auto",
+          "36px"
+        ],
+        "height": [
+          "auto",
+          "14px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(6)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 170,
+          "y": 331,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 240,
+          "y": 331,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(6)>svg:nth-of-type(1)",
+      "tag": "svg",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 361,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 270,
+          "y": 361,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(6)>svg:nth-of-type(1)>defs:nth-of-type(1)",
+      "tag": "defs",
+      "id": "",
+      "rectDelta": {
+        "dx": 200,
+        "dy": 361,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(6)>svg:nth-of-type(1)>defs:nth-of-type(1)>lineargradient:nth-of-type(1)",
+      "tag": "lineargradient",
+      "id": "l2",
+      "rectDelta": {
+        "dx": 200,
+        "dy": 361,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(6)>svg:nth-of-type(1)>defs:nth-of-type(1)>lineargradient:nth-of-type(1)>stop:nth-of-type(1)",
+      "tag": "stop",
+      "id": "",
+      "rectDelta": {
+        "dx": 200,
+        "dy": 361,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(6)>svg:nth-of-type(1)>defs:nth-of-type(1)>lineargradient:nth-of-type(1)>stop:nth-of-type(2)",
+      "tag": "stop",
+      "id": "",
+      "rectDelta": {
+        "dx": 200,
+        "dy": 361,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(6)>svg:nth-of-type(1)>path:nth-of-type(1)",
+      "tag": "path",
+      "id": "",
+      "rectDelta": {
+        "dx": -80,
+        "dy": -6,
+        "dw": -30,
+        "dh": -38
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 280,
+          "y": 367,
+          "w": 30,
+          "h": 38
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(6)>svg:nth-of-type(1)>circle:nth-of-type(1)",
+      "tag": "circle",
+      "id": "",
+      "rectDelta": {
+        "dx": -88,
+        "dy": -18,
+        "dw": -14,
+        "dh": -14
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 200,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 288,
+          "y": 379,
+          "w": 14,
+          "h": 14
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(7)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 340,
+          "y": 331,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 410,
+          "y": 331,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(7)>svg:nth-of-type(1)",
+      "tag": "svg",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 361,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 440,
+          "y": 361,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(7)>svg:nth-of-type(1)>circle:nth-of-type(1)",
+      "tag": "circle",
+      "id": "",
+      "rectDelta": {
+        "dx": -77,
+        "dy": -10,
+        "dw": -30,
+        "dh": -30
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 447,
+          "y": 371,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(7)>svg:nth-of-type(1)>circle:nth-of-type(2)",
+      "tag": "circle",
+      "id": "",
+      "rectDelta": {
+        "dx": -93,
+        "dy": -10,
+        "dw": -30,
+        "dh": -30
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 463,
+          "y": 371,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(7)>svg:nth-of-type(1)>rect:nth-of-type(1)",
+      "tag": "rect",
+      "id": "",
+      "rectDelta": {
+        "dx": -130,
+        "dy": -20,
+        "dw": -24,
+        "dh": -10
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 370,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 500,
+          "y": 381,
+          "w": 24,
+          "h": 10
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "auto",
+          "24px"
+        ],
+        "height": [
+          "auto",
+          "10px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(8)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 510,
+          "y": 331,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 580,
+          "y": 331,
+          "w": 150,
+          "h": 110
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(8)>svg:nth-of-type(1)",
+      "tag": "svg",
+      "id": "",
+      "rectDelta": {
+        "dx": -70,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 540,
+          "y": 361,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 610,
+          "y": 361,
+          "w": 90,
+          "h": 50
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(8)>svg:nth-of-type(1)>polygon:nth-of-type(1)",
+      "tag": "polygon",
+      "id": "",
+      "rectDelta": {
+        "dx": -76,
+        "dy": -6,
+        "dw": -32,
+        "dh": -38
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 540,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 616,
+          "y": 367,
+          "w": 32,
+          "h": 38
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(8)>svg:nth-of-type(1)>polygon:nth-of-type(2)",
+      "tag": "polygon",
+      "id": "",
+      "rectDelta": {
+        "dx": -84,
+        "dy": -16,
+        "dw": -16,
+        "dh": -18
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 540,
+          "y": 361,
+          "w": 0,
+          "h": 0
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 624,
+          "y": 377,
+          "w": 16,
+          "h": 18
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    }
+  ]
+}
