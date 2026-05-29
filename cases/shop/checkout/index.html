@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>checkout</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #f4f6f9; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  .topbar { height: 50px; display: flex; align-items: center; justify-content: center; background: #fff; border-bottom: 1px solid #eaeaea; }
+  .brand { width: 90px; height: 18px; background: #1a1a1a; border-radius: 4px; }
+  .wrap { display: flex; gap: 24px; padding: 28px; }
+  .form { flex: 1; background: #fff; border: 1px solid #eaecf0; border-radius: 12px; padding: 24px; }
+  .sec-title { width: 140px; height: 14px; background: #1a2433; border-radius: 5px; margin-bottom: 18px; }
+  .field { margin-bottom: 16px; }
+  .lbl { width: 80px; height: 9px; background: #b6bcc8; border-radius: 4px; margin-bottom: 8px; }
+  .input { width: 100%; height: 38px; background: #f5f7fa; border: 1px solid #e2e6ec; border-radius: 8px; box-sizing: border-box; }
+  .row2 { display: flex; gap: 14px; }
+  .row2 .field { flex: 1; }
+  .pay-row { display: flex; gap: 10px; margin-top: 6px; }
+  .pay { width: 52px; height: 34px; border: 1px solid #e2e6ec; border-radius: 6px; }
+  .pay.sel { border-color: #2b6cff; background: #eef4ff; }
+  .summary { width: 280px; background: #fff; border: 1px solid #eaecf0; border-radius: 12px; padding: 22px; }
+  .item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .i-img { width: 50px; height: 50px; border-radius: 8px; }
+  .item:nth-child(2) .i-img { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+  .item:nth-child(3) .i-img { background: linear-gradient(135deg, #d4fc79, #96e6a1); }
+  .i-lines { flex: 1; }
+  .i-l1 { width: 80%; height: 9px; background: #cfd4dd; border-radius: 4px; margin-bottom: 7px; }
+  .i-l2 { width: 40%; height: 8px; background: #e0e4ea; border-radius: 4px; }
+  .i-price { width: 40px; height: 12px; background: #1a1a1a; border-radius: 4px; }
+  .divider { height: 1px; background: #eaecf0; margin: 16px 0; }
+  .tot-row { display: flex; align-items: center; margin-bottom: 12px; }
+  .tot-lbl { width: 70px; height: 9px; background: #c2c8d2; border-radius: 4px; }
+  .tot-val { margin-left: auto; width: 50px; height: 9px; background: #9aa2b0; border-radius: 4px; }
+  .grand .tot-lbl { height: 14px; width: 90px; background: #1a2433; }
+  .grand .tot-val { height: 14px; width: 70px; background: #1a2433; }
+  .place { width: 100%; height: 46px; background: #2b6cff; border-radius: 9px; margin-top: 18px; box-shadow: 0 6px 16px rgba(43,108,255,0.3); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar"><div class="brand"></div></div>
+  <div class="wrap">
+    <div class="form">
+      <div class="sec-title"></div>
+      <div class="field"><div class="lbl"></div><div class="input"></div></div>
+      <div class="row2"><div class="field"><div class="lbl"></div><div class="input"></div></div><div class="field"><div class="lbl"></div><div class="input"></div></div></div>
+      <div class="field"><div class="lbl"></div><div class="input"></div></div>
+      <div class="field"><div class="lbl"></div><div class="pay-row"><div class="pay sel"></div><div class="pay"></div><div class="pay"></div></div></div>
+    </div>
+    <div class="summary">
+      <div class="sec-title"></div>
+      <div class="item"><div class="i-img"></div><div class="i-lines"><div class="i-l1"></div><div class="i-l2"></div></div><div class="i-price"></div></div>
+      <div class="item"><div class="i-img"></div><div class="i-lines"><div class="i-l1"></div><div class="i-l2"></div></div><div class="i-price"></div></div>
+      <div class="divider"></div>
+      <div class="tot-row"><div class="tot-lbl"></div><div class="tot-val"></div></div>
+      <div class="tot-row"><div class="tot-lbl"></div><div class="tot-val"></div></div>
+      <div class="divider"></div>
+      <div class="tot-row grand"><div class="tot-lbl"></div><div class="tot-val"></div></div>
+      <div class="place"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

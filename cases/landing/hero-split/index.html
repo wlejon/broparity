@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hero-split</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #0e1320; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  .nav { height: 60px; padding: 0 40px; display: flex; align-items: center; background: #0e1320; }
+  .brand { width: 120px; height: 22px; background: linear-gradient(90deg, #6ce5b1, #2bb3ff); border-radius: 4px; }
+  .nav-links { margin-left: auto; display: flex; gap: 22px; align-items: center; }
+  .nav-link { width: 50px; height: 10px; background: #3a4661; border-radius: 5px; }
+  .nav-cta { width: 90px; height: 36px; border: 1px solid #6ce5b1; border-radius: 18px; }
+  .hero { height: 540px; display: flex; align-items: center; gap: 40px; padding: 0 40px; }
+  .col-text { width: 380px; display: flex; flex-direction: column; gap: 14px; }
+  .tag { width: 120px; height: 24px; background: rgba(108,229,177,0.15); border: 1px solid #6ce5b1; border-radius: 12px; }
+  .h-line { height: 26px; background: #eef3ff; border-radius: 6px; }
+  .h-line.l1 { width: 340px; }
+  .h-line.l2 { width: 260px; }
+  .h-line.l3 { width: 300px; }
+  .h-sub { width: 320px; height: 12px; background: #6b7793; border-radius: 6px; margin-top: 8px; }
+  .h-sub.s2 { width: 250px; }
+  .cta-row { display: flex; gap: 14px; margin-top: 16px; }
+  .btn { height: 46px; border-radius: 8px; }
+  .btn.primary { width: 150px; background: linear-gradient(90deg, #6ce5b1, #2bb3ff); }
+  .btn.ghost { width: 120px; background: transparent; border: 1px solid #3a4661; }
+  .col-art { flex: 1; height: 360px; position: relative; }
+  .panel { position: absolute; border-radius: 14px; }
+  .panel.back { top: 30px; left: 20px; right: 0; bottom: 30px; background: linear-gradient(135deg, #1b2540, #11192e); border: 1px solid #2a3654; }
+  .panel.front { top: 0; left: 0; width: 200px; height: 130px; background: linear-gradient(135deg, #2bb3ff, #1d6fd0); box-shadow: 0 20px 40px rgba(0,0,0,0.45); }
+  .panel.chip { bottom: 0; right: 30px; width: 150px; height: 90px; background: linear-gradient(135deg, #6ce5b1, #2a9d7a); box-shadow: 0 16px 32px rgba(0,0,0,0.45); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="nav">
+    <div class="brand"></div>
+    <div class="nav-links">
+      <div class="nav-link"></div>
+      <div class="nav-link"></div>
+      <div class="nav-link"></div>
+      <div class="nav-cta"></div>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="col-text">
+      <div class="tag"></div>
+      <div class="h-line l1"></div>
+      <div class="h-line l2"></div>
+      <div class="h-line l3"></div>
+      <div class="h-sub"></div>
+      <div class="h-sub s2"></div>
+      <div class="cta-row">
+        <div class="btn primary"></div>
+        <div class="btn ghost"></div>
+      </div>
+    </div>
+    <div class="col-art">
+      <div class="panel back"></div>
+      <div class="panel front"></div>
+      <div class="panel chip"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

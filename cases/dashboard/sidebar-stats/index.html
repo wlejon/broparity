@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sidebar-stats</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #eef1f6; }
+  .page { width: 800px; height: 600px; overflow: hidden; display: flex; }
+  .sidebar { width: 200px; background: #161a2b; padding: 20px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .s-brand { width: 120px; height: 26px; background: linear-gradient(90deg, #6c8cff, #9b6cff); border-radius: 6px; margin-bottom: 22px; }
+  .s-item { height: 38px; border-radius: 8px; display: flex; align-items: center; gap: 12px; padding: 0 12px; }
+  .s-item.active { background: rgba(108,140,255,0.18); }
+  .s-ico { width: 18px; height: 18px; border-radius: 5px; background: #4a5276; }
+  .s-item.active .s-ico { background: #6c8cff; }
+  .s-lbl { width: 80px; height: 10px; background: #3a4163; border-radius: 5px; }
+  .s-item.active .s-lbl { background: #aeb9e8; }
+  .main { flex: 1; padding: 22px; }
+  .topbar { display: flex; align-items: center; margin-bottom: 22px; }
+  .pg-title { width: 160px; height: 20px; background: #2b3148; border-radius: 5px; }
+  .top-right { margin-left: auto; display: flex; align-items: center; gap: 14px; }
+  .search { width: 180px; height: 34px; background: #fff; border: 1px solid #dde1ea; border-radius: 17px; }
+  .avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #6c8cff, #9b6cff); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 16px; }
+  .stat { background: #fff; border-radius: 10px; padding: 14px; }
+  .stat-ico { width: 30px; height: 30px; border-radius: 8px; margin-bottom: 12px; }
+  .stat:nth-child(1) .stat-ico { background: #6c8cff; }
+  .stat:nth-child(2) .stat-ico { background: #2ec5a3; }
+  .stat:nth-child(3) .stat-ico { background: #ff8a5b; }
+  .stat:nth-child(4) .stat-ico { background: #ff5b8a; }
+  .stat-num { width: 70px; height: 16px; background: #2b3148; border-radius: 4px; margin-bottom: 7px; }
+  .stat-lbl { width: 50px; height: 9px; background: #c2c8d6; border-radius: 4px; }
+  .panels { display: flex; gap: 14px; }
+  .chart { flex: 2; height: 220px; background: #fff; border-radius: 10px; padding: 16px; }
+  .chart-title { width: 120px; height: 12px; background: #2b3148; border-radius: 5px; margin-bottom: 18px; }
+  .bars { display: flex; align-items: flex-end; gap: 14px; height: 150px; }
+  .bar { flex: 1; background: linear-gradient(180deg, #6c8cff, #9b6cff); border-radius: 5px 5px 0 0; }
+  .list { flex: 1; height: 220px; background: #fff; border-radius: 10px; padding: 16px; }
+  .list-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .l-dot { width: 22px; height: 22px; border-radius: 50%; background: #dfe3ec; }
+  .l-line { flex: 1; height: 9px; background: #d3d8e2; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="sidebar">
+    <div class="s-brand"></div>
+    <div class="s-item active"><div class="s-ico"></div><div class="s-lbl"></div></div>
+    <div class="s-item"><div class="s-ico"></div><div class="s-lbl"></div></div>
+    <div class="s-item"><div class="s-ico"></div><div class="s-lbl"></div></div>
+    <div class="s-item"><div class="s-ico"></div><div class="s-lbl"></div></div>
+    <div class="s-item"><div class="s-ico"></div><div class="s-lbl"></div></div>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <div class="pg-title"></div>
+      <div class="top-right"><div class="search"></div><div class="avatar"></div></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-ico"></div><div class="stat-num"></div><div class="stat-lbl"></div></div>
+      <div class="stat"><div class="stat-ico"></div><div class="stat-num"></div><div class="stat-lbl"></div></div>
+      <div class="stat"><div class="stat-ico"></div><div class="stat-num"></div><div class="stat-lbl"></div></div>
+      <div class="stat"><div class="stat-ico"></div><div class="stat-num"></div><div class="stat-lbl"></div></div>
+    </div>
+    <div class="panels">
+      <div class="chart">
+        <div class="chart-title"></div>
+        <div class="bars">
+          <div class="bar" style="height:60%"></div>
+          <div class="bar" style="height:85%"></div>
+          <div class="bar" style="height:45%"></div>
+          <div class="bar" style="height:95%"></div>
+          <div class="bar" style="height:70%"></div>
+          <div class="bar" style="height:55%"></div>
+          <div class="bar" style="height:80%"></div>
+        </div>
+      </div>
+      <div class="list">
+        <div class="chart-title"></div>
+        <div class="list-row"><div class="l-dot"></div><div class="l-line"></div></div>
+        <div class="list-row"><div class="l-dot"></div><div class="l-line"></div></div>
+        <div class="list-row"><div class="l-dot"></div><div class="l-line"></div></div>
+        <div class="list-row"><div class="l-dot"></div><div class="l-line"></div></div>
+        <div class="list-row"><div class="l-dot"></div><div class="l-line"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

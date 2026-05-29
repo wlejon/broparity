@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>product-grid</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #fafafa; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  .topbar { height: 56px; padding: 0 24px; display: flex; align-items: center; gap: 20px; background: #fff; border-bottom: 1px solid #ececec; }
+  .brand { width: 90px; height: 20px; background: #111; border-radius: 4px; }
+  .search { flex: 1; max-width: 280px; height: 34px; background: #f0f0f0; border-radius: 17px; }
+  .cart { margin-left: auto; width: 34px; height: 34px; border-radius: 8px; background: #111; }
+  .layout { display: flex; }
+  .filters { width: 180px; padding: 22px 20px; }
+  .f-group { margin-bottom: 22px; }
+  .f-title { width: 90px; height: 12px; background: #1a1a1a; border-radius: 5px; margin-bottom: 14px; }
+  .f-row { display: flex; align-items: center; gap: 10px; margin-bottom: 11px; }
+  .checkbox { width: 16px; height: 16px; border: 1px solid #c4c4c4; border-radius: 4px; }
+  .f-lbl { width: 90px; height: 9px; background: #cfcfcf; border-radius: 4px; }
+  .grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 22px 24px 22px 0; }
+  .card { background: #fff; border: 1px solid #ededed; border-radius: 10px; overflow: hidden; }
+  .ph { height: 120px; position: relative; }
+  .card:nth-child(3n+1) .ph { background: linear-gradient(135deg, #ffd3a5, #fd6585); }
+  .card:nth-child(3n+2) .ph { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+  .card:nth-child(3n) .ph { background: linear-gradient(135deg, #d4fc79, #96e6a1); }
+  .badge { position: absolute; top: 10px; left: 10px; width: 40px; height: 18px; background: #e63946; border-radius: 9px; }
+  .pbody { padding: 12px; }
+  .p-name { width: 80%; height: 10px; background: #2a2a2a; border-radius: 5px; margin-bottom: 8px; }
+  .p-name.l2 { width: 55%; }
+  .p-foot { display: flex; align-items: center; margin-top: 12px; }
+  .price { width: 50px; height: 16px; background: #111; border-radius: 4px; }
+  .add { margin-left: auto; width: 28px; height: 28px; border-radius: 8px; background: #2b6cff; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <div class="brand"></div>
+    <div class="search"></div>
+    <div class="cart"></div>
+  </div>
+  <div class="layout">
+    <div class="filters">
+      <div class="f-group">
+        <div class="f-title"></div>
+        <div class="f-row"><div class="checkbox"></div><div class="f-lbl"></div></div>
+        <div class="f-row"><div class="checkbox"></div><div class="f-lbl"></div></div>
+        <div class="f-row"><div class="checkbox"></div><div class="f-lbl"></div></div>
+      </div>
+      <div class="f-group">
+        <div class="f-title"></div>
+        <div class="f-row"><div class="checkbox"></div><div class="f-lbl"></div></div>
+        <div class="f-row"><div class="checkbox"></div><div class="f-lbl"></div></div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="ph"><div class="badge"></div></div><div class="pbody"><div class="p-name"></div><div class="p-name l2"></div><div class="p-foot"><div class="price"></div><div class="add"></div></div></div></div>
+      <div class="card"><div class="ph"></div><div class="pbody"><div class="p-name"></div><div class="p-name l2"></div><div class="p-foot"><div class="price"></div><div class="add"></div></div></div></div>
+      <div class="card"><div class="ph"></div><div class="pbody"><div class="p-name"></div><div class="p-name l2"></div><div class="p-foot"><div class="price"></div><div class="add"></div></div></div></div>
+      <div class="card"><div class="ph"></div><div class="pbody"><div class="p-name"></div><div class="p-name l2"></div><div class="p-foot"><div class="price"></div><div class="add"></div></div></div></div>
+      <div class="card"><div class="ph"><div class="badge"></div></div><div class="pbody"><div class="p-name"></div><div class="p-name l2"></div><div class="p-foot"><div class="price"></div><div class="add"></div></div></div></div>
+      <div class="card"><div class="ph"></div><div class="pbody"><div class="p-name"></div><div class="p-name l2"></div><div class="p-foot"><div class="price"></div><div class="add"></div></div></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

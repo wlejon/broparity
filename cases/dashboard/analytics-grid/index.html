@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>analytics-grid</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #0d1117; }
+  .page { width: 800px; height: 600px; overflow: hidden; padding: 20px; box-sizing: border-box; }
+  .head { display: flex; align-items: center; margin-bottom: 16px; }
+  .h-title { width: 180px; height: 20px; background: #e6edf3; border-radius: 5px; }
+  .range { margin-left: auto; display: flex; gap: 8px; }
+  .seg { width: 44px; height: 28px; background: #1c2330; border: 1px solid #2a3340; border-radius: 6px; }
+  .seg.active { background: #2f81f7; border-color: #2f81f7; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 130px 130px 130px; gap: 14px; }
+  .panel { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 14px; }
+  .p-title { width: 70px; height: 9px; background: #6b7685; border-radius: 4px; margin-bottom: 14px; }
+  .wide { grid-column: span 2; }
+  .tall { grid-row: span 2; }
+  .num { width: 90px; height: 26px; background: #e6edf3; border-radius: 5px; margin-bottom: 10px; }
+  .spark { display: flex; align-items: flex-end; gap: 5px; height: 50px; }
+  .spark .b { flex: 1; background: #2f81f7; border-radius: 3px 3px 0 0; }
+  .line-chart { height: 78px; background: linear-gradient(180deg, rgba(47,129,247,0.35), rgba(47,129,247,0)); border-bottom: 2px solid #2f81f7; border-radius: 4px; }
+  .donut { width: 90px; height: 90px; border-radius: 50%; margin: 6px auto 0; background: conic-gradient(#2f81f7 0 40%, #3fb950 40% 70%, #d29922 70% 100%); }
+  .bars-v { display: flex; flex-direction: column; gap: 9px; margin-top: 6px; }
+  .bars-v .row { height: 10px; background: #21262d; border-radius: 5px; position: relative; overflow: hidden; }
+  .bars-v .row .fill { position: absolute; left: 0; top: 0; bottom: 0; background: #3fb950; border-radius: 5px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">
+    <div class="h-title"></div>
+    <div class="range"><div class="seg"></div><div class="seg active"></div><div class="seg"></div></div>
+  </div>
+  <div class="grid">
+    <div class="panel"><div class="p-title"></div><div class="num"></div><div class="spark"><span class="b" style="height:40%"></span><span class="b" style="height:70%"></span><span class="b" style="height:55%"></span><span class="b" style="height:90%"></span></div></div>
+    <div class="panel"><div class="p-title"></div><div class="num"></div><div class="spark"><span class="b" style="height:80%"></span><span class="b" style="height:50%"></span><span class="b" style="height:65%"></span><span class="b" style="height:35%"></span></div></div>
+    <div class="panel tall"><div class="p-title"></div><div class="donut"></div></div>
+    <div class="panel"><div class="p-title"></div><div class="num"></div><div class="spark"><span class="b" style="height:60%"></span><span class="b" style="height:85%"></span><span class="b" style="height:45%"></span><span class="b" style="height:75%"></span></div></div>
+    <div class="panel wide"><div class="p-title"></div><div class="line-chart"></div></div>
+    <div class="panel"><div class="p-title"></div><div class="num"></div></div>
+    <div class="panel wide"><div class="p-title"></div><div class="bars-v"><div class="row"><div class="fill" style="width:80%"></div></div><div class="row"><div class="fill" style="width:55%"></div></div><div class="row"><div class="fill" style="width:65%"></div></div></div></div>
+    <div class="panel"><div class="p-title"></div><div class="num"></div></div>
+  </div>
+</div>
+</body>
+</html>

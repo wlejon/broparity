@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>post-grid</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #f4f5f7; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  .header { height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: #1b1f3b; }
+  .h-title { width: 240px; height: 22px; background: #fff; border-radius: 5px; }
+  .h-sub { width: 320px; height: 11px; background: #6b7099; border-radius: 5px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 22px; }
+  .card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  .thumb { height: 110px; }
+  .card:nth-child(1) .thumb { background: linear-gradient(135deg, #ff7a59, #ff3d77); }
+  .card:nth-child(2) .thumb { background: linear-gradient(135deg, #5e72e4, #2bb3ff); }
+  .card:nth-child(3) .thumb { background: linear-gradient(135deg, #6ce5b1, #2a9d7a); }
+  .card:nth-child(4) .thumb { background: linear-gradient(135deg, #f7b733, #fc4a1a); }
+  .card:nth-child(5) .thumb { background: linear-gradient(135deg, #834d9b, #d04ed6); }
+  .card:nth-child(6) .thumb { background: linear-gradient(135deg, #11998e, #38ef7d); }
+  .body { padding: 14px; }
+  .cat { width: 60px; height: 10px; background: #ff3d77; border-radius: 5px; margin-bottom: 10px; }
+  .c-title { height: 12px; background: #1d2333; border-radius: 5px; margin-bottom: 7px; }
+  .c-title.l1 { width: 95%; }
+  .c-title.l2 { width: 65%; }
+  .c-foot { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+  .c-avatar { width: 24px; height: 24px; border-radius: 50%; background: #cdd2e0; }
+  .c-name { width: 80px; height: 9px; background: #b5bac9; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header"><div class="h-title"></div><div class="h-sub"></div></div>
+  <div class="grid">
+    <div class="card"><div class="thumb"></div><div class="body"><div class="cat"></div><div class="c-title l1"></div><div class="c-title l2"></div><div class="c-foot"><div class="c-avatar"></div><div class="c-name"></div></div></div></div>
+    <div class="card"><div class="thumb"></div><div class="body"><div class="cat"></div><div class="c-title l1"></div><div class="c-title l2"></div><div class="c-foot"><div class="c-avatar"></div><div class="c-name"></div></div></div></div>
+    <div class="card"><div class="thumb"></div><div class="body"><div class="cat"></div><div class="c-title l1"></div><div class="c-title l2"></div><div class="c-foot"><div class="c-avatar"></div><div class="c-name"></div></div></div></div>
+    <div class="card"><div class="thumb"></div><div class="body"><div class="cat"></div><div class="c-title l1"></div><div class="c-title l2"></div><div class="c-foot"><div class="c-avatar"></div><div class="c-name"></div></div></div></div>
+    <div class="card"><div class="thumb"></div><div class="body"><div class="cat"></div><div class="c-title l1"></div><div class="c-title l2"></div><div class="c-foot"><div class="c-avatar"></div><div class="c-name"></div></div></div></div>
+    <div class="card"><div class="thumb"></div><div class="body"><div class="cat"></div><div class="c-title l1"></div><div class="c-title l2"></div><div class="c-foot"><div class="c-avatar"></div><div class="c-name"></div></div></div></div>
+  </div>
+</div>
+</body>
+</html>

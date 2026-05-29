@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>three-tier</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #f8fafc; }
+  .page { width: 800px; height: 600px; overflow: hidden; padding: 28px; box-sizing: border-box; }
+  .head { text-align: center; margin-bottom: 26px; }
+  .h-title { width: 260px; height: 22px; background: #0f172a; border-radius: 5px; margin: 0 auto 10px; }
+  .h-sub { width: 360px; height: 10px; background: #c3cad6; border-radius: 5px; margin: 0 auto; }
+  .tiers { display: flex; gap: 20px; align-items: stretch; }
+  .tier { flex: 1; background: #fff; border: 1px solid #e6eaf0; border-radius: 14px; padding: 24px 22px; }
+  .tier.featured { border: 2px solid #4f46e5; box-shadow: 0 16px 36px rgba(79,70,229,0.18); transform: translateY(-14px); padding-bottom: 38px; }
+  .ribbon { width: 70px; height: 20px; background: #4f46e5; border-radius: 10px; margin-bottom: 16px; }
+  .plan { width: 80px; height: 12px; background: #475569; border-radius: 5px; margin-bottom: 16px; }
+  .price { display: flex; align-items: flex-end; gap: 6px; margin-bottom: 20px; }
+  .amount { width: 90px; height: 36px; background: #0f172a; border-radius: 6px; }
+  .per { width: 36px; height: 10px; background: #b6c0cf; border-radius: 4px; margin-bottom: 4px; }
+  .feat { display: flex; align-items: center; gap: 10px; margin-bottom: 13px; }
+  .check { width: 16px; height: 16px; border-radius: 50%; background: #d1fae5; }
+  .tier.featured .check { background: #c7d2fe; }
+  .f-line { height: 9px; background: #ccd3de; border-radius: 4px; }
+  .f-line.w1 { width: 70%; }
+  .f-line.w2 { width: 85%; }
+  .f-line.w3 { width: 60%; }
+  .cta { width: 100%; height: 44px; border-radius: 9px; margin-top: 14px; box-sizing: border-box; border: 1px solid #cbd5e1; }
+  .tier.featured .cta { background: #4f46e5; border: none; box-shadow: 0 8px 18px rgba(79,70,229,0.3); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="head"><div class="h-title"></div><div class="h-sub"></div></div>
+  <div class="tiers">
+    <div class="tier">
+      <div class="plan"></div>
+      <div class="price"><div class="amount"></div><div class="per"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w2"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w1"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w3"></div></div>
+      <div class="cta"></div>
+    </div>
+    <div class="tier featured">
+      <div class="ribbon"></div>
+      <div class="plan"></div>
+      <div class="price"><div class="amount"></div><div class="per"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w2"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w1"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w3"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w2"></div></div>
+      <div class="cta"></div>
+    </div>
+    <div class="tier">
+      <div class="plan"></div>
+      <div class="price"><div class="amount"></div><div class="per"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w1"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w2"></div></div>
+      <div class="feat"><div class="check"></div><div class="f-line w3"></div></div>
+      <div class="cta"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

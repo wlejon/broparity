@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hero-centered</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #f5f7fb; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  .nav { height: 56px; padding: 0 32px; display: flex; align-items: center; background: #fff; border-bottom: 1px solid #e3e8f0; }
+  .brand { width: 110px; height: 20px; background: #2b6cff; border-radius: 4px; }
+  .nav-links { margin-left: auto; display: flex; gap: 24px; align-items: center; }
+  .nav-link { width: 56px; height: 10px; background: #c2ccda; border-radius: 5px; }
+  .nav-cta { width: 84px; height: 34px; background: #2b6cff; border-radius: 6px; }
+  .hero { height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 0 80px; background: linear-gradient(180deg, #f5f7fb, #e9eefb); }
+  .h-line { height: 22px; background: #1c2741; border-radius: 6px; }
+  .h-line.l1 { width: 420px; }
+  .h-line.l2 { width: 320px; }
+  .h-sub { width: 380px; height: 12px; background: #8593ab; border-radius: 6px; margin-top: 6px; }
+  .h-sub.s2 { width: 300px; }
+  .cta-row { display: flex; gap: 16px; margin-top: 20px; }
+  .btn { width: 140px; height: 44px; border-radius: 8px; }
+  .btn.primary { background: #2b6cff; box-shadow: 0 6px 16px rgba(43,108,255,0.35); }
+  .btn.ghost { background: #fff; border: 1px solid #c2ccda; }
+  .features { height: 144px; display: flex; gap: 20px; padding: 24px 32px; background: #fff; border-top: 1px solid #e3e8f0; }
+  .card { flex: 1; background: #f5f7fb; border: 1px solid #e3e8f0; border-radius: 10px; padding: 18px; }
+  .icon { width: 36px; height: 36px; background: #2b6cff; border-radius: 8px; margin-bottom: 14px; }
+  .c-line { height: 10px; background: #c2ccda; border-radius: 5px; margin-bottom: 8px; }
+  .c-line.w1 { width: 80%; }
+  .c-line.w2 { width: 55%; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="nav">
+    <div class="brand"></div>
+    <div class="nav-links">
+      <div class="nav-link"></div>
+      <div class="nav-link"></div>
+      <div class="nav-link"></div>
+      <div class="nav-cta"></div>
+    </div>
+  </div>
+  <div class="hero">
+    <div class="h-line l1"></div>
+    <div class="h-line l2"></div>
+    <div class="h-sub"></div>
+    <div class="h-sub s2"></div>
+    <div class="cta-row">
+      <div class="btn primary"></div>
+      <div class="btn ghost"></div>
+    </div>
+  </div>
+  <div class="features">
+    <div class="card"><div class="icon"></div><div class="c-line w1"></div><div class="c-line w2"></div></div>
+    <div class="card"><div class="icon"></div><div class="c-line w1"></div><div class="c-line w2"></div></div>
+    <div class="card"><div class="icon"></div><div class="c-line w1"></div><div class="c-line w2"></div></div>
+  </div>
+</div>
+</body>
+</html>

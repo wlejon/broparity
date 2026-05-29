@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>feature-sections</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #fff; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  .nav { height: 54px; padding: 0 36px; display: flex; align-items: center; border-bottom: 1px solid #ececec; }
+  .brand { width: 100px; height: 18px; background: #111; border-radius: 4px; }
+  .nav-links { margin-left: auto; display: flex; gap: 20px; }
+  .nav-link { width: 48px; height: 10px; background: #d4d4d4; border-radius: 5px; }
+  .section { height: 182px; display: flex; align-items: center; gap: 36px; padding: 0 48px; }
+  .section.alt { flex-direction: row-reverse; background: #f7f7f7; }
+  .media { width: 300px; height: 140px; border-radius: 12px; }
+  .s1 .media { background: linear-gradient(135deg, #ff9a6c, #ff5e7e); }
+  .s2 .media { background: linear-gradient(135deg, #6cb6ff, #5e6bff); }
+  .s3 .media { background: linear-gradient(135deg, #6ce5b1, #3ab0a0); }
+  .copy { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .eyebrow { width: 80px; height: 12px; border-radius: 6px; }
+  .s1 .eyebrow { background: #ff5e7e; }
+  .s2 .eyebrow { background: #5e6bff; }
+  .s3 .eyebrow { background: #3ab0a0; }
+  .t-line { height: 18px; background: #1c1c1c; border-radius: 5px; }
+  .t-line.l1 { width: 70%; }
+  .t-line.l2 { width: 50%; }
+  .p-line { height: 10px; background: #c9c9c9; border-radius: 5px; }
+  .p-line.w1 { width: 90%; }
+  .p-line.w2 { width: 80%; }
+  .p-line.w3 { width: 60%; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="nav">
+    <div class="brand"></div>
+    <div class="nav-links"><div class="nav-link"></div><div class="nav-link"></div><div class="nav-link"></div></div>
+  </div>
+  <div class="section s1">
+    <div class="media"></div>
+    <div class="copy"><div class="eyebrow"></div><div class="t-line l1"></div><div class="t-line l2"></div><div class="p-line w1"></div><div class="p-line w2"></div><div class="p-line w3"></div></div>
+  </div>
+  <div class="section s2 alt">
+    <div class="media"></div>
+    <div class="copy"><div class="eyebrow"></div><div class="t-line l1"></div><div class="t-line l2"></div><div class="p-line w1"></div><div class="p-line w2"></div><div class="p-line w3"></div></div>
+  </div>
+  <div class="section s3">
+    <div class="media"></div>
+    <div class="copy"><div class="eyebrow"></div><div class="t-line l1"></div><div class="t-line l2"></div><div class="p-line w1"></div><div class="p-line w2"></div><div class="p-line w3"></div></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>article-sidebar</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #fff; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  .topbar { height: 52px; padding: 0 28px; display: flex; align-items: center; border-bottom: 1px solid #eee; }
+  .brand { width: 96px; height: 18px; background: #2b3a67; border-radius: 4px; }
+  .nav-links { margin-left: auto; display: flex; gap: 18px; }
+  .nav-link { width: 44px; height: 10px; background: #d6d6d6; border-radius: 5px; }
+  .layout { display: flex; gap: 28px; padding: 28px; }
+  .main { flex: 1; }
+  .title { height: 24px; background: #1d2333; border-radius: 5px; margin-bottom: 9px; }
+  .title.l1 { width: 90%; }
+  .title.l2 { width: 60%; }
+  .p { height: 10px; background: #d2d2d2; border-radius: 5px; margin-bottom: 10px; }
+  .p.full { width: 100%; }
+  .p.w { width: 84%; }
+  .img { width: 100%; height: 150px; background: linear-gradient(135deg, #5e72e4, #825ee4); border-radius: 8px; margin: 18px 0; }
+  .sidebar { width: 220px; display: flex; flex-direction: column; gap: 16px; }
+  .widget { background: #f5f6fa; border: 1px solid #e7e9f2; border-radius: 10px; padding: 14px; }
+  .w-title { width: 100px; height: 12px; background: #2b3a67; border-radius: 5px; margin-bottom: 12px; }
+  .w-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .w-thumb { width: 44px; height: 44px; border-radius: 6px; background: linear-gradient(135deg, #5e72e4, #b65ee4); }
+  .w-lines { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+  .w-l1 { width: 100%; height: 9px; background: #c3c7d6; border-radius: 4px; }
+  .w-l2 { width: 60%; height: 8px; background: #d9dce8; border-radius: 4px; }
+  .tag { display: inline-block; width: 50px; height: 22px; background: #e6e9f5; border-radius: 11px; margin: 0 6px 8px 0; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <div class="brand"></div>
+    <div class="nav-links"><div class="nav-link"></div><div class="nav-link"></div><div class="nav-link"></div></div>
+  </div>
+  <div class="layout">
+    <div class="main">
+      <div class="title l1"></div>
+      <div class="title l2"></div>
+      <div class="img"></div>
+      <div class="p full"></div>
+      <div class="p full"></div>
+      <div class="p w"></div>
+      <div class="p full"></div>
+      <div class="p w"></div>
+    </div>
+    <div class="sidebar">
+      <div class="widget">
+        <div class="w-title"></div>
+        <div class="w-row"><div class="w-thumb"></div><div class="w-lines"><div class="w-l1"></div><div class="w-l2"></div></div></div>
+        <div class="w-row"><div class="w-thumb"></div><div class="w-lines"><div class="w-l1"></div><div class="w-l2"></div></div></div>
+        <div class="w-row"><div class="w-thumb"></div><div class="w-lines"><div class="w-l1"></div><div class="w-l2"></div></div></div>
+      </div>
+      <div class="widget">
+        <div class="w-title"></div>
+        <div><span class="tag"></span><span class="tag"></span><span class="tag"></span><span class="tag"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

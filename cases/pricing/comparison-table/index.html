@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>comparison-table</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #fff; }
+  .page { width: 800px; height: 600px; overflow: hidden; padding: 30px; box-sizing: border-box; }
+  .head { width: 240px; height: 20px; background: #111827; border-radius: 5px; margin: 0 auto 24px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border-bottom: 1px solid #eceef2; padding: 14px 16px; text-align: left; }
+  thead th { border-bottom: 2px solid #e2e6ec; vertical-align: bottom; }
+  .col-feat { width: 40%; }
+  .plan-name { width: 64px; height: 12px; background: #374151; border-radius: 5px; margin: 0 auto 10px; }
+  .plan-price { width: 50px; height: 20px; background: #4f46e5; border-radius: 4px; margin: 0 auto; }
+  thead th.hl { background: #f5f5ff; }
+  td.hl { background: #fafaff; }
+  thead th { text-align: center; }
+  td.val { text-align: center; }
+  .f-lbl { width: 80%; height: 10px; background: #ccd2dc; border-radius: 4px; }
+  .yes { width: 18px; height: 18px; border-radius: 50%; background: #10b981; margin: 0 auto; }
+  .no { width: 18px; height: 4px; border-radius: 2px; background: #d1d5db; margin: 7px auto; }
+  .partial { width: 40px; height: 10px; border-radius: 5px; background: #cbd5e1; margin: 0 auto; }
+  tfoot td { border-bottom: none; padding-top: 18px; }
+  .cta { width: 90%; height: 36px; border-radius: 8px; margin: 0 auto; border: 1px solid #cbd5e1; box-sizing: border-box; }
+  .cta.primary { background: #4f46e5; border: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="head"></div>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-feat"></th>
+        <th><div class="plan-name"></div><div class="plan-price"></div></th>
+        <th class="hl"><div class="plan-name"></div><div class="plan-price"></div></th>
+        <th><div class="plan-name"></div><div class="plan-price"></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><div class="f-lbl"></div></td><td class="val"><div class="yes"></div></td><td class="val hl"><div class="yes"></div></td><td class="val"><div class="yes"></div></td></tr>
+      <tr><td><div class="f-lbl"></div></td><td class="val"><div class="no"></div></td><td class="val hl"><div class="yes"></div></td><td class="val"><div class="yes"></div></td></tr>
+      <tr><td><div class="f-lbl"></div></td><td class="val"><div class="partial"></div></td><td class="val hl"><div class="yes"></div></td><td class="val"><div class="yes"></div></td></tr>
+      <tr><td><div class="f-lbl"></div></td><td class="val"><div class="no"></div></td><td class="val hl"><div class="no"></div></td><td class="val"><div class="yes"></div></td></tr>
+      <tr><td><div class="f-lbl"></div></td><td class="val"><div class="no"></div></td><td class="val hl"><div class="partial"></div></td><td class="val"><div class="yes"></div></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td></td><td><div class="cta"></div></td><td class="hl"><div class="cta primary"></div></td><td><div class="cta"></div></td></tr>
+    </tfoot>
+  </table>
+</div>
+</body>
+</html>

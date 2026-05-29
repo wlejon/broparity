@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>settings-form</title>
+<style>
+  html, body { margin: 0; padding: 0; font-size: 0; background: #f3f4f6; }
+  .page { width: 800px; height: 600px; overflow: hidden; padding: 28px; box-sizing: border-box; }
+  .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; overflow: hidden; }
+  .head { padding: 22px 28px; border-bottom: 1px solid #eef0f3; }
+  .h-title { width: 160px; height: 18px; background: #111827; border-radius: 5px; margin-bottom: 8px; }
+  .h-sub { width: 260px; height: 9px; background: #c7ccd4; border-radius: 4px; }
+  .body { padding: 12px 28px; }
+  .row { display: flex; align-items: center; padding: 18px 0; border-bottom: 1px solid #f1f2f5; }
+  .row:last-child { border-bottom: none; }
+  .label { width: 220px; }
+  .l-main { width: 130px; height: 11px; background: #374151; border-radius: 5px; margin-bottom: 7px; }
+  .l-help { width: 190px; height: 8px; background: #ccd1da; border-radius: 4px; }
+  .control { margin-left: auto; }
+  .input { width: 240px; height: 40px; background: #f6f7f9; border: 1px solid #e2e5eb; border-radius: 9px; }
+  .avatar-row { display: flex; align-items: center; gap: 14px; }
+  .avatar { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #6366f1, #a855f7); }
+  .up-btn { width: 90px; height: 34px; border: 1px solid #d1d5db; border-radius: 8px; }
+  .toggle { width: 48px; height: 26px; border-radius: 13px; background: #6366f1; position: relative; }
+  .toggle .knob { position: absolute; top: 3px; right: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; }
+  .toggle.off { background: #d1d5db; }
+  .toggle.off .knob { right: auto; left: 3px; }
+  .foot { padding: 18px 28px; background: #fafbfc; border-top: 1px solid #eef0f3; display: flex; justify-content: flex-end; gap: 12px; }
+  .btn-cancel { width: 84px; height: 40px; border: 1px solid #d1d5db; border-radius: 9px; }
+  .btn-save { width: 110px; height: 40px; background: #6366f1; border-radius: 9px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="card">
+    <div class="head"><div class="h-title"></div><div class="h-sub"></div></div>
+    <div class="body">
+      <div class="row">
+        <div class="label"><div class="l-main"></div><div class="l-help"></div></div>
+        <div class="control avatar-row"><div class="avatar"></div><div class="up-btn"></div></div>
+      </div>
+      <div class="row">
+        <div class="label"><div class="l-main"></div><div class="l-help"></div></div>
+        <div class="control"><div class="input"></div></div>
+      </div>
+      <div class="row">
+        <div class="label"><div class="l-main"></div><div class="l-help"></div></div>
+        <div class="control"><div class="input"></div></div>
+      </div>
+      <div class="row">
+        <div class="label"><div class="l-main"></div><div class="l-help"></div></div>
+        <div class="control"><div class="toggle"><div class="knob"></div></div></div>
+      </div>
+      <div class="row">
+        <div class="label"><div class="l-main"></div><div class="l-help"></div></div>
+        <div class="control"><div class="toggle off"><div class="knob"></div></div></div>
+      </div>
+    </div>
+    <div class="foot"><div class="btn-cancel"></div><div class="btn-save"></div></div>
+  </div>
+</div>
+</body>
+</html>
