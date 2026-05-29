@@ -2,12 +2,12 @@
 // then screenshots to BROPARITY_OUT_PNG. Output paths come from env (we inline them
 // per-invocation via -e since bro-headless does not expose process.env directly).
 //
-// Configuration: the orchestrator overwrites this file's D:/projects/broparity/out/2026-05-12T18-31-28-943Z/display-types/img-css-size/bro.layout.json / D:/projects/broparity/out/2026-05-12T18-31-28-943Z/display-types/img-css-size/bro.png
+// Configuration: the orchestrator overwrites this file's D:/projects/broparity/out/2026-05-29T01-20-31-919Z/display-types/img-css-size/bro.layout.json / D:/projects/broparity/out/2026-05-29T01-20-31-919Z/display-types/img-css-size/bro.png
 // placeholders before each run, OR passes a tiny bootstrap via -e. We use the
 // placeholder approach for simplicity.
 
-const OUT_JSON = "D:/projects/broparity/out/2026-05-12T18-31-28-943Z/display-types/img-css-size/bro.layout.json";
-const OUT_PNG = "D:/projects/broparity/out/2026-05-12T18-31-28-943Z/display-types/img-css-size/bro.png";
+const OUT_JSON = "D:/projects/broparity/out/2026-05-29T01-20-31-919Z/display-types/img-css-size/bro.layout.json";
+const OUT_PNG = "D:/projects/broparity/out/2026-05-29T01-20-31-919Z/display-types/img-css-size/bro.png";
 
 const STYLE_PROPS = [
   "display", "position",

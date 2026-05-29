@@ -1,6 +1,6 @@
 {
-  "runId": "2026-05-12T18-31-28-943Z",
-  "timestamp": "2026-05-12T18:33:37.839Z",
+  "runId": "2026-05-29T01-20-31-919Z",
+  "timestamp": "2026-05-29T01:23:11.793Z",
   "viewport": {
     "w": 800,
     "h": 600
@@ -17,20 +17,34 @@
       "NVIDIA GeForce RTX 4090"
     ],
     "nodeVersion": "v24.2.0",
-    "detectedAt": "2026-05-12T18:33:37.839Z"
+    "detectedAt": "2026-05-29T01:23:11.793Z"
   },
   "overall": {
-    "layoutScore": 0.9460634725561736,
-    "pixelScore": 0.9914374130080514,
-    "caseCount": 168,
-    "categoryCount": 13
+    "layoutScore": 0.8779922916254974,
+    "pixelScore": 0.9759547246716075,
+    "caseCount": 196,
+    "categoryCount": 22
   },
   "categories": [
+    {
+      "name": "auth",
+      "n": 3,
+      "layoutScore": 0.8809048625792811,
+      "pixelScore": 0.9804749999999999,
+      "errors": 0
+    },
     {
       "name": "backgrounds",
       "n": 10,
       "layoutScore": 1,
       "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "blog",
+      "n": 3,
+      "layoutScore": 0.8945650301464255,
+      "pixelScore": 0.9992972222222223,
       "errors": 0
     },
     {
@@ -48,10 +62,24 @@
       "errors": 0
     },
     {
+      "name": "dashboard",
+      "n": 3,
+      "layoutScore": 0.6696560846560846,
+      "pixelScore": 0.9841840277777778,
+      "errors": 0
+    },
+    {
       "name": "display-types",
       "n": 12,
-      "layoutScore": 0.9680555555555556,
+      "layoutScore": 0.9347222222222222,
       "pixelScore": 0.9916352389180566,
+      "errors": 0
+    },
+    {
+      "name": "editorial",
+      "n": 3,
+      "layoutScore": 0.45988906088751297,
+      "pixelScore": 0.8952583333333334,
       "errors": 0
     },
     {
@@ -76,17 +104,45 @@
       "errors": 0
     },
     {
+      "name": "landing",
+      "n": 3,
+      "layoutScore": 0.8111507936507936,
+      "pixelScore": 0.9871576388888889,
+      "errors": 0
+    },
+    {
+      "name": "media",
+      "n": 3,
+      "layoutScore": 0.9235235235235235,
+      "pixelScore": 0.7494513888888888,
+      "errors": 0
+    },
+    {
       "name": "overflow",
       "n": 7,
       "layoutScore": 1,
-      "pixelScore": 0.9986444805194805,
+      "pixelScore": 0.9984537337662337,
       "errors": 0
     },
     {
       "name": "position",
       "n": 18,
       "layoutScore": 1,
-      "pixelScore": 0.9998430173509192,
+      "pixelScore": 0.9998116796052313,
+      "errors": 0
+    },
+    {
+      "name": "pricing",
+      "n": 3,
+      "layoutScore": 0.944734101579172,
+      "pixelScore": 0.9963041666666667,
+      "errors": 0
+    },
+    {
+      "name": "shop",
+      "n": 3,
+      "layoutScore": 0.8668131868131868,
+      "pixelScore": 0.9993,
       "errors": 0
     },
     {
@@ -97,10 +153,17 @@
       "errors": 0
     },
     {
+      "name": "svg",
+      "n": 4,
+      "layoutScore": 0.5991019620280358,
+      "pixelScore": 0.9911119791666666,
+      "errors": 0
+    },
+    {
       "name": "tables",
       "n": 29,
       "layoutScore": 0.8492733206572078,
-      "pixelScore": 0.9651150389338726,
+      "pixelScore": 0.9651149401590566,
       "errors": 0
     },
     {

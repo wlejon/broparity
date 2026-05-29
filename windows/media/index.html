@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>broparity — media</title>
+<style>
+body { font-family: -apple-system, sans-serif; margin: 24px; background: #fafafa; color: #202020; }
+h1 { margin: 0 0 4px; }
+.sub { color: #606060; font-size: 13px; margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+th { background: #f4f4f4; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #606060; }
+img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block; }
+.num { font-variant-numeric: tabular-nums; font-size: 13px; }
+.dim { color: #808080; font-size: 11px; }
+.err td { background: #fff0f0; }
+.errcell { color: #c00000; font-family: monospace; font-size: 12px; }
+a { color: #1f6feb; }
+</style></head><body>
+<h1>media</h1>
+<div class="sub"><a href="../index.html">all cases</a></div>
+<table><thead><tr><th>Case</th><th>bro</th><th>Chromium</th><th>Diff</th><th>Pixel mismatch</th><th>Layout Δ</th><th>Score</th></tr></thead>
+<tbody><tr id="glass-panel">
+      <td><b>glass-panel</b></td>
+      <td><img src="glass-panel/bro.png" loading="lazy"></td>
+      <td><img src="glass-panel/chromium.png" loading="lazy"></td>
+      <td><img src="glass-panel/diff.png" loading="lazy"></td>
+      <td class="num">41.198%<br><span class="dim">197750/480000 px</span></td>
+      <td class="num">rect: 6<br>style: 1<br><span class="dim">of 18 elems</span></td>
+      <td class="num">L=0.811<br>P=0.588</td>
+    </tr>
+<tr id="image-editor">
+      <td><b>image-editor</b></td>
+      <td><img src="image-editor/bro.png" loading="lazy"></td>
+      <td><img src="image-editor/chromium.png" loading="lazy"></td>
+      <td><img src="image-editor/diff.png" loading="lazy"></td>
+      <td class="num">25.087%<br><span class="dim">120418/480000 px</span></td>
+      <td class="num">rect: 3<br>style: 0<br><span class="dim">of 37 elems</span></td>
+      <td class="num">L=0.959<br>P=0.749</td>
+    </tr>
+<tr id="photo-gallery">
+      <td><b>photo-gallery</b></td>
+      <td><img src="photo-gallery/bro.png" loading="lazy"></td>
+      <td><img src="photo-gallery/chromium.png" loading="lazy"></td>
+      <td><img src="photo-gallery/diff.png" loading="lazy"></td>
+      <td class="num">8.880%<br><span class="dim">42622/480000 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 31 elems</span></td>
+      <td class="num">L=1.000<br>P=0.911</td>
+    </tr></tbody></table>
+</body></html>
