@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>markers</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #0b1020; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+          gap: 16px; padding: 16px; box-sizing: border-box; width: 800px; height: 600px; }
+  .panel { background: #131a30; border-radius: 14px; }
+  svg { display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="grid">
+
+    <!-- 1. orient=auto arrowheads on a horizontal line, an angled line, and a
+            multi-segment path (start + end). refX pins the tip to the vertex. -->
+    <div class="panel">
+      <svg viewBox="0 0 380 270">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+                  markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M0,0 L10,5 L0,10 z" fill="#38bdf8"/>
+          </marker>
+        </defs>
+        <line x1="30" y1="42" x2="340" y2="42" stroke="#38bdf8" stroke-width="3"
+              marker-end="url(#arrow)"/>
+        <line x1="30" y1="95" x2="300" y2="155" stroke="#38bdf8" stroke-width="3"
+              marker-end="url(#arrow)"/>
+        <path d="M30,215 L120,190 L210,235 L320,200" fill="none"
+              stroke="#38bdf8" stroke-width="3"
+              marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+      </svg>
+    </div>
+
+    <!-- 2. marker-mid dots at every polyline vertex; markerUnits=strokeWidth
+            scales the dot by the 4px stroke width. -->
+    <div class="panel">
+      <svg viewBox="0 0 380 270">
+        <defs>
+          <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
+                  markerWidth="5" markerHeight="5">
+            <circle cx="5" cy="5" r="4" fill="#f59e0b"/>
+          </marker>
+        </defs>
+        <polyline points="34,150 100,70 168,180 236,80 320,160" fill="none"
+                  stroke="#f59e0b" stroke-width="4"
+                  marker-start="url(#dot)" marker-mid="url(#dot)" marker-end="url(#dot)"/>
+      </svg>
+    </div>
+
+    <!-- 3. auto-start-reverse (double-headed arrow) and fixed orient=0 ticks. -->
+    <div class="panel">
+      <svg viewBox="0 0 380 270">
+        <defs>
+          <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5"
+                  markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#a78bfa"/>
+          </marker>
+          <marker id="tick" refX="1" refY="5" markerWidth="2" markerHeight="10" orient="0">
+            <rect width="2" height="10" fill="#34d399"/>
+          </marker>
+        </defs>
+        <line x1="46" y1="70" x2="330" y2="70" stroke="#a78bfa" stroke-width="3"
+              marker-start="url(#arrow2)" marker-end="url(#arrow2)"/>
+        <path d="M46,160 L118,160 L190,160 L262,160 L330,160" fill="none"
+              stroke="#34d399" stroke-width="2"
+              marker-start="url(#tick)" marker-mid="url(#tick)" marker-end="url(#tick)"/>
+      </svg>
+    </div>
+
+    <!-- 4. marker-mid inherited from a <g>; a viewBox-less diamond whose refX/refY
+            are in marker units, orient=auto along the zig-zag. -->
+    <div class="panel">
+      <svg viewBox="0 0 380 270">
+        <defs>
+          <marker id="diamond" refX="4" refY="4" markerWidth="8" markerHeight="8"
+                  orient="auto">
+            <path d="M4,0 L8,4 L4,8 L0,4 z" fill="#fb7185"/>
+          </marker>
+        </defs>
+        <g marker-mid="url(#diamond)" fill="none" stroke="#fb7185" stroke-width="2">
+          <polyline points="42,205 112,115 182,205 252,115 322,205"/>
+        </g>
+      </svg>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
