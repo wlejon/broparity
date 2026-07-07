@@ -2,8 +2,9 @@
   "summary": {
     "totalElements": 52,
     "rectMismatches": 0,
-    "styleMismatches": 4,
-    "geomEpsilon": 1
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -963,13 +964,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "132.8px",
-          "132.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(2)",
@@ -998,13 +994,8 @@
           "h": 8
         }
       },
-      "styleDeltas": {
-        "width": [
-          "66.4px",
-          "66.391px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(3)",
@@ -1153,13 +1144,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "132.8px",
-          "132.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(2)",
@@ -1188,13 +1174,8 @@
           "h": 8
         }
       },
-      "styleDeltas": {
-        "width": [
-          "66.4px",
-          "66.391px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(3)>div:nth-of-type(3)",

@@ -2,8 +2,9 @@
   "summary": {
     "totalElements": 2,
     "rectMismatches": 0,
-    "styleMismatches": 2,
-    "geomEpsilon": 1
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -33,13 +34,8 @@
           "h": 44.781
         }
       },
-      "styleDeltas": {
-        "height": [
-          "44.8px",
-          "44.781px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>p:nth-of-type(1)",
@@ -68,13 +64,8 @@
           "h": 44.781
         }
       },
-      "styleDeltas": {
-        "height": [
-          "44.8px",
-          "44.781px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     }
   ]
 }

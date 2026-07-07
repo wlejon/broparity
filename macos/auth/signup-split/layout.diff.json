@@ -1,9 +1,10 @@
 {
   "summary": {
     "totalElements": 33,
-    "rectMismatches": 9,
-    "styleMismatches": 3,
-    "geomEpsilon": 1
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -283,15 +284,15 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": 18,
+        "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 36,
           "y": 550,
-          "w": 118,
+          "w": 100,
           "h": 6
         }
       },
@@ -303,13 +304,8 @@
           "h": 6
         }
       },
-      "styleDeltas": {
-        "width": [
-          "118px",
-          "100px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(1)",
@@ -709,15 +705,15 @@
         "dx": 0,
         "dy": 0,
         "dw": 0,
-        "dh": 33
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 440,
           "y": 184,
           "w": 312,
-          "h": 158
+          "h": 125
         }
       },
       "chromium": {
@@ -728,13 +724,8 @@
           "h": 125
         }
       },
-      "styleDeltas": {
-        "height": [
-          "158px",
-          "125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(4)>div:nth-of-type(1)",
@@ -802,17 +793,17 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 33,
+        "dy": 0,
         "dw": 0,
-        "dh": 33
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 440,
-          "y": 358,
+          "y": 325,
           "w": 312,
-          "h": 158
+          "h": 125
         }
       },
       "chromium": {
@@ -823,13 +814,8 @@
           "h": 125
         }
       },
-      "styleDeltas": {
-        "height": [
-          "158px",
-          "125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(5)>div:nth-of-type(1)",
@@ -837,15 +823,15 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 33,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 440,
-          "y": 358,
+          "y": 325,
           "w": 60,
           "h": 9
         }
@@ -867,15 +853,15 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 33,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 440,
-          "y": 374,
+          "y": 341,
           "w": 312,
           "h": 42
         }
@@ -897,15 +883,15 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 66,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 440,
-          "y": 536,
+          "y": 470,
           "w": 312,
           "h": 18
         }
@@ -927,15 +913,15 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 66,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 440,
-          "y": 536,
+          "y": 470,
           "w": 18,
           "h": 18
         }
@@ -957,15 +943,15 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 66,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 467,
-          "y": 541,
+          "y": 475,
           "w": 180,
           "h": 8
         }
@@ -987,15 +973,15 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 66,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 440,
-          "y": 574,
+          "y": 508,
           "w": 312,
           "h": 48
         }
