@@ -1,0 +1,261 @@
+{
+  "summary": {
+    "totalElements": 8,
+    "rectMismatches": 2,
+    "styleMismatches": 2,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 20,
+          "w": 800,
+          "h": 234
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 20,
+          "w": 800,
+          "h": 234
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "wrap",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 760,
+          "h": 234
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 760,
+          "h": 234
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 760,
+          "h": 58
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 760,
+          "h": 58
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(1)>textarea:nth-of-type(1)",
+      "tag": "textarea",
+      "id": "ta-attrs",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": -10,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 181,
+          "h": 54
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 191,
+          "h": 54
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "175px",
+          "185px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 90,
+          "w": 760,
+          "h": 110
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 90,
+          "w": 760,
+          "h": 110
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>textarea:nth-of-type(1)",
+      "tag": "textarea",
+      "id": "ta-css",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 90,
+          "w": 306,
+          "h": 106
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 90,
+          "w": 306,
+          "h": 106
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(3)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 212,
+          "w": 760,
+          "h": 42
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 212,
+          "w": 760,
+          "h": 42
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>textarea:nth-of-type(1)",
+      "tag": "textarea",
+      "id": "ta-noresize",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": -18,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 212,
+          "w": 341,
+          "h": 38
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 212,
+          "w": 359,
+          "h": 38
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "335px",
+          "353px"
+        ]
+      },
+      "styleMismatch": true
+    }
+  ]
+}

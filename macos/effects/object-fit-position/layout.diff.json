@@ -1,0 +1,191 @@
+{
+  "summary": {
+    "totalElements": 6,
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 800,
+          "h": 138
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 800,
+          "h": 138
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>img:nth-of-type(1)",
+      "tag": "img",
+      "id": "fit-fill",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>img:nth-of-type(2)",
+      "tag": "img",
+      "id": "fit-contain",
+      "rectDelta": {
+        "dx": -0.008000000000009777,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 172.445,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 172.453,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>img:nth-of-type(3)",
+      "tag": "img",
+      "id": "fit-cover",
+      "rectDelta": {
+        "dx": -0.014999999999986358,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 324.891,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 324.906,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>img:nth-of-type(4)",
+      "tag": "img",
+      "id": "fit-none",
+      "rectDelta": {
+        "dx": -0.022999999999967713,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 477.336,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 477.359,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>img:nth-of-type(5)",
+      "tag": "img",
+      "id": "fit-pos",
+      "rectDelta": {
+        "dx": -0.03200000000003911,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 629.781,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 629.813,
+          "y": 24,
+          "w": 120,
+          "h": 90
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    }
+  ]
+}

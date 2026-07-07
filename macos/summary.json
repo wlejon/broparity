@@ -1,6 +1,6 @@
 {
-  "runId": "2026-07-07T00-18-13-609Z",
-  "timestamp": "2026-07-07T00:19:55.761Z",
+  "runId": "2026-07-07T05-57-53-555Z",
+  "timestamp": "2026-07-07T06:00:15.507Z",
   "viewport": {
     "w": 800,
     "h": 600
@@ -16,13 +16,13 @@
       "Apple M2 Pro"
     ],
     "nodeVersion": "v22.8.0",
-    "detectedAt": "2026-07-07T00:19:55.761Z"
+    "detectedAt": "2026-07-07T06:00:15.507Z"
   },
   "overall": {
-    "layoutScore": 0.9964560532732037,
-    "pixelScore": 0.9928767059455317,
-    "caseCount": 196,
-    "categoryCount": 22
+    "layoutScore": 0.9832070844605107,
+    "pixelScore": 0.9882548310063947,
+    "caseCount": 281,
+    "categoryCount": 32
   },
   "categories": [
     {
@@ -61,6 +61,13 @@
       "errors": 0
     },
     {
+      "name": "columns",
+      "n": 7,
+      "layoutScore": 1,
+      "pixelScore": 0.9967045359940744,
+      "errors": 0
+    },
+    {
       "name": "dashboard",
       "n": 3,
       "layoutScore": 1,
@@ -82,6 +89,20 @@
       "errors": 0
     },
     {
+      "name": "effects",
+      "n": 9,
+      "layoutScore": 1,
+      "pixelScore": 0.9162390672049866,
+      "errors": 0
+    },
+    {
+      "name": "elements",
+      "n": 8,
+      "layoutScore": 0.8734375,
+      "pixelScore": 0.9679837654666223,
+      "errors": 0
+    },
+    {
       "name": "flex",
       "n": 18,
       "layoutScore": 1,
@@ -89,10 +110,31 @@
       "errors": 0
     },
     {
+      "name": "floats",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 0.9812644619948724,
+      "errors": 0
+    },
+    {
+      "name": "forms",
+      "n": 8,
+      "layoutScore": 0.7953598484848485,
+      "pixelScore": 0.9791821374896212,
+      "errors": 0
+    },
+    {
       "name": "game-ui",
       "n": 15,
       "layoutScore": 1,
-      "pixelScore": 0.9995880555555556,
+      "pixelScore": 0.9998241666666667,
+      "errors": 0
+    },
+    {
+      "name": "gencontent",
+      "n": 8,
+      "layoutScore": 0.9708333333333333,
+      "pixelScore": 0.9863289635702355,
       "errors": 0
     },
     {
@@ -107,6 +149,13 @@
       "n": 3,
       "layoutScore": 1,
       "pixelScore": 0.9999902777777777,
+      "errors": 0
+    },
+    {
+      "name": "lists",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 0.9855226547060789,
       "errors": 0
     },
     {
@@ -138,6 +187,13 @@
       "errors": 0
     },
     {
+      "name": "rtl",
+      "n": 6,
+      "layoutScore": 0.9901960784313726,
+      "pixelScore": 0.9954775951264492,
+      "errors": 0
+    },
+    {
       "name": "shop",
       "n": 3,
       "layoutScore": 1,
@@ -162,7 +218,7 @@
       "name": "tables",
       "n": 29,
       "layoutScore": 0.995644283121597,
-      "pixelScore": 0.9695028684561313,
+      "pixelScore": 0.9696986539610017,
       "errors": 0
     },
     {
@@ -177,6 +233,20 @@
       "n": 10,
       "layoutScore": 1,
       "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "typography",
+      "n": 12,
+      "layoutScore": 0.9844629156010231,
+      "pixelScore": 0.9744210019765439,
+      "errors": 0
+    },
+    {
+      "name": "values",
+      "n": 7,
+      "layoutScore": 0.9263038548752833,
+      "pixelScore": 0.9973109812574783,
       "errors": 0
     }
   ]

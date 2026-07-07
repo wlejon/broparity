@@ -1,0 +1,91 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>broparity — gencontent</title>
+<style>
+body { font-family: -apple-system, sans-serif; margin: 24px; background: #fafafa; color: #202020; }
+h1 { margin: 0 0 4px; }
+.sub { color: #606060; font-size: 13px; margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+th { background: #f4f4f4; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #606060; }
+img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block; }
+.num { font-variant-numeric: tabular-nums; font-size: 13px; }
+.dim { color: #808080; font-size: 11px; }
+.err td { background: #fff0f0; }
+.errcell { color: #c00000; font-family: monospace; font-size: 12px; }
+a { color: #1f6feb; }
+</style></head><body>
+<h1>gencontent</h1>
+<div class="sub"><a href="../index.html">all cases</a></div>
+<table><thead><tr><th>Case</th><th>bro</th><th>Chromium</th><th>Diff</th><th>Pixel mismatch</th><th>Layout Δ</th><th>Score</th></tr></thead>
+<tbody><tr id="after-absolute-badge">
+      <td><b>after-absolute-badge</b></td>
+      <td><img src="after-absolute-badge/bro.png" loading="lazy"></td>
+      <td><img src="after-absolute-badge/chromium.png" loading="lazy"></td>
+      <td><img src="after-absolute-badge/diff.png" loading="lazy"></td>
+      <td class="num">0.110%<br><span class="dim">164/148800 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 4 elems</span></td>
+      <td class="num">L=1.000<br>P=0.999</td>
+    </tr>
+<tr id="before-after-inline">
+      <td><b>before-after-inline</b></td>
+      <td><img src="before-after-inline/bro.png" loading="lazy"></td>
+      <td><img src="before-after-inline/chromium.png" loading="lazy"></td>
+      <td><img src="before-after-inline/diff.png" loading="lazy"></td>
+      <td class="num">0.718%<br><span class="dim">448/62400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 7 elems</span></td>
+      <td class="num">L=1.000<br>P=0.993</td>
+    </tr>
+<tr id="before-block-box">
+      <td><b>before-block-box</b></td>
+      <td><img src="before-block-box/bro.png" loading="lazy"></td>
+      <td><img src="before-block-box/chromium.png" loading="lazy"></td>
+      <td><img src="before-block-box/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/121600 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 5 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="content-attr">
+      <td><b>content-attr</b></td>
+      <td><img src="content-attr/bro.png" loading="lazy"></td>
+      <td><img src="content-attr/chromium.png" loading="lazy"></td>
+      <td><img src="content-attr/diff.png" loading="lazy"></td>
+      <td class="num">3.646%<br><span class="dim">1196/32800 px</span></td>
+      <td class="num">rect: 2<br>style: 1<br><span class="dim">of 6 elems</span></td>
+      <td class="num">L=0.767<br>P=0.964</td>
+    </tr>
+<tr id="counters-flat">
+      <td><b>counters-flat</b></td>
+      <td><img src="counters-flat/bro.png" loading="lazy"></td>
+      <td><img src="counters-flat/chromium.png" loading="lazy"></td>
+      <td><img src="counters-flat/diff.png" loading="lazy"></td>
+      <td class="num">1.149%<br><span class="dim">2795/243200 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 26 elems</span></td>
+      <td class="num">L=1.000<br>P=0.989</td>
+    </tr>
+<tr id="counters-nested">
+      <td><b>counters-nested</b></td>
+      <td><img src="counters-nested/bro.png" loading="lazy"></td>
+      <td><img src="counters-nested/chromium.png" loading="lazy"></td>
+      <td><img src="counters-nested/diff.png" loading="lazy"></td>
+      <td class="num">0.715%<br><span class="dim">738/103200 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 19 elems</span></td>
+      <td class="num">L=1.000<br>P=0.993</td>
+    </tr>
+<tr id="pseudo-with-floats-clearfix">
+      <td><b>pseudo-with-floats-clearfix</b></td>
+      <td><img src="pseudo-with-floats-clearfix/bro.png" loading="lazy"></td>
+      <td><img src="pseudo-with-floats-clearfix/chromium.png" loading="lazy"></td>
+      <td><img src="pseudo-with-floats-clearfix/diff.png" loading="lazy"></td>
+      <td class="num">3.125%<br><span class="dim">4800/153600 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 11 elems</span></td>
+      <td class="num">L=1.000<br>P=0.969</td>
+    </tr>
+<tr id="quotes-element">
+      <td><b>quotes-element</b></td>
+      <td><img src="quotes-element/bro.png" loading="lazy"></td>
+      <td><img src="quotes-element/chromium.png" loading="lazy"></td>
+      <td><img src="quotes-element/diff.png" loading="lazy"></td>
+      <td class="num">1.473%<br><span class="dim">1579/107200 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 14 elems</span></td>
+      <td class="num">L=1.000<br>P=0.985</td>
+    </tr></tbody></table>
+</body></html>
