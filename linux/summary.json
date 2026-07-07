@@ -1,6 +1,6 @@
 {
-  "runId": "2026-07-07T00-53-38-441Z",
-  "timestamp": "2026-07-07T00:55:39.971Z",
+  "runId": "2026-07-07T05-49-37-341Z",
+  "timestamp": "2026-07-07T05:52:27.247Z",
   "viewport": {
     "w": 800,
     "h": 600
@@ -14,13 +14,13 @@
     "cpuCount": 32,
     "gpus": [],
     "nodeVersion": "v24.8.0",
-    "detectedAt": "2026-07-07T00:55:39.971Z"
+    "detectedAt": "2026-07-07T05:52:27.247Z"
   },
   "overall": {
-    "layoutScore": 0.983598393366336,
-    "pixelScore": 0.9916263941597848,
-    "caseCount": 196,
-    "categoryCount": 22
+    "layoutScore": 0.9665108518154918,
+    "pixelScore": 0.9860272306639257,
+    "caseCount": 281,
+    "categoryCount": 32
   },
   "categories": [
     {
@@ -59,6 +59,13 @@
       "errors": 0
     },
     {
+      "name": "columns",
+      "n": 7,
+      "layoutScore": 1,
+      "pixelScore": 0.9949189660389474,
+      "errors": 0
+    },
+    {
       "name": "dashboard",
       "n": 3,
       "layoutScore": 1,
@@ -68,8 +75,8 @@
     {
       "name": "display-types",
       "n": 12,
-      "layoutScore": 0.9250000000000002,
-      "pixelScore": 0.9900526742276434,
+      "layoutScore": 0.9,
+      "pixelScore": 0.9899305477908618,
       "errors": 0
     },
     {
@@ -80,6 +87,20 @@
       "errors": 0
     },
     {
+      "name": "effects",
+      "n": 9,
+      "layoutScore": 0.9703703703703704,
+      "pixelScore": 0.9154772991075214,
+      "errors": 0
+    },
+    {
+      "name": "elements",
+      "n": 8,
+      "layoutScore": 0.8681976010101011,
+      "pixelScore": 0.962350205386187,
+      "errors": 0
+    },
+    {
       "name": "flex",
       "n": 18,
       "layoutScore": 0.9700000000000001,
@@ -87,10 +108,31 @@
       "errors": 0
     },
     {
+      "name": "floats",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 0.9684483332253588,
+      "errors": 0
+    },
+    {
+      "name": "forms",
+      "n": 8,
+      "layoutScore": 0.772064393939394,
+      "pixelScore": 0.9790443545703158,
+      "errors": 0
+    },
+    {
       "name": "game-ui",
       "n": 15,
       "layoutScore": 1,
-      "pixelScore": 0.9995897222222222,
+      "pixelScore": 0.9998265277777778,
+      "errors": 0
+    },
+    {
+      "name": "gencontent",
+      "n": 8,
+      "layoutScore": 0.9708333333333333,
+      "pixelScore": 0.990423625917511,
       "errors": 0
     },
     {
@@ -105,6 +147,13 @@
       "n": 3,
       "layoutScore": 1,
       "pixelScore": 0.9999902777777777,
+      "errors": 0
+    },
+    {
+      "name": "lists",
+      "n": 10,
+      "layoutScore": 1,
+      "pixelScore": 0.978381940489674,
       "errors": 0
     },
     {
@@ -136,6 +185,13 @@
       "errors": 0
     },
     {
+      "name": "rtl",
+      "n": 6,
+      "layoutScore": 0.96301247771836,
+      "pixelScore": 0.9934872826242258,
+      "errors": 0
+    },
+    {
       "name": "shop",
       "n": 3,
       "layoutScore": 1,
@@ -160,7 +216,7 @@
       "name": "tables",
       "n": 29,
       "layoutScore": 0.8558313207260576,
-      "pixelScore": 0.9665599300459261,
+      "pixelScore": 0.9665530892847228,
       "errors": 0
     },
     {
@@ -175,6 +231,20 @@
       "n": 10,
       "layoutScore": 1,
       "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "typography",
+      "n": 12,
+      "layoutScore": 0.8808155387758968,
+      "pixelScore": 0.9564759590580841,
+      "errors": 0
+    },
+    {
+      "name": "values",
+      "n": 7,
+      "layoutScore": 0.888888888888889,
+      "pixelScore": 0.9979749049549651,
       "errors": 0
     }
   ]

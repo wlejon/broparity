@@ -1,0 +1,370 @@
+{
+  "summary": {
+    "totalElements": 11,
+    "rectMismatches": 0,
+    "styleMismatches": 5,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0.375
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 20,
+          "w": 800,
+          "h": 150.375
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 20,
+          "w": 800,
+          "h": 150
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "wrap",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0.375
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 760,
+          "h": 150.375
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 760,
+          "h": 150
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 760,
+          "h": 24
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 760,
+          "h": 24
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(1)>button:nth-of-type(1)",
+      "tag": "button",
+      "id": "b-text",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0.5309999999999988,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 53,
+          "h": 24
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 20,
+          "w": 52.469,
+          "h": 24
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "53px",
+          "52.469px"
+        ],
+        "background-color": [
+          "rgb(240,240,240)",
+          "rgb(239,239,239)"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 60,
+          "w": 760,
+          "h": 24
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 60,
+          "w": 760,
+          "h": 24
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>button:nth-of-type(1)",
+      "tag": "button",
+      "id": "b-fixed",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 60,
+          "w": 160,
+          "h": 24
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 60,
+          "w": 160,
+          "h": 24
+        }
+      },
+      "styleDeltas": {
+        "background-color": [
+          "rgb(240,240,240)",
+          "rgb(239,239,239)"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(3)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 100,
+          "w": 760,
+          "h": 30
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 100,
+          "w": 760,
+          "h": 30
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>button:nth-of-type(1)",
+      "tag": "button",
+      "id": "b-pad",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0.5310000000000059,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 100,
+          "w": 101,
+          "h": 30
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 100,
+          "w": 100.469,
+          "h": 30
+        }
+      },
+      "styleDeltas": {
+        "width": [
+          "101px",
+          "100.469px"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(4)",
+      "tag": "div",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0.375
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 146,
+          "w": 760,
+          "h": 24.375
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 146,
+          "w": 760,
+          "h": 24
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(4)>button:nth-of-type(1)",
+      "tag": "button",
+      "id": "b-submit",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0.20300000000000296,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 146,
+          "w": 66,
+          "h": 24
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 146,
+          "w": 65.797,
+          "h": 24
+        }
+      },
+      "styleDeltas": {
+        "background-color": [
+          "rgb(240,240,240)",
+          "rgb(239,239,239)"
+        ]
+      },
+      "styleMismatch": true
+    },
+    {
+      "path": "body>div:nth-of-type(1)>div:nth-of-type(4)>input:nth-of-type(1)",
+      "tag": "input",
+      "id": "i-submit",
+      "rectDelta": {
+        "dx": -0.25,
+        "dy": 0.5,
+        "dw": 0.20300000000000296,
+        "dh": -0.125
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 90,
+          "y": 146.5,
+          "w": 66,
+          "h": 23.875
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 90.25,
+          "y": 146,
+          "w": 65.797,
+          "h": 24
+        }
+      },
+      "styleDeltas": {
+        "background-color": [
+          "rgb(240,240,240)",
+          "rgb(239,239,239)"
+        ]
+      },
+      "styleMismatch": true
+    }
+  ]
+}

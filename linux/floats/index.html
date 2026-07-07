@@ -1,0 +1,109 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>broparity — floats</title>
+<style>
+body { font-family: -apple-system, sans-serif; margin: 24px; background: #fafafa; color: #202020; }
+h1 { margin: 0 0 4px; }
+.sub { color: #606060; font-size: 13px; margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+th { background: #f4f4f4; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #606060; }
+img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block; }
+.num { font-variant-numeric: tabular-nums; font-size: 13px; }
+.dim { color: #808080; font-size: 11px; }
+.err td { background: #fff0f0; }
+.errcell { color: #c00000; font-family: monospace; font-size: 12px; }
+a { color: #1f6feb; }
+</style></head><body>
+<h1>floats</h1>
+<div class="sub"><a href="../index.html">all cases</a></div>
+<table><thead><tr><th>Case</th><th>bro</th><th>Chromium</th><th>Diff</th><th>Pixel mismatch</th><th>Layout Δ</th><th>Score</th></tr></thead>
+<tbody><tr id="clear-left-right-both">
+      <td><b>clear-left-right-both</b></td>
+      <td><img src="clear-left-right-both/bro.png" loading="lazy"></td>
+      <td><img src="clear-left-right-both/chromium.png" loading="lazy"></td>
+      <td><img src="clear-left-right-both/diff.png" loading="lazy"></td>
+      <td class="num">1.656%<br><span class="dim">3657/220800 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 8 elems</span></td>
+      <td class="num">L=1.000<br>P=0.983</td>
+    </tr>
+<tr id="clearance-margin">
+      <td><b>clearance-margin</b></td>
+      <td><img src="clearance-margin/bro.png" loading="lazy"></td>
+      <td><img src="clearance-margin/chromium.png" loading="lazy"></td>
+      <td><img src="clearance-margin/diff.png" loading="lazy"></td>
+      <td class="num">0.349%<br><span class="dim">681/195200 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 9 elems</span></td>
+      <td class="num">L=1.000<br>P=0.997</td>
+    </tr>
+<tr id="figure-float-caption">
+      <td><b>figure-float-caption</b></td>
+      <td><img src="figure-float-caption/bro.png" loading="lazy"></td>
+      <td><img src="figure-float-caption/chromium.png" loading="lazy"></td>
+      <td><img src="figure-float-caption/diff.png" loading="lazy"></td>
+      <td class="num">8.485%<br><span class="dim">12762/150400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 5 elems</span></td>
+      <td class="num">L=1.000<br>P=0.915</td>
+    </tr>
+<tr id="float-bfc-containment">
+      <td><b>float-bfc-containment</b></td>
+      <td><img src="float-bfc-containment/bro.png" loading="lazy"></td>
+      <td><img src="float-bfc-containment/chromium.png" loading="lazy"></td>
+      <td><img src="float-bfc-containment/diff.png" loading="lazy"></td>
+      <td class="num">0.263%<br><span class="dim">525/200000 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 6 elems</span></td>
+      <td class="num">L=1.000<br>P=0.997</td>
+    </tr>
+<tr id="float-both-sides">
+      <td><b>float-both-sides</b></td>
+      <td><img src="float-both-sides/bro.png" loading="lazy"></td>
+      <td><img src="float-both-sides/chromium.png" loading="lazy"></td>
+      <td><img src="float-both-sides/diff.png" loading="lazy"></td>
+      <td class="num">7.187%<br><span class="dim">9659/134400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 4 elems</span></td>
+      <td class="num">L=1.000<br>P=0.928</td>
+    </tr>
+<tr id="float-left-text-wrap">
+      <td><b>float-left-text-wrap</b></td>
+      <td><img src="float-left-text-wrap/bro.png" loading="lazy"></td>
+      <td><img src="float-left-text-wrap/chromium.png" loading="lazy"></td>
+      <td><img src="float-left-text-wrap/diff.png" loading="lazy"></td>
+      <td class="num">6.791%<br><span class="dim">9127/134400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=0.932</td>
+    </tr>
+<tr id="float-margins-offset">
+      <td><b>float-margins-offset</b></td>
+      <td><img src="float-margins-offset/bro.png" loading="lazy"></td>
+      <td><img src="float-margins-offset/chromium.png" loading="lazy"></td>
+      <td><img src="float-margins-offset/diff.png" loading="lazy"></td>
+      <td class="num">0.233%<br><span class="dim">283/121600 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 5 elems</span></td>
+      <td class="num">L=1.000<br>P=0.998</td>
+    </tr>
+<tr id="float-right-text-wrap">
+      <td><b>float-right-text-wrap</b></td>
+      <td><img src="float-right-text-wrap/bro.png" loading="lazy"></td>
+      <td><img src="float-right-text-wrap/chromium.png" loading="lazy"></td>
+      <td><img src="float-right-text-wrap/diff.png" loading="lazy"></td>
+      <td class="num">6.446%<br><span class="dim">8663/134400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 3 elems</span></td>
+      <td class="num">L=1.000<br>P=0.936</td>
+    </tr>
+<tr id="float-stacking-wrap">
+      <td><b>float-stacking-wrap</b></td>
+      <td><img src="float-stacking-wrap/bro.png" loading="lazy"></td>
+      <td><img src="float-stacking-wrap/chromium.png" loading="lazy"></td>
+      <td><img src="float-stacking-wrap/diff.png" loading="lazy"></td>
+      <td class="num">0.010%<br><span class="dim">10/102400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 7 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="float-wider-than-line">
+      <td><b>float-wider-than-line</b></td>
+      <td><img src="float-wider-than-line/bro.png" loading="lazy"></td>
+      <td><img src="float-wider-than-line/chromium.png" loading="lazy"></td>
+      <td><img src="float-wider-than-line/diff.png" loading="lazy"></td>
+      <td class="num">0.133%<br><span class="dim">136/102400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 5 elems</span></td>
+      <td class="num">L=1.000<br>P=0.999</td>
+    </tr></tbody></table>
+</body></html>
