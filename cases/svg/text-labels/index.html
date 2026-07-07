@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-labels</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #0b1020; }
+  .page { width: 800px; height: 600px; overflow: hidden; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+          gap: 16px; padding: 16px; box-sizing: border-box; width: 800px; height: 600px; }
+  .panel { background: #131a30; border-radius: 14px; }
+  svg { display: block; width: 100%; height: 100%; }
+  .accent { fill: #93c5fd; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="grid">
+
+    <!-- 1. text-anchor: start / middle / end, all pinned to one x guide -->
+    <div class="panel">
+      <svg viewBox="0 0 380 270">
+        <line x1="190" y1="30" x2="190" y2="150" stroke="#334155" stroke-width="1"/>
+        <text x="190" y="60" text-anchor="start"  font-family="Arial" font-size="15" fill="#e2e8f0">start anchored</text>
+        <text x="190" y="95" text-anchor="middle" font-family="Arial" font-size="15" fill="#e2e8f0">middle anchored</text>
+        <text x="190" y="130" text-anchor="end"    font-family="Arial" font-size="15" fill="#e2e8f0">end anchored</text>
+      </svg>
+    </div>
+
+    <!-- 2. font sizes + weight + a colored caption -->
+    <div class="panel">
+      <svg viewBox="0 0 380 270">
+        <text x="24" y="52" font-family="Arial" font-size="34" font-weight="bold" fill="#f8fafc">Aa Title 34</text>
+        <text x="24" y="86" font-family="Arial" font-size="22" fill="#cbd5e1">Subtitle twenty-two</text>
+        <text x="24" y="116" font-family="Arial" font-size="15" fill="#94a3b8">Body copy at fifteen pixels</text>
+        <text x="24" y="142" font-family="Arial" font-size="12" class="accent">caption 12 &#183; #93c5fd</text>
+      </svg>
+    </div>
+
+    <!-- 3. currentColor, inline weight/color spans, baseline-shift -->
+    <div class="panel">
+      <svg viewBox="0 0 380 270" color="#fbbf24">
+        <text x="24" y="70" font-family="Arial" font-size="17" fill="#e2e8f0">plain <tspan font-weight="bold" fill="currentColor">bold gold</tspan> and <tspan fill="#f472b6">currentCol</tspan></text>
+        <text x="24" y="130" font-family="Arial" font-size="16" fill="#e2e8f0">baseline <tspan font-size="26" fill="#fbbf24">BIG</tspan> back</text>
+      </svg>
+    </div>
+
+    <!-- 4. tspan dx/dy line offsets + dominant-baseline -->
+    <div class="panel">
+      <svg viewBox="0 0 380 270">
+        <text x="24" y="52" font-family="Arial" font-size="15" fill="#e2e8f0"><tspan x="24" dy="0">line one</tspan><tspan x="44" dy="22">line two indented</tspan><tspan x="44" dy="22">line three</tspan></text>
+        <circle cx="150" cy="150" r="4" fill="#f43f5e"/>
+        <text x="164" y="150" font-family="Arial" font-size="13" dominant-baseline="middle" fill="#cbd5e1">middle baseline</text>
+      </svg>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
