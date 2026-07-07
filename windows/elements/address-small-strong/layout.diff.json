@@ -1,0 +1,341 @@
+{
+  "summary": {
+    "totalElements": 11,
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 86
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 86
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>address:nth-of-type(1)",
+      "tag": "address",
+      "id": "addr",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 18
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 18
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(1)",
+      "tag": "p",
+      "id": "mix1",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 34,
+          "w": 600,
+          "h": 18
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 34,
+          "w": 600,
+          "h": 18
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(1)>small:nth-of-type(1)",
+      "tag": "small",
+      "id": "sm",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": -0.5480000000000018,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 91.594,
+          "y": 36,
+          "w": 144.64,
+          "h": 15
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 91.594,
+          "y": 36,
+          "w": 145.188,
+          "h": 15
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(1)>strong:nth-of-type(1)",
+      "tag": "strong",
+      "id": "st",
+      "rectDelta": {
+        "dx": -0.5480000000000018,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 276.265,
+          "y": 34,
+          "w": 82.672,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 276.813,
+          "y": 34,
+          "w": 82.672,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(1)>b:nth-of-type(1)",
+      "tag": "b",
+      "id": "bb",
+      "rectDelta": {
+        "dx": -0.55499999999995,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 394.523,
+          "y": 34,
+          "w": 47.984,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 395.078,
+          "y": 34,
+          "w": 47.984,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(2)",
+      "tag": "p",
+      "id": "mix2",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 68,
+          "w": 600,
+          "h": 18
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 68,
+          "w": 600,
+          "h": 18
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(2)>em:nth-of-type(1)",
+      "tag": "em",
+      "id": "em",
+      "rectDelta": {
+        "dx": -0.007999999999995566,
+        "dy": 0,
+        "dw": -0.006999999999990791,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 40.914,
+          "y": 68,
+          "w": 68.477,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 40.922,
+          "y": 68,
+          "w": 68.484,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(2)>i:nth-of-type(1)",
+      "tag": "i",
+      "id": "it",
+      "rectDelta": {
+        "dx": -0.022999999999996135,
+        "dy": 0,
+        "dw": -0.007999999999995566,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 144.977,
+          "y": 68,
+          "w": 40.008,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 145,
+          "y": 68,
+          "w": 40.016,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(2)>u:nth-of-type(1)",
+      "tag": "u",
+      "id": "un",
+      "rectDelta": {
+        "dx": -0.03900000000001569,
+        "dy": 0,
+        "dw": -0.006999999999990791,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 220.57,
+          "y": 68,
+          "w": 74.727,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 220.609,
+          "y": 68,
+          "w": 74.734,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(2)>s:nth-of-type(1)",
+      "tag": "s",
+      "id": "str",
+      "rectDelta": {
+        "dx": -0.05500000000000682,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 330.883,
+          "y": 68,
+          "w": 69.359,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 330.938,
+          "y": 68,
+          "w": 69.359,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    }
+  ]
+}

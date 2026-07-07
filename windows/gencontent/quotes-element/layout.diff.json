@@ -1,0 +1,431 @@
+{
+  "summary": {
+    "totalElements": 14,
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 14,
+          "w": 800,
+          "h": 126
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 14,
+          "w": 800,
+          "h": 126
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(1)",
+      "tag": "p",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 14,
+          "w": 760,
+          "h": 21
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 14,
+          "w": 760,
+          "h": 21
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(1)>q:nth-of-type(1)",
+      "tag": "q",
+      "id": "q1",
+      "rectDelta": {
+        "dx": -0.001999999999995339,
+        "dy": 0,
+        "dw": -0.012000000000000455,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 79.045,
+          "y": 14,
+          "w": 50.019,
+          "h": 20
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 79.047,
+          "y": 14,
+          "w": 50.031,
+          "h": 20
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(1)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "after1",
+      "rectDelta": {
+        "dx": -0.01500000000001478,
+        "dy": 0,
+        "dw": -0.005999999999996675,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 129.063,
+          "y": 14,
+          "w": 23.01,
+          "h": 20
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 129.078,
+          "y": 14,
+          "w": 23.016,
+          "h": 20
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(2)",
+      "tag": "p",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 49,
+          "w": 760,
+          "h": 21
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 49,
+          "w": 760,
+          "h": 21
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(2)>q:nth-of-type(1)",
+      "tag": "q",
+      "id": "q2",
+      "rectDelta": {
+        "dx": -0.001999999999995339,
+        "dy": 0,
+        "dw": -0.0519999999999925,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 79.045,
+          "y": 49,
+          "w": 141.073,
+          "h": 20
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 79.047,
+          "y": 49,
+          "w": 141.125,
+          "h": 20
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(2)>q:nth-of-type(1)>q:nth-of-type(1)",
+      "tag": "q",
+      "id": "q2i",
+      "rectDelta": {
+        "dx": -0.01099999999999568,
+        "dy": 0,
+        "dw": -0.023999999999993804,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 131.067,
+          "y": 49,
+          "w": 48.023,
+          "h": 20
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 131.078,
+          "y": 49,
+          "w": 48.047,
+          "h": 20
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(2)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "after2",
+      "rectDelta": {
+        "dx": -0.054000000000002046,
+        "dy": 0,
+        "dw": -0.005999999999996675,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 220.118,
+          "y": 49,
+          "w": 23.01,
+          "h": 20
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 220.172,
+          "y": 49,
+          "w": 23.016,
+          "h": 20
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(3)",
+      "tag": "p",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 84,
+          "w": 760,
+          "h": 21
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 84,
+          "w": 760,
+          "h": 21
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(3)>q:nth-of-type(1)",
+      "tag": "q",
+      "id": "q3",
+      "rectDelta": {
+        "dx": -0.01300000000000523,
+        "dy": 0,
+        "dw": -0.009000000000000341,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 83.018,
+          "y": 84,
+          "w": 68.054,
+          "h": 20
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 83.031,
+          "y": 84,
+          "w": 68.063,
+          "h": 20
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(3)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "after3",
+      "rectDelta": {
+        "dx": -0.022999999999996135,
+        "dy": 0,
+        "dw": -0.005999999999996675,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 151.071,
+          "y": 84,
+          "w": 23.01,
+          "h": 20
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 151.094,
+          "y": 84,
+          "w": 23.016,
+          "h": 20
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(4)",
+      "tag": "p",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 119,
+          "w": 760,
+          "h": 21
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 119,
+          "w": 760,
+          "h": 21
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(4)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "c0",
+      "rectDelta": {
+        "dx": -0.0040000000000048885,
+        "dy": 0,
+        "dw": -0.0009999999999976694,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 79.027,
+          "y": 119,
+          "w": 38.03,
+          "h": 20
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 79.031,
+          "y": 119,
+          "w": 38.031,
+          "h": 20
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>p:nth-of-type(4)>span:nth-of-type(2)",
+      "tag": "span",
+      "id": "after4",
+      "rectDelta": {
+        "dx": -0.0049999999999954525,
+        "dy": 0,
+        "dw": -0.005999999999996675,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 117.058,
+          "y": 119,
+          "w": 23.01,
+          "h": 20
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 117.063,
+          "y": 119,
+          "w": 23.016,
+          "h": 20
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    }
+  ]
+}

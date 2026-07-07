@@ -1,0 +1,281 @@
+{
+  "summary": {
+    "totalElements": 9,
+    "rectMismatches": 1,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
+  },
+  "entries": [
+    {
+      "path": "body",
+      "tag": "body",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0.004999999999999005
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "w": 800,
+          "h": 31.333
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "w": 800,
+          "h": 31.328
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)",
+      "tag": "div",
+      "id": "line",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0.004999999999999005
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 20,
+          "y": 40,
+          "w": 740,
+          "h": 31.333
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 20,
+          "y": 40,
+          "w": 740,
+          "h": 31.328
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "va-sub",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0.017000000000003013,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 59.141,
+          "y": 51.533,
+          "w": 25.797,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 59.141,
+          "y": 51.516,
+          "w": 25.797,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>span:nth-of-type(2)",
+      "tag": "span",
+      "id": "va-sup",
+      "rectDelta": {
+        "dx": -0.008000000000009777,
+        "dy": 0,
+        "dw": -0.007999999999995566,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 128.523,
+          "y": 41,
+          "w": 40.023,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 128.531,
+          "y": 41,
+          "w": 40.031,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>span:nth-of-type(3)",
+      "tag": "span",
+      "id": "va-ttop",
+      "rectDelta": {
+        "dx": -0.022999999999996135,
+        "dy": 0.0049999999999954525,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 212.133,
+          "y": 48.333,
+          "w": 26.688,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 212.156,
+          "y": 48.328,
+          "w": 26.688,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>span:nth-of-type(4)",
+      "tag": "span",
+      "id": "va-tbot",
+      "rectDelta": {
+        "dx": -0.031999999999982265,
+        "dy": 1.0049999999999955,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": true,
+      "bro": {
+        "rect": {
+          "x": 282.406,
+          "y": 46.333,
+          "w": 26.688,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 282.438,
+          "y": 45.328,
+          "w": 26.688,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>span:nth-of-type(5)",
+      "tag": "span",
+      "id": "va-mid",
+      "rectDelta": {
+        "dx": -0.03899999999998727,
+        "dy": 0.01300000000000523,
+        "dw": -0.007999999999995566,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 352.68,
+          "y": 48.185,
+          "w": 47.133,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 352.719,
+          "y": 48.172,
+          "w": 47.141,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>span:nth-of-type(6)",
+      "tag": "span",
+      "id": "va-px",
+      "rectDelta": {
+        "dx": -0.05499999999994998,
+        "dy": 0.0049999999999954525,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 443.398,
+          "y": 41.333,
+          "w": 25.797,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 443.453,
+          "y": 41.328,
+          "w": 25.797,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>span:nth-of-type(7)",
+      "tag": "span",
+      "id": "va-neg",
+      "rectDelta": {
+        "dx": -0.06300000000010186,
+        "dy": 0.0049999999999954525,
+        "dw": -0.008000000000002672,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 512.781,
+          "y": 52.333,
+          "w": 44.492,
+          "h": 17
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 512.844,
+          "y": 52.328,
+          "w": 44.5,
+          "h": 17
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    }
+  ]
+}
