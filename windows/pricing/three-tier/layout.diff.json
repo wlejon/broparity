@@ -2,8 +2,9 @@
   "summary": {
     "totalElements": 55,
     "rectMismatches": 0,
-    "styleMismatches": 10,
-    "geomEpsilon": 1
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -423,13 +424,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "159.8px",
-          "159.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(4)",
@@ -518,13 +514,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "131.6px",
-          "131.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(5)",
@@ -613,13 +604,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "112.8px",
-          "112.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(6)",
@@ -918,13 +904,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "159.8px",
-          "159.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(5)",
@@ -1013,13 +994,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "131.6px",
-          "131.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(6)",
@@ -1108,13 +1084,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "112.8px",
-          "112.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(7)",
@@ -1203,13 +1174,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "159.8px",
-          "159.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(8)",
@@ -1478,13 +1444,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "131.6px",
-          "131.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>div:nth-of-type(4)",
@@ -1573,13 +1534,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "159.8px",
-          "159.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>div:nth-of-type(5)",
@@ -1668,13 +1624,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "112.8px",
-          "112.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(3)>div:nth-of-type(6)",

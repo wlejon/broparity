@@ -2,8 +2,9 @@
   "summary": {
     "totalElements": 2,
     "rectMismatches": 0,
-    "styleMismatches": 2,
-    "geomEpsilon": 1
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -33,17 +34,8 @@
           "h": 97.969
         }
       },
-      "styleDeltas": {
-        "height": [
-          "98px",
-          "97.969px"
-        ],
-        "font-size": [
-          "16px",
-          "13px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>pre:nth-of-type(1)",
@@ -72,13 +64,8 @@
           "h": 97.969
         }
       },
-      "styleDeltas": {
-        "height": [
-          "98px",
-          "97.969px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     }
   ]
 }

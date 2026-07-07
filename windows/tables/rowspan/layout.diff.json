@@ -1,9 +1,10 @@
 {
   "summary": {
     "totalElements": 14,
-    "rectMismatches": 3,
-    "styleMismatches": 2,
-    "geomEpsilon": 1
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -134,15 +135,15 @@
         "dx": 0,
         "dy": 0,
         "dw": 0,
-        "dh": -38
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 24,
           "y": 24,
           "w": 120.266,
-          "h": 36
+          "h": 74
         }
       },
       "chromium": {
@@ -153,13 +154,8 @@
           "h": 74
         }
       },
-      "styleDeltas": {
-        "height": [
-          "18px",
-          "56px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)",
@@ -256,17 +252,17 @@
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": -122.26599999999999,
+        "dx": 0,
         "dy": 0,
-        "dw": 63.141000000000005,
+        "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 24,
+          "x": 146.266,
           "y": 62,
-          "w": 120.266,
+          "w": 57.125,
           "h": 36
         }
       },
@@ -278,28 +274,23 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "94.266px",
-          "31.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(2)",
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": -59.125,
+        "dx": 0,
         "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 146.266,
+          "x": 205.391,
           "y": 62,
           "w": 57.125,
           "h": 36

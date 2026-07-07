@@ -2,8 +2,9 @@
   "summary": {
     "totalElements": 5,
     "rectMismatches": 0,
-    "styleMismatches": 3,
-    "geomEpsilon": 1
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -93,13 +94,8 @@
           "h": 100
         }
       },
-      "styleDeltas": {
-        "width": [
-          "152.447px",
-          "152.438px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)",
@@ -128,13 +124,8 @@
           "h": 100
         }
       },
-      "styleDeltas": {
-        "width": [
-          "294.223px",
-          "294.219px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)",
@@ -163,13 +154,8 @@
           "h": 100
         }
       },
-      "styleDeltas": {
-        "width": [
-          "153.33px",
-          "153.344px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     }
   ]
 }

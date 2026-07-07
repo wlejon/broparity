@@ -1,9 +1,10 @@
 {
   "summary": {
     "totalElements": 35,
-    "rectMismatches": 4,
-    "styleMismatches": 13,
-    "geomEpsilon": 1
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -131,17 +132,17 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -18,
+        "dx": 0,
         "dy": 0,
-        "dw": 18,
+        "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 562,
+          "x": 580,
           "y": 22,
-          "w": 202,
+          "w": 184,
           "h": 10
         }
       },
@@ -153,32 +154,23 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "202px",
-          "184px"
-        ],
-        "margin-left": [
-          "426px",
-          "444px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)",
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -18,
+        "dx": 0,
         "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 562,
+          "x": 580,
           "y": 22,
           "w": 48,
           "h": 10
@@ -200,15 +192,15 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -18,
+        "dx": 0,
         "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 630,
+          "x": 648,
           "y": 22,
           "w": 48,
           "h": 10
@@ -230,15 +222,15 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -18,
+        "dx": 0,
         "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 698,
+          "x": 716,
           "y": 22,
           "w": 48,
           "h": 10
@@ -402,13 +394,8 @@
           "h": 18
         }
       },
-      "styleDeltas": {
-        "width": [
-          "257.6px",
-          "257.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(3)",
@@ -467,13 +454,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "331.2px",
-          "331.188px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(5)",
@@ -502,13 +484,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "294.4px",
-          "294.391px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(6)",
@@ -537,13 +514,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "220.8px",
-          "220.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)",
@@ -692,13 +664,8 @@
           "h": 18
         }
       },
-      "styleDeltas": {
-        "width": [
-          "257.6px",
-          "257.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)",
@@ -757,13 +724,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "331.2px",
-          "331.188px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(5)",
@@ -792,13 +754,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "294.4px",
-          "294.391px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(6)",
@@ -827,13 +784,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "220.8px",
-          "220.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(4)",
@@ -982,13 +934,8 @@
           "h": 18
         }
       },
-      "styleDeltas": {
-        "width": [
-          "257.6px",
-          "257.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(4)>div:nth-of-type(2)>div:nth-of-type(3)",
@@ -1047,13 +994,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "331.2px",
-          "331.188px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(4)>div:nth-of-type(2)>div:nth-of-type(5)",
@@ -1082,13 +1024,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "294.4px",
-          "294.391px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(4)>div:nth-of-type(2)>div:nth-of-type(6)",
@@ -1117,13 +1054,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "220.8px",
-          "220.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     }
   ]
 }

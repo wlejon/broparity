@@ -2,8 +2,9 @@
   "summary": {
     "totalElements": 35,
     "rectMismatches": 0,
-    "styleMismatches": 4,
-    "geomEpsilon": 1
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -483,13 +484,8 @@
           "h": 24
         }
       },
-      "styleDeltas": {
-        "width": [
-          "313.2px",
-          "313.188px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(3)",
@@ -518,13 +514,8 @@
           "h": 24
         }
       },
-      "styleDeltas": {
-        "width": [
-          "208.8px",
-          "208.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(4)",
@@ -793,13 +784,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "320.16px",
-          "320.156px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(8)",
@@ -828,13 +814,8 @@
           "h": 9
         }
       },
-      "styleDeltas": {
-        "width": [
-          "243.6px",
-          "243.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(9)",

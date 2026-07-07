@@ -1,9 +1,10 @@
 {
   "summary": {
     "totalElements": 18,
-    "rectMismatches": 3,
-    "styleMismatches": 5,
-    "geomEpsilon": 1
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -251,18 +252,18 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": 0.03499999999996817,
-        "dy": 1.9990000000000023,
-        "dw": -0.06999999999999318,
-        "dh": -3.9989999999999952
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 269.392,
-          "y": 60.061,
-          "w": 357.202,
-          "h": 78.202
+          "x": 269.357,
+          "y": 58.062,
+          "w": 357.272,
+          "h": 82.201
         }
       },
       "chromium": {
@@ -273,31 +274,26 @@
           "h": 82.201
         }
       },
-      "styleDeltas": {
-        "height": [
-          "68px",
-          "72px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(1)",
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": 0.03500000000002501,
-        "dy": 1.9989999999999952,
-        "dw": -0.019000000000005457,
-        "dh": -1.2310000000000016
+        "dx": 0,
+        "dy": 0,
+        "dw": 0.002999999999985903,
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 269.461,
-          "y": 65.303,
-          "w": 285.014,
-          "h": 19.737
+          "x": 269.426,
+          "y": 63.304,
+          "w": 285.036,
+          "h": 20.968
         }
       },
       "chromium": {
@@ -308,35 +304,26 @@
           "h": 20.968
         }
       },
-      "styleDeltas": {
-        "width": [
-          "284.8px",
-          "284.797px"
-        ],
-        "height": [
-          "14.769px",
-          "16px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(2)",
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": 0.014000000000010004,
-        "dy": 0.7689999999999912,
-        "dw": -0.012999999999976808,
-        "dh": -0.7699999999999996
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
       },
       "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 269.824,
-          "y": 84.827,
-          "w": 356.107,
-          "h": 15.442
+          "x": 269.81,
+          "y": 84.058,
+          "w": 356.12,
+          "h": 16.212
         }
       },
       "chromium": {
@@ -347,13 +334,8 @@
           "h": 16.212
         }
       },
-      "styleDeltas": {
-        "height": [
-          "9.231px",
-          "10px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)",
@@ -362,16 +344,16 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": -0.009999999999990905,
-        "dh": -0.6150000000000002
+        "dw": 0,
+        "dh": 0
       },
       "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 270.09,
           "y": 100.055,
-          "w": 356.075,
-          "h": 13.597
+          "w": 356.085,
+          "h": 14.212
         }
       },
       "chromium": {
@@ -382,13 +364,8 @@
           "h": 14.212
         }
       },
-      "styleDeltas": {
-        "height": [
-          "7.385px",
-          "8px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)>div:nth-of-type(1)",
@@ -425,18 +402,18 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -0.011000000000024102,
-        "dy": -0.6159999999999997,
-        "dw": -0.02400000000000091,
-        "dh": -1.3840000000000003
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 270.358,
-          "y": 115.437,
-          "w": 356.236,
-          "h": 22.826
+          "x": 270.369,
+          "y": 116.053,
+          "w": 356.26,
+          "h": 24.21
         }
       },
       "chromium": {
@@ -447,29 +424,24 @@
           "h": 24.21
         }
       },
-      "styleDeltas": {
-        "height": [
-          "16.615px",
-          "18px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(4)>div:nth-of-type(1)",
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -0.011000000000024102,
-        "dy": -0.6159999999999997,
+        "dx": 0,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
       "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 270.358,
-          "y": 121.336,
+          "x": 270.369,
+          "y": 121.952,
           "w": 18.311,
           "h": 18.311
         }
@@ -490,16 +462,16 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -0.010999999999967258,
-        "dy": -0.6159999999999997,
+        "dx": 0,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
       "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 292.355,
-          "y": 120.952,
+          "x": 292.366,
+          "y": 121.568,
           "w": 18.311,
           "h": 18.311
         }
@@ -520,16 +492,16 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -0.011000000000024102,
-        "dy": -0.6159999999999997,
+        "dx": 0,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
       "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 314.351,
-          "y": 120.568,
+          "x": 314.362,
+          "y": 121.184,
           "w": 18.311,
           "h": 18.311
         }
@@ -550,16 +522,16 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -0.010999999999967258,
-        "dy": -0.6159999999999997,
+        "dx": 0,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
       "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 336.348,
-          "y": 120.184,
+          "x": 336.359,
+          "y": 120.8,
           "w": 18.311,
           "h": 18.311
         }
