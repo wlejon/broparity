@@ -1,9 +1,10 @@
 {
   "summary": {
     "totalElements": 15,
-    "rectMismatches": 6,
-    "styleMismatches": 14,
-    "geomEpsilon": 1
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -63,13 +64,8 @@
           "h": 146
         }
       },
-      "styleDeltas": {
-        "width": [
-          "279px",
-          "278.719px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)",
@@ -98,13 +94,8 @@
           "h": 138
         }
       },
-      "styleDeltas": {
-        "width": [
-          "271px",
-          "270.719px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)",
@@ -133,13 +124,8 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "271px",
-          "270.719px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(1)",
@@ -168,13 +154,8 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "60.5px",
-          "60.406px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)",
@@ -183,15 +164,15 @@
       "rectDelta": {
         "dx": 0.09399999999999409,
         "dy": 0,
-        "dw": -1.906000000000006,
+        "dw": 0.09399999999999409,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 115,
           "y": 24,
-          "w": 89,
+          "w": 91,
           "h": 46
         }
       },
@@ -203,30 +184,25 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "55px",
-          "56.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(3)",
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": -1.8129999999999882,
+        "dx": 0.18700000000001182,
         "dy": 0,
-        "dw": 2.093999999999994,
+        "dw": 0.09399999999999409,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 204,
+          "x": 206,
           "y": 24,
-          "w": 91,
+          "w": 89,
           "h": 46
         }
       },
@@ -238,13 +214,8 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "55px",
-          "52.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)",
@@ -273,13 +244,8 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "271px",
-          "270.719px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(1)",
@@ -308,13 +274,8 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "55px",
-          "54.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(2)",
@@ -323,15 +284,15 @@
       "rectDelta": {
         "dx": 0.09399999999999409,
         "dy": 0,
-        "dw": -1.906000000000006,
+        "dw": 0.09399999999999409,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 115,
           "y": 70,
-          "w": 89,
+          "w": 91,
           "h": 46
         }
       },
@@ -343,30 +304,25 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "55px",
-          "56.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(3)",
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": -1.8129999999999882,
+        "dx": 0.18700000000001182,
         "dy": 0,
-        "dw": 2.093999999999994,
+        "dw": 0.09399999999999409,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 204,
+          "x": 206,
           "y": 70,
-          "w": 91,
+          "w": 89,
           "h": 46
         }
       },
@@ -378,13 +334,8 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "59px",
-          "56.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)",
@@ -413,13 +364,8 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "271px",
-          "270.719px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)>td:nth-of-type(1)",
@@ -448,13 +394,8 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "57px",
-          "56.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)>td:nth-of-type(2)",
@@ -463,15 +404,15 @@
       "rectDelta": {
         "dx": 0.09399999999999409,
         "dy": 0,
-        "dw": -1.906000000000006,
+        "dw": 0.09399999999999409,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 115,
           "y": 116,
-          "w": 89,
+          "w": 91,
           "h": 46
         }
       },
@@ -483,30 +424,25 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "53px",
-          "54.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)>td:nth-of-type(3)",
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": -1.8129999999999882,
+        "dx": 0.18700000000001182,
         "dy": 0,
-        "dw": 2.093999999999994,
+        "dw": 0.09399999999999409,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 204,
+          "x": 206,
           "y": 116,
-          "w": 91,
+          "w": 89,
           "h": 46
         }
       },
@@ -518,13 +454,8 @@
           "h": 46
         }
       },
-      "styleDeltas": {
-        "width": [
-          "58.5px",
-          "56.406px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     }
   ]
 }

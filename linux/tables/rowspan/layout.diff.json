@@ -1,9 +1,10 @@
 {
   "summary": {
     "totalElements": 14,
-    "rectMismatches": 3,
-    "styleMismatches": 13,
-    "geomEpsilon": 1
+    "rectMismatches": 0,
+    "styleMismatches": 5,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -149,15 +150,15 @@
         "dx": 0,
         "dy": 0,
         "dw": -0.26600000000000534,
-        "dh": -38
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 24,
           "y": 24,
           "w": 120,
-          "h": 36
+          "h": 74
         }
       },
       "chromium": {
@@ -168,17 +169,8 @@
           "h": 74
         }
       },
-      "styleDeltas": {
-        "width": [
-          "94px",
-          "94.266px"
-        ],
-        "height": [
-          "18px",
-          "56px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)",
@@ -207,13 +199,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "31px",
-          "31.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(3)",
@@ -242,13 +229,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "31px",
-          "31.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)",
@@ -290,17 +272,17 @@
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": -122.26599999999999,
+        "dx": -0.26599999999999113,
         "dy": 0,
-        "dw": 62.875,
+        "dw": -0.125,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 24,
+          "x": 146,
           "y": 62,
-          "w": 120,
+          "w": 57,
           "h": 36
         }
       },
@@ -312,28 +294,23 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "94px",
-          "31.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(2)",
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": -59.39099999999999,
+        "dx": -0.39099999999999113,
         "dy": 0,
         "dw": -0.125,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 146,
+          "x": 205,
           "y": 62,
           "w": 57,
           "h": 36
@@ -347,13 +324,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "31px",
-          "31.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)",
@@ -417,13 +389,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "94px",
-          "94.266px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)>td:nth-of-type(2)",
@@ -452,13 +419,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "31px",
-          "31.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)>td:nth-of-type(3)",
@@ -487,13 +449,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "31px",
-          "31.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     }
   ]
 }

@@ -1,9 +1,10 @@
 {
   "summary": {
     "totalElements": 43,
-    "rectMismatches": 5,
-    "styleMismatches": 9,
-    "geomEpsilon": 1
+    "rectMismatches": 0,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -131,17 +132,17 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -18,
+        "dx": 0,
         "dy": 0,
-        "dw": 18,
+        "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 586,
+          "x": 604,
           "y": 21,
-          "w": 186,
+          "w": 168,
           "h": 10
         }
       },
@@ -153,32 +154,23 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "186px",
-          "168px"
-        ],
-        "margin-left": [
-          "462px",
-          "480px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)",
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -18,
+        "dx": 0,
         "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 586,
+          "x": 604,
           "y": 21,
           "w": 44,
           "h": 10
@@ -200,15 +192,15 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -18,
+        "dx": 0,
         "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 648,
+          "x": 666,
           "y": 21,
           "w": 44,
           "h": 10
@@ -230,15 +222,15 @@
       "tag": "div",
       "id": "",
       "rectDelta": {
-        "dx": -18,
+        "dx": 0,
         "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
-          "x": 710,
+          "x": 728,
           "y": 21,
           "w": 44,
           "h": 10
@@ -293,15 +285,15 @@
         "dx": 0,
         "dy": 0,
         "dw": 0,
-        "dh": -10
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 28,
           "y": 81,
           "w": 496,
-          "h": 336
+          "h": 346
         }
       },
       "chromium": {
@@ -312,13 +304,8 @@
           "h": 346
         }
       },
-      "styleDeltas": {
-        "height": [
-          "336px",
-          "346px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(1)",
@@ -347,13 +334,8 @@
           "h": 24
         }
       },
-      "styleDeltas": {
-        "width": [
-          "446.4px",
-          "446.391px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(2)",
@@ -382,13 +364,8 @@
           "h": 24
         }
       },
-      "styleDeltas": {
-        "width": [
-          "297.6px",
-          "297.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(3)",
@@ -507,13 +484,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "416.64px",
-          "416.625px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(7)",
@@ -572,13 +544,8 @@
           "h": 10
         }
       },
-      "styleDeltas": {
-        "width": [
-          "416.64px",
-          "416.625px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)",
@@ -817,13 +784,8 @@
           "h": 8
         }
       },
-      "styleDeltas": {
-        "width": [
-          "81.6px",
-          "81.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(3)",
@@ -972,13 +934,8 @@
           "h": 8
         }
       },
-      "styleDeltas": {
-        "width": [
-          "81.6px",
-          "81.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(1)>div:nth-of-type(4)",
@@ -1127,13 +1084,8 @@
           "h": 8
         }
       },
-      "styleDeltas": {
-        "width": [
-          "81.6px",
-          "81.594px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(2)>div:nth-of-type(2)>div:nth-of-type(2)",

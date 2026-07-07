@@ -1,9 +1,10 @@
 {
   "summary": {
     "totalElements": 37,
-    "rectMismatches": 3,
+    "rectMismatches": 0,
     "styleMismatches": 0,
-    "geomEpsilon": 1
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -582,15 +583,15 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 5,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 694,
-          "y": 61,
+          "y": 56,
           "w": 16,
           "h": 16
         }
@@ -732,15 +733,15 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 5,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 639,
-          "y": 100,
+          "y": 95,
           "w": 16,
           "h": 16
         }
@@ -882,15 +883,15 @@
       "id": "",
       "rectDelta": {
         "dx": 0,
-        "dy": 5,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 727,
-          "y": 139,
+          "y": 134,
           "w": 16,
           "h": 16
         }

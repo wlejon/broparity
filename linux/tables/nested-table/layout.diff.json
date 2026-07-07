@@ -2,8 +2,9 @@
   "summary": {
     "totalElements": 19,
     "rectMismatches": 18,
-    "styleMismatches": 18,
-    "geomEpsilon": 1
+    "styleMismatches": 8,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -43,7 +44,7 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": -7.328000000000003,
+        "dw": 2.671999999999997,
         "dh": 0
       },
       "rectMismatch": true,
@@ -51,7 +52,7 @@
         "rect": {
           "x": 20,
           "y": 20,
-          "w": 199,
+          "w": 209,
           "h": 106
         }
       },
@@ -65,7 +66,7 @@
       },
       "styleDeltas": {
         "width": [
-          "199px",
+          "209px",
           "206.328px"
         ]
       },
@@ -78,7 +79,7 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": -7.328000000000003,
+        "dw": 2.671999999999997,
         "dh": 0
       },
       "rectMismatch": true,
@@ -86,7 +87,7 @@
         "rect": {
           "x": 21,
           "y": 21,
-          "w": 197,
+          "w": 207,
           "h": 104
         }
       },
@@ -100,7 +101,7 @@
       },
       "styleDeltas": {
         "width": [
-          "197px",
+          "207px",
           "204.328px"
         ]
       },
@@ -113,7 +114,7 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": -7.328000000000003,
+        "dw": 2.671999999999997,
         "dh": 0
       },
       "rectMismatch": true,
@@ -121,7 +122,7 @@
         "rect": {
           "x": 21,
           "y": 21,
-          "w": 197,
+          "w": 207,
           "h": 70.5
         }
       },
@@ -135,7 +136,7 @@
       },
       "styleDeltas": {
         "width": [
-          "197px",
+          "207px",
           "204.328px"
         ]
       },
@@ -183,7 +184,7 @@
       "rectDelta": {
         "dx": 1.625,
         "dy": 0,
-        "dw": -9.813000000000002,
+        "dw": 0.1869999999999976,
         "dh": 0
       },
       "rectMismatch": true,
@@ -191,7 +192,7 @@
         "rect": {
           "x": 88.5,
           "y": 21,
-          "w": 62,
+          "w": 72,
           "h": 70.5
         }
       },
@@ -203,13 +204,8 @@
           "h": 70.5
         }
       },
-      "styleDeltas": {
-        "width": [
-          "41px",
-          "50.813px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)>table:nth-of-type(1)",
@@ -238,13 +234,8 @@
           "h": 53
         }
       },
-      "styleDeltas": {
-        "width": [
-          "51px",
-          "50.813px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)>table:nth-of-type(1)>tbody:nth-of-type(1)",
@@ -273,13 +264,8 @@
           "h": 51
         }
       },
-      "styleDeltas": {
-        "width": [
-          "49px",
-          "48.813px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)",
@@ -308,13 +294,8 @@
           "h": 25.5
         }
       },
-      "styleDeltas": {
-        "width": [
-          "49px",
-          "48.813px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(1)",
@@ -343,13 +324,8 @@
           "h": 25.5
         }
       },
-      "styleDeltas": {
-        "width": [
-          "11px",
-          "10.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)",
@@ -378,13 +354,8 @@
           "h": 25.5
         }
       },
-      "styleDeltas": {
-        "width": [
-          "11px",
-          "10.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)",
@@ -413,13 +384,8 @@
           "h": 25.5
         }
       },
-      "styleDeltas": {
-        "width": [
-          "49px",
-          "48.813px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(1)",
@@ -448,13 +414,8 @@
           "h": 25.5
         }
       },
-      "styleDeltas": {
-        "width": [
-          "11px",
-          "10.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(2)",
@@ -483,20 +444,15 @@
           "h": 25.5
         }
       },
-      "styleDeltas": {
-        "width": [
-          "11px",
-          "10.906px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(3)",
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": -8.187999999999988,
+        "dx": 1.8120000000000118,
         "dy": 0,
         "dw": 0.8589999999999947,
         "dh": 0
@@ -504,7 +460,7 @@
       "rectMismatch": true,
       "bro": {
         "rect": {
-          "x": 150.5,
+          "x": 160.5,
           "y": 21,
           "w": 67.5,
           "h": 70.5
@@ -533,7 +489,7 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": -7.328000000000003,
+        "dw": 2.671999999999997,
         "dh": 0
       },
       "rectMismatch": true,
@@ -541,7 +497,7 @@
         "rect": {
           "x": 21,
           "y": 91.5,
-          "w": 197,
+          "w": 207,
           "h": 33.5
         }
       },
@@ -555,7 +511,7 @@
       },
       "styleDeltas": {
         "width": [
-          "197px",
+          "207px",
           "204.328px"
         ]
       },
@@ -603,7 +559,7 @@
       "rectDelta": {
         "dx": 1.625,
         "dy": 0,
-        "dw": -9.813000000000002,
+        "dw": 0.1869999999999976,
         "dh": 0
       },
       "rectMismatch": true,
@@ -611,7 +567,7 @@
         "rect": {
           "x": 88.5,
           "y": 91.5,
-          "w": 62,
+          "w": 72,
           "h": 33.5
         }
       },
@@ -623,20 +579,15 @@
           "h": 33.5
         }
       },
-      "styleDeltas": {
-        "width": [
-          "41px",
-          "50.813px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(3)",
       "tag": "td",
       "id": "",
       "rectDelta": {
-        "dx": -8.187999999999988,
+        "dx": 1.8120000000000118,
         "dy": 0,
         "dw": 0.8589999999999947,
         "dh": 0
@@ -644,7 +595,7 @@
       "rectMismatch": true,
       "bro": {
         "rect": {
-          "x": 150.5,
+          "x": 160.5,
           "y": 91.5,
           "w": 67.5,
           "h": 33.5

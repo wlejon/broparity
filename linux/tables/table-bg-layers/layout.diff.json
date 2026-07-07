@@ -2,8 +2,9 @@
   "summary": {
     "totalElements": 15,
     "rectMismatches": 0,
-    "styleMismatches": 14,
-    "geomEpsilon": 1
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -63,13 +64,8 @@
           "h": 136
         }
       },
-      "styleDeltas": {
-        "width": [
-          "258px",
-          "258.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)",
@@ -98,13 +94,8 @@
           "h": 120
         }
       },
-      "styleDeltas": {
-        "width": [
-          "242px",
-          "242.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)",
@@ -133,13 +124,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "242px",
-          "242.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(1)",
@@ -168,13 +154,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "58px",
-          "57.828px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(2)",
@@ -203,13 +184,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "36px",
-          "36.469px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(1)>td:nth-of-type(3)",
@@ -238,13 +214,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "58px",
-          "57.828px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)",
@@ -273,13 +244,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "242px",
-          "242.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(1)",
@@ -308,13 +274,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "58px",
-          "57.828px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(2)",
@@ -343,13 +304,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "36px",
-          "36.469px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(2)>td:nth-of-type(3)",
@@ -378,13 +334,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "58px",
-          "57.828px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)",
@@ -413,13 +364,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "242px",
-          "242.125px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)>td:nth-of-type(1)",
@@ -448,13 +394,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "58px",
-          "57.828px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)>td:nth-of-type(2)",
@@ -483,13 +424,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "36px",
-          "36.469px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>table:nth-of-type(1)>tbody:nth-of-type(1)>tr:nth-of-type(3)>td:nth-of-type(3)",
@@ -518,13 +454,8 @@
           "h": 36
         }
       },
-      "styleDeltas": {
-        "width": [
-          "58px",
-          "57.828px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     }
   ]
 }

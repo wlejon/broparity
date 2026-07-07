@@ -1,9 +1,10 @@
 {
   "summary": {
     "totalElements": 6,
-    "rectMismatches": 6,
-    "styleMismatches": 2,
-    "geomEpsilon": 1
+    "rectMismatches": 4,
+    "styleMismatches": 0,
+    "geomEpsilon": 1,
+    "styleEpsilon": 0.5
   },
   "entries": [
     {
@@ -14,15 +15,15 @@
         "dx": 0,
         "dy": 0,
         "dw": 0,
-        "dh": -8
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 0,
           "y": 20,
           "w": 800,
-          "h": 52
+          "h": 60
         }
       },
       "chromium": {
@@ -33,13 +34,8 @@
           "h": 60
         }
       },
-      "styleDeltas": {
-        "height": [
-          "52px",
-          "60px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>p:nth-of-type(1)",
@@ -49,15 +45,15 @@
         "dx": 0,
         "dy": 0,
         "dw": 0,
-        "dh": -8
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 20,
           "y": 20,
           "w": 500,
-          "h": 52
+          "h": 60
         }
       },
       "chromium": {
@@ -68,13 +64,8 @@
           "h": 60
         }
       },
-      "styleDeltas": {
-        "height": [
-          "52px",
-          "60px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>p:nth-of-type(1)>strong:nth-of-type(1)",
@@ -82,17 +73,17 @@
       "id": "",
       "rectDelta": {
         "dx": -1.296999999999997,
-        "dy": -12,
+        "dy": 0,
         "dw": 0.23400000000000176,
-        "dh": 1
+        "dh": 0
       },
       "rectMismatch": true,
       "bro": {
         "rect": {
           "x": 129,
-          "y": 20,
+          "y": 32,
           "w": 34,
-          "h": 18
+          "h": 17
         }
       },
       "chromium": {
@@ -112,17 +103,17 @@
       "id": "",
       "rectDelta": {
         "dx": -2.546999999999997,
-        "dy": -12,
+        "dy": 0,
         "dw": 0.9840000000000018,
-        "dh": 1
+        "dh": 0
       },
       "rectMismatch": true,
       "bro": {
         "rect": {
           "x": 206,
-          "y": 20,
+          "y": 32,
           "w": 33,
-          "h": 18
+          "h": 17
         }
       },
       "chromium": {
@@ -142,17 +133,17 @@
       "id": "",
       "rectDelta": {
         "dx": -3.0470000000000255,
-        "dy": -4,
+        "dy": 0,
         "dw": -3.078000000000003,
-        "dh": 1
+        "dh": 0
       },
       "rectMismatch": true,
       "bro": {
         "rect": {
           "x": 282,
-          "y": 20,
+          "y": 24,
           "w": 121,
-          "h": 28
+          "h": 27
         }
       },
       "chromium": {
@@ -172,7 +163,7 @@
       "id": "",
       "rectDelta": {
         "dx": -6.718999999999994,
-        "dy": -17,
+        "dy": 0,
         "dw": 1.296999999999997,
         "dh": 0
       },
@@ -180,7 +171,7 @@
       "bro": {
         "rect": {
           "x": 438,
-          "y": 20,
+          "y": 37,
           "w": 43,
           "h": 11
         }
