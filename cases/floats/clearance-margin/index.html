@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>clearance-margin</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .panel {
+    display: inline-block;
+    vertical-align: top;
+    width: 360px;
+    margin: 20px 0 0 20px;
+    background: #f2f2f7;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .fl {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #4a90d9;
+    color: #ffffff;
+  }
+  /* CSS2 9.5.2: clearance is introduced (hypothetical top 80 < float
+     bottom 100), so the block lands at y=100 — the 80px margin-top is
+     swallowed by clearance, NOT added below the float. */
+  #eaten {
+    clear: left;
+    margin-top: 80px;
+    height: 50px;
+    background: #f0c948;
+  }
+  /* Hypothetical top 150 is already past the float bottom (100), so no
+     clearance exists and the margin applies in full: y=150. */
+  #kept {
+    clear: left;
+    margin-top: 150px;
+    height: 50px;
+    background: #4ab06a;
+    color: #ffffff;
+  }
+  #spacer-a, #spacer-b { height: 20px; }
+</style>
+</head>
+<body>
+  <div class="panel" id="panel-a">
+    <div class="fl">float</div>
+    <div id="eaten">margin eaten</div>
+    <div id="spacer-a"></div>
+  </div><div class="panel" id="panel-b">
+    <div class="fl">float</div>
+    <div id="kept">margin kept</div>
+    <div id="spacer-b"></div>
+  </div>
+</body>
+</html>

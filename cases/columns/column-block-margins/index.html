@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>column-block-margins</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  /* Sequential fill into 150px-tall columns. In-column, the 30px
+     margin-top applies: m2 sits at y=90 (60+30) and fills to 150.
+     m3's hypothetical position (180) overflows, so it breaks to
+     column 2 — and the margin at the unforced break is TRUNCATED:
+     m3 sits flush at the column top, y=0, not y=30. Likewise m5 at
+     the top of column 3. */
+  #mcols {
+    width: 640px;
+    height: 150px;
+    margin: 20px;
+    column-count: 3;
+    column-gap: 20px;
+    column-fill: auto;
+    background: #f6f2ea;
+  }
+  .blk {
+    height: 60px;
+    break-inside: avoid;
+    font-size: 13px;
+    line-height: 60px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .blk + .blk { margin-top: 30px; }
+  #m1 { background: #4a90d9; }
+  #m2 { background: #4ab06a; }
+  #m3 { background: #f0a030; }
+  #m4 { background: #8a5ad9; }
+  #m5 { background: #d94a6a; }
+</style>
+</head>
+<body>
+  <div id="mcols">
+    <div class="blk" id="m1">m1</div>
+    <div class="blk" id="m2">m2</div>
+    <div class="blk" id="m3">m3</div>
+    <div class="blk" id="m4">m4</div>
+    <div class="blk" id="m5">m5</div>
+  </div>
+</body>
+</html>

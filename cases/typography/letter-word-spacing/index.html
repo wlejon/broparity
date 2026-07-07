@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>letter-word-spacing</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  div {
+    margin: 14px 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #sp-normal { background: #f0f0ff; }
+  #sp-letter { letter-spacing: 2px; background: #e8f8e8; }
+  #sp-word   { word-spacing: 8px;   background: #fff0e0; }
+  span { background: #ffe2b8; }
+</style>
+</head>
+<body>
+  <div><span id="sp-normal">Exactly the same sentence measured three separate times.</span></div>
+  <div><span id="sp-letter">Exactly the same sentence measured three separate times.</span></div>
+  <div><span id="sp-word">Exactly the same sentence measured three separate times.</span></div>
+</body>
+</html>

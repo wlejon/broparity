@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>white-space-trio</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  div {
+    width: 220px;
+    margin: 14px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #ws-nowrap  { white-space: nowrap;   background: #f0f0ff; }
+  #ws-prewrap { white-space: pre-wrap; background: #e8f8e8; }
+  #ws-preline { white-space: pre-line; background: #fff0e0; }
+</style>
+</head>
+<body>
+  <div id="ws-nowrap">Alpha beta   gamma delta
+epsilon zeta eta theta iota kappa lambda mu
+nu xi</div>
+  <div id="ws-prewrap">Alpha beta   gamma delta
+epsilon zeta eta theta iota kappa lambda mu
+nu xi</div>
+  <div id="ws-preline">Alpha beta   gamma delta
+epsilon zeta eta theta iota kappa lambda mu
+nu xi</div>
+</body>
+</html>

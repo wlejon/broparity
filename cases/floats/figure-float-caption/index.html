@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>figure-float-caption</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  #article {
+    width: 560px;
+    margin: 20px;
+    font-size: 15px;
+    line-height: 20px;
+    background: #faf7f0;
+  }
+  #fig {
+    float: right;
+    width: 160px;
+    margin: 0 0 12px 16px;
+    background: #efe6d4;
+  }
+  #fig img {
+    display: block;
+    width: 160px;
+    height: 100px;
+  }
+  #cap {
+    margin: 0;
+    padding: 4px 6px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6a5f4a;
+  }
+</style>
+</head>
+<body>
+  <div id="article">
+    <figure id="fig">
+      <img id="pic" width="160" height="100" alt=""
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='100'%3E%3Crect width='160' height='100' fill='%234a90d9'/%3E%3Ccircle cx='120' cy='24' r='14' fill='%23ffd24a'/%3E%3Cpath d='M0 100 L60 45 L100 80 L130 60 L160 100 Z' fill='%232a5a8a'/%3E%3C/svg%3E">
+      <figcaption id="cap">Fig 1. A calm evening over the ridge.</figcaption>
+    </figure>
+    The article text flows down the left side of the floated figure in
+    shortened line boxes, each one giving up room for the image and its
+    caption on the right. Editorial layouts lean on this pattern for
+    pull-out illustrations, and the wrap has to hold for the full height
+    of the figure including the caption and the bottom margin. Once the
+    text passes below the figure the lines widen back out to the full
+    measure of the column and the closing sentences of the passage run
+    edge to edge without interruption all the way to the end.
+  </div>
+</body>
+</html>

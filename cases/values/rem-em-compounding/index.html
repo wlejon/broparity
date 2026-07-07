@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>rem-em-compounding</title>
+<style>
+  html { font-size: 20px; }
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  #wrap { margin: 20px; width: 600px; background: #f0f0f0; }
+  /* outer: 1.5em of 20px = 30px */
+  #outer { font-size: 1.5em; background: #dce8f8; }
+  /* inner compounds: 1.5em of 30px = 45px */
+  #inner { font-size: 1.5em; background: #d0e0c0; }
+  /* rem ignores nesting: 1rem = 20px even inside 45px context */
+  #rembox { font-size: 1rem; background: #e0c0d0; }
+  /* padding: 1em at 30px font = 30px; margin: 0.5em = 15px */
+  #pad-em { font-size: 30px; padding: 1em; margin-top: 0.5em; width: 200px; background: #e0d0a0; }
+  /* padding: 1rem = 20px regardless of the 30px font */
+  #pad-rem { font-size: 30px; padding: 1rem; margin-top: 0.5rem; width: 200px; background: #c0d0e0; }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="outer">outer 30px
+      <div id="inner">inner 45px
+        <div id="rembox">rem stays 20px</div>
+      </div>
+    </div>
+    <div id="pad-em"></div>
+    <div id="pad-rem"></div>
+  </div>
+</body>
+</html>

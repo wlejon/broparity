@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>opacity-stacking-context</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .demo { display: inline-block; vertical-align: top; width: 300px; margin: 24px; }
+  .par { width: 220px; height: 100px; background: #e0e0e0; }
+  #p2 { opacity: 0.8; }
+  .child { position: relative; z-index: 10; top: 20px; width: 140px; height: 60px; margin-left: 10px; background: #1565c0; }
+  .overlap { position: relative; z-index: 1; width: 140px; height: 60px; margin-top: -50px; margin-left: 80px; background: #ef6c00; }
+</style>
+</head>
+<body>
+<div class="demo">
+  <div class="par" id="p1"><div class="child" id="c1"></div></div>
+  <div class="overlap" id="o1"></div>
+</div>
+<div class="demo">
+  <div class="par" id="p2"><div class="child" id="c2"></div></div>
+  <div class="overlap" id="o2"></div>
+</div>
+</body>
+</html>

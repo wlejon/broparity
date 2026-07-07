@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>viewport-units-mixed</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
+  #wrap { margin: 20px; }
+  .box { margin-bottom: 10px; }
+  /* viewport 800x600: 1vmin = 6px, 1vmax = 8px, 1vw = 8px, 1vh = 6px */
+  #b-vmin { width: 20vmin; height: 10vmin; background: #c0d0e0; }   /* 120 x 60 */
+  #b-vmax { width: 20vmax; height: 5vmax; background: #d0e0c0; }    /* 160 x 40 */
+  #b-calc { width: calc(50vw - 100px); height: 40px; background: #e0c0d0; }  /* 300px */
+  #b-mixed { width: calc(10vmin + 10vmax); height: 5vh; background: #e0d0a0; } /* 200 x 30 */
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="b-vmin" class="box"></div>
+    <div id="b-vmax" class="box"></div>
+    <div id="b-calc" class="box"></div>
+    <div id="b-mixed" class="box"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>logical-properties</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .wrap {
+    position: relative;
+    width: 360px;
+    height: 140px;
+    margin: 20px;
+    background: #eeeeee;
+  }
+  .flow {
+    width: 120px;
+    margin-inline-start: 40px;
+    margin-inline-end: 8px;
+    padding-block: 12px 4px;
+    font-size: 14px;
+    line-height: 20px;
+    background: #2f9e56;
+    color: #ffffff;
+  }
+  .abs {
+    position: absolute;
+    width: 60px;
+    height: 24px;
+    inset-block-start: 100px;
+    inset-inline-start: 20px;
+    background: #d04030;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap" dir="ltr">
+    <div class="flow" id="flow-ltr">flow box</div>
+    <div class="abs" id="abs-ltr"></div>
+  </div>
+  <div class="wrap" dir="rtl">
+    <div class="flow" id="flow-rtl">flow box</div>
+    <div class="abs" id="abs-rtl"></div>
+  </div>
+</body>
+</html>

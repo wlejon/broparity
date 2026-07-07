@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-align-modes</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  p {
+    width: 340px;
+    margin: 10px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #al-left    { text-align: left;    background: #f0f0ff; }
+  #al-center  { text-align: center;  background: #e8f8e8; }
+  #al-right   { text-align: right;   background: #fff0e0; }
+  #al-justify { text-align: justify; background: #f8e8f0; }
+</style>
+</head>
+<body>
+  <p id="al-left">Left aligned paragraph in a fixed box. The ragged edge sits on the right side and every line starts flush at the left edge.</p>
+  <p id="al-center">Center aligned paragraph in a fixed box. Every line is centered so both edges are ragged by an equal amount.</p>
+  <p id="al-right">Right aligned paragraph in a fixed box. The ragged edge sits on the left side and every line ends flush at the right edge.</p>
+  <p id="al-justify">Justified paragraph with enough medium sized words that the spaces between words must stretch to push each full line out to both edges of the box, while the final short line stays aligned to the left edge only.</p>
+</body>
+</html>

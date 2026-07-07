@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fieldset-legend</title>
+<style>
+  /* fieldset/legend UA defaults are the tested feature: reset only html/body. */
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
+  #wrap { margin: 20px; width: 400px; }
+  #fs { background: #f4f0e4; }
+  #content { height: 80px; background: #c0d0e0; }
+  #after { height: 30px; background: #e0c0c0; }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <fieldset id="fs">
+      <legend id="lg">Details</legend>
+      <div id="content">inside the fieldset</div>
+    </fieldset>
+    <div id="after">after the fieldset</div>
+  </div>
+</body>
+</html>

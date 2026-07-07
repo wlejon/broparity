@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>pseudo-with-floats-clearfix</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .par { width: 320px; margin: 20px 20px 0 20px; background: #cfd8dc; }
+  .f { float: left; width: 100px; height: 50px; margin-right: 10px; background: #ef6c00; }
+  .clearfix::after { content: ""; display: block; clear: both; }
+  .marker { width: 320px; height: 24px; margin: 0 20px; background: #7b1fa2; }
+  #spacer { height: 40px; }
+  #stop { clear: both; }
+</style>
+</head>
+<body>
+<div id="fixed" class="par clearfix"><div class="f" id="f1"></div><div class="f" id="f2"></div></div>
+<div id="m1" class="marker"></div>
+<div id="spacer"></div>
+<div id="plain" class="par"><div class="f" id="f3"></div><div class="f" id="f4"></div></div>
+<div id="m2" class="marker"></div>
+<div id="stop"></div>
+</body>
+</html>

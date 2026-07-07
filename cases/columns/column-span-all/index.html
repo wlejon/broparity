@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>column-span-all</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  /* 640px, 3 columns, 20px gap -> 200px columns. Six 40px blocks
+     before the spanner balance to 2 per column (80px tall row); the
+     h2 spans all columns at full 640px width below them (y = 88 with
+     its 8px margin); six more blocks rebalance below the spanner. */
+  #spancols {
+    width: 640px;
+    margin: 20px;
+    column-count: 3;
+    column-gap: 20px;
+    background: #f6f2ea;
+  }
+  .pre, .post {
+    height: 40px;
+    font-size: 13px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .pre  { background: #dce8f4; }
+  .pre:nth-of-type(even) { background: #c2d8ee; }
+  .post { background: #e4f0da; }
+  #spancols .post:nth-of-type(even) { background: #cfe4bc; }
+  #spanner {
+    column-span: all;
+    margin: 8px 0;
+    height: 32px;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    background: #b0483c;
+    color: #ffffff;
+  }
+</style>
+</head>
+<body>
+  <div id="spancols">
+    <div class="pre" id="a1">a1</div>
+    <div class="pre" id="a2">a2</div>
+    <div class="pre" id="a3">a3</div>
+    <div class="pre" id="a4">a4</div>
+    <div class="pre" id="a5">a5</div>
+    <div class="pre" id="a6">a6</div>
+    <h2 id="spanner">Spanning heading</h2>
+    <div class="post" id="b1">b1</div>
+    <div class="post" id="b2">b2</div>
+    <div class="post" id="b3">b3</div>
+    <div class="post" id="b4">b4</div>
+    <div class="post" id="b5">b5</div>
+    <div class="post" id="b6">b6</div>
+  </div>
+</body>
+</html>

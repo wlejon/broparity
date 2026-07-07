@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-shadow</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  div {
+    margin: 30px 24px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 56px;
+  }
+  #sh-one {
+    text-shadow: 6px 6px 0 #d04030;
+  }
+  #sh-multi {
+    text-shadow: -4px -4px 0 #3060c8, 4px 4px 6px #2f9e56;
+  }
+</style>
+</head>
+<body>
+  <div id="sh-one">Hard offset shadow</div>
+  <div id="sh-multi">Two layered shadows</div>
+</body>
+</html>

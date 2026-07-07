@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>float-bfc-containment</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  /* BFC parent: height grows to 100 to contain its float */
+  #bfc {
+    width: 400px;
+    margin: 20px 20px 0 20px;
+    overflow: hidden;
+    background: #ffe2b8;
+  }
+  /* Plain block parent: float does not contribute height, so this box
+     is only as tall as its 2px borders; float hangs out below it. */
+  #plain {
+    width: 400px;
+    margin: 10px 20px 0 20px;
+    border: 2px solid #2a7a3a;
+    background: #d8f2cc;
+  }
+  .fl {
+    float: left;
+    width: 120px;
+    height: 100px;
+    background: #4a90d9;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  /* Sits below the escaped float's bottom edge (y = 232 from page top:
+     bfc 20..120, #plain border top 130, float 132..232) */
+  #after {
+    clear: both;
+    width: 400px;
+    margin-left: 20px;
+    height: 30px;
+    background: #d94a6a;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 30px;
+  }
+</style>
+</head>
+<body>
+  <div id="bfc">
+    <div class="fl" id="f1">contained</div>
+  </div>
+  <div id="plain">
+    <div class="fl" id="f2">escaped</div>
+  </div>
+  <div id="after">after clear</div>
+</body>
+</html>

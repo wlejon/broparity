@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>rtl-inline-blocks</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .strip {
+    width: 460px;
+    margin: 20px;
+    font-size: 14px;
+    background: #eeeeee;
+  }
+  .t {
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+  }
+  .s { width: 36px; height: 28px; }
+  .c1 { background: #d04030; }
+  .c2 { background: #e0a020; }
+  .c3 { background: #2f9e56; }
+  .c4 { background: #3060c8; }
+  .ca { background: #803090; }
+  .cb { background: #109090; }
+</style>
+</head>
+<body>
+  <div class="strip" dir="rtl" id="strip-rtl">
+    <span class="t c1" id="t1"></span><span class="t c2" id="t2"></span><span dir="ltr" id="isl"><span class="t s ca" id="ia"></span><span class="t s cb" id="ib"></span></span><span class="t c3" id="t3"></span><span class="t c4" id="t4"></span>
+  </div>
+  <div class="strip" dir="ltr" id="strip-ltr">
+    <span class="t c1" id="u1"></span><span class="t c2" id="u2"></span><span dir="ltr" id="usl"><span class="t s ca" id="ua"></span><span class="t s cb" id="ub"></span></span><span class="t c3" id="u3"></span><span class="t c4" id="u4"></span>
+  </div>
+</body>
+</html>

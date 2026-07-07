@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>filter-blur</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .box { display: inline-block; vertical-align: top; width: 140px; height: 100px; margin: 40px; background: #1565c0; }
+  #soft { filter: blur(4px); }
+  #bar { display: inline-block; vertical-align: top; width: 6px; height: 100px; margin: 40px; background: #000000; filter: blur(4px); }
+</style>
+</head>
+<body>
+<div class="box" id="sharp"></div>
+<div class="box" id="soft"></div>
+<div id="bar"></div>
+</body>
+</html>

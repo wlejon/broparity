@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>overflow-wrap-anywhere</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  div {
+    width: 160px;
+    margin: 14px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #ow-normal { background: #f0f0ff; }
+  #ow-bword  { overflow-wrap: break-word; background: #e8f8e8; }
+  #ow-any    { overflow-wrap: anywhere;   background: #fff0e0; }
+</style>
+</head>
+<body>
+  <div id="ow-normal">Go https://exampledomain.example/alphabetagamma/deltaepsilonzeta</div>
+  <div id="ow-bword">Go https://exampledomain.example/alphabetagamma/deltaepsilonzeta</div>
+  <div id="ow-any">Go https://exampledomain.example/alphabetagamma/deltaepsilonzeta</div>
+</body>
+</html>

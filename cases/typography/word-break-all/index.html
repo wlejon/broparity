@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>word-break-all</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: Arial; color: #202020; }
+  div {
+    width: 150px;
+    margin: 14px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #wb-all    { word-break: break-all;       background: #f0f0ff; }
+  #wb-normal { word-break: normal;          background: #e8f8e8; }
+  #wb-bword  { overflow-wrap: break-word;   background: #fff0e0; }
+</style>
+</head>
+<body>
+  <div id="wb-all">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</div>
+  <div id="wb-normal">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</div>
+  <div id="wb-bword">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>float-right-text-wrap</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  #para {
+    width: 500px;
+    margin: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    background: #f4f0e6;
+  }
+  #floatbox {
+    float: right;
+    width: 120px;
+    height: 120px;
+    background: #d9774a;
+    color: #ffffff;
+  }
+</style>
+</head>
+<body>
+  <div id="para">
+    <div id="floatbox">FR</div>
+    The quick brown fox jumps over the lazy dog while the band plays on
+    beside the river. Short lines sit next to the orange square and the
+    text keeps its left edge but gives up its right side to the float.
+    Once the text has moved past the bottom edge of the square the line
+    boxes stretch back out to the full width of the paragraph again and
+    the remaining sentences run all the way across without any break in
+    the flow at all.
+  </div>
+</body>
+</html>

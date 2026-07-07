@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>direction-rtl-block</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .box {
+    width: 360px;
+    margin: 14px 20px;
+    font-size: 14px;
+    line-height: 20px;
+    background: #f0f0f0;
+  }
+  .box p { margin: 6px; background: #e0e8ff; }
+  .a { background: #ffc8c8; }
+  .b { background: #c8e8c8; }
+</style>
+</head>
+<body>
+  <div class="box" dir="rtl">
+    <p id="rp">Latin words hug the right edge under rtl.</p>
+    <p><span dir="ltr" class="a" id="ra">alpha</span> <span dir="ltr" class="b" id="rb">beta</span></p>
+  </div>
+  <div class="box" dir="ltr">
+    <p id="lp">Latin words hug the right edge under rtl.</p>
+    <p><span dir="ltr" class="a" id="la">alpha</span> <span dir="ltr" class="b" id="lb">beta</span></p>
+  </div>
+</body>
+</html>

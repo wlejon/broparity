@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>blockquote-default</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
+  body { width: 600px; }
+  blockquote { background: #eef2e0; }
+  #bq2 { background: #e0e8f2; }
+  p { background: #f5e2d0; }
+</style>
+</head>
+<body>
+<p id="pa">Leading paragraph before the quotation begins.</p>
+<blockquote id="bq1">
+  <p id="pb">Quoted paragraph inside the outer blockquote.</p>
+  <blockquote id="bq2">
+    <p id="pc">Nested quotation one level deeper.</p>
+  </blockquote>
+</blockquote>
+<p id="pd">Trailing paragraph after the quotation ends.</p>
+</body>
+</html>

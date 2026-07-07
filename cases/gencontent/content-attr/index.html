@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>content-attr</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  #row { margin: 24px; font-size: 18px; }
+  .tile { display: inline-block; vertical-align: top; padding: 6px; margin-right: 12px; background: #e1bee7; }
+  .tile::after { content: attr(data-status); background: #4caf50; color: #ffffff; margin-left: 6px; }
+  #end { display: inline-block; vertical-align: top; width: 20px; height: 32px; background: #37474f; }
+</style>
+</head>
+<body>
+<div id="row">
+  <div class="tile" id="t1" data-status="OK">alpha</div>
+  <div class="tile" id="t2" data-status="PENDING">alpha</div>
+  <div class="tile" id="t3" data-status="UNAVAILABLE">alpha</div>
+  <div id="end"></div>
+</div>
+</body>
+</html>

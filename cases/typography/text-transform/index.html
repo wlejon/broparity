@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-transform</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  div {
+    margin: 14px 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #tt-none  { text-transform: none;       background: #f0f0ff; }
+  #tt-upper { text-transform: uppercase;  background: #e8f8e8; }
+  #tt-lower { text-transform: lowercase;  background: #fff0e0; }
+  #tt-cap   { text-transform: capitalize; background: #f8e8f0; }
+</style>
+</head>
+<body>
+  <div><span id="tt-none">mixed Case WORDS and some letters here</span></div>
+  <div><span id="tt-upper">mixed Case WORDS and some letters here</span></div>
+  <div><span id="tt-lower">mixed Case WORDS and some letters here</span></div>
+  <div><span id="tt-cap">mixed Case WORDS and some letters here</span></div>
+</body>
+</html>

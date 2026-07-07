@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>custom-properties</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
+  :root { --w: 240px; --c: #3060c0; --pad: 12px; --unitless: 20; }
+  #wrap { margin: 20px; width: 500px; background: #f0f0f0; }
+  .box { height: 40px; margin-bottom: 10px; }
+  #b-root { width: var(--w); padding: var(--pad); background: var(--c); }
+  #sub { --w: 120px; --c: #c05030; }
+  #b-sub { width: var(--w); padding: var(--pad); background: var(--c); }
+  #b-fallback { width: var(--missing, 180px); background: var(--nocolor, #30a050); }
+  /* --unitless is "20": invalid at computed-value time for width -> unset -> auto (fills 500px) */
+  #b-iacvt { width: var(--unitless); background: #806090; }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="b-root" class="box"></div>
+    <div id="sub">
+      <div id="b-sub" class="box"></div>
+    </div>
+    <div id="b-fallback" class="box"></div>
+    <div id="b-iacvt" class="box"></div>
+  </div>
+</body>
+</html>

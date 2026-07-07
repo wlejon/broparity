@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-decoration</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  div {
+    margin: 16px 20px;
+    font-size: 22px;
+    line-height: 32px;
+    background: #f4f4f4;
+  }
+  #dec-under   { text-decoration: underline; }
+  #dec-through { text-decoration: line-through; }
+  #dec-over    { text-decoration: overline; }
+  #dec-prop    { text-decoration: underline; }
+  #dec-prop .kid { color: #c02040; }
+  #dec-thick   { text-decoration: underline 3px; }
+</style>
+</head>
+<body>
+  <div><span id="dec-under">Underlined run of text</span></div>
+  <div><span id="dec-through">Struck through run of text</span></div>
+  <div><span id="dec-over">Overlined run of text</span></div>
+  <div><span id="dec-prop">Parent underline runs <span class="kid" id="dec-kid">across a red child</span> unbroken</span></div>
+  <div><span id="dec-thick">Three pixel thick underline</span></div>
+</body>
+</html>

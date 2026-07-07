@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>before-block-box</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .card { display: inline-block; vertical-align: top; width: 260px; margin: 24px; background: #e0e0e0; }
+  #with::before { content: ""; display: block; height: 40px; background: #c2185b; }
+  .child { height: 60px; background: #1976d2; }
+</style>
+</head>
+<body>
+<div id="with" class="card"><div id="child-a" class="child"></div></div>
+<div id="without" class="card"><div id="child-b" class="child"></div></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>min-max-functions</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
+  #root { width: 400px; margin: 20px; background: #f0f0f0; }
+  .box { height: 40px; margin-bottom: 10px; }
+  /* min(300px, 50% of 400) = 200px */
+  #b-min { width: min(300px, 50%); background: #c0d0e0; }
+  /* max(150px, 60% of 400) = 240px */
+  #b-max { width: max(150px, 60%); background: #d0e0c0; }
+  /* clamp(120px, 10em, 50%) at 16px font = clamp(120, 160, 200) = 160px */
+  #b-clamp { width: clamp(120px, 10em, 50%); background: #e0c0d0; }
+  /* clamp where preferred exceeds max: clamp(50px, 90%, 280px) = 280px */
+  #b-clamp-hi { width: clamp(50px, 90%, 280px); background: #e0d0a0; }
+</style>
+</head>
+<body>
+  <div id="root">
+    <div id="b-min" class="box"></div>
+    <div id="b-max" class="box"></div>
+    <div id="b-clamp" class="box"></div>
+    <div id="b-clamp-hi" class="box"></div>
+  </div>
+</body>
+</html>

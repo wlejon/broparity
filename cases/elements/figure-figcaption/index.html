@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>figure-figcaption</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
+  #before, #after { width: 500px; background: #e2e8f0; }
+  figure { background: #f7f2e2; }
+  figcaption { background: #d8ecd8; }
+</style>
+</head>
+<body>
+<div id="before">Block before the figure</div>
+<figure id="fig">
+  <img id="img" width="120" height="80" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%232f6fb0'/%3E%3C/svg%3E">
+  <figcaption id="cap">Caption under the image</figcaption>
+</figure>
+<div id="after">Block after the figure</div>
+</body>
+</html>

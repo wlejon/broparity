@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>progress-meter</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
+  #wrap { margin: 20px; }
+  .row { margin-bottom: 20px; }
+  progress, meter { width: 200px; height: 16px; }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="row"><progress id="pr" value="0.6" max="1"></progress></div>
+    <div class="row"><meter id="mt-optimum" min="0" max="100" low="30" high="70" optimum="80" value="80"></meter></div>
+    <div class="row"><meter id="mt-mid" min="0" max="100" low="30" high="70" optimum="80" value="50"></meter></div>
+    <div class="row"><meter id="mt-low" min="0" max="100" low="30" high="70" optimum="80" value="15"></meter></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>filter-grayscale-brightness</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .tile { display: inline-block; vertical-align: top; width: 150px; height: 100px; margin: 24px 12px; background: linear-gradient(135deg, #e53935, #fdd835, #43a047, #1e88e5); }
+  #gray { filter: grayscale(100%); }
+  #dim { filter: brightness(0.5); }
+  #sat { filter: saturate(200%); }
+</style>
+</head>
+<body>
+<div class="tile" id="plain"></div>
+<div class="tile" id="gray"></div>
+<div class="tile" id="dim"></div>
+<div class="tile" id="sat"></div>
+</body>
+</html>

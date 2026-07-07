@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>counters-flat</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  #list { counter-reset: item; margin: 20px; width: 420px; font-size: 18px; }
+  .it { counter-increment: item; background: #e3f2fd; margin-bottom: 4px; }
+  .it::before { content: counter(item) ". "; background: #ffca28; color: #b71c1c; font-weight: bold; }
+  .txt { background: #c8e6c9; }
+</style>
+</head>
+<body>
+<div id="list">
+  <div class="it"><span class="txt" id="t1">first entry</span></div>
+  <div class="it"><span class="txt" id="t2">second entry</span></div>
+  <div class="it"><span class="txt" id="t3">third entry</span></div>
+  <div class="it"><span class="txt" id="t4">fourth entry</span></div>
+  <div class="it"><span class="txt" id="t5">fifth entry</span></div>
+  <div class="it"><span class="txt" id="t6">sixth entry</span></div>
+  <div class="it"><span class="txt" id="t7">seventh entry</span></div>
+  <div class="it"><span class="txt" id="t8">eighth entry</span></div>
+  <div class="it"><span class="txt" id="t9">ninth entry</span></div>
+  <div class="it"><span class="txt" id="t10">tenth entry</span></div>
+  <div class="it"><span class="txt" id="t11">eleventh entry</span></div>
+  <div class="it"><span class="txt" id="t12">twelfth entry</span></div>
+</div>
+</body>
+</html>

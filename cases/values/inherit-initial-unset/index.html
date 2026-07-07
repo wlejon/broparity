@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>inherit-initial-unset</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
+  #grand { margin: 20px; width: 500px; background: #d8d8d8; padding: 10px; }
+  /* parent: 60% of 500px = 300px */
+  #parent { width: 60%; color: #c02020; background-color: #ffe0e0; padding: 10px; }
+  .box { height: 28px; margin-bottom: 8px; }
+  /* width is non-inherited: inherit copies the computed 60%, re-resolved
+     against the parent's 300px content box = 180px */
+  #w-inherit { width: inherit; background: #c0d0e0; }
+  /* initial = auto: fills parent content box = 300px */
+  #w-initial { width: initial; background: #d0e0c0; }
+  /* unset on non-inherited prop = initial = auto */
+  #w-unset { width: unset; background: #e0d0a0; }
+  /* color is inherited: unset behaves as inherit (red), initial resets to UA initial (black) */
+  #c-inherit { color: inherit; }
+  #c-initial { color: initial; }
+  #c-unset { color: unset; }
+  /* background-color is non-inherited: inherit copies pink, initial/unset -> transparent */
+  #bg-inherit { background-color: inherit; }
+  #bg-initial { background-color: initial; }
+  #bg-unset { background-color: unset; }
+</style>
+</head>
+<body>
+  <div id="grand">
+    <div id="parent">
+      <div id="w-inherit" class="box"></div>
+      <div id="w-initial" class="box"></div>
+      <div id="w-unset" class="box"></div>
+      <div id="c-inherit">color inherit stays red</div>
+      <div id="c-initial">color initial goes black</div>
+      <div id="c-unset">color unset stays red</div>
+      <div id="bg-inherit" class="box"></div>
+      <div id="bg-initial" class="box"></div>
+      <div id="bg-unset" class="box"></div>
+    </div>
+  </div>
+</body>
+</html>

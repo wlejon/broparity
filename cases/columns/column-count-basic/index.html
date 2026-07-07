@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>column-count-basic</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  /* 640px, 3 columns, 20px gaps -> each column is exactly 200px wide.
+     12 single-line paragraphs of 28px each (336px of content) balance
+     to 4 per column, so the container height is 112px. */
+  #cols {
+    width: 640px;
+    margin: 20px;
+    column-count: 3;
+    column-gap: 20px;
+    background: #f6f2ea;
+  }
+  #cols p {
+    margin: 0;
+    padding: 4px 6px;
+    font-size: 14px;
+    line-height: 20px;
+    background: #dce8f4;
+  }
+  #cols p:nth-of-type(even) { background: #e4f0da; }
+</style>
+</head>
+<body>
+  <div id="cols">
+    <p id="p1">Item one</p>
+    <p id="p2">Item two</p>
+    <p id="p3">Item three</p>
+    <p id="p4">Item four</p>
+    <p id="p5">Item five</p>
+    <p id="p6">Item six</p>
+    <p id="p7">Item seven</p>
+    <p id="p8">Item eight</p>
+    <p id="p9">Item nine</p>
+    <p id="p10">Item ten</p>
+    <p id="p11">Item eleven</p>
+    <p id="p12">Item twelve</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mix-blend-multiply-screen</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .stage { position: relative; display: inline-block; vertical-align: top; width: 230px; height: 200px; margin: 20px 10px 20px 20px; isolation: isolate; }
+  #stage1 { background: #ffffff; }
+  #stage2 { background: #ffcc80; }
+  #stage3 { background: #263238; }
+  .c { position: absolute; width: 120px; height: 120px; border-radius: 50%; }
+  .m1 { left: 20px; top: 24px; background: #e53935; mix-blend-mode: multiply; }
+  .m2 { left: 80px; top: 60px; background: #1e88e5; mix-blend-mode: multiply; }
+  .s1 { left: 20px; top: 24px; background: #e53935; mix-blend-mode: screen; }
+  .s2 { left: 80px; top: 60px; background: #1e88e5; mix-blend-mode: screen; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage1"><div class="c m1" id="a1"></div><div class="c m2" id="a2"></div></div>
+<div class="stage" id="stage2"><div class="c m1" id="b1"></div><div class="c m2" id="b2"></div></div>
+<div class="stage" id="stage3"><div class="c s1" id="c1"></div><div class="c s2" id="c2"></div></div>
+</body>
+</html>

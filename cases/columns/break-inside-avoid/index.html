@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>break-inside-avoid</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  /* Sequential fill (column-fill:auto + definite 200px height).
+     Two 70px cards (+10px margins) fit per column; the third card
+     would fragment at 160..230, but break-inside:avoid moves it WHOLE
+     to the top of the next column: k3 at (220,0), k5 at (440,0). */
+  #deck {
+    width: 640px;
+    height: 200px;
+    margin: 20px;
+    column-count: 3;
+    column-gap: 20px;
+    column-fill: auto;
+    background: #f6f2ea;
+  }
+  .card {
+    height: 70px;
+    margin: 0 0 10px 0;
+    break-inside: avoid;
+    font-size: 13px;
+    line-height: 70px;
+    text-align: center;
+    color: #ffffff;
+  }
+  #k1 { background: #4a90d9; }
+  #k2 { background: #4ab06a; }
+  #k3 { background: #f0a030; }
+  #k4 { background: #8a5ad9; }
+  #k5 { background: #d94a6a; }
+  #k6 { background: #3aa8a0; }
+</style>
+</head>
+<body>
+  <div id="deck">
+    <div class="card" id="k1">card 1</div>
+    <div class="card" id="k2">card 2</div>
+    <div class="card" id="k3">card 3</div>
+    <div class="card" id="k4">card 4</div>
+    <div class="card" id="k5">card 5</div>
+    <div class="card" id="k6">card 6</div>
+  </div>
+</body>
+</html>

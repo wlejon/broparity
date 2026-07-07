@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>counters-nested</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  #root { margin: 20px; width: 440px; font-size: 18px; }
+  .list { counter-reset: sec; }
+  .list .list { margin-left: 32px; }
+  .sec { counter-increment: sec; }
+  .h { background: #e8eaf6; margin-bottom: 4px; }
+  .h::before { content: counters(sec, ".") " "; background: #ff7043; color: #ffffff; font-weight: bold; }
+  .t { background: #c8e6c9; }
+</style>
+</head>
+<body>
+<div class="list" id="root">
+  <div class="sec">
+    <div class="h"><span class="t" id="s1">Alpha</span></div>
+    <div class="list">
+      <div class="sec"><div class="h"><span class="t" id="s11">Beta</span></div></div>
+      <div class="sec"><div class="h"><span class="t" id="s12">Gamma</span></div></div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="h"><span class="t" id="s2">Delta</span></div>
+    <div class="list">
+      <div class="sec"><div class="h"><span class="t" id="s21">Epsilon</span></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

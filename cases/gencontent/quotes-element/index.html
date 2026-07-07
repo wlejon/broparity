@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>quotes-element</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  p { margin: 14px 20px; font-size: 18px; }
+  .w { background: #fff9c4; }
+  .w2 { background: #b3e5fc; }
+  .sib { background: #a5d6a7; }
+  #q3 { quotes: "«[" "]»" "‹" "›"; }
+</style>
+</head>
+<body>
+<p>default <q id="q1" class="w">hello</q><span id="after1" class="sib">tail</span></p>
+<p>nested <q id="q2" class="w">outer <q id="q2i" class="w2">inner</q> end</q><span id="after2" class="sib">tail</span></p>
+<p>custom <q id="q3" class="w">hello</q><span id="after3" class="sib">tail</span></p>
+<p>control <span id="c0" class="w">hello</span><span id="after4" class="sib">tail</span></p>
+</body>
+</html>

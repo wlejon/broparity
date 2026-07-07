@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>column-width-auto</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  /* column-width is a hint: the engine derives the count.
+     #wide  700px: floor((700+20)/(180+20)) = 3 cols, used width 220.
+     #narrow 500px: floor((500+20)/(180+20)) = 2 cols, used width 240.
+     The .item divs fill their column, so their measured widths (220 vs
+     240) assert the derived column sizing. */
+  #wide, #narrow {
+    column-width: 180px;
+    column-gap: 20px;
+    margin: 20px 0 0 20px;
+    background: #f6f2ea;
+  }
+  #wide { width: 700px; }
+  #narrow { width: 500px; }
+  .item {
+    height: 24px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 24px;
+    background: #dce8f4;
+  }
+  .item:nth-of-type(even) { background: #e4f0da; }
+</style>
+</head>
+<body>
+  <div id="wide">
+    <div class="item" id="w1">w1</div>
+    <div class="item" id="w2">w2</div>
+    <div class="item" id="w3">w3</div>
+    <div class="item" id="w4">w4</div>
+    <div class="item" id="w5">w5</div>
+    <div class="item" id="w6">w6</div>
+    <div class="item" id="w7">w7</div>
+    <div class="item" id="w8">w8</div>
+    <div class="item" id="w9">w9</div>
+  </div>
+  <div id="narrow">
+    <div class="item" id="n1">n1</div>
+    <div class="item" id="n2">n2</div>
+    <div class="item" id="n3">n3</div>
+    <div class="item" id="n4">n4</div>
+    <div class="item" id="n5">n5</div>
+    <div class="item" id="n6">n6</div>
+    <div class="item" id="n7">n7</div>
+    <div class="item" id="n8">n8</div>
+  </div>
+</body>
+</html>

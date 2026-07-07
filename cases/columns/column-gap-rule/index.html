@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>column-gap-rule</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  /* 620px, 3 columns, 40px gaps -> column width (620-80)/3 = 180.
+     Each child is exactly one column tall (120px, 360 total balances
+     to 120 per column), so the child x positions assert the gap:
+     c1 x=0, c2 x=220, c3 x=440 (container-relative). The 4px rule is
+     painted centered in each 40px gap — pixel-diff territory. */
+  #ruled {
+    width: 620px;
+    margin: 20px;
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 4px solid #b0483c;
+    background: #f6f2ea;
+  }
+  #ruled > div {
+    height: 120px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 120px;
+    text-align: center;
+  }
+  #c1 { background: #4a90d9; }
+  #c2 { background: #4ab06a; }
+  #c3 { background: #8a5ad9; }
+</style>
+</head>
+<body>
+  <div id="ruled">
+    <div id="c1">col 1</div>
+    <div id="c2">col 2</div>
+    <div id="c3">col 3</div>
+  </div>
+</body>
+</html>

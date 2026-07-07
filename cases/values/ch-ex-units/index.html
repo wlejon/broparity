@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ch-ex-units</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
+  #wrap { margin: 20px; }
+  .group { margin-bottom: 20px; background: #f0f0f0; padding: 10px; width: 500px; }
+  .box { height: 30px; margin-bottom: 8px; }
+  #mono { font-family: monospace; font-size: 16px; }
+  #sans { font-family: sans-serif; font-size: 16px; }
+  .ch10 { width: 10ch; background: #c0d0e0; }
+  .ex4 { width: 4ex; background: #e0c0d0; }
+  #mono-text { width: 10ch; background: #d0e0c0; white-space: nowrap; overflow: hidden; }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="mono" class="group">
+      <div id="mono-ch" class="box ch10"></div>
+      <div id="mono-ex" class="box ex4"></div>
+      <div id="mono-text">0123456789</div>
+    </div>
+    <div id="sans" class="group">
+      <div id="sans-ch" class="box ch10"></div>
+      <div id="sans-ex" class="box ex4"></div>
+    </div>
+  </div>
+</body>
+</html>

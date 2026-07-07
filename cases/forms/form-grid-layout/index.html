@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>form-grid-layout</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
+  #form { margin: 20px; width: 480px; display: grid; grid-template-columns: 140px 1fr; gap: 12px 10px; background: #f0f0f0; padding: 16px; box-sizing: border-box; }
+  label { background: #dce8f8; }
+  input, select, textarea, button { font-family: sans-serif; font-size: 16px; width: 100%; box-sizing: border-box; }
+  #f-notes { height: 60px; resize: none; }
+</style>
+</head>
+<body>
+  <div id="form">
+    <label id="l-name" for="f-name">Name</label>
+    <input id="f-name" type="text">
+    <label id="l-kind" for="f-kind">Kind</label>
+    <select id="f-kind">
+      <option>Widget</option>
+      <option>Gadget</option>
+    </select>
+    <label id="l-notes" for="f-notes">Notes</label>
+    <textarea id="f-notes" rows="3"></textarea>
+    <label id="l-go" for="f-go">Action</label>
+    <button id="f-go">Apply</button>
+  </div>
+</body>
+</html>

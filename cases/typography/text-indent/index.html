@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-indent</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  p {
+    width: 340px;
+    margin: 12px 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #ind-px  { text-indent: 48px;  background: #f0f0ff; }
+  #ind-pct { text-indent: 25%;   background: #e8f8e8; }
+  #ind-neg { text-indent: -24px; padding-left: 36px; background: #fff0e0; }
+  .w { background: #ffd8d8; }
+</style>
+</head>
+<body>
+  <p id="ind-px"><span class="w" id="w1">Pixel</span> indent of forty eight pixels shifts only this first line, while the wrapped second line starts back at the left content edge.</p>
+  <p id="ind-pct"><span class="w" id="w2">Percent</span> indent of twenty five percent resolves against the box width, again shifting only the first line before the wrap.</p>
+  <p id="ind-neg"><span class="w" id="w3">Negative</span> indent pulls the first line back into the padding area, and the wrapped second line sits at the padded content edge.</p>
+</body>
+</html>

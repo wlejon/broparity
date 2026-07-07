@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>rtl-margins-auto</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .wrap {
+    width: 360px;
+    margin: 10px 20px;
+    background: #eeeeee;
+  }
+  .bar { width: 120px; height: 28px; }
+  #auto-center { margin: 0 auto;      background: #d04030; }
+  #lone-auto   { margin-left: auto;   background: #2f9e56; }
+  #over-ltr, #over-rtl {
+    width: 200px; height: 28px;
+    margin-left: 20px; margin-right: 20px;
+    background: #3060c8;
+  }
+  .txt { font-size: 14px; line-height: 20px; margin: 4px 0; }
+  #ta-start-ltr, #ta-start-rtl { text-align: start; }
+  #ta-end-ltr,   #ta-end-rtl   { text-align: end; }
+  .txt span { background: #ffd8a8; }
+</style>
+</head>
+<body>
+  <div class="wrap" dir="rtl">
+    <div class="bar" id="auto-center"></div>
+    <div class="bar" id="lone-auto"></div>
+    <div id="over-rtl"></div>
+  </div>
+  <div class="wrap" dir="ltr">
+    <div id="over-ltr"></div>
+  </div>
+  <div class="wrap" dir="ltr">
+    <p class="txt" id="ta-start-ltr"><span id="s1">start in ltr</span></p>
+    <p class="txt" id="ta-end-ltr"><span id="s2">end in ltr</span></p>
+  </div>
+  <div class="wrap" dir="rtl">
+    <p class="txt" id="ta-start-rtl"><span id="s3">start in rtl</span></p>
+    <p class="txt" id="ta-end-rtl"><span id="s4">end in rtl</span></p>
+  </div>
+</body>
+</html>

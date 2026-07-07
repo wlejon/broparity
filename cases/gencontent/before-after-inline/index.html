@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>before-after-inline</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  .row { margin: 24px; font-size: 20px; }
+  .host { background: #ffd54f; }
+  .sib { background: #a5d6a7; }
+  #tag::before { content: "["; color: #ffffff; background: #c62828; }
+  #tag::after { content: "]"; color: #ffffff; background: #c62828; }
+</style>
+</head>
+<body>
+<div class="row"><span id="tag" class="host">alpha</span><span id="sib1" class="sib">tail</span></div>
+<div class="row"><span id="plain" class="host">alpha</span><span id="sib2" class="sib">tail</span></div>
+</body>
+</html>

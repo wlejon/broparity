@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>textarea-rows-cols</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
+  #wrap { margin: 20px; }
+  .row { margin-bottom: 12px; }
+  textarea { font-family: monospace; font-size: 14px; }
+  #ta-css { width: 300px; height: 100px; background: #dce8f8; }
+  #ta-noresize { resize: none; background: #e4f0dc; }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="row"><textarea id="ta-attrs" rows="3" cols="20">alpha beta</textarea></div>
+    <div class="row"><textarea id="ta-css" rows="5" cols="30">gamma delta</textarea></div>
+    <div class="row"><textarea id="ta-noresize" rows="2" cols="40">epsilon</textarea></div>
+  </div>
+</body>
+</html>

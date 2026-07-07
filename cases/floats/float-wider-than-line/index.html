@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>float-wider-than-line</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; }
+  #lane {
+    width: 500px;
+    margin: 20px;
+    overflow: hidden;
+    background: #ececec;
+  }
+  #narrow {
+    float: left;
+    width: 150px;
+    height: 60px;
+    background: #4a90d9;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+  }
+  /* 400px does not fit beside the 150px float (550 > 500), so this
+     float drops below it: expected position x = 0, y = 60. */
+  #wide {
+    float: left;
+    width: 400px;
+    height: 60px;
+    background: #d94a6a;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+  }
+  /* 80px fits in the 100px left beside #wide: x = 400, y = 60. */
+  #small {
+    float: left;
+    width: 80px;
+    height: 60px;
+    background: #4ab06a;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div id="lane">
+    <div id="narrow">150</div>
+    <div id="wide">400 drops</div>
+    <div id="small">80</div>
+  </div>
+</body>
+</html>
