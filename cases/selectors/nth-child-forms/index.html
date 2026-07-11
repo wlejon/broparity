@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>nth-child-forms</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .grid { margin: 8px; }
+  .grid div { width: 200px; height: 22px; margin: 3px; background: #dddddd; color: #202020; font-size: 12px; }
+
+  .odd div:nth-child(odd) { background: #2e7d32; color: #ffffff; }
+  .anb div:nth-child(3n+1) { background: #1565c0; color: #ffffff; }
+  .anb div:nth-child(-n+2) { width: 280px; }
+  .last div:nth-last-child(2) { background: #c62828; color: #ffffff; }
+  .last div:nth-last-child(-n+2) { width: 300px; }
+  .oftype p:nth-of-type(2) { background: #6a1b9a; color: #ffffff; }
+  .oftype p { width: 200px; height: 22px; margin: 3px; background: #dddddd; font-size: 12px; }
+</style>
+</head>
+<body>
+  <div class="grid odd">
+    <div>1 odd</div><div>2</div><div>3 odd</div><div>4</div><div>5 odd</div>
+  </div>
+  <div class="grid anb">
+    <div>1 (3n+1, -n+2)</div><div>2 (-n+2)</div><div>3</div><div>4 (3n+1)</div><div>5</div><div>6</div><div>7 (3n+1)</div>
+  </div>
+  <div class="grid last">
+    <div>1</div><div>2</div><div>3 second-from-end</div><div>4 last</div>
+  </div>
+  <div class="grid oftype">
+    <div>div 1</div>
+    <p>p 1</p>
+    <div>div 2</div>
+    <p>p 2 (purple)</p>
+    <p>p 3</p>
+  </div>
+</body>
+</html>

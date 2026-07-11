@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>not-selector-list</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .item { width: 240px; height: 36px; margin: 8px; background: #dddddd; color: #202020; }
+
+  /* simple :not */
+  .item:not(.skip) { background: #2e7d32; color: #ffffff; }
+  /* :not with selector list — matches elements that are neither p nor .special */
+  div.item:not(.skip, .special) { width: 320px; }
+  /* :not(:first-child) */
+  .group .item:not(:first-child) { margin-left: 40px; }
+</style>
+</head>
+<body>
+  <div class="item">plain (green, wide)</div>
+  <div class="item skip">skip (grey, narrow)</div>
+  <div class="item special">special (green, narrow)</div>
+  <div class="group">
+    <div class="item">group first (no indent)</div>
+    <div class="item">group second (indent)</div>
+    <div class="item">group third (indent)</div>
+  </div>
+</body>
+</html>

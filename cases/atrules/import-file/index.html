@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>import-file</title>
+<style>
+  @import url("shared.css");
+  @import url("narrow.css") (max-width: 400px);
+
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+
+  /* same-specificity later rule in the importing sheet loses to nothing —
+     imported rules come first in source order, so this local width wins
+     only where shared.css does not set width */
+  #local { background: #1565c0; color: #ffffff; }
+</style>
+</head>
+<body>
+  <div class="box" id="imported">from shared.css (green)</div>
+  <div class="box from-import">wide + purple edge from import</div>
+  <div class="box" id="local">local rule (blue)</div>
+</body>
+</html>

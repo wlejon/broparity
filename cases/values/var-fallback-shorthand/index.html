@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>var-fallback-shorthand</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  :root {
+    --brand: #1565c0;
+    --pad: 12px;
+  }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+
+  /* defined var */
+  #defined { background: var(--brand); color: #ffffff; }
+  /* fallback used when undefined */
+  #fallback { background: var(--missing, #2e7d32); color: #ffffff; }
+  /* nested fallback chain: --missing → --also-missing → literal */
+  #chain { background: var(--missing, var(--also-missing, #6a1b9a)); color: #ffffff; }
+  /* var inside a shorthand */
+  #shorthand { margin: var(--pad) 30px; border: var(--bw, 6px) solid #ef6c00; }
+  /* scoped override: child redefines the var */
+  .scope { --brand: #c62828; }
+  .scope .swatch { width: 200px; height: 30px; margin: 8px; background: var(--brand); color: #ffffff; }
+</style>
+</head>
+<body>
+  <div class="box" id="defined">defined var (blue)</div>
+  <div class="box" id="fallback">fallback (green)</div>
+  <div class="box" id="chain">nested fallback (purple)</div>
+  <div class="box" id="shorthand">var in shorthand (orange border)</div>
+  <div class="scope">
+    <div class="swatch">scoped override (red)</div>
+  </div>
+</body>
+</html>

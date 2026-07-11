@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>attr-substring-ops</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .row { width: 220px; height: 36px; margin: 8px; background: #dddddd; color: #202020; }
+
+  /* prefix */
+  .row[href^="https://"] { background: #2e7d32; color: #ffffff; width: 280px; }
+  /* suffix */
+  .row[href$=".pdf"] { background: #1565c0; color: #ffffff; height: 52px; }
+  /* substring */
+  .row[href*="example"] { border-left: 12px solid #ef6c00; }
+  /* whitespace list word */
+  .row[data-tags~="hot"] { background: #c62828; color: #ffffff; width: 340px; }
+  /* ~= must not match substrings of a word */
+  .row[data-tags~="ho"] { background: #000000; height: 90px; }
+</style>
+</head>
+<body>
+  <div class="row" href="https://example.com/a">https prefix + example substr</div>
+  <div class="row" href="http://other.org/b">http only</div>
+  <div class="row" href="https://files.org/doc.pdf">https + pdf suffix</div>
+  <div class="row" href="file.pdfx">pdfx (no suffix match)</div>
+  <div class="row" data-tags="new hot sale">tags word hot</div>
+  <div class="row" data-tags="hotel">tags hotel (no word match)</div>
+  <div class="row" data-tags="">empty tags</div>
+</body>
+</html>

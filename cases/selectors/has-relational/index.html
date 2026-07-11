@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>has-relational</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .card { width: 260px; margin: 10px; padding: 10px; background: #dddddd; color: #202020; }
+
+  /* parent styled by child presence */
+  .card:has(.flag) { background: #2e7d32; color: #ffffff; }
+  /* direct-child form must not match a nested flag */
+  .card:has(> .flag) { border-left: 14px solid #ef6c00; }
+  /* sibling form: element followed by .after */
+  .card:has(+ .after) { width: 340px; }
+</style>
+</head>
+<body>
+  <div class="card"><div class="flag">direct flag child</div></div>
+  <div class="card"><div class="wrap"><div class="flag">nested flag</div></div></div>
+  <div class="card">no flag</div>
+  <div class="card">followed by .after (wide)</div>
+  <div class="after card">the .after element</div>
+</body>
+</html>

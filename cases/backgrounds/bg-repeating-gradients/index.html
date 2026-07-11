@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>bg-repeating-gradients</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .swatch { width: 220px; height: 160px; margin: 12px; display: inline-block; border: 1px solid #202020; }
+
+  #lin {
+    background: repeating-linear-gradient(
+      45deg, #1565c0 0px, #1565c0 12px, #ffffff 12px, #ffffff 24px);
+  }
+  #rad {
+    background: repeating-radial-gradient(
+      circle at 50% 50%, #2e7d32 0px, #2e7d32 10px, #ffffff 10px, #ffffff 20px);
+  }
+  #con {
+    background: repeating-conic-gradient(
+      from 0deg at 50% 50%, #ef6c00 0deg, #ef6c00 15deg, #ffffff 15deg, #ffffff 30deg);
+  }
+</style>
+</head>
+<body>
+  <div class="swatch" id="lin"></div>
+  <div class="swatch" id="rad"></div>
+  <div class="swatch" id="con"></div>
+</body>
+</html>

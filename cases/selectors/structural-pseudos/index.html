@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>structural-pseudos</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .list { margin: 8px; padding: 4px; background: #f0f0f0; }
+  .list div, .list p { width: 220px; height: 26px; margin: 4px; background: #dddddd; color: #202020; font-size: 13px; }
+
+  .list :first-child { background: #2e7d32; color: #ffffff; }
+  .list :last-child { background: #1565c0; color: #ffffff; }
+  .only :only-child { background: #6a1b9a; color: #ffffff; width: 300px; }
+  .list :empty { background: #c62828; height: 14px; }
+  .mixed p:first-of-type { border-left: 12px solid #ef6c00; }
+  .mixed p:last-of-type { border-left: 12px solid #2e7d32; }
+  .mixed div:only-of-type { width: 320px; }
+</style>
+</head>
+<body>
+  <div class="list">
+    <div>first (green)</div>
+    <div>middle</div>
+    <div></div>
+    <div>last (blue)</div>
+  </div>
+  <div class="list only">
+    <div>only child (purple, wide)</div>
+  </div>
+  <div class="list mixed">
+    <p>first p (orange edge)</p>
+    <div>the only div (wide)</div>
+    <p>middle p</p>
+    <p>last p (green edge)</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sibling-combinators</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  p { width: 240px; height: 28px; margin: 6px; background: #dddddd; color: #202020; font-size: 14px; }
+  h4 { margin: 6px; font-size: 16px; color: #202020; }
+
+  /* adjacent: only the p immediately after an h4 */
+  h4 + p { background: #1565c0; color: #ffffff; }
+  /* general: every following p sibling of .marker */
+  .marker ~ p { width: 320px; }
+  /* chained adjacent */
+  p + p + p { border-left: 10px solid #ef6c00; }
+</style>
+</head>
+<body>
+  <p>before heading</p>
+  <h4>heading</h4>
+  <p>right after heading (blue)</p>
+  <p>second after heading</p>
+  <div class="marker" style="width:240px;height:20px;margin:6px;background:#6a1b9a;"></div>
+  <p>after marker (wide)</p>
+  <p>after marker two (wide)</p>
+  <p>after marker three (wide + orange edge)</p>
+</body>
+</html>

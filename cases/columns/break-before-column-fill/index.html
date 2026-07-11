@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>break-before-column-fill</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .cols {
+    column-count: 3;
+    column-gap: 20px;
+    width: 700px;
+    height: 150px;
+    margin: 10px;
+    background: #f0f0f0;
+  }
+  .blockx { height: 30px; margin: 4px 0; background: #dddddd; color: #202020; font-size: 12px; }
+  .force { break-before: column; background: #2e7d32; color: #ffffff; }
+
+  #fill-auto { column-fill: auto; }
+  #fill-balance { column-fill: balance; }
+</style>
+</head>
+<body>
+  <!-- break-before: column forces "col 2 start" into a new column -->
+  <div class="cols" id="fill-auto">
+    <div class="blockx">a1</div>
+    <div class="blockx">a2</div>
+    <div class="blockx force">col 2 start</div>
+    <div class="blockx">b1</div>
+    <div class="blockx">b2</div>
+  </div>
+  <!-- balance spreads content evenly across the 3 columns -->
+  <div class="cols" id="fill-balance">
+    <div class="blockx">c1</div>
+    <div class="blockx">c2</div>
+    <div class="blockx">c3</div>
+    <div class="blockx">c4</div>
+    <div class="blockx">c5</div>
+    <div class="blockx">c6</div>
+  </div>
+</body>
+</html>

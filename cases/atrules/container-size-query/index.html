@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>container-size-query</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .holder { container-type: inline-size; container-name: card; margin: 10px; background: #f0f0f0; }
+  .wide-holder { width: 500px; }
+  .narrow-holder { width: 220px; }
+  .chip { height: 40px; margin: 6px; background: #dddddd; color: #202020; }
+
+  @container card (min-width: 400px) {
+    .chip { background: #2e7d32; color: #ffffff; height: 56px; }
+  }
+  @container card (max-width: 300px) {
+    .chip { background: #1565c0; color: #ffffff; }
+  }
+</style>
+</head>
+<body>
+  <div class="holder wide-holder">
+    <div class="chip">wide container (green, tall)</div>
+  </div>
+  <div class="holder narrow-holder">
+    <div class="chip">narrow container (blue)</div>
+  </div>
+</body>
+</html>

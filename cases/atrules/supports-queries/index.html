@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>supports-queries</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+
+  @supports (display: grid) {
+    #grid-yes { background: #2e7d32; color: #ffffff; }
+  }
+  @supports (display: fake-value-nobody-supports) {
+    #grid-yes { background: #c62828; height: 80px; }
+  }
+  @supports not (display: fake-value-nobody-supports) {
+    #not-fake { background: #1565c0; color: #ffffff; width: 320px; }
+  }
+  @supports (display: flex) and (position: absolute) {
+    #and-both { background: #6a1b9a; color: #ffffff; }
+  }
+  @supports (display: fake-value-nobody-supports) or (color: red) {
+    #or-one { background: #ef6c00; color: #ffffff; width: 300px; }
+  }
+</style>
+</head>
+<body>
+  <div class="box" id="grid-yes">supports grid (green)</div>
+  <div class="box" id="not-fake">not fake (blue, wide)</div>
+  <div class="box" id="and-both">flex and abs (purple)</div>
+  <div class="box" id="or-one">fake or red (orange, wide)</div>
+</body>
+</html>

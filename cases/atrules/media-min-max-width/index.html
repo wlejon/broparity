@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>media-min-max-width</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+
+  /* viewport is 800x600: these MATCH */
+  @media (min-width: 600px) {
+    #a { background: #2e7d32; color: #ffffff; }
+  }
+  @media (max-width: 1000px) {
+    #b { background: #1565c0; color: #ffffff; width: 320px; }
+  }
+  @media (min-width: 700px) and (max-width: 900px) {
+    #c { background: #6a1b9a; color: #ffffff; }
+  }
+  /* these must NOT match */
+  @media (min-width: 900px) {
+    #a { background: #c62828; height: 80px; }
+  }
+  @media (max-width: 700px) {
+    #b { background: #c62828; height: 80px; }
+  }
+  @media (min-height: 700px) {
+    #c { background: #c62828; height: 80px; }
+  }
+</style>
+</head>
+<body>
+  <div class="box" id="a">min-width 600 (green)</div>
+  <div class="box" id="b">max-width 1000 (blue, wide)</div>
+  <div class="box" id="c">700..900 band (purple)</div>
+</body>
+</html>

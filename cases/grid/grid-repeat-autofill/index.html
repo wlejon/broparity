@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>grid-repeat-autofill</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+    width: 600px;
+    margin: 10px;
+    background: #f0f0f0;
+  }
+  .cell { height: 40px; background: #1565c0; color: #ffffff; font-size: 12px; }
+  .fixed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 600px;
+    margin: 10px;
+    background: #f0f0f0;
+  }
+  .fixed .cell { background: #2e7d32; }
+</style>
+</head>
+<body>
+  <!-- 600px / minmax(120px,1fr) + 8px gap → 4 tracks; 6 items wrap to 2 rows -->
+  <div class="grid">
+    <div class="cell">1</div><div class="cell">2</div><div class="cell">3</div>
+    <div class="cell">4</div><div class="cell">5</div><div class="cell">6</div>
+  </div>
+  <div class="fixed">
+    <div class="cell">a</div><div class="cell">b</div><div class="cell">c</div>
+    <div class="cell">d</div>
+  </div>
+</body>
+</html>

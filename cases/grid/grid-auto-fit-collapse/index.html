@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>grid-auto-fit-collapse</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  /* auto-fit collapses empty repeated tracks, so 2 items stretch across
+     the full 600px; auto-fill keeps the empty tracks, so the same 2 items
+     stay at one track each. */
+  .grid {
+    display: grid;
+    gap: 10px;
+    width: 600px;
+    margin: 10px;
+    background: #f0f0f0;
+  }
+  #fit { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  #fill { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .cell { height: 44px; background: #6a1b9a; color: #ffffff; font-size: 12px; }
+</style>
+</head>
+<body>
+  <div class="grid" id="fit">
+    <div class="cell">fit 1 (wide)</div><div class="cell">fit 2 (wide)</div>
+  </div>
+  <div class="grid" id="fill">
+    <div class="cell">fill 1 (narrow)</div><div class="cell">fill 2 (narrow)</div>
+  </div>
+</body>
+</html>

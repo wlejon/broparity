@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>child-vs-descendant</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .outer { margin: 10px; padding: 8px; background: #f0f0f0; }
+  .leaf { width: 220px; height: 26px; margin: 4px; background: #dddddd; color: #202020; font-size: 13px; }
+
+  /* descendant: hits both depths */
+  .outer .leaf { border-left: 10px solid #6a1b9a; }
+  /* child: only direct children of .outer */
+  .outer > .leaf { background: #2e7d32; color: #ffffff; }
+  /* three-level chain */
+  .outer > .mid > .leaf { background: #1565c0; color: #ffffff; width: 300px; }
+</style>
+</head>
+<body>
+  <div class="outer">
+    <div class="leaf">direct child (green)</div>
+    <div class="mid">
+      <div class="leaf">grandchild via .mid (blue, wide)</div>
+      <div class="deep">
+        <div class="leaf">great-grandchild (grey, purple edge)</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

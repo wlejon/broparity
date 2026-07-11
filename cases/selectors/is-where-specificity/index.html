@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>is-where-specificity</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+
+  /* :is() takes the specificity of its most specific argument (#id → 1,0,0),
+     so this beats the later plain-class rule. */
+  :is(#alpha, .never) { background: #1565c0; color: #ffffff; }
+  #alpha { /* placeholder to keep id present */ }
+  .box.blue-target { background: #c62828; }
+
+  /* :where() has zero specificity, so the later class rule wins. */
+  :where(#beta, .box) .inner { background: #c62828; color: #ffffff; }
+  .inner { background: #2e7d32; color: #ffffff; }
+
+  /* :is() used purely for grouping — both h5 and .h-like get the same box */
+  :is(h5, .h-like) { width: 300px; height: 30px; margin: 10px; background: #6a1b9a; color: #ffffff; font-size: 14px; font-weight: normal; }
+</style>
+</head>
+<body>
+  <div class="box blue-target" id="alpha">is() id specificity wins (blue)</div>
+  <div class="box" id="beta"><div class="inner">where() zero specificity loses (green)</div></div>
+  <h5>h5 via is()</h5>
+  <div class="h-like">div via is()</div>
+</body>
+</html>

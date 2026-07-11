@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>attr-presence-equals</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .row { width: 200px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+
+  /* presence */
+  .row[data-on] { background: #2e7d32; color: #ffffff; }
+  /* exact match */
+  .row[data-kind="alpha"] { background: #1565c0; color: #ffffff; width: 260px; }
+  /* exact match must NOT hit a different value */
+  .row[data-kind="beta"] { background: #c62828; color: #ffffff; width: 320px; }
+  /* dash match: en and en-US, not enx */
+  .row[lang|="en"] { background: #6a1b9a; color: #ffffff; height: 56px; }
+  /* case-insensitive flag */
+  .row[data-ci="MiXeD" i] { background: #ef6c00; color: #ffffff; width: 380px; }
+</style>
+</head>
+<body>
+  <div class="row" data-on>presence match</div>
+  <div class="row">no attributes</div>
+  <div class="row" data-kind="alpha">kind alpha</div>
+  <div class="row" data-kind="beta">kind beta</div>
+  <div class="row" data-kind="alphabet">kind alphabet (no match)</div>
+  <div class="row" lang="en">lang en</div>
+  <div class="row" lang="en-US">lang en-US</div>
+  <div class="row" lang="enx">lang enx (no match)</div>
+  <div class="row" data-ci="mixed">ci lower</div>
+  <div class="row" data-ci="MIXED">ci upper</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>accent-color</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .row { margin: 14px; font-size: 14px; color: #202020; }
+  input { width: 24px; height: 24px; vertical-align: middle; }
+
+  .green input { accent-color: #2e7d32; }
+  .blue input { accent-color: #1565c0; }
+  .orange input { accent-color: #ef6c00; }
+</style>
+</head>
+<body>
+  <div class="row green"><input type="checkbox" checked> green checkbox</div>
+  <div class="row blue"><input type="checkbox" checked> blue checkbox</div>
+  <div class="row orange"><input type="radio" checked> orange radio</div>
+  <div class="row green"><input type="radio" checked> green radio</div>
+  <div class="row blue"><input type="checkbox"> unchecked (accent unused)</div>
+</body>
+</html>

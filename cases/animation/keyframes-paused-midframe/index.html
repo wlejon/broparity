@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>keyframes-paused-midframe</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  .box { width: 120px; height: 40px; margin: 12px; background: #dddddd; color: #202020; font-size: 12px; }
+
+  /* Paused + negative delay pins a deterministic mid-animation frame.
+     linear timing, exact fractions → exact interpolated values. */
+  @keyframes slide {
+    from { transform: translateX(0px); }
+    to   { transform: translateX(400px); }
+  }
+  @keyframes recolor {
+    from { background-color: rgb(0, 0, 255); }
+    to   { background-color: rgb(0, 0, 55); }
+  }
+  @keyframes grow {
+    from { width: 100px; }
+    to   { width: 500px; }
+  }
+
+  #t25 { animation: slide 4s linear -1s paused; }
+  #t50 { animation: slide 4s linear -2s paused; }
+  #t75 { animation: slide 4s linear -3s paused; }
+  #color-half { animation: recolor 2s linear -1s paused; color: #ffffff; }
+  #width-half { animation: grow 2s linear -1s paused; }
+</style>
+</head>
+<body>
+  <div class="box" id="t25">25% → x=100</div>
+  <div class="box" id="t50">50% → x=200</div>
+  <div class="box" id="t75">75% → x=300</div>
+  <div class="box" id="color-half">50% blue mix</div>
+  <div class="box" id="width-half">50% → w=300</div>
+</body>
+</html>
