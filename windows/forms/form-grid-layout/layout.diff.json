@@ -1,6 +1,6 @@
 {
   "summary": {
-    "totalElements": 12,
+    "totalElements": 16,
     "rectMismatches": 0,
     "styleMismatches": 2,
     "geomEpsilon": 1,
@@ -98,6 +98,36 @@
       "styleMismatch": false
     },
     {
+      "path": "body>div:nth-of-type(1)>label:nth-of-type(1)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 36,
+          "y": 36,
+          "w": 48,
+          "h": 14
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 36,
+          "y": 36,
+          "w": 48,
+          "h": 14
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
       "path": "body>div:nth-of-type(1)>input:nth-of-type(1)",
       "tag": "input",
       "id": "f-name",
@@ -152,6 +182,36 @@
           "y": 72,
           "w": 140,
           "h": 21
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>label:nth-of-type(2)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": -0.125,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 36,
+          "y": 71.875,
+          "w": 40,
+          "h": 14
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 36,
+          "y": 72,
+          "w": 40,
+          "h": 14
         }
       },
       "styleDeltas": {},
@@ -288,6 +348,36 @@
       "styleMismatch": false
     },
     {
+      "path": "body>div:nth-of-type(1)>label:nth-of-type(3)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": -0.125,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 36,
+          "y": 104.875,
+          "w": 52,
+          "h": 14
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 36,
+          "y": 105,
+          "w": 52,
+          "h": 14
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
       "path": "body>div:nth-of-type(1)>textarea:nth-of-type(1)",
       "tag": "textarea",
       "id": "f-notes",
@@ -342,6 +432,36 @@
           "y": 177,
           "w": 140,
           "h": 24
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>label:nth-of-type(4)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": -0.125,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 36,
+          "y": 176.875,
+          "w": 56,
+          "h": 14
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 36,
+          "y": 177,
+          "w": 56,
+          "h": 14
         }
       },
       "styleDeltas": {},

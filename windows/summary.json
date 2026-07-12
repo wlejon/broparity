@@ -1,6 +1,6 @@
 {
-  "runId": "2026-07-07T14-02-38-559Z",
-  "timestamp": "2026-07-07T14:05:51.539Z",
+  "runId": "2026-07-12T11-44-24-830Z",
+  "timestamp": "2026-07-12T11:48:38.387Z",
   "viewport": {
     "w": 800,
     "h": 600
@@ -17,15 +17,29 @@
       "NVIDIA GeForce RTX 4090"
     ],
     "nodeVersion": "v24.2.0",
-    "detectedAt": "2026-07-07T14:05:51.539Z"
+    "detectedAt": "2026-07-12T11:48:38.387Z"
   },
   "overall": {
-    "layoutScore": 0.9960481809170723,
-    "pixelScore": 0.9927338716086886,
-    "caseCount": 284,
-    "categoryCount": 32
+    "layoutScore": 0.9964211635985928,
+    "pixelScore": 0.9955705423730146,
+    "caseCount": 320,
+    "categoryCount": 36
   },
   "categories": [
+    {
+      "name": "animation",
+      "n": 2,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "atrules",
+      "n": 6,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    },
     {
       "name": "auth",
       "n": 3,
@@ -35,9 +49,9 @@
     },
     {
       "name": "backgrounds",
-      "n": 10,
+      "n": 11,
       "layoutScore": 1,
-      "pixelScore": 1,
+      "pixelScore": 0.9967666354264292,
       "errors": 0
     },
     {
@@ -58,14 +72,14 @@
       "name": "boxmodel",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9987714550407247,
+      "pixelScore": 1,
       "errors": 0
     },
     {
       "name": "columns",
-      "n": 7,
+      "n": 8,
       "layoutScore": 1,
-      "pixelScore": 0.9950793474269016,
+      "pixelScore": 1,
       "errors": 0
     },
     {
@@ -77,16 +91,16 @@
     },
     {
       "name": "display-types",
-      "n": 12,
+      "n": 13,
       "layoutScore": 1,
-      "pixelScore": 0.9924888963651691,
+      "pixelScore": 0.9975486086782444,
       "errors": 0
     },
     {
       "name": "editorial",
       "n": 3,
       "layoutScore": 1,
-      "pixelScore": 0.9998472222222222,
+      "pixelScore": 0.9996729166666666,
       "errors": 0
     },
     {
@@ -99,29 +113,36 @@
     {
       "name": "elements",
       "n": 8,
-      "layoutScore": 0.9859375,
-      "pixelScore": 0.9769001944855085,
+      "layoutScore": 1,
+      "pixelScore": 0.9845795793675131,
       "errors": 0
     },
     {
       "name": "flex",
-      "n": 18,
+      "n": 19,
       "layoutScore": 1,
-      "pixelScore": 0.9973624494026843,
+      "pixelScore": 0.9997534938148106,
       "errors": 0
     },
     {
       "name": "floats",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9794468419659103,
+      "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "fonts",
+      "n": 9,
+      "layoutScore": 0.936422471559919,
+      "pixelScore": 0.9970314375791263,
       "errors": 0
     },
     {
       "name": "forms",
-      "n": 8,
-      "layoutScore": 0.9611904761904763,
-      "pixelScore": 0.9845204293732464,
+      "n": 10,
+      "layoutScore": 0.9706190476190477,
+      "pixelScore": 0.9911258767179912,
       "errors": 0
     },
     {
@@ -135,14 +156,14 @@
       "name": "gencontent",
       "n": 8,
       "layoutScore": 0.9708333333333333,
-      "pixelScore": 0.986115615775562,
+      "pixelScore": 0.9857706538053711,
       "errors": 0
     },
     {
       "name": "grid",
-      "n": 11,
+      "n": 13,
       "layoutScore": 1,
-      "pixelScore": 1,
+      "pixelScore": 0.9995479497403978,
       "errors": 0
     },
     {
@@ -156,7 +177,7 @@
       "name": "lists",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9821950539740257,
+      "pixelScore": 0.9979713714758501,
       "errors": 0
     },
     {
@@ -190,8 +211,15 @@
     {
       "name": "rtl",
       "n": 6,
-      "layoutScore": 0.9901960784313726,
-      "pixelScore": 0.9950819764966652,
+      "layoutScore": 1,
+      "pixelScore": 0.9992566872427983,
+      "errors": 0
+    },
+    {
+      "name": "selectors",
+      "n": 9,
+      "layoutScore": 1,
+      "pixelScore": 1,
       "errors": 0
     },
     {
@@ -205,28 +233,28 @@
       "name": "sizing",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9993097826086956,
+      "pixelScore": 1,
       "errors": 0
     },
     {
       "name": "svg",
-      "n": 7,
-      "layoutScore": 0.9976190476190476,
-      "pixelScore": 0.9994208333333333,
+      "n": 8,
+      "layoutScore": 0.9979166666666667,
+      "pixelScore": 0.9994908970771144,
       "errors": 0
     },
     {
       "name": "tables",
       "n": 29,
-      "layoutScore": 0.995644283121597,
-      "pixelScore": 0.9680933326563091,
+      "layoutScore": 1,
+      "pixelScore": 0.9780299758395066,
       "errors": 0
     },
     {
       "name": "text",
       "n": 8,
       "layoutScore": 1,
-      "pixelScore": 0.9720294625153472,
+      "pixelScore": 0.9720225691329942,
       "errors": 0
     },
     {
@@ -239,15 +267,15 @@
     {
       "name": "typography",
       "n": 12,
-      "layoutScore": 0.981644880174292,
-      "pixelScore": 0.9716571391550669,
+      "layoutScore": 0.9953703703703703,
+      "pixelScore": 0.9724443256502856,
       "errors": 0
     },
     {
       "name": "values",
-      "n": 7,
-      "layoutScore": 0.9904761904761905,
-      "pixelScore": 0.9994766363920331,
+      "n": 8,
+      "layoutScore": 1,
+      "pixelScore": 0.99983932492479,
       "errors": 0
     }
   ]

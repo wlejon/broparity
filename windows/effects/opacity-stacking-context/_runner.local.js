@@ -2,12 +2,12 @@
 // then screenshots to BROPARITY_OUT_PNG. Output paths come from env (we inline them
 // per-invocation via -e since bro-headless does not expose process.env directly).
 //
-// Configuration: the orchestrator overwrites this file's D:/projects/broparity/out/2026-07-07T14-02-38-559Z/effects/opacity-stacking-context/bro.layout.json / D:/projects/broparity/out/2026-07-07T14-02-38-559Z/effects/opacity-stacking-context/bro.png
+// Configuration: the orchestrator overwrites this file's D:/projects/broparity/out/2026-07-12T11-44-24-830Z/effects/opacity-stacking-context/bro.layout.json / D:/projects/broparity/out/2026-07-12T11-44-24-830Z/effects/opacity-stacking-context/bro.png
 // placeholders before each run, OR passes a tiny bootstrap via -e. We use the
 // placeholder approach for simplicity.
 
-const OUT_JSON = "D:/projects/broparity/out/2026-07-07T14-02-38-559Z/effects/opacity-stacking-context/bro.layout.json";
-const OUT_PNG = "D:/projects/broparity/out/2026-07-07T14-02-38-559Z/effects/opacity-stacking-context/bro.png";
+const OUT_JSON = "D:/projects/broparity/out/2026-07-12T11-44-24-830Z/effects/opacity-stacking-context/bro.layout.json";
+const OUT_PNG = "D:/projects/broparity/out/2026-07-12T11-44-24-830Z/effects/opacity-stacking-context/bro.png";
 
 const STYLE_PROPS = [
   "display", "position",
