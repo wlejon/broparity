@@ -5,7 +5,8 @@
 <title>supports-queries</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   @supports (display: grid) {
     #grid-yes { background: #2e7d32; color: #ffffff; }
@@ -25,9 +26,9 @@
 </style>
 </head>
 <body>
-  <div class="box" id="grid-yes">supports grid (green)</div>
-  <div class="box" id="not-fake">not fake (blue, wide)</div>
-  <div class="box" id="and-both">flex and abs (purple)</div>
-  <div class="box" id="or-one">fake or red (orange, wide)</div>
+  <div class="box" id="grid-yes"><span class="w" style="width:64px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:48px"></span></div>
+  <div class="box" id="not-fake"><span class="w" style="width:32px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:40px"></span> <span class="w" style="width:36px"></span></div>
+  <div class="box" id="and-both"><span class="w" style="width:36px"></span> <span class="w" style="width:32px"></span> <span class="w" style="width:56px"></span></div>
+  <div class="box" id="or-one"><span class="w" style="width:36px"></span> <span class="w" style="width:32px"></span> <span class="w" style="width:44px"></span> <span class="w" style="width:52px"></span></div>
 </body>
 </html>

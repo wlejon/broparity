@@ -5,7 +5,8 @@
 <title>media-min-max-width</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   /* viewport is 800x600: these MATCH */
   @media (min-width: 600px) {
@@ -30,8 +31,8 @@
 </style>
 </head>
 <body>
-  <div class="box" id="a">min-width 600 (green)</div>
-  <div class="box" id="b">max-width 1000 (blue, wide)</div>
-  <div class="box" id="c">700..900 band (purple)</div>
+  <div class="box" id="a"><span class="w" style="width:72px"></span> <span class="w" style="width:32px"></span> <span class="w" style="width:52px"></span></div>
+  <div class="box" id="b"><span class="w" style="width:76px"></span> <span class="w" style="width:40px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:36px"></span></div>
+  <div class="box" id="c"><span class="w" style="width:64px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:56px"></span></div>
 </body>
 </html>

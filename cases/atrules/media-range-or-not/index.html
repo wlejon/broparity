@@ -5,7 +5,8 @@
 <title>media-range-or-not</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   /* range syntax — viewport 800x600 matches */
   @media (600px <= width <= 1000px) {
@@ -32,9 +33,9 @@
 </style>
 </head>
 <body>
-  <div class="box" id="range">range 600..1000 (green)</div>
-  <div class="box" id="orient">landscape (blue, wide)</div>
-  <div class="box" id="or">or-list (purple)</div>
-  <div class="box" id="not">not-query (stays grey)</div>
+  <div class="box" id="range"><span class="w" style="width:44px"></span> <span class="w" style="width:72px"></span> <span class="w" style="width:48px"></span></div>
+  <div class="box" id="orient"><span class="w" style="width:76px"></span> <span class="w" style="width:40px"></span> <span class="w" style="width:36px"></span></div>
+  <div class="box" id="or"><span class="w" style="width:48px"></span> <span class="w" style="width:56px"></span></div>
+  <div class="box" id="not"><span class="w" style="width:64px"></span> <span class="w" style="width:40px"></span> <span class="w" style="width:44px"></span></div>
 </body>
 </html>

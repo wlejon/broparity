@@ -5,7 +5,8 @@
 <title>animation-fill-modes</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .box { width: 200px; height: 40px; margin: 12px; background: #dddddd; color: #202020; font-size: 12px; }
+  .box { width: 200px; height: 40px; margin: 12px; background: #dddddd; color: #202020; font-size: 12px; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   @keyframes paint {
     from { background-color: rgb(21, 101, 192); width: 300px; }
@@ -20,8 +21,8 @@
 </style>
 </head>
 <body>
-  <div class="box" id="backwards">backwards → from-frame (blue, 300)</div>
-  <div class="box" id="both">both → from-frame (blue, 300)</div>
-  <div class="box" id="none">none → base (grey, 200)</div>
+  <div class="box" id="backwards"><span class="w" style="width:72px"></span> <span class="w" style="width:80px"></span> <span class="w" style="width:40px"></span></div>
+  <div class="box" id="both"><span class="w" style="width:36px"></span> <span class="w" style="width:80px"></span> <span class="w" style="width:40px"></span></div>
+  <div class="box" id="none"><span class="w" style="width:40px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:44px"></span></div>
 </body>
 </html>

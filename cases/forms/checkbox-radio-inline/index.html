@@ -6,24 +6,26 @@
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
   #wrap { margin: 20px; }
-  .row { margin-bottom: 18px; background: #f0f0f0; }
+  .row { margin-bottom: 18px; background: #f0f0f0; line-height: 26px; }
   label { background: #dce8f8; }
   #cb-big, #rd-big { width: 24px; height: 24px; }
+  input { line-height: normal; }
+  .w { display: inline-block; height: 14px; background: #b04030; }
 </style>
 </head>
 <body>
   <div id="wrap">
     <div class="row" id="row-default">
       <input id="cb-default" type="checkbox" checked>
-      <label id="lb-cb" for="cb-default">Check me</label>
+      <label id="lb-cb" for="cb-default"><span class="w" style="width:48px"></span> <span class="w" style="width:32px"></span></label>
       <input id="rd-default" type="radio" name="g1" checked>
-      <label id="lb-rd" for="rd-default">Pick me</label>
+      <label id="lb-rd" for="rd-default"><span class="w" style="width:36px"></span> <span class="w" style="width:32px"></span></label>
     </div>
     <div class="row" id="row-scaled">
       <input id="cb-big" type="checkbox" checked>
-      <label id="lb-cb-big" for="cb-big">Bigger check</label>
+      <label id="lb-cb-big" for="cb-big"><span class="w" style="width:52px"></span> <span class="w" style="width:44px"></span></label>
       <input id="rd-big" type="radio" name="g2" checked>
-      <label id="lb-rd-big" for="rd-big">Bigger radio</label>
+      <label id="lb-rd-big" for="rd-big"><span class="w" style="width:52px"></span> <span class="w" style="width:40px"></span></label>
     </div>
   </div>
 </body>

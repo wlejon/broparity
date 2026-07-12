@@ -20,6 +20,10 @@
   #c-inherit { color: inherit; }
   #c-initial { color: initial; }
   #c-unset { color: unset; }
+  #c-inherit, #c-initial, #c-unset { line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; }
+  #c-inherit .w, #c-unset .w { background: #c02020; }
+  #c-initial .w { background: #000000; }
   /* background-color is non-inherited: inherit copies pink, initial/unset -> transparent */
   #bg-inherit { background-color: inherit; }
   #bg-initial { background-color: initial; }
@@ -32,9 +36,9 @@
       <div id="w-inherit" class="box"></div>
       <div id="w-initial" class="box"></div>
       <div id="w-unset" class="box"></div>
-      <div id="c-inherit">color inherit stays red</div>
-      <div id="c-initial">color initial goes black</div>
-      <div id="c-unset">color unset stays red</div>
+      <div id="c-inherit"><span class="w" style="width:44px"></span> <span class="w" style="width:56px"></span> <span class="w" style="width:40px"></span> <span class="w" style="width:32px"></span></div>
+      <div id="c-initial"><span class="w" style="width:44px"></span> <span class="w" style="width:48px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:44px"></span></div>
+      <div id="c-unset"><span class="w" style="width:44px"></span> <span class="w" style="width:44px"></span> <span class="w" style="width:40px"></span> <span class="w" style="width:32px"></span></div>
       <div id="bg-inherit" class="box"></div>
       <div id="bg-initial" class="box"></div>
       <div id="bg-unset" class="box"></div>

@@ -5,7 +5,8 @@
 <title>keyframes-paused-midframe</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .box { width: 120px; height: 40px; margin: 12px; background: #dddddd; color: #202020; font-size: 12px; }
+  .box { width: 120px; height: 40px; margin: 12px; background: #dddddd; color: #202020; font-size: 12px; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   /* Paused + negative delay pins a deterministic mid-animation frame.
      linear timing, exact fractions → exact interpolated values. */
@@ -30,10 +31,10 @@
 </style>
 </head>
 <body>
-  <div class="box" id="t25">25% → x=100</div>
-  <div class="box" id="t50">50% → x=200</div>
-  <div class="box" id="t75">75% → x=300</div>
-  <div class="box" id="color-half">50% blue mix</div>
-  <div class="box" id="width-half">50% → w=300</div>
+  <div class="box" id="t25"><span class="w" style="width:32px"></span> <span class="w" style="width:48px"></span></div>
+  <div class="box" id="t50"><span class="w" style="width:36px"></span> <span class="w" style="width:44px"></span></div>
+  <div class="box" id="t75"><span class="w" style="width:40px"></span> <span class="w" style="width:40px"></span></div>
+  <div class="box" id="color-half"><span class="w" style="width:32px"></span> <span class="w" style="width:36px"></span></div>
+  <div class="box" id="width-half"><span class="w" style="width:32px"></span> <span class="w" style="width:52px"></span></div>
 </body>
 </html>

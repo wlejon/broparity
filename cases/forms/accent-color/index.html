@@ -5,8 +5,9 @@
 <title>accent-color</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .row { margin: 14px; font-size: 14px; color: #202020; }
-  input { width: 24px; height: 24px; vertical-align: middle; }
+  .row { margin: 14px; font-size: 14px; color: #202020; line-height: 24px; }
+  input { width: 24px; height: 24px; vertical-align: middle; line-height: normal; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   .green input { accent-color: #2e7d32; }
   .blue input { accent-color: #1565c0; }
@@ -14,10 +15,10 @@
 </style>
 </head>
 <body>
-  <div class="row green"><input type="checkbox" checked> green checkbox</div>
-  <div class="row blue"><input type="checkbox" checked> blue checkbox</div>
-  <div class="row orange"><input type="radio" checked> orange radio</div>
-  <div class="row green"><input type="radio" checked> green radio</div>
-  <div class="row blue"><input type="checkbox"> unchecked (accent unused)</div>
+  <div class="row green"><input type="checkbox" checked> <span class="w" style="width:56px"></span> <span class="w" style="width:72px"></span></div>
+  <div class="row blue"><input type="checkbox" checked> <span class="w" style="width:40px"></span> <span class="w" style="width:72px"></span></div>
+  <div class="row orange"><input type="radio" checked> <span class="w" style="width:60px"></span> <span class="w" style="width:44px"></span></div>
+  <div class="row green"><input type="radio" checked> <span class="w" style="width:56px"></span> <span class="w" style="width:44px"></span></div>
+  <div class="row blue"><input type="checkbox"> <span class="w" style="width:80px"></span> <span class="w" style="width:52px"></span> <span class="w" style="width:64px"></span></div>
 </body>
 </html>

@@ -8,7 +8,8 @@
   @import url("narrow.css") (max-width: 400px);
 
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   /* same-specificity later rule in the importing sheet loses to nothing —
      imported rules come first in source order, so this local width wins
@@ -17,8 +18,8 @@
 </style>
 </head>
 <body>
-  <div class="box" id="imported">from shared.css (green)</div>
-  <div class="box from-import">wide + purple edge from import</div>
-  <div class="box" id="local">local rule (blue)</div>
+  <div class="box" id="imported"><span class="w" style="width:40px"></span> <span class="w" style="width:76px"></span> <span class="w" style="width:48px"></span></div>
+  <div class="box from-import"><span class="w" style="width:36px"></span> <span class="w" style="width:52px"></span> <span class="w" style="width:32px"></span> <span class="w" style="width:44px"></span> <span class="w" style="width:48px"></span></div>
+  <div class="box" id="local"><span class="w" style="width:40px"></span> <span class="w" style="width:32px"></span> <span class="w" style="width:36px"></span></div>
 </body>
 </html>

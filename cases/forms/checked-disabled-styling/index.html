@@ -5,8 +5,10 @@
 <title>checked-disabled-styling</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .row { margin: 10px; font-size: 14px; color: #202020; }
+  .row { margin: 10px; font-size: 14px; color: #202020; line-height: 24px; }
   label { display: inline-block; width: 220px; height: 24px; background: #dddddd; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
+  input { line-height: normal; }
 
   /* statically-set states drive selector styling */
   input:checked + label { background: #2e7d32; color: #ffffff; }
@@ -16,11 +18,11 @@
 </style>
 </head>
 <body>
-  <div class="row"><input type="checkbox" checked><label>checked (green)</label></div>
-  <div class="row"><input type="checkbox"><label>unchecked (grey, blue edge)</label></div>
-  <div class="row"><input type="checkbox" disabled><label>disabled (red)</label></div>
-  <div class="row"><input type="checkbox" checked disabled><label>checked+disabled (purple)</label></div>
-  <div class="row"><input type="radio" name="r" checked><label>radio checked (green)</label></div>
-  <div class="row"><input type="radio" name="r"><label>radio unchecked (grey, blue edge)</label></div>
+  <div class="row"><input type="checkbox" checked><label><span class="w" style="width:56px"></span> <span class="w" style="width:44px"></span></label></div>
+  <div class="row"><input type="checkbox"><label><span class="w" style="width:72px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:60px"></span></label></div>
+  <div class="row"><input type="checkbox" disabled><label><span class="w" style="width:60px"></span> <span class="w" style="width:32px"></span></label></div>
+  <div class="row"><input type="checkbox" checked disabled><label><span class="w" style="width:88px"></span> <span class="w" style="width:52px"></span></label></div>
+  <div class="row"><input type="radio" name="r" checked><label><span class="w" style="width:40px"></span> <span class="w" style="width:56px"></span> <span class="w" style="width:44px"></span></label></div>
+  <div class="row"><input type="radio" name="r"><label><span class="w" style="width:40px"></span> <span class="w" style="width:72px"></span> <span class="w" style="width:36px"></span></label></div>
 </body>
 </html>

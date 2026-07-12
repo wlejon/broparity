@@ -9,7 +9,9 @@
     --brand: #1565c0;
     --pad: 12px;
   }
-  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #ffffff; }
+  #shorthand .w { background: #202020; }
 
   /* defined var */
   #defined { background: var(--brand); color: #ffffff; }
@@ -21,16 +23,16 @@
   #shorthand { margin: var(--pad) 30px; border: var(--bw, 6px) solid #ef6c00; }
   /* scoped override: child redefines the var */
   .scope { --brand: #c62828; }
-  .scope .swatch { width: 200px; height: 30px; margin: 8px; background: var(--brand); color: #ffffff; }
+  .scope .swatch { width: 200px; height: 30px; margin: 8px; background: var(--brand); color: #ffffff; line-height: 20px; }
 </style>
 </head>
 <body>
-  <div class="box" id="defined">defined var (blue)</div>
-  <div class="box" id="fallback">fallback (green)</div>
-  <div class="box" id="chain">nested fallback (purple)</div>
-  <div class="box" id="shorthand">var in shorthand (orange border)</div>
+  <div class="box" id="defined"><span class="w" style="width:56px"></span> <span class="w" style="width:32px"></span> <span class="w" style="width:44px"></span></div>
+  <div class="box" id="fallback"><span class="w" style="width:64px"></span> <span class="w" style="width:52px"></span></div>
+  <div class="box" id="chain"><span class="w" style="width:48px"></span> <span class="w" style="width:64px"></span> <span class="w" style="width:56px"></span></div>
+  <div class="box" id="shorthand"><span class="w" style="width:32px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:76px"></span> <span class="w" style="width:48px"></span></div>
   <div class="scope">
-    <div class="swatch">scoped override (red)</div>
+    <div class="swatch"><span class="w" style="width:52px"></span> <span class="w" style="width:64px"></span> <span class="w" style="width:36px"></span></div>
   </div>
 </body>
 </html>

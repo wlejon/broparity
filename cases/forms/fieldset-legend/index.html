@@ -8,17 +8,19 @@
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; }
   #wrap { margin: 20px; width: 400px; }
   #fs { background: #f4f0e4; }
-  #content { height: 80px; background: #c0d0e0; }
-  #after { height: 30px; background: #e0c0c0; }
+  #content { height: 80px; background: #c0d0e0; line-height: 20px; }
+  #after { height: 30px; background: #e0c0c0; line-height: 20px; }
+  #lg { line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
   <div id="wrap">
     <fieldset id="fs">
-      <legend id="lg">Details</legend>
-      <div id="content">inside the fieldset</div>
+      <legend id="lg"><span class="w" style="width:52px"></span></legend>
+      <div id="content"><span class="w" style="width:44px"></span> <span class="w" style="width:32px"></span> <span class="w" style="width:64px"></span></div>
     </fieldset>
-    <div id="after">after the fieldset</div>
+    <div id="after"><span class="w" style="width:40px"></span> <span class="w" style="width:32px"></span> <span class="w" style="width:64px"></span></div>
   </div>
 </body>
 </html>

@@ -8,7 +8,8 @@
   .holder { container-type: inline-size; container-name: card; margin: 10px; background: #f0f0f0; }
   .wide-holder { width: 500px; }
   .narrow-holder { width: 220px; }
-  .chip { height: 40px; margin: 6px; background: #dddddd; color: #202020; }
+  .chip { height: 40px; margin: 6px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   @container card (min-width: 400px) {
     .chip { background: #2e7d32; color: #ffffff; height: 56px; }
@@ -20,10 +21,10 @@
 </head>
 <body>
   <div class="holder wide-holder">
-    <div class="chip">wide container (green, tall)</div>
+    <div class="chip"><span class="w" style="width:44px"></span> <span class="w" style="width:80px"></span> <span class="w" style="width:56px"></span> <span class="w" style="width:36px"></span></div>
   </div>
   <div class="holder narrow-holder">
-    <div class="chip">narrow container (blue)</div>
+    <div class="chip"><span class="w" style="width:56px"></span> <span class="w" style="width:80px"></span> <span class="w" style="width:40px"></span></div>
   </div>
 </body>
 </html>

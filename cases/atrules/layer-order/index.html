@@ -5,7 +5,8 @@
 <title>layer-order</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   @layer base, theme;
 
@@ -33,8 +34,8 @@
 </style>
 </head>
 <body>
-  <div class="box" id="a">later layer wins (green)</div>
-  <div class="box" id="b">unlayered wins (blue, wide)</div>
-  <div class="box" id="c">earlier !important wins (purple)</div>
+  <div class="box" id="a"><span class="w" style="width:40px"></span> <span class="w" style="width:44px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:52px"></span></div>
+  <div class="box" id="b"><span class="w" style="width:76px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:44px"></span> <span class="w" style="width:36px"></span></div>
+  <div class="box" id="c"><span class="w" style="width:52px"></span> <span class="w" style="width:80px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:56px"></span></div>
 </body>
 </html>
