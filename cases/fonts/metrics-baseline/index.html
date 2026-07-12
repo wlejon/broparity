@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>metrics-baseline</title>
+<style>
+  @font-face { font-family: "ParityBungee"; src: url("Bungee-Regular.ttf"); }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  /* Baseline placement: a fixed-size inline-block strut sits on the same
+     baseline as text spans of varying size/family. The strut's rect.y
+     reveals where the engine put the shared baseline; each span's rect.y
+     reveals its ascent above that baseline. */
+  .row { margin: 6px 8px; line-height: 80px; background: #f4f4f4; }
+  .strut { display: inline-block; width: 12px; height: 40px; background: #333;
+           vertical-align: baseline; }
+  .t { background: #dde9ff; color: #1565c0; }
+  .a { font-family: Arial, sans-serif; }
+  .b { font-family: "ParityBungee"; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="strut"></span><span class="t a" style="font-size: 16px">Hxg</span></div>
+  <div class="row"><span class="strut"></span><span class="t a" style="font-size: 32px">Hxg</span></div>
+  <div class="row"><span class="strut"></span><span class="t a" style="font-size: 13.333px">Hxg</span></div>
+  <div class="row"><span class="strut"></span><span class="t b" style="font-size: 16px">HXG</span></div>
+  <div class="row"><span class="strut"></span><span class="t b" style="font-size: 32px">HXG</span></div>
+  <div class="row"><span class="strut"></span><span class="t a" style="font-size: 12px">small</span><span class="t a" style="font-size: 40px">BIG</span></div>
+</body>
+</html>

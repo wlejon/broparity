@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>metrics-advance-glyphs</title>
+<style>
+  @font-face { font-family: "ParityBungee"; src: url("Bungee-Regular.ttf"); }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  /* Single-glyph advances vs the same glyphs measured as one string.
+     If singles match but the string doesn't, the delta is shaping
+     (kerning / cluster) rather than per-glyph advances. */
+  .m { display: inline-block; font-family: "ParityBungee"; font-size: 32px;
+       line-height: 40px; white-space: nowrap; background: #efe; color: #2e7d32; }
+  div.row { margin: 4px 8px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="m">S</span></div>
+  <div class="row"><span class="m">I</span></div>
+  <div class="row"><span class="m">Z</span></div>
+  <div class="row"><span class="m">E</span></div>
+  <div class="row"><span class="m">D</span></div>
+  <div class="row"><span class="m">B</span></div>
+  <div class="row"><span class="m">Y</span></div>
+  <div class="row"><span class="m">F</span></div>
+  <div class="row"><span class="m">O</span></div>
+  <div class="row"><span class="m">N</span></div>
+  <div class="row"><span class="m">T</span></div>
+  <div class="row"><span class="m">&nbsp;</span></div>
+  <div class="row"><span class="m">SIZED</span></div>
+  <div class="row"><span class="m">SIZED&nbsp;BY</span></div>
+  <div class="row"><span class="m">SIZED&nbsp;BY&nbsp;FONT</span></div>
+</body>
+</html>

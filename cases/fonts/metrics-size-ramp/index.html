@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>metrics-size-ramp</title>
+<style>
+  @font-face { font-family: "ParityBungee"; src: url("Bungee-Regular.ttf"); }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  /* Same string across a font-size ramp (integer + fractional px).
+     Drift proportional to glyph count at every size = advance rounding;
+     drift proportional to size = scale error. */
+  .m { display: inline-block; font-family: "ParityBungee"; white-space: nowrap;
+       line-height: 90px; background: #eef; color: #1565c0; vertical-align: top; }
+  div.row { margin: 2px 8px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="m" style="font-size: 8px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 11px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 12px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 13.333px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 16px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 17.5px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 20px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 24px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 32px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 48px">HAMBURGEFONTS</span></div>
+  <div class="row"><span class="m" style="font-size: 64px">HAMBURGEFONTS</span></div>
+</body>
+</html>

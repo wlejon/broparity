@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>metrics-kerning</title>
+<style>
+  @font-face { font-family: "ParityBungee"; src: url("Bungee-Regular.ttf"); }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  /* Kerning probe: width("AV") vs width("A")+width("V") in adjacent spans.
+     A shaped pipeline applies GPOS kerning inside one span but not across
+     the span boundary; an unshaped pipeline measures both rows equal. */
+  .b { font-family: "ParityBungee"; }
+  .a { font-family: Arial, sans-serif; }
+  .m { display: inline-block; font-size: 32px; line-height: 40px;
+       white-space: nowrap; background: #fee; color: #b04030; }
+  div.row { margin: 4px 8px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="m b">AV</span></div>
+  <div class="row"><span class="m b">A</span><span class="m b">V</span></div>
+  <div class="row"><span class="m b">To</span></div>
+  <div class="row"><span class="m b">T</span><span class="m b">o</span></div>
+  <div class="row"><span class="m b">AVATAR</span></div>
+  <div class="row"><span class="m a">AV</span></div>
+  <div class="row"><span class="m a">A</span><span class="m a">V</span></div>
+  <div class="row"><span class="m a">To</span></div>
+  <div class="row"><span class="m a">T</span><span class="m a">o</span></div>
+  <div class="row"><span class="m a">AVATAR WAVE Yo.</span></div>
+</body>
+</html>

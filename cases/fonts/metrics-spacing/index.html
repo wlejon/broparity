@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>metrics-spacing</title>
+<style>
+  @font-face { font-family: "ParityBungee"; src: url("Bungee-Regular.ttf"); }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  /* letter-spacing / word-spacing with fractional values over a fixed
+     glyph count: whether the extra space accumulates fractionally or is
+     rounded per gap. */
+  .m { display: inline-block; font-family: "ParityBungee"; font-size: 24px;
+       line-height: 32px; white-space: nowrap; background: #f3e6f7; color: #6a2c82; }
+  div.row { margin: 3px 8px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="m">HHHHHHHHHH</span></div>
+  <div class="row"><span class="m" style="letter-spacing: 1px">HHHHHHHHHH</span></div>
+  <div class="row"><span class="m" style="letter-spacing: 0.5px">HHHHHHHHHH</span></div>
+  <div class="row"><span class="m" style="letter-spacing: 1.7px">HHHHHHHHHH</span></div>
+  <div class="row"><span class="m" style="letter-spacing: 0.25em">HHHHHHHHHH</span></div>
+  <div class="row"><span class="m" style="letter-spacing: -0.6px">HHHHHHHHHH</span></div>
+  <div class="row"><span class="m">AB&nbsp;CD&nbsp;EF&nbsp;GH</span></div>
+  <div class="row"><span class="m" style="word-spacing: 3px">AB CD EF GH</span></div>
+  <div class="row"><span class="m" style="word-spacing: 2.4px">AB CD EF GH</span></div>
+  <div class="row"><span class="m" style="word-spacing: -1.5px">AB CD EF GH</span></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>metrics-advance-run-length</title>
+<style>
+  @font-face { font-family: "ParityBungee"; src: url("Bungee-Regular.ttf"); }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  /* Each span's inline-block width = summed glyph advances. Repeating the
+     same glyph isolates per-glyph advance quantization: a constant offset
+     means a one-time delta, linear drift means each advance is off. */
+  .m { display: inline-block; font-family: "ParityBungee"; font-size: 32px;
+       line-height: 40px; white-space: nowrap; background: #eef; color: #1565c0; }
+  div.row { margin: 4px 8px; }
+</style>
+</head>
+<body>
+  <div class="row"><span class="m">H</span></div>
+  <div class="row"><span class="m">HH</span></div>
+  <div class="row"><span class="m">HHHH</span></div>
+  <div class="row"><span class="m">HHHHHHHH</span></div>
+  <div class="row"><span class="m">HHHHHHHHHHHHHHHH</span></div>
+  <div class="row"><span class="m">HHHHHHHHHHHHHHHHHHHH</span></div>
+  <div class="row"><span class="m">O</span></div>
+  <div class="row"><span class="m">OOOO</span></div>
+  <div class="row"><span class="m">OOOOOOOOOOOOOOOO</span></div>
+  <div class="row"><span class="m">I</span></div>
+  <div class="row"><span class="m">IIII</span></div>
+  <div class="row"><span class="m">IIIIIIIIIIIIIIII</span></div>
+</body>
+</html>
