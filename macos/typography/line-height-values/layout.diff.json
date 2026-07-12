@@ -1,8 +1,8 @@
 {
   "summary": {
     "totalElements": 17,
-    "rectMismatches": 4,
-    "styleMismatches": 2,
+    "rectMismatches": 0,
+    "styleMismatches": 0,
     "geomEpsilon": 1,
     "styleEpsilon": 0.5
   },
@@ -15,15 +15,15 @@
         "dx": 0,
         "dy": 0,
         "dw": 0,
-        "dh": 2
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 0,
           "y": 8,
           "w": 800,
-          "h": 373
+          "h": 371
         }
       },
       "chromium": {
@@ -34,13 +34,8 @@
           "h": 371
         }
       },
-      "styleDeltas": {
-        "height": [
-          "373px",
-          "371px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>p:nth-of-type(1)",
@@ -380,7 +375,7 @@
         "dx": 0,
         "dy": 0,
         "dw": -0.0040000000000048885,
-        "dh": -1
+        "dh": 0
       },
       "rectMismatch": false,
       "bro": {
@@ -388,7 +383,7 @@
           "x": 177.406,
           "y": 264,
           "w": 117.387,
-          "h": 27
+          "h": 28
         }
       },
       "chromium": {
@@ -440,15 +435,15 @@
         "dx": 0,
         "dy": 0,
         "dw": 0,
-        "dh": 2
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 20,
           "y": 328,
           "w": 420,
-          "h": 53
+          "h": 51
         }
       },
       "chromium": {
@@ -459,13 +454,8 @@
           "h": 51
         }
       },
-      "styleDeltas": {
-        "height": [
-          "53px",
-          "51px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>p:nth-of-type(7)>span:nth-of-type(1)",
@@ -473,17 +463,17 @@
       "id": "big-px",
       "rectDelta": {
         "dx": -0.007999999999981355,
-        "dy": 2,
+        "dy": 0,
         "dw": -0.0040000000000048885,
-        "dh": -1
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 155.18,
-          "y": 328,
+          "y": 326,
           "w": 117.387,
-          "h": 27
+          "h": 28
         }
       },
       "chromium": {
@@ -503,15 +493,15 @@
       "id": "",
       "rectDelta": {
         "dx": -0.01999999999998181,
-        "dy": 2,
+        "dy": 0,
         "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 313.48,
-          "y": 336,
+          "y": 334,
           "w": 0,
           "h": 18
         }

@@ -1,0 +1,100 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>broparity — selectors</title>
+<style>
+body { font-family: -apple-system, sans-serif; margin: 24px; background: #fafafa; color: #202020; }
+h1 { margin: 0 0 4px; }
+.sub { color: #606060; font-size: 13px; margin-bottom: 24px; }
+table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
+th, td { padding: 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+th { background: #f4f4f4; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #606060; }
+img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block; }
+.num { font-variant-numeric: tabular-nums; font-size: 13px; }
+.dim { color: #808080; font-size: 11px; }
+.err td { background: #fff0f0; }
+.errcell { color: #c00000; font-family: monospace; font-size: 12px; }
+a { color: #1f6feb; }
+</style></head><body>
+<h1>selectors</h1>
+<div class="sub"><a href="../index.html">all cases</a></div>
+<table><thead><tr><th>Case</th><th>bro</th><th>Chromium</th><th>Diff</th><th>Pixel mismatch</th><th>Layout Δ</th><th>Score</th></tr></thead>
+<tbody><tr id="attr-presence-equals">
+      <td><b>attr-presence-equals</b></td>
+      <td><img src="attr-presence-equals/bro.png" loading="lazy"></td>
+      <td><img src="attr-presence-equals/chromium.png" loading="lazy"></td>
+      <td><img src="attr-presence-equals/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/424000 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 31 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="attr-substring-ops">
+      <td><b>attr-substring-ops</b></td>
+      <td><img src="attr-substring-ops/bro.png" loading="lazy"></td>
+      <td><img src="attr-substring-ops/chromium.png" loading="lazy"></td>
+      <td><img src="attr-substring-ops/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/259200 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 22 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="child-vs-descendant">
+      <td><b>child-vs-descendant</b></td>
+      <td><img src="child-vs-descendant/bro.png" loading="lazy"></td>
+      <td><img src="child-vs-descendant/chromium.png" loading="lazy"></td>
+      <td><img src="child-vs-descendant/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/94400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 13 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="has-relational">
+      <td><b>has-relational</b></td>
+      <td><img src="has-relational/bro.png" loading="lazy"></td>
+      <td><img src="has-relational/chromium.png" loading="lazy"></td>
+      <td><img src="has-relational/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/198400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 19 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="is-where-specificity">
+      <td><b>is-where-specificity</b></td>
+      <td><img src="is-where-specificity/bro.png" loading="lazy"></td>
+      <td><img src="is-where-specificity/chromium.png" loading="lazy"></td>
+      <td><img src="is-where-specificity/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/142400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 16 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="not-selector-list">
+      <td><b>not-selector-list</b></td>
+      <td><img src="not-selector-list/bro.png" loading="lazy"></td>
+      <td><img src="not-selector-list/chromium.png" loading="lazy"></td>
+      <td><img src="not-selector-list/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/211200 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 20 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="nth-child-forms">
+      <td><b>nth-child-forms</b></td>
+      <td><img src="nth-child-forms/bro.png" loading="lazy"></td>
+      <td><img src="nth-child-forms/chromium.png" loading="lazy"></td>
+      <td><img src="nth-child-forms/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/436000 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 68 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="sibling-combinators">
+      <td><b>sibling-combinators</b></td>
+      <td><img src="sibling-combinators/bro.png" loading="lazy"></td>
+      <td><img src="sibling-combinators/chromium.png" loading="lazy"></td>
+      <td><img src="sibling-combinators/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/206400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 23 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr>
+<tr id="structural-pseudos">
+      <td><b>structural-pseudos</b></td>
+      <td><img src="structural-pseudos/bro.png" loading="lazy"></td>
+      <td><img src="structural-pseudos/chromium.png" loading="lazy"></td>
+      <td><img src="structural-pseudos/diff.png" loading="lazy"></td>
+      <td class="num">0.000%<br><span class="dim">0/254400 px</span></td>
+      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 29 elems</span></td>
+      <td class="num">L=1.000<br>P=1.000</td>
+    </tr></tbody></table>
+</body></html>

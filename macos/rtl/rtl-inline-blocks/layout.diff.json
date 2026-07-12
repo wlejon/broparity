@@ -1,7 +1,7 @@
 {
   "summary": {
     "totalElements": 17,
-    "rectMismatches": 2,
+    "rectMismatches": 0,
     "styleMismatches": 0,
     "geomEpsilon": 1,
     "styleEpsilon": 0.5
@@ -133,17 +133,17 @@
       "id": "isl",
       "rectDelta": {
         "dx": 0,
-        "dy": -15,
+        "dy": 0,
         "dw": 0,
-        "dh": 12
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 268,
-          "y": 32,
+          "y": 47,
           "w": 72,
-          "h": 28
+          "h": 16
         }
       },
       "chromium": {
@@ -373,17 +373,17 @@
       "id": "usl",
       "rectDelta": {
         "dx": 0,
-        "dy": -15,
+        "dy": 0,
         "dw": 0,
-        "dh": 12
+        "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 160,
-          "y": 95,
+          "y": 110,
           "w": 72,
-          "h": 28
+          "h": 16
         }
       },
       "chromium": {

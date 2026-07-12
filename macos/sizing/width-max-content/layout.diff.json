@@ -1,6 +1,6 @@
 {
   "summary": {
-    "totalElements": 2,
+    "totalElements": 4,
     "rectMismatches": 0,
     "styleMismatches": 0,
     "geomEpsilon": 1,
@@ -23,7 +23,7 @@
           "x": 0,
           "y": 30,
           "w": 800,
-          "h": 38
+          "h": 40
         }
       },
       "chromium": {
@@ -31,7 +31,7 @@
           "x": 0,
           "y": 30,
           "w": 800,
-          "h": 38
+          "h": 40
         }
       },
       "styleDeltas": {},
@@ -44,7 +44,7 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": -0.007999999999995566,
+        "dw": -0.008000000000009777,
         "dh": 0
       },
       "rectMismatch": false,
@@ -52,16 +52,76 @@
         "rect": {
           "x": 30,
           "y": 30,
-          "w": 96.461,
-          "h": 38
+          "w": 120.445,
+          "h": 40
         }
       },
       "chromium": {
         "rect": {
           "x": 30,
           "y": 30,
-          "w": 96.469,
-          "h": 38
+          "w": 120.453,
+          "h": 40
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>span:nth-of-type(1)",
+      "tag": "span",
+      "id": "",
+      "rectDelta": {
+        "dx": 0,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 40,
+          "y": 40,
+          "w": 56,
+          "h": 14
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 40,
+          "y": 40,
+          "w": 56,
+          "h": 14
+        }
+      },
+      "styleDeltas": {},
+      "styleMismatch": false
+    },
+    {
+      "path": "body>div:nth-of-type(1)>span:nth-of-type(2)",
+      "tag": "span",
+      "id": "",
+      "rectDelta": {
+        "dx": -0.008000000000009777,
+        "dy": 0,
+        "dw": 0,
+        "dh": 0
+      },
+      "rectMismatch": false,
+      "bro": {
+        "rect": {
+          "x": 100.445,
+          "y": 40,
+          "w": 40,
+          "h": 14
+        }
+      },
+      "chromium": {
+        "rect": {
+          "x": 100.453,
+          "y": 40,
+          "w": 40,
+          "h": 14
         }
       },
       "styleDeltas": {},

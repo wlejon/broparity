@@ -1,6 +1,6 @@
 {
-  "runId": "2026-07-07T14-04-02-089Z",
-  "timestamp": "2026-07-07T14:06:24.423Z",
+  "runId": "2026-07-12T12-05-03-351Z",
+  "timestamp": "2026-07-12T12:07:42.614Z",
   "viewport": {
     "w": 800,
     "h": 600
@@ -16,15 +16,29 @@
       "Apple M2 Pro"
     ],
     "nodeVersion": "v22.8.0",
-    "detectedAt": "2026-07-07T14:06:24.423Z"
+    "detectedAt": "2026-07-12T12:07:42.614Z"
   },
   "overall": {
-    "layoutScore": 0.9832070844605107,
-    "pixelScore": 0.9927211113463589,
-    "caseCount": 284,
-    "categoryCount": 32
+    "layoutScore": 0.9855516409334784,
+    "pixelScore": 0.9953111140484692,
+    "caseCount": 320,
+    "categoryCount": 36
   },
   "categories": [
+    {
+      "name": "animation",
+      "n": 2,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "atrules",
+      "n": 6,
+      "layoutScore": 1,
+      "pixelScore": 1,
+      "errors": 0
+    },
     {
       "name": "auth",
       "n": 3,
@@ -34,9 +48,9 @@
     },
     {
       "name": "backgrounds",
-      "n": 10,
+      "n": 11,
       "layoutScore": 1,
-      "pixelScore": 1,
+      "pixelScore": 0.9967666354264292,
       "errors": 0
     },
     {
@@ -57,14 +71,14 @@
       "name": "boxmodel",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9989450741029986,
+      "pixelScore": 1,
       "errors": 0
     },
     {
       "name": "columns",
-      "n": 7,
+      "n": 8,
       "layoutScore": 1,
-      "pixelScore": 0.9967045359940744,
+      "pixelScore": 1,
       "errors": 0
     },
     {
@@ -76,16 +90,16 @@
     },
     {
       "name": "display-types",
-      "n": 12,
-      "layoutScore": 0.9638888888888889,
-      "pixelScore": 0.993070801425688,
+      "n": 13,
+      "layoutScore": 0.9666666666666667,
+      "pixelScore": 0.9973708773334669,
       "errors": 0
     },
     {
       "name": "editorial",
       "n": 3,
       "layoutScore": 1,
-      "pixelScore": 0.9998472222222222,
+      "pixelScore": 0.9996729166666666,
       "errors": 0
     },
     {
@@ -98,29 +112,36 @@
     {
       "name": "elements",
       "n": 8,
-      "layoutScore": 0.8734375,
-      "pixelScore": 0.9679837654666223,
+      "layoutScore": 0.8875,
+      "pixelScore": 0.9746579370913381,
       "errors": 0
     },
     {
       "name": "flex",
-      "n": 18,
+      "n": 19,
       "layoutScore": 1,
-      "pixelScore": 0.9980373500522819,
+      "pixelScore": 0.9998710424845652,
       "errors": 0
     },
     {
       "name": "floats",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9812644619948724,
+      "pixelScore": 1,
+      "errors": 0
+    },
+    {
+      "name": "fonts",
+      "n": 9,
+      "layoutScore": 0.9082002493376967,
+      "pixelScore": 0.9955122586641738,
       "errors": 0
     },
     {
       "name": "forms",
-      "n": 8,
-      "layoutScore": 0.7953598484848485,
-      "pixelScore": 0.9791821374896212,
+      "n": 10,
+      "layoutScore": 0.8421212121212122,
+      "pixelScore": 0.9874780254643319,
       "errors": 0
     },
     {
@@ -134,14 +155,14 @@
       "name": "gencontent",
       "n": 8,
       "layoutScore": 0.9708333333333333,
-      "pixelScore": 0.9863289635702355,
+      "pixelScore": 0.986608665423283,
       "errors": 0
     },
     {
       "name": "grid",
-      "n": 11,
+      "n": 13,
       "layoutScore": 1,
-      "pixelScore": 1,
+      "pixelScore": 0.9996118029266979,
       "errors": 0
     },
     {
@@ -155,7 +176,7 @@
       "name": "lists",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9855226547060789,
+      "pixelScore": 0.9977006256775308,
       "errors": 0
     },
     {
@@ -189,8 +210,15 @@
     {
       "name": "rtl",
       "n": 6,
-      "layoutScore": 0.9901960784313726,
-      "pixelScore": 0.9954775951264492,
+      "layoutScore": 1,
+      "pixelScore": 0.9992566872427983,
+      "errors": 0
+    },
+    {
+      "name": "selectors",
+      "n": 9,
+      "layoutScore": 1,
+      "pixelScore": 1,
       "errors": 0
     },
     {
@@ -204,21 +232,21 @@
       "name": "sizing",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9995271739130434,
+      "pixelScore": 1,
       "errors": 0
     },
     {
       "name": "svg",
-      "n": 7,
+      "n": 8,
       "layoutScore": 1,
-      "pixelScore": 0.9996062499999999,
+      "pixelScore": 0.9996531366604476,
       "errors": 0
     },
     {
       "name": "tables",
       "n": 29,
-      "layoutScore": 0.995644283121597,
-      "pixelScore": 0.9696986539610017,
+      "layoutScore": 1,
+      "pixelScore": 0.9780299758395066,
       "errors": 0
     },
     {
@@ -238,15 +266,15 @@
     {
       "name": "typography",
       "n": 12,
-      "layoutScore": 0.9844629156010231,
-      "pixelScore": 0.9744210019765439,
+      "layoutScore": 0.9981884057971014,
+      "pixelScore": 0.9769521056392071,
       "errors": 0
     },
     {
       "name": "values",
-      "n": 7,
-      "layoutScore": 0.9263038548752833,
-      "pixelScore": 0.9973109812574783,
+      "n": 8,
+      "layoutScore": 0.9438492063492063,
+      "pixelScore": 0.9979104733801677,
       "errors": 0
     }
   ]
