@@ -21,7 +21,7 @@
 import { execSync } from "node:child_process";
 import { existsSync, readdirSync, statSync, rmSync, cpSync, writeFileSync, readFileSync } from "node:fs";
 import { resolve, join, basename } from "node:path";
-import { platformSlug as detectPlatformSlug, formatSystemLabel } from "./system-info.mjs";
+import { platformSlug as detectPlatformSlug } from "./system-info.mjs";
 
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
@@ -114,82 +114,229 @@ function copyRun(runDir, platformDir) {
   cpSync(runDir, platformDir, { recursive: true });
 }
 
+function scoreBand(p) {
+  if (p >= 99.5) return "good";
+  if (p >= 95) return "ok";
+  if (p >= 85) return "mid";
+  return "bad";
+}
+
 function renderLanding(manifest) {
   const platforms = Object.entries(manifest.platforms || {})
     .sort(([a], [b]) => a.localeCompare(b));
   const cards = platforms.map(([slug, p]) => {
-    const layoutPct = ((p.overall?.layoutScore ?? 0) * 100).toFixed(1);
-    const pixelPct = ((p.overall?.pixelScore ?? 0) * 100).toFixed(1);
-    const sysLabel = p.system ? formatSystemLabel(p.system) : "";
+    const layoutN = (p.overall?.layoutScore ?? 0) * 100;
+    const pixelN = (p.overall?.pixelScore ?? 0) * 100;
+    const layoutPct = layoutN.toFixed(1);
+    const pixelPct = pixelN.toFixed(1);
     const cases = p.overall?.caseCount ?? 0;
     const cats = p.overall?.categoryCount ?? 0;
-    const sysRows = p.system ? [
-      ["OS", p.system.os],
-      ["CPU", p.system.cpu ? `${p.system.cpu}${p.system.cpuCount ? ` (${p.system.cpuCount} threads)` : ""}` : null],
-      ["GPU", p.system.gpus?.length ? p.system.gpus.join(", ") : null],
-    ].filter(([, v]) => v) : [];
+    const os = p.system?.os || slug;
+    const cpu = p.system?.cpu
+      ? `${p.system.cpu}${p.system.cpuCount ? ` · ${p.system.cpuCount}t` : ""}`
+      : null;
+    const gpu = p.system?.gpus?.length ? p.system.gpus.join(", ") : null;
+    const published = (p.publishedAt || "").slice(0, 10);
     return `
       <a class="card" href="${escapeHtml(slug)}/index.html">
-        <div class="card-head">
-          <div class="card-title">${escapeHtml(p.system?.os || slug)}</div>
-          <div class="card-sub">${escapeHtml(sysLabel)}</div>
+        <div class="card-top">
+          <span class="slug">${escapeHtml(slug)}</span>
+          ${published ? `<span class="date">${escapeHtml(published)}</span>` : ""}
         </div>
+        <div class="card-title">${escapeHtml(os)}</div>
         <div class="card-metrics">
-          <div class="m"><div class="v">${layoutPct}%</div><div class="l">layout</div></div>
-          <div class="m"><div class="v">${pixelPct}%</div><div class="l">pixels</div></div>
+          <div class="m"><div class="v ${scoreBand(layoutN)}">${layoutPct}%</div><div class="l">layout</div></div>
+          <div class="m"><div class="v ${scoreBand(pixelN)}">${pixelPct}%</div><div class="l">pixels</div></div>
           <div class="m"><div class="v">${cases}</div><div class="l">cases</div></div>
         </div>
-        <div class="card-sys">
-          ${sysRows.map(([k, v]) => `<div><span>${escapeHtml(k)}</span> ${escapeHtml(String(v))}</div>`).join("")}
+        <div class="card-meta">
+          ${cpu ? `<div>${escapeHtml(cpu)}</div>` : ""}
+          ${gpu ? `<div>${escapeHtml(gpu)}</div>` : ""}
+          ${cats ? `<div>${cats} categories</div>` : ""}
         </div>
-        <div class="card-foot">View report → · published ${escapeHtml((p.publishedAt || "").slice(0, 10))} · run ${escapeHtml(p.runId || "")}</div>
+        <div class="card-foot">Open report →</div>
       </a>`;
   }).join("");
 
   return `<!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>broparity — Bro vs Chromium rendering parity</title>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>broparity — Bro vs Chromium</title>
 <style>
-:root { color-scheme: light; }
-body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; background: #fafafa; color: #202020; }
-.wrap { max-width: 980px; margin: 0 auto; padding: 48px 24px; }
-h1 { margin: 0 0 8px; font-size: 32px; }
-.tag { color: #606060; font-size: 14px; margin-bottom: 28px; }
-.intro { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px 22px; margin-bottom: 24px; line-height: 1.55; font-size: 15px; }
-.intro p { margin: 0 0 10px; }
-.intro p:last-child { margin: 0; }
-.intro a { color: #1f6feb; }
-h2 { font-size: 18px; margin: 28px 0 12px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-.card { display: block; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 18px; text-decoration: none; color: inherit; transition: border-color 0.1s, transform 0.1s; }
-.card:hover { border-color: #1f6feb; transform: translateY(-1px); }
-.card-head { margin-bottom: 14px; }
-.card-title { font-size: 17px; font-weight: 600; }
-.card-sub { font-size: 12px; color: #707070; margin-top: 2px; }
-.card-metrics { display: flex; gap: 18px; margin-bottom: 14px; }
-.m .v { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
-.m .l { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #707070; }
-.card-sys { font-size: 12px; color: #505050; line-height: 1.5; margin-bottom: 12px; }
-.card-sys span { color: #909090; display: inline-block; min-width: 36px; }
-.card-foot { font-size: 11px; color: #909090; border-top: 1px solid #f0f0f0; padding-top: 10px; }
-.empty { background: #fff; border: 1px dashed #d0d0d0; border-radius: 8px; padding: 24px; text-align: center; color: #707070; font-size: 14px; }
-footer { margin-top: 40px; color: #909090; font-size: 12px; }
-footer a { color: #707070; }
-</style></head><body>
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --bg-1: #161b22;
+  --bg-2: #1c2128;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --dim: #6e7681;
+  --accent: #58a6ff;
+  --good: #3fb950;
+  --ok: #56d364;
+  --mid: #d29922;
+  --bad: #f85149;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 40px 20px 64px; }
+header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+.tag {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+.intro {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 28px;
+  max-width: 62ch;
+}
+.intro a { color: var(--accent); text-decoration: none; }
+.intro a:hover { text-decoration: underline; }
+.intro strong { color: var(--text); font-weight: 550; }
+h2 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.12s, background 0.12s, transform 0.12s;
+}
+.card:hover {
+  border-color: var(--accent);
+  background: var(--bg-2);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.slug {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  background: rgba(88, 166, 255, 0.12);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.date { font-size: 11px; color: var(--dim); font-variant-numeric: tabular-nums; }
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+.card-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.m .v {
+  font-size: 22px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.m .v.good { color: var(--good); }
+.m .v.ok { color: var(--ok); }
+.m .v.mid { color: var(--mid); }
+.m .v.bad { color: var(--bad); }
+.m .l {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  margin-top: 3px;
+}
+.card-meta {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.45;
+  flex: 1;
+}
+.card-meta div { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card-foot {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+}
+.empty {
+  background: var(--bg-1);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+footer {
+  margin-top: 36px;
+  color: var(--dim);
+  font-size: 12px;
+}
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+</style>
+</head><body>
 <div class="wrap">
-  <h1>broparity</h1>
-  <div class="tag">Side-by-side rendering parity: <b>Bro</b> vs <b>Chromium</b></div>
-  <div class="intro">
-    <p>Bro is a small HTML/CSS/JS app runtime. <a href="https://github.com/wlejon/bro">Bro</a> renders web pages with its own layout and paint engine — not by embedding a browser. <a href="https://github.com/wlejon/broparity">Broparity</a> measures how close that engine is to Chromium on a curated set of test pages.</p>
-    <p>Each test case is a UA-neutral HTML page rendered by both engines. We compare the resulting pixels and a structural layout dump (every element's box and a curated set of computed styles). Numbers below are factual and unweighted: this is what bro currently produces, not a target or a claim.</p>
-    <p>Rendering depends on the host system — fonts, GPU drivers, and OS text shaping all influence the result — so each platform is tracked separately.</p>
-  </div>
+  <header>
+    <h1>broparity</h1>
+    <div class="tag">Bro vs Chromium rendering parity</div>
+  </header>
+  <p class="intro">
+    <a href="https://github.com/wlejon/bro"><strong>Bro</strong></a> is an HTML/CSS/JS runtime with its own layout engine.
+    <a href="https://github.com/wlejon/broparity">Broparity</a> compares Bro to Chromium on UA-neutral test pages
+    (pixels + structural layout dumps). Host-dependent — tracked per platform.
+  </p>
 
-  <h2>Reports by platform</h2>
+  <h2>Platforms</h2>
   ${platforms.length ? `<div class="grid">${cards}</div>` : `<div class="empty">No platforms published yet.</div>`}
 
   <footer>
-    Published from broparity at ${escapeHtml(new Date().toISOString())}.
-    Source: <a href="https://github.com/wlejon/broparity">github.com/wlejon/broparity</a>
+    Updated ${escapeHtml(new Date().toISOString().slice(0, 10))} ·
+    <a href="https://github.com/wlejon/broparity">github.com/wlejon/broparity</a>
   </footer>
 </div>
 </body></html>
