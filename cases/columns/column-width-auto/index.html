@@ -26,29 +26,32 @@
     background: #dce8f4;
   }
   .item:nth-of-type(even) { background: #e4f0da; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div id="wide">
-    <div class="item" id="w1">w1</div>
-    <div class="item" id="w2">w2</div>
-    <div class="item" id="w3">w3</div>
-    <div class="item" id="w4">w4</div>
-    <div class="item" id="w5">w5</div>
-    <div class="item" id="w6">w6</div>
-    <div class="item" id="w7">w7</div>
-    <div class="item" id="w8">w8</div>
-    <div class="item" id="w9">w9</div>
+    <div class="item" id="w1"><span class="w" style="width:32px"></span></div>
+    <div class="item" id="w2"><span class="w" style="width:36px"></span></div>
+    <div class="item" id="w3"><span class="w" style="width:40px"></span></div>
+    <div class="item" id="w4"><span class="w" style="width:44px"></span></div>
+    <div class="item" id="w5"><span class="w" style="width:48px"></span></div>
+    <div class="item" id="w6"><span class="w" style="width:52px"></span></div>
+    <div class="item" id="w7"><span class="w" style="width:56px"></span></div>
+    <div class="item" id="w8"><span class="w" style="width:60px"></span></div>
+    <div class="item" id="w9"><span class="w" style="width:64px"></span></div>
   </div>
   <div id="narrow">
-    <div class="item" id="n1">n1</div>
-    <div class="item" id="n2">n2</div>
-    <div class="item" id="n3">n3</div>
-    <div class="item" id="n4">n4</div>
-    <div class="item" id="n5">n5</div>
-    <div class="item" id="n6">n6</div>
-    <div class="item" id="n7">n7</div>
-    <div class="item" id="n8">n8</div>
+    <div class="item" id="n1"><span class="w" style="width:32px; background:#8a5030"></span></div>
+    <div class="item" id="n2"><span class="w" style="width:36px; background:#8a5030"></span></div>
+    <div class="item" id="n3"><span class="w" style="width:40px; background:#8a5030"></span></div>
+    <div class="item" id="n4"><span class="w" style="width:44px; background:#8a5030"></span></div>
+    <div class="item" id="n5"><span class="w" style="width:48px; background:#8a5030"></span></div>
+    <div class="item" id="n6"><span class="w" style="width:52px; background:#8a5030"></span></div>
+    <div class="item" id="n7"><span class="w" style="width:56px; background:#8a5030"></span></div>
+    <div class="item" id="n8"><span class="w" style="width:60px; background:#8a5030"></span></div>
   </div>
 </body>
 </html>

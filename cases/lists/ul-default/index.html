@@ -6,16 +6,20 @@
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
   #wrap { width: 400px; border: 1px solid #909090; background: #f4f4f4; }
+  ul { line-height: 20px; }
   li { background: #cfe8ff; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
 <div id="wrap">
   <ul id="list">
-    <li id="i1">Alpha</li>
-    <li id="i2">Bravo</li>
-    <li id="i3">Charlie</li>
-    <li id="i4">Delta</li>
+    <li id="i1"><span class="w" style="width:44px"></span></li>
+    <li id="i2"><span class="w" style="width:48px"></span></li>
+    <li id="i3"><span class="w" style="width:56px"></span></li>
+    <li id="i4"><span class="w" style="width:40px"></span></li>
   </ul>
 </div>
 </body>

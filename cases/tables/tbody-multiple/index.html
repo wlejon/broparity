@@ -10,6 +10,7 @@
     border: 2px solid #404040;
     border-collapse: collapse;
     font-size: 16px;
+    line-height: 20px;
     color: #202020;
   }
   td {
@@ -19,20 +20,25 @@
   tbody.a td { background: #ffe0e0; }
   tbody.b td { background: #e0ffe0; }
   tbody.c td { background: #e0e0ff; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
+  .w2 { background: #2f7a4d; }
+  .w3 { background: #3060c8; }
 </style>
 </head>
 <body>
   <table>
     <tbody class="a">
-      <tr><td>A1</td><td>A2</td><td>A3</td></tr>
-      <tr><td>A4</td><td>A5</td><td>A6</td></tr>
+      <tr><td><span class="w" style="width:28px"></span></td><td><span class="w" style="width:36px"></span></td><td><span class="w" style="width:32px"></span></td></tr>
+      <tr><td><span class="w" style="width:32px"></span></td><td><span class="w" style="width:28px"></span></td><td><span class="w" style="width:36px"></span></td></tr>
     </tbody>
     <tbody class="b">
-      <tr><td>B1</td><td>B2</td><td>B3</td></tr>
+      <tr><td><span class="w w2" style="width:36px"></span></td><td><span class="w w2" style="width:32px"></span></td><td><span class="w w2" style="width:28px"></span></td></tr>
     </tbody>
     <tbody class="c">
-      <tr><td>C1</td><td>C2</td><td>C3</td></tr>
-      <tr><td>C4</td><td>C5</td><td>C6</td></tr>
+      <tr><td><span class="w w3" style="width:28px"></span></td><td><span class="w w3" style="width:32px"></span></td><td><span class="w w3" style="width:36px"></span></td></tr>
+      <tr><td><span class="w w3" style="width:36px"></span></td><td><span class="w w3" style="width:28px"></span></td><td><span class="w w3" style="width:32px"></span></td></tr>
     </tbody>
   </table>
 </body>

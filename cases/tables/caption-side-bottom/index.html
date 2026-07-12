@@ -10,6 +10,7 @@
     border: 2px solid #404040;
     border-collapse: collapse;
     font-size: 16px;
+    line-height: 20px;
     color: #202020;
   }
   caption {
@@ -23,13 +24,18 @@
     border: 1px solid #808080;
     background: #ffffff;
   }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
+  .w2 { background: #2f7a4d; }
+  .wc { background: #555555; }
 </style>
 </head>
 <body>
   <table>
-    <caption>Caption below</caption>
-    <tr><td>a1</td><td>a2</td><td>a3</td></tr>
-    <tr><td>b1</td><td>b2</td><td>b3</td></tr>
+    <caption><span class="w wc" style="width:108px"></span></caption>
+    <tr><td><span class="w" style="width:32px"></span></td><td><span class="w" style="width:28px"></span></td><td><span class="w" style="width:36px"></span></td></tr>
+    <tr><td><span class="w w2" style="width:28px"></span></td><td><span class="w w2" style="width:40px"></span></td><td><span class="w w2" style="width:24px"></span></td></tr>
   </table>
 </body>
 </html>

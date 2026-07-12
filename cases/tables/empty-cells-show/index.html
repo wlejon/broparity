@@ -5,12 +5,13 @@
 <title>empty-cells-show</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .lbl { margin: 10px 20px 4px; font-size: 14px; color: #404040; }
+  .lbl { margin: 10px 20px 4px; font-size: 14px; line-height: 18px; color: #404040; }
   table {
     margin: 0 20px 20px;
     border: 2px solid #404040;
     border-spacing: 4px;
     font-size: 16px;
+    line-height: 20px;
     color: #202020;
   }
   td {
@@ -22,18 +23,22 @@
   }
   table.show { empty-cells: show; }
   table.hide { empty-cells: hide; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
+  .wl { height: 12px; background: #707070; }
 </style>
 </head>
 <body>
-  <p class="lbl">empty-cells: show</p>
+  <p class="lbl"><span class="w wl" style="width:128px"></span></p>
   <table class="show">
-    <tr><td>a</td><td></td><td>c</td></tr>
-    <tr><td></td><td>e</td><td></td></tr>
+    <tr><td><span class="w" style="width:16px"></span></td><td></td><td><span class="w" style="width:16px"></span></td></tr>
+    <tr><td></td><td><span class="w" style="width:16px"></span></td><td></td></tr>
   </table>
-  <p class="lbl">empty-cells: hide</p>
+  <p class="lbl"><span class="w wl" style="width:124px"></span></p>
   <table class="hide">
-    <tr><td>a</td><td></td><td>c</td></tr>
-    <tr><td></td><td>e</td><td></td></tr>
+    <tr><td><span class="w" style="width:16px"></span></td><td></td><td><span class="w" style="width:16px"></span></td></tr>
+    <tr><td></td><td><span class="w" style="width:16px"></span></td><td></td></tr>
   </table>
 </body>
 </html>

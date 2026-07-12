@@ -17,20 +17,28 @@
     width: 120px;
     height: 120px;
     background: #4a90d9;
-    color: #ffffff;
   }
+  /* word-like fixed-size inline-blocks: wrap at their boundaries like
+     words, without font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #a88860; }
 </style>
 </head>
 <body>
   <div id="para">
-    <div id="floatbox">FL</div>
-    The quick brown fox jumps over the lazy dog while the band plays on
-    beside the river. Short lines sit next to the blue square and each
-    one stops early because the float takes away part of the line box.
-    Once the text has moved past the bottom edge of the square the line
-    boxes stretch back out to the full width of the paragraph again and
-    the remaining sentences run all the way across without any break in
-    the flow at all.
+    <div id="floatbox"></div>
+    <span class="w" style="width:56px"></span> <span class="w" style="width:72px"></span>
+    <span class="w" style="width:40px"></span> <span class="w" style="width:88px"></span>
+    <span class="w" style="width:64px"></span> <span class="w" style="width:48px"></span>
+    <span class="w" style="width:96px"></span> <span class="w" style="width:36px"></span>
+    <span class="w" style="width:80px"></span> <span class="w" style="width:52px"></span>
+    <span class="w" style="width:68px"></span> <span class="w" style="width:44px"></span>
+    <span class="w" style="width:92px"></span> <span class="w" style="width:60px"></span>
+    <span class="w" style="width:76px"></span> <span class="w" style="width:32px"></span>
+    <span class="w" style="width:84px"></span> <span class="w" style="width:56px"></span>
+    <span class="w" style="width:48px"></span> <span class="w" style="width:100px"></span>
+    <span class="w" style="width:64px"></span> <span class="w" style="width:40px"></span>
+    <span class="w" style="width:72px"></span> <span class="w" style="width:88px"></span>
+    <span class="w" style="width:52px"></span> <span class="w" style="width:60px"></span>
   </div>
 </body>
 </html>

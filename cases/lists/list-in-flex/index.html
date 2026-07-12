@@ -5,20 +5,23 @@
 <title>list-in-flex</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
-  #fx { display: flex; list-style: none; margin: 0; padding: 0; width: 600px; }
+  #fx { display: flex; list-style: none; margin: 0; padding: 0; width: 600px; line-height: 20px; }
   #fx li { flex: 1; padding: 10px; margin-right: 6px; background: #b8d8b8; text-align: center; }
-  #ctrl { width: 300px; }
+  #ctrl { width: 300px; line-height: 20px; }
   #c1 { background: #f5d8d8; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
 <ul id="fx">
-  <li id="f1">One</li>
-  <li id="f2">Two</li>
-  <li id="f3">Three</li>
+  <li id="f1"><span class="w" style="width:44px"></span></li>
+  <li id="f2"><span class="w" style="width:52px"></span></li>
+  <li id="f3"><span class="w" style="width:60px"></span></li>
 </ul>
 <ul id="ctrl">
-  <li id="c1">Control list item with default marker</li>
+  <li id="c1"><span class="w" style="width:68px; background:#8a5030"></span> <span class="w" style="width:40px; background:#8a5030"></span> <span class="w" style="width:56px; background:#8a5030"></span></li>
 </ul>
 </body>
 </html>

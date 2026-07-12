@@ -40,16 +40,19 @@
     color: #ffffff;
   }
   #spacer-a, #spacer-b { height: 20px; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div class="panel" id="panel-a">
-    <div class="fl">float</div>
-    <div id="eaten">margin eaten</div>
+    <div class="fl"><span class="w" style="width:48px"></span></div>
+    <div id="eaten"><span class="w" style="width:88px"></span></div>
     <div id="spacer-a"></div>
   </div><div class="panel" id="panel-b">
-    <div class="fl">float</div>
-    <div id="kept">margin kept</div>
+    <div class="fl"><span class="w" style="width:48px"></span></div>
+    <div id="kept"><span class="w" style="width:80px; background:#8a3040"></span></div>
     <div id="spacer-b"></div>
   </div>
 </body>

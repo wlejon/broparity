@@ -28,13 +28,16 @@
   #c1 { background: #4a90d9; }
   #c2 { background: #4ab06a; }
   #c3 { background: #8a5ad9; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div id="ruled">
-    <div id="c1">col 1</div>
-    <div id="c2">col 2</div>
-    <div id="c3">col 3</div>
+    <div id="c1"><span class="w" style="width:48px"></span></div>
+    <div id="c2"><span class="w" style="width:52px"></span></div>
+    <div id="c3"><span class="w" style="width:56px"></span></div>
   </div>
 </body>
 </html>

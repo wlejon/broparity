@@ -10,6 +10,7 @@
     border-collapse: collapse;
     border: 2px solid #404040;
     font-size: 16px;
+    line-height: 20px;
     color: #202020;
   }
   th, td {
@@ -19,20 +20,25 @@
   thead { background: #d0d8e0; }
   tbody { background: #ffffff; }
   tfoot { background: #e8e0d0; font-weight: bold; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
+  .wh { background: #555555; }
+  .wf { background: #3060c8; }
 </style>
 </head>
 <body>
   <table>
     <thead>
-      <tr><th>Item</th><th>Qty</th><th>Cost</th></tr>
+      <tr><th><span class="w wh" style="width:40px"></span></th><th><span class="w wh" style="width:32px"></span></th><th><span class="w wh" style="width:36px"></span></th></tr>
     </thead>
     <tbody>
-      <tr><td>apples</td><td>3</td><td>1.50</td></tr>
-      <tr><td>bread</td><td>1</td><td>2.00</td></tr>
-      <tr><td>milk</td><td>2</td><td>3.00</td></tr>
+      <tr><td><span class="w" style="width:52px"></span></td><td><span class="w" style="width:12px"></span></td><td><span class="w" style="width:32px"></span></td></tr>
+      <tr><td><span class="w" style="width:44px"></span></td><td><span class="w" style="width:12px"></span></td><td><span class="w" style="width:32px"></span></td></tr>
+      <tr><td><span class="w" style="width:36px"></span></td><td><span class="w" style="width:12px"></span></td><td><span class="w" style="width:32px"></span></td></tr>
     </tbody>
     <tfoot>
-      <tr><td>Total</td><td>6</td><td>6.50</td></tr>
+      <tr><td><span class="w wf" style="width:40px"></span></td><td><span class="w wf" style="width:12px"></span></td><td><span class="w wf" style="width:32px"></span></td></tr>
     </tfoot>
   </table>
 </body>

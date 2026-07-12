@@ -21,7 +21,9 @@
   .txt { font-size: 14px; line-height: 20px; margin: 4px 0; }
   #ta-start-ltr, #ta-start-rtl { text-align: start; }
   #ta-end-ltr,   #ta-end-rtl   { text-align: end; }
-  .txt span { background: #ffd8a8; }
+  /* the alignment-probe spans, given word-like fixed boxes so their
+     inline position is asserted without font-metric pixel drift */
+  .txt span { background: #ffd8a8; display: inline-block; width: 76px; height: 14px; vertical-align: top; }
 </style>
 </head>
 <body>
@@ -34,12 +36,12 @@
     <div id="over-ltr"></div>
   </div>
   <div class="wrap" dir="ltr">
-    <p class="txt" id="ta-start-ltr"><span id="s1">start in ltr</span></p>
-    <p class="txt" id="ta-end-ltr"><span id="s2">end in ltr</span></p>
+    <p class="txt" id="ta-start-ltr"><span id="s1"></span></p>
+    <p class="txt" id="ta-end-ltr"><span id="s2"></span></p>
   </div>
   <div class="wrap" dir="rtl">
-    <p class="txt" id="ta-start-rtl"><span id="s3">start in rtl</span></p>
-    <p class="txt" id="ta-end-rtl"><span id="s4">end in rtl</span></p>
+    <p class="txt" id="ta-start-rtl"><span id="s3"></span></p>
+    <p class="txt" id="ta-end-rtl"><span id="s4"></span></p>
   </div>
 </body>
 </html>

@@ -5,19 +5,22 @@
 <title>li-block-content</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
-  ul { width: 420px; }
+  ul { width: 420px; line-height: 20px; }
   li { background: #e6e0f5; }
   #p1 { background: #c2d8f0; }
   #d1 { margin: 12px 0; background: #f0d0c2; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
 <ul id="list">
   <li id="li1">
-    <p id="p1">Paragraph inside a list item with default margins</p>
-    <div id="d1">Div with its own vertical margins</div>
+    <p id="p1"><span class="w" style="width:72px"></span> <span class="w" style="width:48px"></span> <span class="w" style="width:60px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:80px"></span></p>
+    <div id="d1"><span class="w" style="width:40px; background:#8a5030"></span> <span class="w" style="width:56px; background:#8a5030"></span> <span class="w" style="width:44px; background:#8a5030"></span> <span class="w" style="width:68px; background:#8a5030"></span></div>
   </li>
-  <li id="li2">Second item with plain inline text</li>
+  <li id="li2"><span class="w" style="width:64px; background:#3a6a4a"></span> <span class="w" style="width:36px; background:#3a6a4a"></span> <span class="w" style="width:52px; background:#3a6a4a"></span> <span class="w" style="width:44px; background:#3a6a4a"></span></li>
 </ul>
 </body>
 </html>

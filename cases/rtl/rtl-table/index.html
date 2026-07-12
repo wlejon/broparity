@@ -14,36 +14,40 @@
     height: 32px;
     padding: 0;
     font-size: 14px;
+    line-height: 20px;
     border: 1px solid #808080;
   }
   .c1 { background: #f0b0a8; }
   .c2 { background: #b0e0b8; }
   .c3 { background: #a8c0f0; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <table dir="rtl" id="tab-rtl">
     <tr>
-      <td class="c1" id="rc1">one</td>
-      <td class="c2" id="rc2">two</td>
-      <td class="c3" id="rc3">three</td>
+      <td class="c1" id="rc1"><span class="w" style="width:32px"></span></td>
+      <td class="c2" id="rc2"><span class="w" style="width:40px"></span></td>
+      <td class="c3" id="rc3"><span class="w" style="width:48px"></span></td>
     </tr>
     <tr>
-      <td id="rd1">a</td>
-      <td id="rd2">b</td>
-      <td id="rd3">c</td>
+      <td id="rd1"><span class="w" style="width:16px; background:#8a5030"></span></td>
+      <td id="rd2"><span class="w" style="width:20px; background:#8a5030"></span></td>
+      <td id="rd3"><span class="w" style="width:24px; background:#8a5030"></span></td>
     </tr>
   </table>
   <table dir="ltr" id="tab-ltr">
     <tr>
-      <td class="c1" id="lc1">one</td>
-      <td class="c2" id="lc2">two</td>
-      <td class="c3" id="lc3">three</td>
+      <td class="c1" id="lc1"><span class="w" style="width:32px"></span></td>
+      <td class="c2" id="lc2"><span class="w" style="width:40px"></span></td>
+      <td class="c3" id="lc3"><span class="w" style="width:48px"></span></td>
     </tr>
     <tr>
-      <td id="ld1">a</td>
-      <td id="ld2">b</td>
-      <td id="ld3">c</td>
+      <td id="ld1"><span class="w" style="width:16px; background:#8a5030"></span></td>
+      <td id="ld2"><span class="w" style="width:20px; background:#8a5030"></span></td>
+      <td id="ld3"><span class="w" style="width:24px; background:#8a5030"></span></td>
     </tr>
   </table>
 </body>

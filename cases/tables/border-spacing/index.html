@@ -12,6 +12,7 @@
     border-spacing: 12px 6px;
     background: #f0f0f0;
     font-size: 16px;
+    line-height: 20px;
     color: #202020;
   }
   td {
@@ -19,13 +20,18 @@
     border: 1px solid #808080;
     background: #ffffff;
   }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
+  .w2 { background: #2f7a4d; }
+  .w3 { background: #3060c8; }
 </style>
 </head>
 <body>
   <table>
-    <tr><td>a1</td><td>a2</td><td>a3</td></tr>
-    <tr><td>b1</td><td>b2</td><td>b3</td></tr>
-    <tr><td>c1</td><td>c2</td><td>c3</td></tr>
+    <tr><td><span class="w" style="width:32px"></span></td><td><span class="w" style="width:40px"></span></td><td><span class="w" style="width:28px"></span></td></tr>
+    <tr><td><span class="w w2" style="width:36px"></span></td><td><span class="w w2" style="width:24px"></span></td><td><span class="w w2" style="width:44px"></span></td></tr>
+    <tr><td><span class="w w3" style="width:28px"></span></td><td><span class="w w3" style="width:36px"></span></td><td><span class="w w3" style="width:32px"></span></td></tr>
   </table>
 </body>
 </html>

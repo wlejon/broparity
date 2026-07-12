@@ -10,6 +10,7 @@
     border: 2px solid #404040;
     border-collapse: collapse;
     font-size: 16px;
+    line-height: 20px;
     color: #202020;
   }
   td {
@@ -18,16 +19,20 @@
   }
   tr:nth-child(odd)  td { background: #ffffff; }
   tr:nth-child(even) td { background: #e8eef8; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
+  .w2 { background: #2f7a4d; }
 </style>
 </head>
 <body>
   <table>
-    <tr><td>row 1</td><td>odd</td><td>white</td></tr>
-    <tr><td>row 2</td><td>even</td><td>blue-gray</td></tr>
-    <tr><td>row 3</td><td>odd</td><td>white</td></tr>
-    <tr><td>row 4</td><td>even</td><td>blue-gray</td></tr>
-    <tr><td>row 5</td><td>odd</td><td>white</td></tr>
-    <tr><td>row 6</td><td>even</td><td>blue-gray</td></tr>
+    <tr><td><span class="w" style="width:44px"></span></td><td><span class="w" style="width:32px"></span></td><td><span class="w" style="width:44px"></span></td></tr>
+    <tr><td><span class="w w2" style="width:48px"></span></td><td><span class="w w2" style="width:36px"></span></td><td><span class="w w2" style="width:68px"></span></td></tr>
+    <tr><td><span class="w" style="width:44px"></span></td><td><span class="w" style="width:32px"></span></td><td><span class="w" style="width:44px"></span></td></tr>
+    <tr><td><span class="w w2" style="width:48px"></span></td><td><span class="w w2" style="width:36px"></span></td><td><span class="w w2" style="width:68px"></span></td></tr>
+    <tr><td><span class="w" style="width:44px"></span></td><td><span class="w" style="width:32px"></span></td><td><span class="w" style="width:44px"></span></td></tr>
+    <tr><td><span class="w w2" style="width:48px"></span></td><td><span class="w w2" style="width:36px"></span></td><td><span class="w w2" style="width:68px"></span></td></tr>
   </table>
 </body>
 </html>

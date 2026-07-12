@@ -5,16 +5,19 @@
 <title>list-none-reset</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
-  #nav { list-style: none; margin: 0; padding: 0; width: 600px; background: #333a44; }
+  #nav { list-style: none; margin: 0; padding: 0; width: 600px; background: #333a44; line-height: 20px; }
   #nav li { display: inline-block; padding: 8px 16px; margin-right: 4px; background: #4a6ea0; color: #ffffff; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #d8e0ec; }
 </style>
 </head>
 <body>
 <ul id="nav">
-  <li id="n1">Home</li>
-  <li id="n2">Products</li>
-  <li id="n3">About</li>
-  <li id="n4">Contact</li>
+  <li id="n1"><span class="w" style="width:44px"></span></li>
+  <li id="n2"><span class="w" style="width:68px"></span></li>
+  <li id="n3"><span class="w" style="width:48px"></span></li>
+  <li id="n4"><span class="w" style="width:60px"></span></li>
 </ul>
 </body>
 </html>

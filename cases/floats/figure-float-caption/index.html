@@ -30,6 +30,11 @@
     line-height: 16px;
     color: #6a5f4a;
   }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #a88860; }
+  /* caption words: smaller to match the 12px/16px caption type scale */
+  .cw { display: inline-block; height: 10px; vertical-align: top; background: #6a5f4a; }
 </style>
 </head>
 <body>
@@ -37,16 +42,41 @@
     <figure id="fig">
       <img id="pic" width="160" height="100" alt=""
         src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='100'%3E%3Crect width='160' height='100' fill='%234a90d9'/%3E%3Ccircle cx='120' cy='24' r='14' fill='%23ffd24a'/%3E%3Cpath d='M0 100 L60 45 L100 80 L130 60 L160 100 Z' fill='%232a5a8a'/%3E%3C/svg%3E">
-      <figcaption id="cap">Fig 1. A calm evening over the ridge.</figcaption>
+      <figcaption id="cap"><span class="cw" style="width:30px"></span> <span class="cw" style="width:20px"></span> <span class="cw" style="width:44px"></span> <span class="cw" style="width:36px"></span> <span class="cw" style="width:28px"></span> <span class="cw" style="width:40px"></span></figcaption>
     </figure>
-    The article text flows down the left side of the floated figure in
-    shortened line boxes, each one giving up room for the image and its
-    caption on the right. Editorial layouts lean on this pattern for
-    pull-out illustrations, and the wrap has to hold for the full height
-    of the figure including the caption and the bottom margin. Once the
-    text passes below the figure the lines widen back out to the full
-    measure of the column and the closing sentences of the passage run
-    edge to edge without interruption all the way to the end.
+    <span class="w" style="width:56px"></span> <span class="w" style="width:72px"></span>
+    <span class="w" style="width:40px"></span> <span class="w" style="width:88px"></span>
+    <span class="w" style="width:64px"></span> <span class="w" style="width:48px"></span>
+    <span class="w" style="width:96px"></span> <span class="w" style="width:36px"></span>
+    <span class="w" style="width:80px"></span> <span class="w" style="width:52px"></span>
+    <span class="w" style="width:68px"></span> <span class="w" style="width:44px"></span>
+    <span class="w" style="width:92px"></span> <span class="w" style="width:60px"></span>
+    <span class="w" style="width:76px"></span> <span class="w" style="width:32px"></span>
+    <span class="w" style="width:84px"></span> <span class="w" style="width:56px"></span>
+    <span class="w" style="width:48px"></span> <span class="w" style="width:100px"></span>
+    <span class="w" style="width:64px"></span> <span class="w" style="width:40px"></span>
+    <span class="w" style="width:72px"></span> <span class="w" style="width:88px"></span>
+    <span class="w" style="width:52px"></span> <span class="w" style="width:60px"></span>
+    <span class="w" style="width:96px"></span> <span class="w" style="width:44px"></span>
+    <span class="w" style="width:68px"></span> <span class="w" style="width:80px"></span>
+    <span class="w" style="width:36px"></span> <span class="w" style="width:56px"></span>
+    <span class="w" style="width:92px"></span> <span class="w" style="width:48px"></span>
+    <span class="w" style="width:76px"></span> <span class="w" style="width:60px"></span>
+    <span class="w" style="width:40px"></span> <span class="w" style="width:84px"></span>
+    <span class="w" style="width:52px"></span> <span class="w" style="width:72px"></span>
+    <span class="w" style="width:64px"></span> <span class="w" style="width:32px"></span>
+    <span class="w" style="width:88px"></span> <span class="w" style="width:56px"></span>
+    <span class="w" style="width:100px"></span> <span class="w" style="width:44px"></span>
+    <span class="w" style="width:68px"></span> <span class="w" style="width:48px"></span>
+    <span class="w" style="width:80px"></span> <span class="w" style="width:60px"></span>
+    <span class="w" style="width:36px"></span> <span class="w" style="width:92px"></span>
+    <span class="w" style="width:56px"></span> <span class="w" style="width:72px"></span>
+    <span class="w" style="width:44px"></span> <span class="w" style="width:84px"></span>
+    <span class="w" style="width:64px"></span> <span class="w" style="width:52px"></span>
+    <span class="w" style="width:76px"></span> <span class="w" style="width:40px"></span>
+    <span class="w" style="width:96px"></span> <span class="w" style="width:60px"></span>
+    <span class="w" style="width:48px"></span> <span class="w" style="width:88px"></span>
+    <span class="w" style="width:56px"></span> <span class="w" style="width:68px"></span>
   </div>
 </body>
 </html>

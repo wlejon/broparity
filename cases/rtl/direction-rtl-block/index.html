@@ -13,18 +13,23 @@
     background: #f0f0f0;
   }
   .box p { margin: 6px; background: #e0e8ff; }
-  .a { background: #ffc8c8; }
-  .b { background: #c8e8c8; }
+  /* the tested dir="ltr" spans, given word-like fixed boxes so their
+     bidi ordering is asserted without font-metric pixel drift */
+  .a { background: #ffc8c8; display: inline-block; width: 44px; height: 14px; vertical-align: top; }
+  .b { background: #c8e8c8; display: inline-block; width: 60px; height: 14px; vertical-align: top; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div class="box" dir="rtl">
-    <p id="rp">Latin words hug the right edge under rtl.</p>
-    <p><span dir="ltr" class="a" id="ra">alpha</span> <span dir="ltr" class="b" id="rb">beta</span></p>
+    <p id="rp"><span class="w" style="width:48px"></span> <span class="w" style="width:64px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:56px"></span> <span class="w" style="width:40px"></span></p>
+    <p><span dir="ltr" class="a" id="ra"></span> <span dir="ltr" class="b" id="rb"></span></p>
   </div>
   <div class="box" dir="ltr">
-    <p id="lp">Latin words hug the right edge under rtl.</p>
-    <p><span dir="ltr" class="a" id="la">alpha</span> <span dir="ltr" class="b" id="lb">beta</span></p>
+    <p id="lp"><span class="w" style="width:48px"></span> <span class="w" style="width:64px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:56px"></span> <span class="w" style="width:40px"></span></p>
+    <p><span dir="ltr" class="a" id="la"></span> <span dir="ltr" class="b" id="lb"></span></p>
   </div>
 </body>
 </html>

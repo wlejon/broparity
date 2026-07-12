@@ -10,6 +10,7 @@
     border: 2px solid #404040;
     border-collapse: collapse;
     font-size: 16px;
+    line-height: 20px;
     color: #202020;
   }
   td {
@@ -22,14 +23,18 @@
   td.t { vertical-align: top; background: #ffe0e0; }
   td.m { vertical-align: middle; background: #e0ffe0; }
   td.b { vertical-align: bottom; background: #e0e0ff; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift. The subject under test is the
+     td's own vertical-align; the .w va:top only pins boxes in their line */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
   <table>
     <tr>
-      <td class="t">top text</td>
-      <td class="m">middle text</td>
-      <td class="b">bottom text</td>
+      <td class="t"><span class="w" style="width:64px"></span> <span class="w" style="width:36px"></span></td>
+      <td class="m"><span class="w" style="width:56px"></span> <span class="w" style="width:44px"></span></td>
+      <td class="b"><span class="w" style="width:72px"></span> <span class="w" style="width:28px"></span></td>
     </tr>
   </table>
 </body>

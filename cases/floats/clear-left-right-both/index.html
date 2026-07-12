@@ -54,16 +54,19 @@
     background: #d94a6a;
     color: #ffffff;
   }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div id="wrap">
-    <div id="fl">left 100</div>
-    <div id="fr">right 160</div>
-    <div id="c-left">clear left</div>
-    <div id="c-right">clear right</div>
-    <div id="fl2">float 60</div>
-    <div id="c-both">clear both</div>
+    <div id="fl"><span class="w" style="width:56px"></span></div>
+    <div id="fr"><span class="w" style="width:64px"></span></div>
+    <div id="c-left"><span class="w" style="width:60px"></span></div>
+    <div id="c-right"><span class="w" style="width:68px"></span></div>
+    <div id="fl2"><span class="w" style="width:52px"></span></div>
+    <div id="c-both"><span class="w" style="width:72px; background:#8a3040"></span></div>
   </div>
 </body>
 </html>

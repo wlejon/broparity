@@ -11,6 +11,7 @@
     border: 2px solid #404040;
     border-collapse: collapse;
     font-size: 16px;
+    line-height: 20px;
     color: #202020;
   }
   td {
@@ -21,13 +22,17 @@
   td.a { background: #ffe0e0; }
   td.b { background: #e0ffe0; }
   td.c { background: #e0e0ff; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
+  .w2 { background: #2f7a4d; }
 </style>
 </head>
 <body>
   <div class="wrap">
     <table>
-      <tr><td class="a">A</td><td class="b">B</td><td class="c">C</td></tr>
-      <tr><td>1</td><td>2</td><td>3</td></tr>
+      <tr><td class="a"><span class="w" style="width:16px"></span></td><td class="b"><span class="w" style="width:16px"></span></td><td class="c"><span class="w" style="width:16px"></span></td></tr>
+      <tr><td><span class="w w2" style="width:12px"></span></td><td><span class="w w2" style="width:12px"></span></td><td><span class="w w2" style="width:12px"></span></td></tr>
     </table>
   </div>
 </body>

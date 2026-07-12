@@ -23,22 +23,25 @@
     background: #dce8f4;
   }
   #cols p:nth-of-type(even) { background: #e4f0da; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div id="cols">
-    <p id="p1">Item one</p>
-    <p id="p2">Item two</p>
-    <p id="p3">Item three</p>
-    <p id="p4">Item four</p>
-    <p id="p5">Item five</p>
-    <p id="p6">Item six</p>
-    <p id="p7">Item seven</p>
-    <p id="p8">Item eight</p>
-    <p id="p9">Item nine</p>
-    <p id="p10">Item ten</p>
-    <p id="p11">Item eleven</p>
-    <p id="p12">Item twelve</p>
+    <p id="p1"><span class="w" style="width:40px"></span> <span class="w" style="width:32px"></span></p>
+    <p id="p2"><span class="w" style="width:40px"></span> <span class="w" style="width:36px"></span></p>
+    <p id="p3"><span class="w" style="width:40px"></span> <span class="w" style="width:44px"></span></p>
+    <p id="p4"><span class="w" style="width:40px"></span> <span class="w" style="width:38px"></span></p>
+    <p id="p5"><span class="w" style="width:40px"></span> <span class="w" style="width:34px"></span></p>
+    <p id="p6"><span class="w" style="width:40px"></span> <span class="w" style="width:28px"></span></p>
+    <p id="p7"><span class="w" style="width:40px"></span> <span class="w" style="width:48px"></span></p>
+    <p id="p8"><span class="w" style="width:40px"></span> <span class="w" style="width:42px"></span></p>
+    <p id="p9"><span class="w" style="width:40px"></span> <span class="w" style="width:36px"></span></p>
+    <p id="p10"><span class="w" style="width:40px"></span> <span class="w" style="width:30px"></span></p>
+    <p id="p11"><span class="w" style="width:40px"></span> <span class="w" style="width:46px"></span></p>
+    <p id="p12"><span class="w" style="width:40px"></span> <span class="w" style="width:44px"></span></p>
   </div>
 </body>
 </html>

@@ -30,15 +30,18 @@
     inset-inline-start: 20px;
     background: #d04030;
   }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b8e0c4; }
 </style>
 </head>
 <body>
   <div class="wrap" dir="ltr">
-    <div class="flow" id="flow-ltr">flow box</div>
+    <div class="flow" id="flow-ltr"><span class="w" style="width:40px"></span> <span class="w" style="width:28px"></span></div>
     <div class="abs" id="abs-ltr"></div>
   </div>
   <div class="wrap" dir="rtl">
-    <div class="flow" id="flow-rtl">flow box</div>
+    <div class="flow" id="flow-rtl"><span class="w" style="width:40px"></span> <span class="w" style="width:28px"></span></div>
     <div class="abs" id="abs-rtl"></div>
   </div>
 </body>

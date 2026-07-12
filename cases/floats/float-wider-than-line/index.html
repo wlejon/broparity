@@ -44,13 +44,16 @@
     line-height: 60px;
     text-align: center;
   }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div id="lane">
-    <div id="narrow">150</div>
-    <div id="wide">400 drops</div>
-    <div id="small">80</div>
+    <div id="narrow"><span class="w" style="width:48px"></span></div>
+    <div id="wide"><span class="w" style="width:96px; background:#8a3040"></span></div>
+    <div id="small"><span class="w" style="width:36px; background:#2a5a3a"></span></div>
   </div>
 </body>
 </html>

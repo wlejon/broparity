@@ -10,6 +10,7 @@
     border: 2px solid #404040;
     border-collapse: collapse;
     font-size: 14px;
+    line-height: 18px;
     color: #202020;
   }
   td {
@@ -28,24 +29,29 @@
     border: 1px solid #c08080;
     background: #ffffff;
   }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
+  .w2 { background: #2f7a4d; }
+  .wi { height: 12px; background: #3060c8; }
 </style>
 </head>
 <body>
   <table>
     <tr>
-      <td>outer A</td>
+      <td><span class="w" style="width:44px"></span> <span class="w" style="width:16px"></span></td>
       <td>
         <table class="inner">
-          <tr><td>i1</td><td>i2</td></tr>
-          <tr><td>i3</td><td>i4</td></tr>
+          <tr><td><span class="w wi" style="width:20px"></span></td><td><span class="w wi" style="width:24px"></span></td></tr>
+          <tr><td><span class="w wi" style="width:28px"></span></td><td><span class="w wi" style="width:20px"></span></td></tr>
         </table>
       </td>
-      <td>outer B</td>
+      <td><span class="w" style="width:44px"></span> <span class="w" style="width:16px"></span></td>
     </tr>
     <tr>
-      <td>r2c1</td>
-      <td>r2c2</td>
-      <td>r2c3</td>
+      <td><span class="w w2" style="width:36px"></span></td>
+      <td><span class="w w2" style="width:40px"></span></td>
+      <td><span class="w w2" style="width:32px"></span></td>
     </tr>
   </table>
 </body>

@@ -41,15 +41,18 @@
     font-size: 14px;
     line-height: 30px;
   }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div id="bfc">
-    <div class="fl" id="f1">contained</div>
+    <div class="fl" id="f1"><span class="w" style="width:76px"></span></div>
   </div>
   <div id="plain">
-    <div class="fl" id="f2">escaped</div>
+    <div class="fl" id="f2"><span class="w" style="width:60px"></span></div>
   </div>
-  <div id="after">after clear</div>
+  <div id="after"><span class="w" style="width:84px; background:#8a3040"></span></div>
 </body>
 </html>

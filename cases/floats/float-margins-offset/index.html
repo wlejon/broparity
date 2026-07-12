@@ -37,13 +37,16 @@
     font-size: 14px;
     line-height: 24px;
   }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div id="lane">
-    <div class="f" id="m1">m1</div>
-    <div class="f" id="m2">m2</div>
-    <div id="cleared">cleared at 120</div>
+    <div class="f" id="m1"><span class="w" style="width:36px"></span></div>
+    <div class="f" id="m2"><span class="w" style="width:36px"></span></div>
+    <div id="cleared"><span class="w" style="width:92px; background:#8a3040"></span></div>
   </div>
 </body>
 </html>

@@ -33,16 +33,19 @@
   #k4 { background: #8a5ad9; }
   #k5 { background: #d94a6a; }
   #k6 { background: #3aa8a0; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
   <div id="deck">
-    <div class="card" id="k1">card 1</div>
-    <div class="card" id="k2">card 2</div>
-    <div class="card" id="k3">card 3</div>
-    <div class="card" id="k4">card 4</div>
-    <div class="card" id="k5">card 5</div>
-    <div class="card" id="k6">card 6</div>
+    <div class="card" id="k1"><span class="w" style="width:44px"></span></div>
+    <div class="card" id="k2"><span class="w" style="width:48px"></span></div>
+    <div class="card" id="k3"><span class="w" style="width:52px"></span></div>
+    <div class="card" id="k4"><span class="w" style="width:56px"></span></div>
+    <div class="card" id="k5"><span class="w" style="width:60px"></span></div>
+    <div class="card" id="k6"><span class="w" style="width:64px"></span></div>
   </div>
 </body>
 </html>

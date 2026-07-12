@@ -5,20 +5,23 @@
 <title>list-style-position</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
-  ul { width: 260px; }
+  ul { width: 260px; line-height: 20px; }
   li { background: #ffe2b8; }
   #in { list-style-position: inside; }
   #out { list-style-position: outside; }
+  /* word-like fixed-size inline-blocks: align/wrap exactly like text runs
+     but carry no font-metric pixel drift */
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #204060; }
 </style>
 </head>
 <body>
 <ul id="in">
-  <li id="in1">Short item</li>
-  <li id="in2">A longer wrapping item that continues onto a second line here</li>
+  <li id="in1"><span class="w" style="width:56px"></span> <span class="w" style="width:36px"></span></li>
+  <li id="in2"><span class="w" style="width:72px; background:#8a5030"></span> <span class="w" style="width:60px; background:#8a5030"></span> <span class="w" style="width:48px; background:#8a5030"></span> <span class="w" style="width:80px; background:#8a5030"></span> <span class="w" style="width:40px; background:#8a5030"></span></li>
 </ul>
 <ul id="out">
-  <li id="out1">Short item</li>
-  <li id="out2">A longer wrapping item that continues onto a second line here</li>
+  <li id="out1"><span class="w" style="width:56px"></span> <span class="w" style="width:36px"></span></li>
+  <li id="out2"><span class="w" style="width:72px; background:#8a5030"></span> <span class="w" style="width:60px; background:#8a5030"></span> <span class="w" style="width:48px; background:#8a5030"></span> <span class="w" style="width:80px; background:#8a5030"></span> <span class="w" style="width:40px; background:#8a5030"></span></li>
 </ul>
 </body>
 </html>
