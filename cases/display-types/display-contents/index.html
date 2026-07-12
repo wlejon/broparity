@@ -6,34 +6,35 @@
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
   .wrap { display: contents; }
-  .item { width: 200px; height: 32px; margin: 6px; background: #dddddd; color: #202020; font-size: 13px; }
+  .item { width: 200px; height: 32px; margin: 6px; background: #dddddd; color: #202020; font-size: 13px; line-height: 20px; }
 
   /* flex container: display:contents child's children become flex items */
   .flexbox { display: flex; gap: 10px; margin: 10px; background: #f0f0f0; padding: 8px; }
-  .flexbox .cell { width: 110px; height: 44px; background: #1565c0; color: #ffffff; font-size: 12px; }
+  .flexbox .cell { width: 110px; height: 44px; background: #1565c0; color: #ffffff; font-size: 12px; line-height: 20px; }
   .flexbox .wrap .cell { background: #2e7d32; }
 
   /* block flow: children promoted, wrapper generates no box */
   .blockhost { margin: 10px; padding: 8px; background: #f0f0f0; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
   <div class="blockhost">
-    <div class="item">before</div>
+    <div class="item"><span class="w" style="width:56px"></span></div>
     <div class="wrap">
-      <div class="item">promoted 1</div>
-      <div class="item">promoted 2</div>
+      <div class="item"><span class="w" style="width:72px"></span> <span class="w" style="width:32px"></span></div>
+      <div class="item"><span class="w" style="width:72px"></span> <span class="w" style="width:40px"></span></div>
     </div>
-    <div class="item">after</div>
+    <div class="item"><span class="w" style="width:44px"></span></div>
   </div>
 
   <div class="flexbox">
-    <div class="cell">real item</div>
+    <div class="cell"><span class="w" style="width:64px"></span></div>
     <div class="wrap">
-      <div class="cell">via contents 1</div>
-      <div class="cell">via contents 2</div>
+      <div class="cell"><span class="w" style="width:48px"></span> <span class="w" style="width:36px"></span></div>
+      <div class="cell"><span class="w" style="width:48px"></span> <span class="w" style="width:40px"></span></div>
     </div>
-    <div class="cell">real item</div>
+    <div class="cell"><span class="w" style="width:64px"></span></div>
   </div>
 </body>
 </html>

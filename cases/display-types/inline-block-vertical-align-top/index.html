@@ -5,7 +5,7 @@
 <title>inline-block-vertical-align-top</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; color: #202020; font-size: 16px; line-height: 1.4; }
-  #row { margin: 30px; background: #f8f8f0; padding: 4px; }
+  #row { margin: 30px; background: #f8f8f0; padding: 4px; line-height: 22px; }
   .ib {
     display: inline-block;
     vertical-align: top;
@@ -17,15 +17,16 @@
   .tall { height: 80px; width: 60px; }
   .mid { height: 40px; width: 60px; }
   .short { height: 20px; width: 60px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
   <div id="row">
-    text before
-    <span class="ib tall">tall</span>
-    <span class="ib mid">mid</span>
-    <span class="ib short">short</span>
-    text after
+    <span class="w" style="width:44px"></span> <span class="w" style="width:60px"></span>
+    <span class="ib tall"><span class="w" style="width:36px"></span></span>
+    <span class="ib mid"><span class="w" style="width:32px"></span></span>
+    <span class="ib short"><span class="w" style="width:40px"></span></span>
+    <span class="w" style="width:52px"></span> <span class="w" style="width:36px"></span>
   </div>
 </body>
 </html>

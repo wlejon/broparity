@@ -6,7 +6,8 @@
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
   .list { margin: 8px; padding: 4px; background: #f0f0f0; }
-  .list div, .list p { width: 220px; height: 26px; margin: 4px; background: #dddddd; color: #202020; font-size: 13px; }
+  .list div, .list p { width: 220px; height: 26px; margin: 4px; background: #dddddd; color: #202020; font-size: 13px; line-height: 18px; }
+  .w { display: inline-block; height: 12px; vertical-align: top; background: #b04030; }
 
   .list :first-child { background: #2e7d32; color: #ffffff; }
   .list :last-child { background: #1565c0; color: #ffffff; }
@@ -19,19 +20,19 @@
 </head>
 <body>
   <div class="list">
-    <div>first (green)</div>
-    <div>middle</div>
+    <div><span class="w" style="width:60px"></span> <span class="w" style="width:44px"></span></div>
+    <div><span class="w" style="width:48px"></span> <span class="w" style="width:72px"></span></div>
     <div></div>
-    <div>last (blue)</div>
+    <div><span class="w" style="width:56px"></span> <span class="w" style="width:36px"></span></div>
   </div>
   <div class="list only">
-    <div>only child (purple, wide)</div>
+    <div><span class="w" style="width:64px"></span> <span class="w" style="width:40px"></span></div>
   </div>
   <div class="list mixed">
-    <p>first p (orange edge)</p>
-    <div>the only div (wide)</div>
-    <p>middle p</p>
-    <p>last p (green edge)</p>
+    <p><span class="w" style="width:52px"></span> <span class="w" style="width:76px"></span></p>
+    <div><span class="w" style="width:44px"></span> <span class="w" style="width:60px"></span></div>
+    <p><span class="w" style="width:68px"></span> <span class="w" style="width:32px"></span></p>
+    <p><span class="w" style="width:56px"></span> <span class="w" style="width:48px"></span></p>
   </div>
 </body>
 </html>

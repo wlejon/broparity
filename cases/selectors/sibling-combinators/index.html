@@ -5,8 +5,9 @@
 <title>sibling-combinators</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  p { width: 240px; height: 28px; margin: 6px; background: #dddddd; color: #202020; font-size: 14px; }
-  h4 { margin: 6px; font-size: 16px; color: #202020; }
+  p { width: 240px; height: 28px; margin: 6px; background: #dddddd; color: #202020; font-size: 14px; line-height: 18px; }
+  .w { display: inline-block; height: 12px; vertical-align: top; background: #b04030; }
+  h4 { margin: 6px; font-size: 16px; color: #202020; line-height: 20px; }
 
   /* adjacent: only the p immediately after an h4 */
   h4 + p { background: #1565c0; color: #ffffff; }
@@ -17,13 +18,13 @@
 </style>
 </head>
 <body>
-  <p>before heading</p>
-  <h4>heading</h4>
-  <p>right after heading (blue)</p>
-  <p>second after heading</p>
+  <p><span class="w" style="width:56px"></span> <span class="w" style="width:40px"></span></p>
+  <h4><span class="w" style="width:68px"></span> <span class="w" style="width:32px"></span></h4>
+  <p><span class="w" style="width:64px"></span> <span class="w" style="width:36px"></span></p>
+  <p><span class="w" style="width:48px"></span> <span class="w" style="width:72px"></span></p>
   <div class="marker" style="width:240px;height:20px;margin:6px;background:#6a1b9a;"></div>
-  <p>after marker (wide)</p>
-  <p>after marker two (wide)</p>
-  <p>after marker three (wide + orange edge)</p>
+  <p><span class="w" style="width:60px"></span> <span class="w" style="width:44px"></span></p>
+  <p><span class="w" style="width:52px"></span> <span class="w" style="width:68px"></span></p>
+  <p><span class="w" style="width:44px"></span> <span class="w" style="width:76px"></span></p>
 </body>
 </html>

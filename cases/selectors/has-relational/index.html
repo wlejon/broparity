@@ -5,7 +5,8 @@
 <title>has-relational</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .card { width: 260px; margin: 10px; padding: 10px; background: #dddddd; color: #202020; }
+  .card { width: 260px; margin: 10px; padding: 10px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   /* parent styled by child presence */
   .card:has(.flag) { background: #2e7d32; color: #ffffff; }
@@ -16,10 +17,10 @@
 </style>
 </head>
 <body>
-  <div class="card"><div class="flag">direct flag child</div></div>
-  <div class="card"><div class="wrap"><div class="flag">nested flag</div></div></div>
-  <div class="card">no flag</div>
-  <div class="card">followed by .after (wide)</div>
-  <div class="after card">the .after element</div>
+  <div class="card"><div class="flag"><span class="w" style="width:64px"></span> <span class="w" style="width:48px"></span></div></div>
+  <div class="card"><div class="wrap"><div class="flag"><span class="w" style="width:56px"></span> <span class="w" style="width:40px"></span></div></div></div>
+  <div class="card"><span class="w" style="width:44px"></span> <span class="w" style="width:72px"></span></div>
+  <div class="card"><span class="w" style="width:80px"></span> <span class="w" style="width:36px"></span></div>
+  <div class="after card"><span class="w" style="width:52px"></span> <span class="w" style="width:68px"></span></div>
 </body>
 </html>

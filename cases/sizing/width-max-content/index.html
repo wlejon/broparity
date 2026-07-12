@@ -5,10 +5,11 @@
 <title>width-max-content</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  #b { width: max-content; padding: 8px; margin: 30px; background: #c0d0e0; border: 2px solid #404040; font-size: 16px; }
+  #b { width: max-content; padding: 8px; margin: 30px; background: #c0d0e0; border: 2px solid #404040; font-size: 16px; line-height: 20px; }
+.w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
-<div id="b">small word</div>
+<div id="b"><span class="w" style="width:56px"></span> <span class="w" style="width:40px"></span></div>
 </body>
 </html>

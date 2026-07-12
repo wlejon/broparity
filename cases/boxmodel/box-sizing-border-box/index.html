@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <title>box-sizing-border-box</title>
 <style>
-  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
+  html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
   #content-box {
     box-sizing: content-box;
     width: 200px;
@@ -24,7 +25,7 @@
 </style>
 </head>
 <body>
-  <div id="content-box">content-box: outer width = 200 + 40 + 12 = 252</div>
-  <div id="border-box">border-box: outer width = 200</div>
+  <div id="content-box"><span class="w" style="width:64px"></span> <span class="w" style="width:44px"></span> <span class="w" style="width:72px"></span> <span class="w" style="width:36px"></span></div>
+  <div id="border-box"><span class="w" style="width:56px"></span> <span class="w" style="width:80px"></span> <span class="w" style="width:40px"></span></div>
 </body>
 </html>

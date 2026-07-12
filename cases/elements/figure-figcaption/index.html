@@ -5,17 +5,19 @@
 <title>figure-figcaption</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
+  body { line-height: 20px; }
   #before, #after { width: 500px; background: #e2e8f0; }
   figure { background: #f7f2e2; }
   figcaption { background: #d8ecd8; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
-<div id="before">Block before the figure</div>
+<div id="before"><span class="w" style="width:64px"></span> <span class="w" style="width:40px"></span> <span class="w" style="width:80px"></span></div>
 <figure id="fig">
   <img id="img" width="120" height="80" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80'%3E%3Crect width='120' height='80' fill='%232f6fb0'/%3E%3C/svg%3E">
-  <figcaption id="cap">Caption under the image</figcaption>
+  <figcaption id="cap"><span class="w" style="width:52px"></span> <span class="w" style="width:72px"></span> <span class="w" style="width:36px"></span></figcaption>
 </figure>
-<div id="after">Block after the figure</div>
+<div id="after"><span class="w" style="width:44px"></span> <span class="w" style="width:88px"></span> <span class="w" style="width:56px"></span></div>
 </body>
 </html>

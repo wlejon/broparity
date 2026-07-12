@@ -8,9 +8,10 @@
   #p { margin: 30px; width: 500px; background: #f8f8f0; }
   .inl { background: #ffe0e0; }
   .ib { display: inline-block; width: 80px; height: 30px; background: #e0e0ff; border: 1px solid #4080c0; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
-  <p id="p">Plain leading text <span class="inl">inline span</span> mid text <span class="ib">ib1</span> more text <span class="inl">inline two</span> tail <span class="ib">ib2</span> end.</p>
+<p id="p"><span class="w" style="width:56px"></span> <span class="w" style="width:72px"></span> <span class="w" style="width:40px"></span> <span class="inl"><span class="w" style="width:96px; vertical-align: baseline"></span></span> <span class="w" style="width:36px"></span> <span class="w" style="width:48px"></span> <span class="ib"></span> <span class="w" style="width:52px"></span> <span class="w" style="width:64px"></span> <span class="inl"><span class="w" style="width:84px; vertical-align: baseline"></span></span> <span class="w" style="width:44px"></span> <span class="ib"></span> <span class="w" style="width:36px"></span></p>
 </body>
 </html>

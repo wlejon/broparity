@@ -6,7 +6,8 @@
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
   .grid { margin: 8px; }
-  .grid div { width: 200px; height: 22px; margin: 3px; background: #dddddd; color: #202020; font-size: 12px; }
+  .grid div { width: 200px; height: 22px; margin: 3px; background: #dddddd; color: #202020; font-size: 12px; line-height: 16px; }
+  .w { display: inline-block; height: 12px; vertical-align: top; background: #b04030; }
 
   .odd div:nth-child(odd) { background: #2e7d32; color: #ffffff; }
   .anb div:nth-child(3n+1) { background: #1565c0; color: #ffffff; }
@@ -14,25 +15,25 @@
   .last div:nth-last-child(2) { background: #c62828; color: #ffffff; }
   .last div:nth-last-child(-n+2) { width: 300px; }
   .oftype p:nth-of-type(2) { background: #6a1b9a; color: #ffffff; }
-  .oftype p { width: 200px; height: 22px; margin: 3px; background: #dddddd; font-size: 12px; }
+  .oftype p { width: 200px; height: 22px; margin: 3px; background: #dddddd; font-size: 12px; line-height: 16px; }
 </style>
 </head>
 <body>
   <div class="grid odd">
-    <div>1 odd</div><div>2</div><div>3 odd</div><div>4</div><div>5 odd</div>
+    <div><span class="w" style="width:56px"></span> <span class="w" style="width:36px"></span></div><div><span class="w" style="width:48px"></span> <span class="w" style="width:64px"></span></div><div><span class="w" style="width:60px"></span> <span class="w" style="width:40px"></span></div><div><span class="w" style="width:52px"></span> <span class="w" style="width:72px"></span></div><div><span class="w" style="width:44px"></span> <span class="w" style="width:56px"></span></div>
   </div>
   <div class="grid anb">
-    <div>1 (3n+1, -n+2)</div><div>2 (-n+2)</div><div>3</div><div>4 (3n+1)</div><div>5</div><div>6</div><div>7 (3n+1)</div>
+    <div><span class="w" style="width:68px"></span> <span class="w" style="width:32px"></span></div><div><span class="w" style="width:56px"></span> <span class="w" style="width:48px"></span></div><div><span class="w" style="width:40px"></span> <span class="w" style="width:76px"></span></div><div><span class="w" style="width:60px"></span> <span class="w" style="width:44px"></span></div><div><span class="w" style="width:72px"></span> <span class="w" style="width:36px"></span></div><div><span class="w" style="width:52px"></span> <span class="w" style="width:64px"></span></div><div><span class="w" style="width:48px"></span> <span class="w" style="width:56px"></span></div>
   </div>
   <div class="grid last">
-    <div>1</div><div>2</div><div>3 second-from-end</div><div>4 last</div>
+    <div><span class="w" style="width:64px"></span> <span class="w" style="width:40px"></span></div><div><span class="w" style="width:56px"></span> <span class="w" style="width:72px"></span></div><div><span class="w" style="width:44px"></span> <span class="w" style="width:60px"></span></div><div><span class="w" style="width:68px"></span> <span class="w" style="width:36px"></span></div>
   </div>
   <div class="grid oftype">
-    <div>div 1</div>
-    <p>p 1</p>
-    <div>div 2</div>
-    <p>p 2 (purple)</p>
-    <p>p 3</p>
+    <div><span class="w" style="width:52px"></span> <span class="w" style="width:48px"></span></div>
+    <p><span class="w" style="width:48px"></span> <span class="w" style="width:68px"></span></p>
+    <div><span class="w" style="width:60px"></span> <span class="w" style="width:32px"></span></div>
+    <p><span class="w" style="width:56px"></span> <span class="w" style="width:44px"></span></p>
+    <p><span class="w" style="width:72px"></span> <span class="w" style="width:40px"></span></p>
   </div>
 </body>
 </html>

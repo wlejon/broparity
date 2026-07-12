@@ -5,7 +5,8 @@
 <title>is-where-specificity</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+  .box { width: 240px; height: 40px; margin: 10px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   /* :is() takes the specificity of its most specific argument (#id → 1,0,0),
      so this beats the later plain-class rule. */
@@ -18,13 +19,13 @@
   .inner { background: #2e7d32; color: #ffffff; }
 
   /* :is() used purely for grouping — both h5 and .h-like get the same box */
-  :is(h5, .h-like) { width: 300px; height: 30px; margin: 10px; background: #6a1b9a; color: #ffffff; font-size: 14px; font-weight: normal; }
+  :is(h5, .h-like) { width: 300px; height: 30px; margin: 10px; background: #6a1b9a; color: #ffffff; font-size: 14px; font-weight: normal; line-height: 18px; }
 </style>
 </head>
 <body>
-  <div class="box blue-target" id="alpha">is() id specificity wins (blue)</div>
-  <div class="box" id="beta"><div class="inner">where() zero specificity loses (green)</div></div>
-  <h5>h5 via is()</h5>
-  <div class="h-like">div via is()</div>
+  <div class="box blue-target" id="alpha"><span class="w" style="width:64px"></span> <span class="w" style="width:48px"></span> <span class="w" style="width:80px"></span></div>
+  <div class="box" id="beta"><div class="inner"><span class="w" style="width:56px"></span> <span class="w" style="width:72px"></span> <span class="w" style="width:40px"></span></div></div>
+  <h5><span class="w" style="width:52px"></span> <span class="w" style="width:36px"></span></h5>
+  <div class="h-like"><span class="w" style="width:60px"></span> <span class="w" style="width:44px"></span></div>
 </body>
 </html>

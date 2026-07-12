@@ -5,7 +5,8 @@
 <title>attr-substring-ops</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .row { width: 220px; height: 36px; margin: 8px; background: #dddddd; color: #202020; }
+  .row { width: 220px; height: 36px; margin: 8px; background: #dddddd; color: #202020; line-height: 18px; }
+  .w { display: inline-block; height: 12px; vertical-align: top; background: #b04030; }
 
   /* prefix */
   .row[href^="https://"] { background: #2e7d32; color: #ffffff; width: 280px; }
@@ -20,12 +21,12 @@
 </style>
 </head>
 <body>
-  <div class="row" href="https://example.com/a">https prefix + example substr</div>
-  <div class="row" href="http://other.org/b">http only</div>
-  <div class="row" href="https://files.org/doc.pdf">https + pdf suffix</div>
-  <div class="row" href="file.pdfx">pdfx (no suffix match)</div>
-  <div class="row" data-tags="new hot sale">tags word hot</div>
-  <div class="row" data-tags="hotel">tags hotel (no word match)</div>
-  <div class="row" data-tags="">empty tags</div>
+  <div class="row" href="https://example.com/a"><span class="w" style="width:56px"></span> <span class="w" style="width:40px"></span></div>
+  <div class="row" href="http://other.org/b"><span class="w" style="width:48px"></span> <span class="w" style="width:72px"></span></div>
+  <div class="row" href="https://files.org/doc.pdf"><span class="w" style="width:64px"></span> <span class="w" style="width:36px"></span></div>
+  <div class="row" href="file.pdfx"><span class="w" style="width:52px"></span> <span class="w" style="width:80px"></span></div>
+  <div class="row" data-tags="new hot sale"><span class="w" style="width:44px"></span> <span class="w" style="width:60px"></span></div>
+  <div class="row" data-tags="hotel"><span class="w" style="width:68px"></span> <span class="w" style="width:32px"></span></div>
+  <div class="row" data-tags=""><span class="w" style="width:56px"></span> <span class="w" style="width:44px"></span></div>
 </body>
 </html>

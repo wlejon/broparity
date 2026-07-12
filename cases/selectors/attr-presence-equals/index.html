@@ -5,7 +5,8 @@
 <title>attr-presence-equals</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .row { width: 200px; height: 40px; margin: 10px; background: #dddddd; color: #202020; }
+  .row { width: 200px; height: 40px; margin: 10px; background: #dddddd; color: #202020; line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 
   /* presence */
   .row[data-on] { background: #2e7d32; color: #ffffff; }
@@ -20,15 +21,15 @@
 </style>
 </head>
 <body>
-  <div class="row" data-on>presence match</div>
-  <div class="row">no attributes</div>
-  <div class="row" data-kind="alpha">kind alpha</div>
-  <div class="row" data-kind="beta">kind beta</div>
-  <div class="row" data-kind="alphabet">kind alphabet (no match)</div>
-  <div class="row" lang="en">lang en</div>
-  <div class="row" lang="en-US">lang en-US</div>
-  <div class="row" lang="enx">lang enx (no match)</div>
-  <div class="row" data-ci="mixed">ci lower</div>
-  <div class="row" data-ci="MIXED">ci upper</div>
+  <div class="row" data-on><span class="w" style="width:56px"></span> <span class="w" style="width:36px"></span></div>
+  <div class="row"><span class="w" style="width:48px"></span> <span class="w" style="width:72px"></span></div>
+  <div class="row" data-kind="alpha"><span class="w" style="width:64px"></span> <span class="w" style="width:40px"></span></div>
+  <div class="row" data-kind="beta"><span class="w" style="width:52px"></span> <span class="w" style="width:80px"></span></div>
+  <div class="row" data-kind="alphabet"><span class="w" style="width:44px"></span> <span class="w" style="width:60px"></span></div>
+  <div class="row" lang="en"><span class="w" style="width:68px"></span> <span class="w" style="width:32px"></span></div>
+  <div class="row" lang="en-US"><span class="w" style="width:56px"></span> <span class="w" style="width:48px"></span></div>
+  <div class="row" lang="enx"><span class="w" style="width:40px"></span> <span class="w" style="width:76px"></span></div>
+  <div class="row" data-ci="mixed"><span class="w" style="width:60px"></span> <span class="w" style="width:44px"></span></div>
+  <div class="row" data-ci="MIXED"><span class="w" style="width:72px"></span> <span class="w" style="width:36px"></span></div>
 </body>
 </html>

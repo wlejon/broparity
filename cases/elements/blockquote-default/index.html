@@ -5,20 +5,21 @@
 <title>blockquote-default</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
-  body { width: 600px; }
+  body { width: 600px; line-height: 20px; }
   blockquote { background: #eef2e0; }
   #bq2 { background: #e0e8f2; }
   p { background: #f5e2d0; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
-<p id="pa">Leading paragraph before the quotation begins.</p>
+<p id="pa"><span class="w" style="width:56px"></span> <span class="w" style="width:80px"></span> <span class="w" style="width:44px"></span> <span class="w" style="width:64px"></span></p>
 <blockquote id="bq1">
-  <p id="pb">Quoted paragraph inside the outer blockquote.</p>
+  <p id="pb"><span class="w" style="width:48px"></span> <span class="w" style="width:72px"></span> <span class="w" style="width:36px"></span> <span class="w" style="width:60px"></span></p>
   <blockquote id="bq2">
-    <p id="pc">Nested quotation one level deeper.</p>
+    <p id="pc"><span class="w" style="width:52px"></span> <span class="w" style="width:88px"></span> <span class="w" style="width:40px"></span></p>
   </blockquote>
 </blockquote>
-<p id="pd">Trailing paragraph after the quotation ends.</p>
+<p id="pd"><span class="w" style="width:68px"></span> <span class="w" style="width:44px"></span> <span class="w" style="width:76px"></span> <span class="w" style="width:32px"></span></p>
 </body>
 </html>

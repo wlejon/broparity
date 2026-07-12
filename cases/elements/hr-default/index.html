@@ -5,18 +5,20 @@
 <title>hr-default</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; font-size: 16px; color: #202020; }
+  body { line-height: 20px; }
   body > div { width: 500px; background: #e2e8f0; }
   #h2 { width: 50%; }
   #h3 { border: 3px solid #c0504d; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
-<div id="a">Block above the bare hr</div>
+<div id="a"><span class="w" style="width:60px"></span> <span class="w" style="width:44px"></span> <span class="w" style="width:76px"></span></div>
 <hr id="h1">
-<div id="b">Between bare and half-width</div>
+<div id="b"><span class="w" style="width:52px"></span> <span class="w" style="width:88px"></span> <span class="w" style="width:36px"></span></div>
 <hr id="h2">
-<div id="c">Between half-width and styled</div>
+<div id="c"><span class="w" style="width:68px"></span> <span class="w" style="width:40px"></span> <span class="w" style="width:56px"></span></div>
 <hr id="h3">
-<div id="d">Block below the styled hr</div>
+<div id="d"><span class="w" style="width:48px"></span> <span class="w" style="width:80px"></span> <span class="w" style="width:32px"></span></div>
 </body>
 </html>

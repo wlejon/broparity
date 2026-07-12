@@ -15,14 +15,16 @@
     border: 2px solid #404040;
     background: #f0f0ff;
     box-sizing: content-box;
+    line-height: 20px;
   }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
   <div id="row">
-    <div class="ib">first</div>
-    <div class="ib">second</div>
-    <div class="ib">third</div>
+    <div class="ib"><span class="w" style="width:48px"></span> <span class="w" style="width:36px"></span></div>
+    <div class="ib"><span class="w" style="width:64px"></span> <span class="w" style="width:32px"></span></div>
+    <div class="ib"><span class="w" style="width:56px"></span> <span class="w" style="width:40px"></span></div>
   </div>
 </body>
 </html>

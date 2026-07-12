@@ -5,7 +5,8 @@
 <title>not-selector-list</title>
 <style>
   html, body { margin: 0; padding: 0; background: #ffffff; font-family: sans-serif; }
-  .item { width: 240px; height: 36px; margin: 8px; background: #dddddd; color: #202020; }
+  .item { width: 240px; height: 36px; margin: 8px; background: #dddddd; color: #202020; line-height: 18px; }
+  .w { display: inline-block; height: 12px; vertical-align: top; background: #b04030; }
 
   /* simple :not */
   .item:not(.skip) { background: #2e7d32; color: #ffffff; }
@@ -16,13 +17,13 @@
 </style>
 </head>
 <body>
-  <div class="item">plain (green, wide)</div>
-  <div class="item skip">skip (grey, narrow)</div>
-  <div class="item special">special (green, narrow)</div>
+  <div class="item"><span class="w" style="width:60px"></span> <span class="w" style="width:44px"></span></div>
+  <div class="item skip"><span class="w" style="width:48px"></span> <span class="w" style="width:72px"></span></div>
+  <div class="item special"><span class="w" style="width:56px"></span> <span class="w" style="width:36px"></span></div>
   <div class="group">
-    <div class="item">group first (no indent)</div>
-    <div class="item">group second (indent)</div>
-    <div class="item">group third (indent)</div>
+    <div class="item"><span class="w" style="width:64px"></span> <span class="w" style="width:40px"></span></div>
+    <div class="item"><span class="w" style="width:52px"></span> <span class="w" style="width:76px"></span></div>
+    <div class="item"><span class="w" style="width:44px"></span> <span class="w" style="width:68px"></span></div>
   </div>
 </body>
 </html>

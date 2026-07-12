@@ -8,13 +8,15 @@
   #wrap { margin: 30px; }
   #before, #after { width: 200px; height: 40px; background: #e0f0ff; border: 1px solid #4080c0; }
   #hidden { visibility: hidden; width: 200px; height: 40px; background: #ffe0e0; }
+  #wrap { line-height: 20px; }
+  .w { display: inline-block; height: 14px; vertical-align: top; background: #b04030; }
 </style>
 </head>
 <body>
   <div id="wrap">
-    <div id="before">before</div>
-    <div id="hidden">hidden</div>
-    <div id="after">after</div>
+    <div id="before"><span class="w" style="width:56px"></span> <span class="w" style="width:36px"></span></div>
+    <div id="hidden"><span class="w" style="width:64px"></span> <span class="w" style="width:44px"></span></div>
+    <div id="after"><span class="w" style="width:48px"></span> <span class="w" style="width:72px"></span></div>
   </div>
 </body>
 </html>
