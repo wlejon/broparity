@@ -1,6 +1,6 @@
 {
-  "runId": "2026-07-07T14-02-50-708Z",
-  "timestamp": "2026-07-07T14:05:46.773Z",
+  "runId": "2026-07-12T10-38-37-623Z",
+  "timestamp": "2026-07-12T10:42:04.968Z",
   "viewport": {
     "w": 800,
     "h": 600
@@ -14,15 +14,29 @@
     "cpuCount": 32,
     "gpus": [],
     "nodeVersion": "v24.8.0",
-    "detectedAt": "2026-07-07T14:05:46.773Z"
+    "detectedAt": "2026-07-12T10:42:04.968Z"
   },
   "overall": {
-    "layoutScore": 0.9655435899107299,
-    "pixelScore": 0.9904476268346898,
-    "caseCount": 284,
-    "categoryCount": 32
+    "layoutScore": 0.9691126090604941,
+    "pixelScore": 0.9937691300223208,
+    "caseCount": 320,
+    "categoryCount": 36
   },
   "categories": [
+    {
+      "name": "animation",
+      "n": 2,
+      "layoutScore": 1,
+      "pixelScore": 0.9996546052631579,
+      "errors": 0
+    },
+    {
+      "name": "atrules",
+      "n": 6,
+      "layoutScore": 0.9515951336675021,
+      "pixelScore": 0.9989774062600151,
+      "errors": 0
+    },
     {
       "name": "auth",
       "n": 3,
@@ -32,9 +46,9 @@
     },
     {
       "name": "backgrounds",
-      "n": 10,
+      "n": 11,
       "layoutScore": 1,
-      "pixelScore": 1,
+      "pixelScore": 0.9963583645735707,
       "errors": 0
     },
     {
@@ -55,14 +69,14 @@
       "name": "boxmodel",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9984803921568627,
+      "pixelScore": 0.9999105738993711,
       "errors": 0
     },
     {
       "name": "columns",
-      "n": 7,
+      "n": 8,
       "layoutScore": 1,
-      "pixelScore": 0.9949189660389474,
+      "pixelScore": 1,
       "errors": 0
     },
     {
@@ -74,16 +88,16 @@
     },
     {
       "name": "display-types",
-      "n": 12,
-      "layoutScore": 0.9,
-      "pixelScore": 0.9899305477908618,
+      "n": 13,
+      "layoutScore": 0.9027629233511587,
+      "pixelScore": 0.9946080695265155,
       "errors": 0
     },
     {
       "name": "editorial",
       "n": 3,
       "layoutScore": 1,
-      "pixelScore": 0.9998472222222222,
+      "pixelScore": 0.9996729166666666,
       "errors": 0
     },
     {
@@ -96,29 +110,36 @@
     {
       "name": "elements",
       "n": 8,
-      "layoutScore": 0.8681976010101011,
-      "pixelScore": 0.962350205386187,
+      "layoutScore": 0.8737373737373737,
+      "pixelScore": 0.9721276656804942,
       "errors": 0
     },
     {
       "name": "flex",
-      "n": 18,
-      "layoutScore": 0.9700000000000001,
-      "pixelScore": 0.994538401104481,
+      "n": 19,
+      "layoutScore": 1,
+      "pixelScore": 0.9996506459216966,
       "errors": 0
     },
     {
       "name": "floats",
       "n": 10,
-      "layoutScore": 1,
-      "pixelScore": 0.9684483332253588,
+      "layoutScore": 0.9354101358411704,
+      "pixelScore": 0.9933027553763442,
+      "errors": 0
+    },
+    {
+      "name": "fonts",
+      "n": 9,
+      "layoutScore": 0.8611397849462366,
+      "pixelScore": 0.9932458613241637,
       "errors": 0
     },
     {
       "name": "forms",
-      "n": 8,
-      "layoutScore": 0.772064393939394,
-      "pixelScore": 0.9790443545703158,
+      "n": 10,
+      "layoutScore": 0.8201515151515151,
+      "pixelScore": 0.987481705070633,
       "errors": 0
     },
     {
@@ -132,14 +153,14 @@
       "name": "gencontent",
       "n": 8,
       "layoutScore": 0.9708333333333333,
-      "pixelScore": 0.990423625917511,
+      "pixelScore": 0.9899575602269675,
       "errors": 0
     },
     {
       "name": "grid",
-      "n": 11,
+      "n": 13,
       "layoutScore": 1,
-      "pixelScore": 1,
+      "pixelScore": 0.9993801621205094,
       "errors": 0
     },
     {
@@ -152,8 +173,8 @@
     {
       "name": "lists",
       "n": 10,
-      "layoutScore": 1,
-      "pixelScore": 0.978381940489674,
+      "layoutScore": 0.9554648248528297,
+      "pixelScore": 0.9962756066452968,
       "errors": 0
     },
     {
@@ -187,8 +208,15 @@
     {
       "name": "rtl",
       "n": 6,
-      "layoutScore": 0.96301247771836,
-      "pixelScore": 0.9934872826242258,
+      "layoutScore": 1,
+      "pixelScore": 0.9992566872427983,
+      "errors": 0
+    },
+    {
+      "name": "selectors",
+      "n": 9,
+      "layoutScore": 1,
+      "pixelScore": 0.999956304619226,
       "errors": 0
     },
     {
@@ -201,29 +229,29 @@
     {
       "name": "sizing",
       "n": 10,
-      "layoutScore": 0.9800000000000001,
-      "pixelScore": 0.999288043478261,
+      "layoutScore": 1,
+      "pixelScore": 1,
       "errors": 0
     },
     {
       "name": "svg",
-      "n": 7,
-      "layoutScore": 0.969047619047619,
-      "pixelScore": 0.9988553571428571,
+      "n": 8,
+      "layoutScore": 0.9729166666666667,
+      "pixelScore": 0.9989961054104477,
       "errors": 0
     },
     {
       "name": "tables",
       "n": 29,
-      "layoutScore": 0.8558313207260576,
-      "pixelScore": 0.9665530892847228,
+      "layoutScore": 0.9752417607184342,
+      "pixelScore": 0.9769871211830518,
       "errors": 0
     },
     {
       "name": "text",
       "n": 8,
       "layoutScore": 0.9083333333333333,
-      "pixelScore": 0.9564457475951808,
+      "pixelScore": 0.9564319608304749,
       "errors": 0
     },
     {
@@ -236,15 +264,15 @@
     {
       "name": "typography",
       "n": 12,
-      "layoutScore": 0.8808155387758968,
-      "pixelScore": 0.9564759590580841,
+      "layoutScore": 0.8896390681876615,
+      "pixelScore": 0.9560624979411988,
       "errors": 0
     },
     {
       "name": "values",
-      "n": 7,
-      "layoutScore": 0.888888888888889,
-      "pixelScore": 0.9979749049549651,
+      "n": 8,
+      "layoutScore": 0.900457702020202,
+      "pixelScore": 0.9985144193515927,
       "errors": 0
     }
   ]

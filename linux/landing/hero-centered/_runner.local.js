@@ -2,12 +2,12 @@
 // then screenshots to BROPARITY_OUT_PNG. Output paths come from env (we inline them
 // per-invocation via -e since bro-headless does not expose process.env directly).
 //
-// Configuration: the orchestrator overwrites this file's /home/j/projects/broparity/out/2026-07-07T14-02-50-708Z/landing/hero-centered/bro.layout.json / /home/j/projects/broparity/out/2026-07-07T14-02-50-708Z/landing/hero-centered/bro.png
+// Configuration: the orchestrator overwrites this file's /home/j/projects/broparity/out/2026-07-12T10-38-37-623Z/landing/hero-centered/bro.layout.json / /home/j/projects/broparity/out/2026-07-12T10-38-37-623Z/landing/hero-centered/bro.png
 // placeholders before each run, OR passes a tiny bootstrap via -e. We use the
 // placeholder approach for simplicity.
 
-const OUT_JSON = "/home/j/projects/broparity/out/2026-07-07T14-02-50-708Z/landing/hero-centered/bro.layout.json";
-const OUT_PNG = "/home/j/projects/broparity/out/2026-07-07T14-02-50-708Z/landing/hero-centered/bro.png";
+const OUT_JSON = "/home/j/projects/broparity/out/2026-07-12T10-38-37-623Z/landing/hero-centered/bro.layout.json";
+const OUT_PNG = "/home/j/projects/broparity/out/2026-07-12T10-38-37-623Z/landing/hero-centered/bro.png";
 
 const STYLE_PROPS = [
   "display", "position",
