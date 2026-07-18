@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-direction</title>
+<style>
+  /* The Canvas2D `direction` attribute and its effect on `textAlign`.
+
+     Two things are under test and they are easy to confuse. `direction`
+     changes the base the bidi algorithm resolves against, which decides the
+     order of multiple direction runs and how neutrals and numbers at the edges
+     attach. Separately, `start` and `end` are direction-relative anchors:
+     under `rtl` the start edge is the RIGHT one, while `left` and `right` stay
+     absolute. An engine that treats start as left and end as right looks
+     correct until direction is rtl.
+
+     Alignment is verified numerically as well as visually: each drawn string's
+     measured extent is projected into a DOM box, so the anchor arithmetic is
+     compared against Chromium with the rect diff rather than by eye. */
+  html, body { margin: 0; padding: 0; background: #fff; color: #202020;
+               font-family: Arial; font-size: 12px; }
+  .probe { height: 6px; background: #ffe8d8; margin: 1px 0; }
+  canvas { display: block; border-bottom: 1px solid #ccc; }
+</style>
+</head>
+<body>
+  <canvas id="cv" width="760" height="330"></canvas>
+  <div id="out"></div>
+<script>
+(function () {
+  var ctx = document.getElementById('cv').getContext('2d');
+  var out = document.getElementById('out');
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, 760, 330);
+
+  function emit(id, value) {
+    var d = document.createElement('div');
+    d.className = 'probe';
+    d.id = id;
+    var v = (typeof value === 'number' && isFinite(value)) ? value : -200;
+    d.style.width = (v + 200).toFixed(2) + 'px';
+    out.appendChild(d);
+  }
+
+  ctx.font = '28px Arial';
+  ctx.textBaseline = 'alphabetic';
+
+  // A tick at the anchor x of every line, so the pixel diff shows where the
+  // text sits relative to the point it was asked to sit at.
+  function tick(x, y) {
+    ctx.fillStyle = '#c02020';
+    ctx.fillRect(x - 0.5, y - 24, 1, 30);
+    ctx.fillStyle = '#202020';
+  }
+
+  var ANCHOR = 380;
+  var dirs = ['ltr', 'rtl'];
+  var aligns = ['start', 'center', 'right', 'end', 'left'];
+  var y = 30;
+
+  // Latin text under both bases: the glyphs never change, only where the
+  // anchor puts them. This isolates the alignment arithmetic from bidi.
+  for (var d = 0; d < dirs.length; d++) {
+    for (var a = 0; a < aligns.length; a++) {
+      ctx.direction = dirs[d];
+      ctx.textAlign = aligns[a];
+      tick(ANCHOR, y);
+      ctx.fillText('Anchor', ANCHOR, y);
+      var m = ctx.measureText('Anchor');
+      emit('lat-' + dirs[d] + '-' + aligns[a] + '-l', m.actualBoundingBoxLeft);
+      emit('lat-' + dirs[d] + '-' + aligns[a] + '-r', m.actualBoundingBoxRight);
+      y += 30;
+    }
+  }
+
+  // Bidi proper: the same string under each base. "abc שלום 123" resolves
+  // differently ltr vs rtl — the number attaches to a different side and the
+  // runs swap order — so these two lines must NOT look alike.
+  var mixed = 'abc שלום 123';
+  ctx.textAlign = 'left';
+  ctx.direction = 'ltr';
+  tick(20, y); ctx.fillText(mixed, 20, y); y += 34;
+  ctx.direction = 'rtl';
+  tick(20, y); ctx.fillText(mixed, 20, y); y += 34;
+
+  // Pure RTL with a direction-relative anchor: under rtl, `start` is the right
+  // edge, so this line grows leftward from the tick.
+  ctx.direction = 'rtl';
+  ctx.textAlign = 'start';
+  tick(740, y); ctx.fillText('שלום עולם', 740, y); y += 34;
+  ctx.textAlign = 'end';
+  tick(20, y); ctx.fillText('שלום עולם', 20, y);
+
+  // The measured extents of both bases, for the numeric comparison.
+  ctx.textAlign = 'left';
+  ctx.direction = 'ltr';
+  emit('mix-ltr-w', ctx.measureText(mixed).width);
+  emit('mix-ltr-l', ctx.measureText(mixed).actualBoundingBoxLeft);
+  emit('mix-ltr-r', ctx.measureText(mixed).actualBoundingBoxRight);
+  ctx.direction = 'rtl';
+  emit('mix-rtl-w', ctx.measureText(mixed).width);
+  emit('mix-rtl-l', ctx.measureText(mixed).actualBoundingBoxLeft);
+  emit('mix-rtl-r', ctx.measureText(mixed).actualBoundingBoxRight);
+  ctx.direction = 'ltr';
+})();
+</script>
+</body>
+</html>

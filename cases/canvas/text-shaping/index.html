@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-shaping</title>
+<style>
+  /* Canvas2D text RENDERING through the shaper — the pixel counterpart to
+     text-metrics, which only compares numbers.
+
+     Everything here is drawn twice at the same y: once as canvas text and,
+     directly below it, the same string as DOM text in the same font. If the
+     canvas path and the DOM path shape differently, the two rows stop lining
+     up and the pixel diff shows it as a doubled edge. That makes this a check
+     that canvas and the rest of the engine share one text stack, not just
+     that canvas draws something.
+
+     Strings are chosen for what shaping does to them: kerned pairs, the fi/ffl
+     ligatures, Arabic joining forms (a letter's glyph depends on its
+     neighbours), and Hebrew ordering. */
+  html, body { margin: 0; padding: 0; background: #fff; color: #202020; }
+  .pair { margin: 0 0 6px 0; }
+  .dom { font: 32px Arial; line-height: 40px; height: 40px;
+         margin: 0; padding: 0 0 0 8px; color: #202020; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+  <canvas id="cv" width="760" height="360"></canvas>
+  <div class="pair"><p class="dom">AV To AVATAR WAVE</p></div>
+  <div class="pair"><p class="dom" style="font-family:Calibri">office fluffy waffle first</p></div>
+  <div class="pair"><p class="dom">Wg Yo. LTA VA Ty</p></div>
+  <div class="pair"><p class="dom" dir="rtl">שלום עולם גדול</p></div>
+  <div class="pair"><p class="dom" dir="rtl">مرحبا بالعالم</p></div>
+  <div class="pair"><p class="dom">abc שלום 123 def</p></div>
+<script>
+(function () {
+  var ctx = document.getElementById('cv').getContext('2d');
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, 760, 360);
+  ctx.fillStyle = '#202020';
+  ctx.textBaseline = 'alphabetic';
+
+  // The same six strings the DOM rows below use, at the same size and font.
+  var rows = [
+    ['32px Arial', 'AV To AVATAR WAVE', 'ltr'],
+    ['32px Calibri', 'office fluffy waffle first', 'ltr'],
+    ['32px Arial', 'Wg Yo. LTA VA Ty', 'ltr'],
+    ['32px Arial', 'שלום עולם גדול', 'rtl'],
+    ['32px Arial', 'مرحبا بالعالم', 'rtl'],
+    ['32px Arial', 'abc שלום 123 def', 'ltr']
+  ];
+  for (var i = 0; i < rows.length; i++) {
+    ctx.font = rows[i][0];
+    ctx.direction = rows[i][2];
+    ctx.textAlign = rows[i][2] === 'rtl' ? 'right' : 'left';
+    ctx.fillText(rows[i][1], rows[i][2] === 'rtl' ? 752 : 8, 30 + i * 40);
+  }
+  ctx.direction = 'ltr';
+  ctx.textAlign = 'left';
+
+  // Stroked text goes through the same shaped blob as filled text; a path
+  // that only shaped the fill case would show a mismatched outline here.
+  ctx.font = '32px Arial';
+  ctx.strokeStyle = '#b04030';
+  ctx.lineWidth = 1;
+  ctx.strokeText('Stroked AVATAR office', 8, 270);
+
+  // Scaled and rotated text: shaping happens in user space, so the glyph
+  // sequence must be identical and only the transform differs.
+  ctx.save();
+  ctx.translate(8, 310);
+  ctx.scale(1.5, 1.5);
+  ctx.fillText('Scaled AV', 0, 0);
+  ctx.restore();
+
+  ctx.save();
+  ctx.translate(400, 300);
+  ctx.rotate(-0.15);
+  ctx.fillText('Rotated To', 0, 0);
+  ctx.restore();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-metrics</title>
+<style>
+  /* Canvas2D TextMetrics, compared numerically rather than by eye.
+
+     A canvas's contents are invisible to the layout dump, so measuring text
+     on a canvas and only rendering it would give this suite nothing but a
+     pixel ratio. Instead each measured value is projected into the WIDTH of a
+     DOM box, which the rect diff then compares against Chromium's answer with
+     its 1px epsilon. Any drift in an advance, an ink extent or a baseline
+     offset shows up as a rect delta on a named element.
+
+     Values are offset by +200px so negative metrics (an ideographic baseline,
+     an ink box that starts right of the anchor) stay representable as widths. */
+  html, body { margin: 0; padding: 0; background: #fff; color: #202020;
+               font-family: Arial; font-size: 12px; }
+  .probe { height: 6px; background: #d8e8ff; margin: 1px 0; }
+  .lbl { font-size: 10px; color: #606060; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+  <canvas id="cv" width="10" height="10"></canvas>
+  <div id="out"></div>
+<script>
+(function () {
+  var ctx = document.getElementById('cv').getContext('2d');
+  var out = document.getElementById('out');
+
+  // Every field of the metrics object, over strings chosen so the ink box and
+  // the font box disagree: "Hello" has no descender, "gjpqy" is all descender,
+  // "ÀÉÎ" reaches above the cap height.
+  var FIELDS = [
+    'width',
+    'actualBoundingBoxLeft', 'actualBoundingBoxRight',
+    'actualBoundingBoxAscent', 'actualBoundingBoxDescent',
+    'fontBoundingBoxAscent', 'fontBoundingBoxDescent',
+    'hangingBaseline', 'alphabeticBaseline', 'ideographicBaseline'
+  ];
+  // emHeightAscent and emHeightDescent are deliberately NOT probed here.
+  // They are in the spec and bro reports them (from the face's OS/2
+  // typographic metrics, which is the same quantity `textBaseline: top`
+  // names), but Chromium does not implement them at all — it returns
+  // undefined — so a probe would be a permanent delta against nothing.
+  // tests/canvas/test_canvas_text_shaping.js asserts them in-repo instead.
+
+  function emit(id, value) {
+    var d = document.createElement('div');
+    d.className = 'probe';
+    d.id = id;
+    // +200 keeps negatives positive; NaN/undefined collapses to 0 so a missing
+    // field reads as an obvious zero-width box rather than a broken layout.
+    var v = (typeof value === 'number' && isFinite(value)) ? value : -200;
+    d.style.width = (v + 200).toFixed(2) + 'px';
+    out.appendChild(d);
+  }
+
+  function probe(tag, font, text) {
+    ctx.font = font;
+    var m = ctx.measureText(text);
+    for (var i = 0; i < FIELDS.length; i++) {
+      emit(tag + '-' + FIELDS[i], m[FIELDS[i]]);
+    }
+  }
+
+  probe('a', '32px Arial', 'Hello');
+  probe('b', '32px Arial', 'gjpqy');
+  probe('c', '32px Arial', 'ÀÉÎ');
+  probe('d', '16px Arial', 'The quick brown fox');
+  probe('e', 'bold 24px Arial', 'Bold Text');
+  probe('f', 'italic 24px Arial', 'Italic Text');
+  probe('g', '48px Georgia', 'Georgia Wg');
+  probe('h', '20px "Times New Roman"', 'Times Wg');
+
+  // The metrics are anchor-relative, so textAlign and textBaseline move them
+  // without changing a single glyph. These probes are what catch an
+  // implementation that reports a fixed box and ignores the anchor.
+  var aligns = ['start', 'center', 'right', 'end', 'left'];
+  for (var i = 0; i < aligns.length; i++) {
+    ctx.font = '32px Arial';
+    ctx.textAlign = aligns[i];
+    var m = ctx.measureText('Anchored');
+    emit('align-' + aligns[i] + '-left', m.actualBoundingBoxLeft);
+    emit('align-' + aligns[i] + '-right', m.actualBoundingBoxRight);
+    emit('align-' + aligns[i] + '-width', m.width);
+  }
+  ctx.textAlign = 'start';
+
+  var baselines = ['alphabetic', 'top', 'middle', 'bottom', 'hanging', 'ideographic'];
+  for (var j = 0; j < baselines.length; j++) {
+    ctx.font = '32px Arial';
+    ctx.textBaseline = baselines[j];
+    var mb = ctx.measureText('Baseline');
+    emit('base-' + baselines[j] + '-asc', mb.actualBoundingBoxAscent);
+    emit('base-' + baselines[j] + '-desc', mb.actualBoundingBoxDescent);
+    emit('base-' + baselines[j] + '-alpha', mb.alphabeticBaseline);
+  }
+  ctx.textBaseline = 'alphabetic';
+
+  // Shaping proper: a kerned pair must be narrower than its parts measured
+  // apart, and a ligature must not be wider than its letters. These are the
+  // probes that separate a real shaper from a per-codepoint advance sum.
+  ctx.font = '40px Arial';
+  emit('kern-AV', ctx.measureText('AV').width);
+  emit('kern-A', ctx.measureText('A').width);
+  emit('kern-V', ctx.measureText('V').width);
+  emit('kern-To', ctx.measureText('To').width);
+  emit('kern-T', ctx.measureText('T').width);
+  emit('kern-o', ctx.measureText('o').width);
+  emit('kern-AVATAR', ctx.measureText('AVATAR').width);
+  emit('kern-WAVEYo', ctx.measureText('WAVEYo.').width);
+  // NOT probed: a kerned string with a space in it, e.g. "WAVE Yo.". bro
+  // shapes the whole string and so kerns the E-space-Y sequence; Chromium
+  // shapes word by word (its shaping cache is keyed per word) and adds a
+  // plain space advance between, so it does not. The two differ by ~0.7px on
+  // that string — inside the 1px rect gate, outside the 0.5px style gate.
+  // Neither is wrong per spec and closing it would mean segmenting every
+  // shaping call in the engine on whitespace, so it is recorded here rather
+  // than hidden by a probe that reports a permanent delta.
+
+  ctx.font = '40px Calibri';
+  emit('liga-office', ctx.measureText('office').width);
+  emit('liga-fi', ctx.measureText('fi').width);
+  emit('liga-f', ctx.measureText('f').width);
+  emit('liga-i', ctx.measureText('i').width);
+  emit('liga-fluffy', ctx.measureText('fluffy waffle').width);
+
+  // Non-Latin advances, where a per-codepoint mapping and a shaper diverge
+  // most: Arabic joining forms have different widths from isolated letters.
+  ctx.font = '32px Arial';
+  emit('heb-shalom', ctx.measureText('שלום').width);
+  emit('heb-sentence', ctx.measureText('שלום עולם').width);
+  emit('ara-salam', ctx.measureText('السلام').width);
+  emit('ara-word', ctx.measureText('بالعالم').width);
+  emit('ara-word2', ctx.measureText('اليوم').width);
+  emit('ara-sentence', ctx.measureText('مرحبا بالعالم').width);
+  emit('mixed-num', ctx.measureText('abc שלום 123 def').width);
+
+  // The base direction changes order and neutral resolution, not the advance
+  // of a uniform run. These two must agree.
+  ctx.direction = 'ltr';
+  emit('dir-ltr-heb', ctx.measureText('שלום').width);
+  ctx.direction = 'rtl';
+  emit('dir-rtl-heb', ctx.measureText('שלום').width);
+  ctx.direction = 'ltr';
+})();
+</script>
+</body>
+</html>

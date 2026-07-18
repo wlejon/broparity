@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-rtl</title>
+<style>
+  /* SVG <text> under a right-to-left base direction.
+
+     cases/svg/text-labels covers LTR <text> geometry. Nothing covered what a
+     base direction does to it, and the answer is not "the same layout mirrored":
+     an SVG <text> is a sequence of runs split by <tspan> and by absolute x
+     resets, and reordering has to happen across those run boundaries over a
+     whole text chunk. A run boundary is not a paragraph boundary — the bidi W
+     and N rules see across it, so a number between two Hebrew tspans resolves
+     differently than it would in isolation.
+
+     `direction` is exercised both as a CSS property and as an SVG presentation
+     attribute, because they are two different routes into the cascade and only
+     one of them used to work.
+
+     text-anchor is direction-relative in SVG: under rtl, `start` is the right
+     edge. The anchored rows below are what catch an implementation that
+     reorders correctly but anchors from the wrong side.
+
+     EXPECTED: 5 rect deltas, all of them WIDTHS, none of them x positions.
+     They are a pre-existing disagreement about what an SVG text bounding box
+     IS, not about where this case puts anything: bro reports the pen advance,
+     Chromium reports something ink-derived and about a pixel wider. The same
+     disagreement is why cases/svg/text-labels has carried rectΔ=2 since long
+     before RTL text existed here. It is not simply "use the ink box" — trying
+     that (ink on both ends, then pen-origin-to-ink-right) moved text-labels to
+     13 and then 7, so Chromium's actual rule is something else again and
+     finding it is a job for an SVG geometry pass, not a text-ordering one.
+
+     What this case is really asserting is therefore the x column, which is
+     what reordering and anchoring produce, and which matches Chromium to
+     within 0.02px on every row. */
+  html, body { margin: 0; padding: 0; background: #fff; color: #202020; }
+  svg { display: block; }
+  text { font-family: Arial; font-size: 20px; }
+  .bg { fill: #f4f4f4; }
+  .hl { fill: #b04030; }
+</style>
+</head>
+<body>
+  <svg width="760" height="520" xmlns="http://www.w3.org/2000/svg">
+    <!-- Baseline: LTR, so this row must be unaffected by any of it. -->
+    <rect class="bg" x="0" y="4" width="756" height="28"/>
+    <text id="t1" x="10" y="26">Latin <tspan class="hl">tspan</tspan> run</text>
+
+    <!-- RTL via the presentation attribute. Two Hebrew runs split by a tspan:
+         the tspan must end up on the LEFT. -->
+    <rect class="bg" x="0" y="36" width="756" height="28"/>
+    <text id="t2" x="10" y="58" direction="rtl">שלום <tspan class="hl">עולם</tspan> גדול</text>
+
+    <!-- The same thing via CSS, which must agree exactly with the attribute. -->
+    <rect class="bg" x="0" y="68" width="756" height="28"/>
+    <text id="t3" x="10" y="90" style="direction:rtl">שלום <tspan class="hl">עולם</tspan> גדול</text>
+
+    <!-- Arabic, where joining forms mean a wrong result is a shaping error as
+         well as an ordering one. -->
+    <rect class="bg" x="0" y="100" width="756" height="28"/>
+    <text id="t4" x="10" y="122" direction="rtl">مرحبا <tspan class="hl">بالعالم</tspan> اليوم</text>
+
+    <!-- A number between two Hebrew tspans. This is the case that separates
+         per-run resolution from whole-chunk resolution: resolved in isolation
+         the digits are a neutral LTR island, resolved across the chunk they
+         attach to the surrounding Hebrew. -->
+    <rect class="bg" x="0" y="132" width="756" height="28"/>
+    <text id="t5" x="10" y="154" direction="rtl">שלום <tspan class="hl">123</tspan> עולם</text>
+
+    <!-- A Latin island inside RTL: the run order flips around it but the Latin
+         itself still reads left to right. -->
+    <rect class="bg" x="0" y="164" width="756" height="28"/>
+    <text id="t6" x="10" y="186" direction="rtl">שלום <tspan class="hl">Hello</tspan> עולם</text>
+
+    <!-- text-anchor under rtl. start = right edge, end = left edge, middle is
+         the same either way. All three anchor on x=380. -->
+    <rect class="bg" x="0" y="196" width="756" height="28"/>
+    <line x1="380" y1="196" x2="380" y2="224" stroke="#c02020"/>
+    <text id="t7" x="380" y="218" direction="rtl" text-anchor="start">שלום עולם</text>
+
+    <rect class="bg" x="0" y="228" width="756" height="28"/>
+    <line x1="380" y1="228" x2="380" y2="256" stroke="#c02020"/>
+    <text id="t8" x="380" y="250" direction="rtl" text-anchor="middle">שלום עולם</text>
+
+    <rect class="bg" x="0" y="260" width="756" height="28"/>
+    <line x1="380" y1="260" x2="380" y2="288" stroke="#c02020"/>
+    <text id="t9" x="380" y="282" direction="rtl" text-anchor="end">שלום עולם</text>
+
+    <!-- The same three anchors under ltr, so the pair can be compared. -->
+    <rect class="bg" x="0" y="292" width="756" height="28"/>
+    <line x1="380" y1="292" x2="380" y2="320" stroke="#c02020"/>
+    <text id="t10" x="380" y="314" text-anchor="start">LatinAnchor</text>
+
+    <rect class="bg" x="0" y="324" width="756" height="28"/>
+    <line x1="380" y1="324" x2="380" y2="352" stroke="#c02020"/>
+    <text id="t11" x="380" y="346" text-anchor="middle">LatinAnchor</text>
+
+    <rect class="bg" x="0" y="356" width="756" height="28"/>
+    <line x1="380" y1="356" x2="380" y2="384" stroke="#c02020"/>
+    <text id="t12" x="380" y="378" text-anchor="end">LatinAnchor</text>
+
+    <!-- An absolute x on a tspan starts a new text chunk, so the two chunks
+         reorder independently of each other. -->
+    <rect class="bg" x="0" y="388" width="756" height="28"/>
+    <text id="t13" x="10" y="410" direction="rtl">שלום <tspan class="hl" x="400">עולם גדול</tspan></text>
+
+    <!-- Nested tspans, and a dx offset inside an RTL chunk. -->
+    <rect class="bg" x="0" y="420" width="756" height="28"/>
+    <text id="t14" x="10" y="442" direction="rtl">שלום <tspan class="hl">עולם <tspan>גדול</tspan></tspan></text>
+
+    <!-- RTL text with no tspans at all: a single run, so this isolates the
+         shaping and the anchor from the run reordering entirely. -->
+    <rect class="bg" x="0" y="452" width="756" height="28"/>
+    <text id="t15" x="10" y="474" direction="rtl">שלום עולם גדול היום</text>
+
+    <!-- dominant-baseline still applies under rtl. -->
+    <rect class="bg" x="0" y="484" width="756" height="30"/>
+    <text id="t16" x="10" y="500" direction="rtl" dominant-baseline="middle">שלום עולם</text>
+  </svg>
+</body>
+</html>
