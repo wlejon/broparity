@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-bidi-numbers</title>
+<style>
+  /* Numbers are where a naive "reverse everything RTL" implementation shows
+     itself. European digits after a right-to-left run resolve one embedding
+     level ABOVE it, so they keep their own left-to-right order inside a line
+     that otherwise reads right to left: "1234" must never come out "4321",
+     and a phone number embedded in Arabic must not have its parts swapped. */
+  html, body { margin: 0; padding: 0; background: #fff; color: #202020; }
+  .p { font-family: Arial; font-size: 20px; line-height: 28px;
+       width: 560px; margin: 10px; background: #f4f4f4; }
+  .w { background: #ffe8d0; }
+  .h { background: #e0ffe0; }
+  .n { background: #d8e8ff; }
+</style>
+</head>
+<body>
+  <!-- Digits between two Arabic words, RTL base. -->
+  <p class="p" dir="rtl" id="p1"><span class="w" id="a1">مرحبا</span> <span class="n" id="a2">1234</span> <span class="w" id="a3">بالعالم</span></p>
+
+  <!-- A multi-part Latin island inside an RTL line. The island's own words
+       stay in left-to-right order while the line around them reverses. -->
+  <p class="p" dir="rtl" id="p2"><span class="w" id="b1">مرحبا</span> <span class="n" id="b2">abc</span> <span class="n" id="b3">123</span> <span class="w" id="b4">بالعالم</span></p>
+
+  <!-- The mirror: an RTL island inside an LTR line, with digits. -->
+  <p class="p" dir="ltr" id="p3"><span class="n" id="c1">total</span> <span class="h" id="c2">שלום</span> <span class="h" id="c3">עולם</span> <span class="n" id="c4">42</span></p>
+
+  <!-- Arabic-Indic digits, whose bidi class is AN rather than EN — they
+       resolve differently from European digits and belong to the RTL run. -->
+  <p class="p" dir="rtl" id="p4"><span class="w" id="d1">مرحبا</span> <span class="w" id="d2">١٢٣٤</span> <span class="w" id="d3">بالعالم</span></p>
+
+  <!-- Punctuation between digits: a neutral inside a number run. -->
+  <p class="p" dir="rtl" id="p5"><span class="w" id="e1">صفحة</span> <span class="n" id="e2">3.14</span> <span class="w" id="e3">من</span></p>
+
+  <!-- Raw text for the pixel comparison. -->
+  <p class="p" dir="rtl" id="p6">مرحبا abc 123 بالعالم</p>
+</body>
+</html>

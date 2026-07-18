@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-arabic-paragraph</title>
+<style>
+  /* Arabic text in visual order (UAX #9). Every word is wrapped in a span so
+     the layout dump carries one rect per word — that turns "did the line
+     reorder" into a numeric comparison of x positions rather than a pixel
+     judgement, which is what this harness compares reliably.
+
+     Arial is named explicitly because it carries Arabic on every platform this
+     runs on; leaving it to the fallback chain would let the two engines pick
+     different faces and turn a correctness test into a font test. */
+  html, body { margin: 0; padding: 0; background: #fff; color: #202020; }
+  .p { font-family: Arial; font-size: 20px; line-height: 28px;
+       width: 520px; margin: 10px; background: #f4f4f4; }
+  .w { background: #ffe8d0; }
+  .n { background: #d8e8ff; }
+</style>
+</head>
+<body>
+  <!-- An Arabic paragraph with an explicit RTL base: words run right to left. -->
+  <p class="p" dir="rtl" id="p1"><span class="w" id="a1">مرحبا</span> <span class="w" id="a2">بالعالم</span> <span class="w" id="a3">اليوم</span> <span class="w" id="a4">جميل</span></p>
+
+  <!-- The same content in an LTR block. The paragraph is still Arabic, so the
+       words still run right to left; only the line's alignment differs. -->
+  <p class="p" dir="ltr" id="p2"><span class="w" id="b1">مرحبا</span> <span class="w" id="b2">بالعالم</span> <span class="w" id="b3">اليوم</span> <span class="w" id="b4">جميل</span></p>
+
+  <!-- Arabic wrapping across two lines: each line reorders independently. -->
+  <p class="p" dir="rtl" id="p3" style="width:240px"><span class="w" id="c1">مرحبا</span> <span class="w" id="c2">بالعالم</span> <span class="w" id="c3">اليوم</span> <span class="w" id="c4">جميل</span> <span class="w" id="c5">جدا</span></p>
+
+  <!-- An Arabic run inside an otherwise Latin paragraph: only the island moves. -->
+  <p class="p" dir="ltr" id="p4"><span class="n" id="d1">start</span> <span class="w" id="d2">مرحبا</span> <span class="w" id="d3">بالعالم</span> <span class="n" id="d4">end</span></p>
+
+  <!-- Raw text, no spans: the pixel comparison for shaped + reordered Arabic. -->
+  <p class="p" dir="rtl" id="p5">مرحبا بالعالم اليوم جميل</p>
+</body>
+</html>

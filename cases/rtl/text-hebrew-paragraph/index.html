@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text-hebrew-paragraph</title>
+<style>
+  /* Hebrew differs from Arabic in one way that matters here: it has no
+     joining behaviour, so a wrong result is a pure ordering error with no
+     shaping error mixed into it. That makes this the cleaner of the two
+     cases to read when something breaks. */
+  html, body { margin: 0; padding: 0; background: #fff; color: #202020; }
+  .p { font-family: Arial; font-size: 20px; line-height: 28px;
+       width: 520px; margin: 10px; background: #f4f4f4; }
+  .w { background: #e0ffe0; }
+  .n { background: #d8e8ff; }
+</style>
+</head>
+<body>
+  <!-- Hebrew with an RTL base. -->
+  <p class="p" dir="rtl" id="p1"><span class="w" id="a1">שלום</span> <span class="w" id="a2">עולם</span> <span class="w" id="a3">גדול</span></p>
+
+  <!-- Hebrew in an LTR block: still reads right to left, but the line begins
+       at the left edge. This is the case that a direction-only implementation
+       gets wrong — every box in the right place, the sentence backwards. -->
+  <p class="p" dir="ltr" id="p2"><span class="w" id="b1">שלום</span> <span class="w" id="b2">עולם</span> <span class="w" id="b3">גדול</span></p>
+
+  <!-- A bolded word inside a Hebrew paragraph. Bidi does not stop at an
+       element boundary: the <b> reorders with the rest of the sentence. -->
+  <p class="p" dir="rtl" id="p3"><span class="w" id="c1">שלום</span> <b class="w" id="c2">עולם</b> <span class="w" id="c3">גדול</span></p>
+
+  <!-- An explicit dir="ltr" island inside a Hebrew paragraph isolates: its
+       contents resolve on their own and the span sits at the opposite level. -->
+  <p class="p" dir="rtl" id="p4"><span class="w" id="d1">שלום</span> <span class="n" dir="ltr" id="d2">Hello World</span> <span class="w" id="d3">גדול</span></p>
+
+  <!-- Raw text for the pixel comparison. -->
+  <p class="p" dir="ltr" id="p5">שלום עולם גדול</p>
+</body>
+</html>
