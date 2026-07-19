@@ -1,8 +1,8 @@
 {
   "summary": {
     "totalElements": 25,
-    "rectMismatches": 4,
-    "styleMismatches": 4,
+    "rectMismatches": 0,
+    "styleMismatches": 0,
     "geomEpsilon": 1,
     "styleEpsilon": 0.5
   },
@@ -74,7 +74,7 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": 0.31400000000000006,
+        "dw": -0.006000000000000227,
         "dh": 0
       },
       "rectMismatch": false,
@@ -82,7 +82,7 @@
         "rect": {
           "x": 8,
           "y": 4,
-          "w": 46.72,
+          "w": 46.4,
           "h": 40
         }
       },
@@ -224,7 +224,7 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": 0.15400000000000347,
+        "dw": -0.006000000000000227,
         "dh": 0
       },
       "rectMismatch": false,
@@ -232,7 +232,7 @@
         "rect": {
           "x": 8,
           "y": 92,
-          "w": 44.576,
+          "w": 44.416,
           "h": 40
         }
       },
@@ -374,15 +374,15 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": 3.1920000000000073,
+        "dw": -0.007999999999981355,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 8,
           "y": 180,
-          "w": 138.208,
+          "w": 135.008,
           "h": 40
         }
       },
@@ -394,13 +394,8 @@
           "h": 40
         }
       },
-      "styleDeltas": {
-        "width": [
-          "138.208px",
-          "135.016px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(6)",
@@ -439,15 +434,15 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": 2.375,
+        "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 8,
           "y": 224,
-          "w": 42.688,
+          "w": 40.313,
           "h": 40
         }
       },
@@ -459,13 +454,8 @@
           "h": 40
         }
       },
-      "styleDeltas": {
-        "width": [
-          "42.688px",
-          "40.313px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(7)",
@@ -594,15 +584,15 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": 3.547000000000004,
+        "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 8,
           "y": 312,
-          "w": 37.344,
+          "w": 33.797,
           "h": 40
         }
       },
@@ -614,13 +604,8 @@
           "h": 40
         }
       },
-      "styleDeltas": {
-        "width": [
-          "37.344px",
-          "33.797px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     },
     {
       "path": "body>div:nth-of-type(9)",
@@ -749,15 +734,15 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": 16.577999999999975,
+        "dw": 0,
         "dh": 0
       },
-      "rectMismatch": true,
+      "rectMismatch": false,
       "bro": {
         "rect": {
           "x": 8,
           "y": 400,
-          "w": 288.078,
+          "w": 271.5,
           "h": 40
         }
       },
@@ -769,13 +754,8 @@
           "h": 40
         }
       },
-      "styleDeltas": {
-        "width": [
-          "288.078px",
-          "271.5px"
-        ]
-      },
-      "styleMismatch": true
+      "styleDeltas": {},
+      "styleMismatch": false
     }
   ]
 }

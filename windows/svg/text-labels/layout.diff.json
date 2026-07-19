@@ -1,7 +1,7 @@
 {
   "summary": {
     "totalElements": 30,
-    "rectMismatches": 1,
+    "rectMismatches": 2,
     "styleMismatches": 0,
     "geomEpsilon": 1,
     "styleEpsilon": 0.5
@@ -344,15 +344,15 @@
       "rectDelta": {
         "dx": 1,
         "dy": -0.45600000000000307,
-        "dw": -0.6730000000000018,
+        "dw": -1.281000000000006,
         "dh": 0.5850000000000009
       },
-      "rectMismatch": false,
+      "rectMismatch": true,
       "bro": {
         "rect": {
           "x": 431.747,
           "y": 41.418,
-          "w": 168.276,
+          "w": 167.668,
           "h": 37.585
         }
       },

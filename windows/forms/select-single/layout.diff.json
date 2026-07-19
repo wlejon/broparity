@@ -1,8 +1,8 @@
 {
   "summary": {
     "totalElements": 15,
-    "rectMismatches": 0,
-    "styleMismatches": 7,
+    "rectMismatches": 1,
+    "styleMismatches": 8,
     "geomEpsilon": 1,
     "styleEpsilon": 0.5
   },
@@ -399,15 +399,15 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": -0.4370000000000118,
+        "dw": -1.3199999999999932,
         "dh": 0
       },
-      "rectMismatch": false,
+      "rectMismatch": true,
       "bro": {
         "rect": {
           "x": 20,
           "y": 94,
-          "w": 395.563,
+          "w": 394.68,
           "h": 21
         }
       },
@@ -419,8 +419,13 @@
           "h": 21
         }
       },
-      "styleDeltas": {},
-      "styleMismatch": false
+      "styleDeltas": {
+        "width": [
+          "394.68px",
+          "396px"
+        ]
+      },
+      "styleMismatch": true
     },
     {
       "path": "body>div:nth-of-type(1)>div:nth-of-type(3)>select:nth-of-type(1)>option:nth-of-type(1)",

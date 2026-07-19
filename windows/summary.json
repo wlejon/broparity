@@ -1,6 +1,6 @@
 {
-  "runId": "2026-07-12T11-44-24-830Z",
-  "timestamp": "2026-07-12T11:48:38.387Z",
+  "runId": "2026-07-19T05-00-32-029Z",
+  "timestamp": "2026-07-19T05:04:38.099Z",
   "viewport": {
     "w": 800,
     "h": 600
@@ -17,13 +17,13 @@
       "NVIDIA GeForce RTX 4090"
     ],
     "nodeVersion": "v24.2.0",
-    "detectedAt": "2026-07-12T11:48:38.387Z"
+    "detectedAt": "2026-07-19T05:04:38.099Z"
   },
   "overall": {
-    "layoutScore": 0.9964211635985928,
-    "pixelScore": 0.9955705423730146,
-    "caseCount": 320,
-    "categoryCount": 36
+    "layoutScore": 0.9981848378991237,
+    "pixelScore": 0.9959394162506076,
+    "caseCount": 328,
+    "categoryCount": 37
   },
   "categories": [
     {
@@ -76,6 +76,13 @@
       "errors": 0
     },
     {
+      "name": "canvas",
+      "n": 3,
+      "layoutScore": 1,
+      "pixelScore": 0.9951368055555556,
+      "errors": 0
+    },
+    {
       "name": "columns",
       "n": 8,
       "layoutScore": 1,
@@ -93,7 +100,7 @@
       "name": "display-types",
       "n": 13,
       "layoutScore": 1,
-      "pixelScore": 0.9975486086782444,
+      "pixelScore": 0.9976939029578099,
       "errors": 0
     },
     {
@@ -114,14 +121,14 @@
       "name": "elements",
       "n": 8,
       "layoutScore": 1,
-      "pixelScore": 0.9845795793675131,
+      "pixelScore": 0.9883527089685309,
       "errors": 0
     },
     {
       "name": "flex",
       "n": 19,
       "layoutScore": 1,
-      "pixelScore": 0.9997534938148106,
+      "pixelScore": 0.9997653764253773,
       "errors": 0
     },
     {
@@ -134,15 +141,15 @@
     {
       "name": "fonts",
       "n": 9,
-      "layoutScore": 0.936422471559919,
-      "pixelScore": 0.9970314375791263,
+      "layoutScore": 0.9822222222222222,
+      "pixelScore": 0.9980483317661134,
       "errors": 0
     },
     {
       "name": "forms",
       "n": 10,
-      "layoutScore": 0.9706190476190477,
-      "pixelScore": 0.9911258767179912,
+      "layoutScore": 0.9646190476190476,
+      "pixelScore": 0.9911102761191009,
       "errors": 0
     },
     {
@@ -155,15 +162,15 @@
     {
       "name": "gencontent",
       "n": 8,
-      "layoutScore": 0.9708333333333333,
-      "pixelScore": 0.9857706538053711,
+      "layoutScore": 1,
+      "pixelScore": 0.988640923564405,
       "errors": 0
     },
     {
       "name": "grid",
       "n": 13,
       "layoutScore": 1,
-      "pixelScore": 0.9995479497403978,
+      "pixelScore": 0.999619611569135,
       "errors": 0
     },
     {
@@ -177,7 +184,7 @@
       "name": "lists",
       "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9979713714758501,
+      "pixelScore": 0.9980030591509201,
       "errors": 0
     },
     {
@@ -191,14 +198,14 @@
       "name": "overflow",
       "n": 7,
       "layoutScore": 1,
-      "pixelScore": 0.9984537337662337,
+      "pixelScore": 0.9985260126777984,
       "errors": 0
     },
     {
       "name": "position",
       "n": 18,
       "layoutScore": 1,
-      "pixelScore": 0.9998116796052313,
+      "pixelScore": 0.999837756814435,
       "errors": 0
     },
     {
@@ -210,9 +217,9 @@
     },
     {
       "name": "rtl",
-      "n": 6,
+      "n": 10,
       "layoutScore": 1,
-      "pixelScore": 0.9992566872427983,
+      "pixelScore": 0.995396743580519,
       "errors": 0
     },
     {
@@ -238,9 +245,9 @@
     },
     {
       "name": "svg",
-      "n": 8,
-      "layoutScore": 0.9979166666666667,
-      "pixelScore": 0.9994908970771144,
+      "n": 9,
+      "layoutScore": 0.9906273620559334,
+      "pixelScore": 0.9994655001867253,
       "errors": 0
     },
     {
@@ -254,7 +261,7 @@
       "name": "text",
       "n": 8,
       "layoutScore": 1,
-      "pixelScore": 0.9720225691329942,
+      "pixelScore": 0.9779797663032513,
       "errors": 0
     },
     {
@@ -268,14 +275,14 @@
       "name": "typography",
       "n": 12,
       "layoutScore": 0.9953703703703703,
-      "pixelScore": 0.9724443256502856,
+      "pixelScore": 0.9764152904039377,
       "errors": 0
     },
     {
       "name": "values",
       "n": 8,
       "layoutScore": 1,
-      "pixelScore": 0.99983932492479,
+      "pixelScore": 0.9998749983790933,
       "errors": 0
     }
   ]
