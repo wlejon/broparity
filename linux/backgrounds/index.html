@@ -1,118 +1,528 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>broparity — backgrounds</title>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>broparity — backgrounds</title>
 <style>
-body { font-family: -apple-system, sans-serif; margin: 24px; background: #fafafa; color: #202020; }
-h1 { margin: 0 0 4px; }
-.sub { color: #606060; font-size: 13px; margin-bottom: 24px; }
-table { border-collapse: collapse; width: 100%; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
-th, td { padding: 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
-th { background: #f4f4f4; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #606060; }
-img { max-width: 280px; height: auto; border: 1px solid #d0d0d0; display: block; }
-.num { font-variant-numeric: tabular-nums; font-size: 13px; }
-.dim { color: #808080; font-size: 11px; }
-.err td { background: #fff0f0; }
-.errcell { color: #c00000; font-family: monospace; font-size: 12px; }
-a { color: #1f6feb; }
-</style></head><body>
-<h1>backgrounds</h1>
-<div class="sub"><a href="../index.html">all cases</a></div>
-<table><thead><tr><th>Case</th><th>bro</th><th>Chromium</th><th>Diff</th><th>Pixel mismatch</th><th>Layout Δ</th><th>Score</th></tr></thead>
-<tbody><tr id="bg-attachment-local">
-      <td><b>bg-attachment-local</b></td>
-      <td><img src="bg-attachment-local/bro.png" loading="lazy"></td>
-      <td><img src="bg-attachment-local/chromium.png" loading="lazy"></td>
-      <td><img src="bg-attachment-local/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --bg-1: #161b22;
+  --bg-2: #1c2128;
+  --bg-3: #21262d;
+  --border: #30363d;
+  --border-soft: #21262d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --dim: #6e7681;
+  --accent: #58a6ff;
+  --accent-dim: rgba(88, 166, 255, 0.15);
+  --good: #3fb950;
+  --ok: #56d364;
+  --mid: #d29922;
+  --bad: #f85149;
+  --warn: #db6d28;
+  --err-bg: rgba(248, 81, 73, 0.1);
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 28px 20px 64px; }
+header.page { margin-bottom: 20px; }
+header.page h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.sub {
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+}
+.sub .sep { color: var(--dim); }
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.panel {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+.metric {
+  background: var(--bg-2);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.metric .v {
+  font-size: 28px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.metric .l {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.metric .h { font-size: 11px; color: var(--dim); margin-top: 3px; }
+.metric.good .v { color: var(--good); }
+.metric.ok .v { color: var(--ok); }
+.metric.mid .v { color: var(--mid); }
+.metric.bad .v { color: var(--bad); }
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.chip {
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 9px;
+}
+.chip b { color: var(--text); font-weight: 500; }
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px 0 10px;
+}
+.toolbar h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-1);
+}
+.controls label:hover { border-color: var(--accent); color: var(--text); }
+.controls input { accent-color: var(--accent); }
+.controls input[type="search"] {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  min-width: 180px;
+  outline: none;
+}
+.controls input[type="search"]:focus { border-color: var(--accent); }
+.controls input[type="search"]::placeholder { color: var(--dim); }
+.table-wrap {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: auto;
+  margin-bottom: 14px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+  text-align: left;
+}
+th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg-2);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(88, 166, 255, 0.04); }
+tr.ok { opacity: 0.72; }
+tr.ok:hover { opacity: 1; }
+body.hide-ok tr.ok { display: none; }
+body.filter-active tr.filtered-out { display: none; }
+.case-name {
+  font-weight: 600;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+.case-name .cat { color: var(--dim); font-weight: 500; }
+.num {
+  font-variant-numeric: tabular-nums;
+  font-size: 12.5px;
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+.dim { color: var(--dim); font-size: 11px; font-weight: 400; }
+.warn { color: var(--warn); font-size: 11px; }
+.err td { background: var(--err-bg); }
+.errcell {
+  color: var(--bad);
+  font-family: var(--mono);
+  font-size: 12px;
+  white-space: normal;
+}
+.score { font-weight: 600; }
+.score.good, .band.good { color: var(--good); }
+.score.ok, .band.ok { color: var(--ok); }
+.score.mid, .band.mid { color: var(--mid); }
+.score.bad, .band.bad { color: var(--bad); }
+.bar {
+  display: inline-block;
+  height: 6px;
+  width: 72px;
+  background: var(--bg-3);
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 8px;
+  overflow: hidden;
+}
+.bar > i { display: block; height: 100%; border-radius: 3px; background: var(--good); }
+.bar.ok > i { background: var(--ok); }
+.bar.mid > i { background: var(--mid); }
+.bar.bad > i { background: var(--bad); }
+.shots { display: flex; gap: 8px; flex-wrap: wrap; }
+.shot {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.shot span {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--dim);
+}
+.shot img, td > img {
+  max-width: 220px;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: block;
+  background: #fff;
+  image-rendering: auto;
+}
+td > img { max-width: 200px; }
+.stat-line { line-height: 1.55; }
+.delta-zero { color: var(--dim); }
+.delta-hot { color: var(--bad); font-weight: 600; }
+.footer-note {
+  margin-top: 20px;
+  color: var(--dim);
+  font-size: 12px;
+}
+@media (max-width: 720px) {
+  .metric .v { font-size: 22px; }
+  td > img { max-width: 140px; }
+}
+</style>
+</head><body>
+<div class="wrap">
+  <header class="page">
+    <h1>backgrounds</h1>
+    <div class="sub">
+      <a href="../index.html">← all cases</a>
+      <span class="sep">·</span>
+      <span>11 cases</span>
+      <span class="sep">·</span>
+      <span>10 perfect</span>
+      <span class="sep">·</span>
+      <span>1 with diffs</span>
+    </div>
+  </header>
+  <div class="toolbar">
+    <h2>Cases</h2>
+    <div class="controls">
+      <label><input type="checkbox" id="hide-ok"> Diffs only</label>
+      <input type="search" id="q" placeholder="Filter cases…" autocomplete="off">
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>Case</th><th>Bro</th><th>Chromium</th><th>Diff</th><th>Pixels</th><th>Layout</th>
+      </tr></thead>
+      <tbody><tr id="bg-attachment-local" class="ok" data-name="bg-attachment-local">
+      <td class="case-name">bg-attachment-local</td>
+      <td><img src="bg-attachment-local/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-attachment-local/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-attachment-local/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/166,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
     </tr>
-<tr id="bg-color-basic">
-      <td><b>bg-color-basic</b></td>
-      <td><img src="bg-color-basic/bro.png" loading="lazy"></td>
-      <td><img src="bg-color-basic/chromium.png" loading="lazy"></td>
-      <td><img src="bg-color-basic/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
+<tr id="bg-color-basic" class="ok" data-name="bg-color-basic">
+      <td class="case-name">bg-color-basic</td>
+      <td><img src="bg-color-basic/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-color-basic/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-color-basic/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/166,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
     </tr>
-<tr id="bg-image-data-url">
-      <td><b>bg-image-data-url</b></td>
-      <td><img src="bg-image-data-url/bro.png" loading="lazy"></td>
-      <td><img src="bg-image-data-url/chromium.png" loading="lazy"></td>
-      <td><img src="bg-image-data-url/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
+<tr id="bg-image-data-url" class="ok" data-name="bg-image-data-url">
+      <td class="case-name">bg-image-data-url</td>
+      <td><img src="bg-image-data-url/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-image-data-url/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-image-data-url/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/166,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
     </tr>
-<tr id="bg-linear-gradient">
-      <td><b>bg-linear-gradient</b></td>
-      <td><img src="bg-linear-gradient/bro.png" loading="lazy"></td>
-      <td><img src="bg-linear-gradient/chromium.png" loading="lazy"></td>
-      <td><img src="bg-linear-gradient/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
+<tr id="bg-linear-gradient" class="ok" data-name="bg-linear-gradient">
+      <td class="case-name">bg-linear-gradient</td>
+      <td><img src="bg-linear-gradient/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-linear-gradient/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-linear-gradient/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/166,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
     </tr>
-<tr id="bg-multiple">
-      <td><b>bg-multiple</b></td>
-      <td><img src="bg-multiple/bro.png" loading="lazy"></td>
-      <td><img src="bg-multiple/chromium.png" loading="lazy"></td>
-      <td><img src="bg-multiple/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
+<tr id="bg-multiple" class="ok" data-name="bg-multiple">
+      <td class="case-name">bg-multiple</td>
+      <td><img src="bg-multiple/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-multiple/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-multiple/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/166,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
     </tr>
-<tr id="bg-position">
-      <td><b>bg-position</b></td>
-      <td><img src="bg-position/bro.png" loading="lazy"></td>
-      <td><img src="bg-position/chromium.png" loading="lazy"></td>
-      <td><img src="bg-position/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
+<tr id="bg-position" class="ok" data-name="bg-position">
+      <td class="case-name">bg-position</td>
+      <td><img src="bg-position/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-position/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-position/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/166,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
     </tr>
-<tr id="bg-radial-gradient">
-      <td><b>bg-radial-gradient</b></td>
-      <td><img src="bg-radial-gradient/bro.png" loading="lazy"></td>
-      <td><img src="bg-radial-gradient/chromium.png" loading="lazy"></td>
-      <td><img src="bg-radial-gradient/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
+<tr id="bg-radial-gradient" class="ok" data-name="bg-radial-gradient">
+      <td class="case-name">bg-radial-gradient</td>
+      <td><img src="bg-radial-gradient/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-radial-gradient/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-radial-gradient/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/166,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
     </tr>
-<tr id="bg-repeat-x">
-      <td><b>bg-repeat-x</b></td>
-      <td><img src="bg-repeat-x/bro.png" loading="lazy"></td>
-      <td><img src="bg-repeat-x/chromium.png" loading="lazy"></td>
-      <td><img src="bg-repeat-x/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/86400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
+<tr id="bg-repeat-x" class="ok" data-name="bg-repeat-x">
+      <td class="case-name">bg-repeat-x</td>
+      <td><img src="bg-repeat-x/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-repeat-x/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-repeat-x/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/86,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
     </tr>
-<tr id="bg-repeating-gradients">
-      <td><b>bg-repeating-gradients</b></td>
-      <td><img src="bg-repeating-gradients/bro.png" loading="lazy"></td>
-      <td><img src="bg-repeating-gradients/chromium.png" loading="lazy"></td>
-      <td><img src="bg-repeating-gradients/diff.png" loading="lazy"></td>
-      <td class="num">4.006%<br><span class="dim">6217/155200 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 4 elems</span></td>
-      <td class="num">L=1.000<br>P=0.960</td>
+<tr id="bg-repeating-gradients" class="diff" data-name="bg-repeating-gradients">
+      <td class="case-name">bg-repeating-gradients</td>
+      <td><img src="bg-repeating-gradients/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-repeating-gradients/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-repeating-gradients/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score bad">4.006%</span>
+        <br><span class="dim">6,217/155,200 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">4 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 0.960</span>
+      </td>
     </tr>
-<tr id="bg-size-contain">
-      <td><b>bg-size-contain</b></td>
-      <td><img src="bg-size-contain/bro.png" loading="lazy"></td>
-      <td><img src="bg-size-contain/chromium.png" loading="lazy"></td>
-      <td><img src="bg-size-contain/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
+<tr id="bg-size-contain" class="ok" data-name="bg-size-contain">
+      <td class="case-name">bg-size-contain</td>
+      <td><img src="bg-size-contain/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-size-contain/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-size-contain/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/166,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
     </tr>
-<tr id="bg-size-cover">
-      <td><b>bg-size-cover</b></td>
-      <td><img src="bg-size-cover/bro.png" loading="lazy"></td>
-      <td><img src="bg-size-cover/chromium.png" loading="lazy"></td>
-      <td><img src="bg-size-cover/diff.png" loading="lazy"></td>
-      <td class="num">0.000%<br><span class="dim">0/166400 px</span></td>
-      <td class="num">rect: 0<br>style: 0<br><span class="dim">of 2 elems</span></td>
-      <td class="num">L=1.000<br>P=1.000</td>
-    </tr></tbody></table>
+<tr id="bg-size-cover" class="ok" data-name="bg-size-cover">
+      <td class="case-name">bg-size-cover</td>
+      <td><img src="bg-size-cover/bro.png" loading="lazy" alt="bro"></td>
+      <td><img src="bg-size-cover/chromium.png" loading="lazy" alt="chromium"></td>
+      <td><img src="bg-size-cover/diff.png" loading="lazy" alt="diff"></td>
+      <td class="num stat-line">
+        <span class="score good">0.000%</span>
+        <br><span class="dim">0/166,400 px</span>
+        
+      </td>
+      <td class="num stat-line">
+        <span class="delta-zero">rect 0</span>
+        · <span class="delta-zero">style 0</span>
+        <br><span class="dim">2 elems</span>
+        <br><span class="score good">L 1.000</span>
+        <span class="dim"> · P 1.000</span>
+      </td>
+    </tr></tbody>
+    </table>
+  </div>
+</div>
+<script>
+(() => {
+  const hide = document.getElementById("hide-ok");
+  const q = document.getElementById("q");
+  const apply = () => {
+    document.body.classList.toggle("hide-ok", hide.checked);
+    const term = (q.value || "").trim().toLowerCase();
+    document.body.classList.toggle("filter-active", !!term);
+    for (const tr of document.querySelectorAll("tbody tr")) {
+      const name = tr.dataset.name || "";
+      tr.classList.toggle("filtered-out", term && !name.includes(term));
+    }
+  };
+  hide.addEventListener("change", apply);
+  q.addEventListener("input", apply);
+})();
+</script>
 </body></html>

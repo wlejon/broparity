@@ -1,7 +1,7 @@
 {
   "summary": {
     "totalElements": 15,
-    "rectMismatches": 0,
+    "rectMismatches": 1,
     "styleMismatches": 10,
     "geomEpsilon": 1,
     "styleEpsilon": 0.5
@@ -409,15 +409,15 @@
       "rectDelta": {
         "dx": 0,
         "dy": 0,
-        "dw": -1,
+        "dw": -1.8829999999999814,
         "dh": 0
       },
-      "rectMismatch": false,
+      "rectMismatch": true,
       "bro": {
         "rect": {
           "x": 20,
           "y": 94,
-          "w": 395,
+          "w": 394.117,
           "h": 21
         }
       },
@@ -431,7 +431,7 @@
       },
       "styleDeltas": {
         "width": [
-          "395px",
+          "394.117px",
           "396px"
         ],
         "background-color": [
