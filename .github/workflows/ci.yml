@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# A parity run needs a GPU and a built bro-headless, which a hosted runner has
+# neither of, so runs happen on real machines and are published to gh-pages.
+# What CI can check is that the harness itself is sound: every script parses,
+# the locked dependencies install, and every case is complete (an index.html
+# and the bro.json manifest bro-headless loads it with).
+jobs:
+  check:
+    name: Harness check
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Scripts parse
+        run: |
+          for f in *.mjs drivers/*.mjs diff/*.mjs report/*.mjs _runner.js; do
+            node --check "$f"
+          done
+
+      - name: Cases are complete
+        run: |
+          bad=0
+          for d in cases/*/*/; do
+            for f in index.html bro.json; do
+              if [ ! -f "$d$f" ]; then echo "::error::$d is missing $f"; bad=1; fi
+            done
+            node -e "JSON.parse(require('fs').readFileSync('${d}bro.json', 'utf8'))" \
+              || { echo "::error::${d}bro.json is not valid JSON"; bad=1; }
+          done
+          exit $bad

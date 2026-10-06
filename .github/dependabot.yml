@@ -1,0 +1,30 @@
+version: 2
+
+# npm carries the harness's three dev dependencies (Playwright, pixelmatch,
+# pngjs). A Playwright bump changes the Chromium that every published report is
+# measured against, so its PRs are worth reading rather than merging blind:
+# scores move with it.
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      npm:
+        patterns: ["*"]
+    labels: [dependencies]
+    commit-message:
+      prefix: "deps"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      actions:
+        patterns: ["*"]
+    labels: [ci]
+    commit-message:
+      prefix: "ci"

@@ -1,8 +1,31 @@
 # broparity
 
-Side-by-side parity comparison for the bro engine vs Chromium. Each case is a small,
-UA-neutral HTML page. Both engines render it; we compare pixels and a structural
-layout dump.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+Side-by-side parity comparison for the [bro](https://github.com/wlejon/bro)
+engine vs Chromium. Each case is a small, UA-neutral HTML page. Both engines
+render it; we compare pixels and a structural layout dump. The latest reports
+are published at <https://wlejon.github.io/broparity/>.
+
+It is the HTML/CSS conformance oracle for bro and its layout engine,
+[htmlayout](https://github.com/wlejon/htmlayout): around 330 cases in 37
+categories, from box model, floats, flex, grid, tables and text through SVG,
+canvas text metrics, RTL and whole-page layouts (dashboards, pricing pages,
+game UI). Where it sits among the other repos is in the
+[ecosystem index](https://github.com/wlejon/bro/blob/main/docs/ecosystem.md).
+
+## Requirements
+
+- Node.js (ES modules; any current LTS) and npm.
+- Chromium through Playwright (`npx playwright install chromium`).
+- A built `bro-headless`. By default the driver looks for a bro checkout beside
+  this one (`../bro/build/Release/bro-headless.exe` on Windows,
+  `../bro/build-release/bro-headless` elsewhere); set `BRO_HEADLESS=<path>` to
+  point it anywhere else. bro-headless renders on the GPU (Vulkan), so the
+  machine needs a Vulkan driver.
+
+Runs on Windows, Linux and macOS. Results are per platform, since fonts, GPU
+drivers and OS text shaping all move pixels.
 
 ## Run
 
@@ -16,8 +39,19 @@ node run.mjs --filter boxmodel
 
 - `--filter <substr>` — limit to cases whose `category/case` contains the substring
 - `--width <n>` `--height <n>` — viewport (default 800x600)
+- `--geom-epsilon <px>` — rect tolerance (default 1)
+- `--style-epsilon <n>` — tolerance for single-number style values (default 0.5)
 
 Output lands in `out/<run-id>/`. Open `out/<run-id>/index.html` for the report.
+`node scan-diffs.mjs [substr]` prints the mismatching entries of the newest run
+of each case, for working through failures from the terminal.
+
+## Adding a case
+
+Make `cases/<category>/<case>/index.html` (no script, no UA sniffing, nothing
+that depends on Chromium's UA stylesheet) and a `bro.json` beside it, copied
+from a neighbouring case. Keep the page small and aimed at one behaviour, so a
+mismatch points at one thing.
 
 ## Layout
 
@@ -77,7 +111,9 @@ numeric values normalize to 3 decimal places.
 - **Layout**: align elements by `path`. For each, compute `rectDelta` and a
   per-property `styleDeltas` map. Default geometric tolerance ε=1px (so subpixel
   font hinting differences don't dominate). Style values are exact-match after
-  normalization.
+  normalization, except that two single numbers (with the same optional `px`/`%`
+  unit) match within the style ε, 0.5 by default, so fractional widths that
+  round to the same pixel are not flagged.
 
 ## Scoring
 
@@ -142,3 +178,15 @@ publisher reads to populate the landing page.
 - `bro-headless` requires a GPU by default; we use the default (GPU) mode.
 - The bro driver materializes a per-case `_runner.local.js` next to the output so
   the output paths are baked in (bro-headless has no `process.env`).
+- `index.html`, `manifest.json` and `windows/`, `linux/`, `macos/` at the root of
+  `main` are a committed copy of the published site from an earlier publish;
+  `gh-pages` is the live one.
+- CI does not run the comparison: a run needs a GPU and a built bro, so it
+  happens on the machines that have them. CI checks the harness instead: the
+  locked dependencies install, every script parses, and every case has its
+  `index.html` and a valid `bro.json`.
+
+## License
+
+[MIT](LICENSE). `Bungee-Regular.ttf`, used by some font cases, is under the
+SIL Open Font License.
